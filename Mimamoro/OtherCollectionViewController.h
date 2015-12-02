@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  OtherCollectionViewController.h
 //  Mimamoro
 //
 //  Created by totyu1 on 2015/12/02.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface OtherCollectionViewController : UICollectionViewController
 
 @end
-

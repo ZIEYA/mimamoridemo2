@@ -9,12 +9,26 @@
 /* Begin PBXBuildFile section */
 		E55914B81C0EC92E00CE9102 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E55914B71C0EC92E00CE9102 /* main.m */; };
 		E55914BB1C0EC92E00CE9102 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E55914BA1C0EC92E00CE9102 /* AppDelegate.m */; };
-		E55914BE1C0EC92E00CE9102 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E55914BD1C0EC92E00CE9102 /* ViewController.m */; };
 		E55914C11C0EC92E00CE9102 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E55914BF1C0EC92E00CE9102 /* Main.storyboard */; };
 		E55914C31C0EC92E00CE9102 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E55914C21C0EC92E00CE9102 /* Assets.xcassets */; };
 		E55914C61C0EC92E00CE9102 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E55914C41C0EC92E00CE9102 /* LaunchScreen.storyboard */; };
 		E55914D11C0EC92E00CE9102 /* MimamoroTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E55914D01C0EC92E00CE9102 /* MimamoroTests.m */; };
 		E55914DC1C0EC92E00CE9102 /* MimamoroUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E55914DB1C0EC92E00CE9102 /* MimamoroUITests.m */; };
+		E55914F61C0ED0A300CE9102 /* EmergencyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E55914F51C0ED0A300CE9102 /* EmergencyViewController.m */; };
+		E55914F91C0ED0B000CE9102 /* WorryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E55914F81C0ED0B000CE9102 /* WorryViewController.m */; };
+		E55914FC1C0ED0BD00CE9102 /* OtherCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E55914FB1C0ED0BD00CE9102 /* OtherCollectionViewController.m */; };
+		E55914FF1C0ED0DA00CE9102 /* ContactCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E55914FE1C0ED0DA00CE9102 /* ContactCollectionViewController.m */; };
+		E55915021C0ED54C00CE9102 /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = E55915011C0ED54C00CE9102 /* TabBarController.m */; };
+		E55915041C0ED73A00CE9102 /* contactlist.png in Resources */ = {isa = PBXBuildFile; fileRef = E55915031C0ED73A00CE9102 /* contactlist.png */; };
+		E55915061C0ED87F00CE9102 /* emergency.png in Resources */ = {isa = PBXBuildFile; fileRef = E55915051C0ED87F00CE9102 /* emergency.png */; };
+		E55915081C0ED88300CE9102 /* worry.png in Resources */ = {isa = PBXBuildFile; fileRef = E55915071C0ED88300CE9102 /* worry.png */; };
+		E559150A1C0ED88600CE9102 /* setting.png in Resources */ = {isa = PBXBuildFile; fileRef = E55915091C0ED88600CE9102 /* setting.png */; };
+		E559150C1C0ED99000CE9102 /* contactlist-0.png in Resources */ = {isa = PBXBuildFile; fileRef = E559150B1C0ED99000CE9102 /* contactlist-0.png */; };
+		E559150E1C0ED99400CE9102 /* emergency-0.png in Resources */ = {isa = PBXBuildFile; fileRef = E559150D1C0ED99400CE9102 /* emergency-0.png */; };
+		E55915101C0ED99700CE9102 /* worry-0.png in Resources */ = {isa = PBXBuildFile; fileRef = E559150F1C0ED99700CE9102 /* worry-0.png */; };
+		E55915121C0ED99B00CE9102 /* setting-0.png in Resources */ = {isa = PBXBuildFile; fileRef = E55915111C0ED99B00CE9102 /* setting-0.png */; };
+		E55915151C0EDD5B00CE9102 /* emergencybtn.png in Resources */ = {isa = PBXBuildFile; fileRef = E55915141C0EDD5B00CE9102 /* emergencybtn.png */; };
+		E55915171C0EDD5E00CE9102 /* worrybtn.png in Resources */ = {isa = PBXBuildFile; fileRef = E55915161C0EDD5E00CE9102 /* worrybtn.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,12 +49,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		E55914B31C0EC92E00CE9102 /* Mimamoro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mimamoro.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E55914B31C0EC92E00CE9102 /* Mimamori.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mimamori.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E55914B71C0EC92E00CE9102 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E55914B91C0EC92E00CE9102 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E55914BA1C0EC92E00CE9102 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E55914BC1C0EC92E00CE9102 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E55914BD1C0EC92E00CE9102 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		E55914C01C0EC92E00CE9102 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E55914C21C0EC92E00CE9102 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E55914C51C0EC92E00CE9102 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +63,26 @@
 		E55914D71C0EC92E00CE9102 /* MimamoroUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MimamoroUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E55914DB1C0EC92E00CE9102 /* MimamoroUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MimamoroUITests.m; sourceTree = "<group>"; };
 		E55914DD1C0EC92E00CE9102 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E55914F41C0ED0A300CE9102 /* EmergencyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmergencyViewController.h; sourceTree = "<group>"; };
+		E55914F51C0ED0A300CE9102 /* EmergencyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmergencyViewController.m; sourceTree = "<group>"; };
+		E55914F71C0ED0B000CE9102 /* WorryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorryViewController.h; sourceTree = "<group>"; };
+		E55914F81C0ED0B000CE9102 /* WorryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorryViewController.m; sourceTree = "<group>"; };
+		E55914FA1C0ED0BD00CE9102 /* OtherCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtherCollectionViewController.h; sourceTree = "<group>"; };
+		E55914FB1C0ED0BD00CE9102 /* OtherCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtherCollectionViewController.m; sourceTree = "<group>"; };
+		E55914FD1C0ED0DA00CE9102 /* ContactCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactCollectionViewController.h; sourceTree = "<group>"; };
+		E55914FE1C0ED0DA00CE9102 /* ContactCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactCollectionViewController.m; sourceTree = "<group>"; };
+		E55915001C0ED54C00CE9102 /* TabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
+		E55915011C0ED54C00CE9102 /* TabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
+		E55915031C0ED73A00CE9102 /* contactlist.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = contactlist.png; sourceTree = "<group>"; };
+		E55915051C0ED87F00CE9102 /* emergency.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emergency.png; sourceTree = "<group>"; };
+		E55915071C0ED88300CE9102 /* worry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = worry.png; sourceTree = "<group>"; };
+		E55915091C0ED88600CE9102 /* setting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = setting.png; sourceTree = "<group>"; };
+		E559150B1C0ED99000CE9102 /* contactlist-0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "contactlist-0.png"; sourceTree = "<group>"; };
+		E559150D1C0ED99400CE9102 /* emergency-0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "emergency-0.png"; sourceTree = "<group>"; };
+		E559150F1C0ED99700CE9102 /* worry-0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "worry-0.png"; sourceTree = "<group>"; };
+		E55915111C0ED99B00CE9102 /* setting-0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "setting-0.png"; sourceTree = "<group>"; };
+		E55915141C0EDD5B00CE9102 /* emergencybtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emergencybtn.png; sourceTree = "<group>"; };
+		E55915161C0EDD5E00CE9102 /* worrybtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = worrybtn.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,7 +123,7 @@
 		E55914B41C0EC92E00CE9102 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E55914B31C0EC92E00CE9102 /* Mimamoro.app */,
+				E55914B31C0EC92E00CE9102 /* Mimamori.app */,
 				E55914CC1C0EC92E00CE9102 /* MimamoroTests.xctest */,
 				E55914D71C0EC92E00CE9102 /* MimamoroUITests.xctest */,
 			);
@@ -103,8 +135,16 @@
 			children = (
 				E55914B91C0EC92E00CE9102 /* AppDelegate.h */,
 				E55914BA1C0EC92E00CE9102 /* AppDelegate.m */,
-				E55914BC1C0EC92E00CE9102 /* ViewController.h */,
-				E55914BD1C0EC92E00CE9102 /* ViewController.m */,
+				E55915001C0ED54C00CE9102 /* TabBarController.h */,
+				E55915011C0ED54C00CE9102 /* TabBarController.m */,
+				E55914FD1C0ED0DA00CE9102 /* ContactCollectionViewController.h */,
+				E55914FE1C0ED0DA00CE9102 /* ContactCollectionViewController.m */,
+				E55914F41C0ED0A300CE9102 /* EmergencyViewController.h */,
+				E55914F51C0ED0A300CE9102 /* EmergencyViewController.m */,
+				E55914F71C0ED0B000CE9102 /* WorryViewController.h */,
+				E55914F81C0ED0B000CE9102 /* WorryViewController.m */,
+				E55914FA1C0ED0BD00CE9102 /* OtherCollectionViewController.h */,
+				E55914FB1C0ED0BD00CE9102 /* OtherCollectionViewController.m */,
 				E55914BF1C0EC92E00CE9102 /* Main.storyboard */,
 				E55914C21C0EC92E00CE9102 /* Assets.xcassets */,
 				E55914C41C0EC92E00CE9102 /* LaunchScreen.storyboard */,
@@ -118,6 +158,16 @@
 			isa = PBXGroup;
 			children = (
 				E55914B71C0EC92E00CE9102 /* main.m */,
+				E559150B1C0ED99000CE9102 /* contactlist-0.png */,
+				E559150D1C0ED99400CE9102 /* emergency-0.png */,
+				E559150F1C0ED99700CE9102 /* worry-0.png */,
+				E55915111C0ED99B00CE9102 /* setting-0.png */,
+				E55915031C0ED73A00CE9102 /* contactlist.png */,
+				E55915051C0ED87F00CE9102 /* emergency.png */,
+				E55915071C0ED88300CE9102 /* worry.png */,
+				E55915091C0ED88600CE9102 /* setting.png */,
+				E55915141C0EDD5B00CE9102 /* emergencybtn.png */,
+				E55915161C0EDD5E00CE9102 /* worrybtn.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -143,9 +193,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E55914B21C0EC92E00CE9102 /* Mimamoro */ = {
+		E55914B21C0EC92E00CE9102 /* Mimamori */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E55914E01C0EC92E00CE9102 /* Build configuration list for PBXNativeTarget "Mimamoro" */;
+			buildConfigurationList = E55914E01C0EC92E00CE9102 /* Build configuration list for PBXNativeTarget "Mimamori" */;
 			buildPhases = (
 				E55914AF1C0EC92E00CE9102 /* Sources */,
 				E55914B01C0EC92E00CE9102 /* Frameworks */,
@@ -155,9 +205,9 @@
 			);
 			dependencies = (
 			);
-			name = Mimamoro;
+			name = Mimamori;
 			productName = Mimamoro;
-			productReference = E55914B31C0EC92E00CE9102 /* Mimamoro.app */;
+			productReference = E55914B31C0EC92E00CE9102 /* Mimamori.app */;
 			productType = "com.apple.product-type.application";
 		};
 		E55914CB1C0EC92E00CE9102 /* MimamoroTests */ = {
@@ -231,7 +281,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E55914B21C0EC92E00CE9102 /* Mimamoro */,
+				E55914B21C0EC92E00CE9102 /* Mimamori */,
 				E55914CB1C0EC92E00CE9102 /* MimamoroTests */,
 				E55914D61C0EC92E00CE9102 /* MimamoroUITests */,
 			);
@@ -244,7 +294,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				E55914C61C0EC92E00CE9102 /* LaunchScreen.storyboard in Resources */,
+				E55915081C0ED88300CE9102 /* worry.png in Resources */,
+				E559150A1C0ED88600CE9102 /* setting.png in Resources */,
+				E55915171C0EDD5E00CE9102 /* worrybtn.png in Resources */,
+				E55915151C0EDD5B00CE9102 /* emergencybtn.png in Resources */,
 				E55914C31C0EC92E00CE9102 /* Assets.xcassets in Resources */,
+				E55915041C0ED73A00CE9102 /* contactlist.png in Resources */,
+				E55915101C0ED99700CE9102 /* worry-0.png in Resources */,
+				E55915061C0ED87F00CE9102 /* emergency.png in Resources */,
+				E559150C1C0ED99000CE9102 /* contactlist-0.png in Resources */,
+				E55915121C0ED99B00CE9102 /* setting-0.png in Resources */,
+				E559150E1C0ED99400CE9102 /* emergency-0.png in Resources */,
 				E55914C11C0EC92E00CE9102 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,8 +330,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E55914BE1C0EC92E00CE9102 /* ViewController.m in Sources */,
+				E55915021C0ED54C00CE9102 /* TabBarController.m in Sources */,
 				E55914BB1C0EC92E00CE9102 /* AppDelegate.m in Sources */,
+				E55914F61C0ED0A300CE9102 /* EmergencyViewController.m in Sources */,
+				E55914FC1C0ED0BD00CE9102 /* OtherCollectionViewController.m in Sources */,
+				E55914FF1C0ED0DA00CE9102 /* ContactCollectionViewController.m in Sources */,
+				E55914F91C0ED0B000CE9102 /* WorryViewController.m in Sources */,
 				E55914B81C0EC92E00CE9102 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -297,12 +361,12 @@
 /* Begin PBXTargetDependency section */
 		E55914CE1C0EC92E00CE9102 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = E55914B21C0EC92E00CE9102 /* Mimamoro */;
+			target = E55914B21C0EC92E00CE9102 /* Mimamori */;
 			targetProxy = E55914CD1C0EC92E00CE9102 /* PBXContainerItemProxy */;
 		};
 		E55914D91C0EC92E00CE9102 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = E55914B21C0EC92E00CE9102 /* Mimamoro */;
+			target = E55914B21C0EC92E00CE9102 /* Mimamori */;
 			targetProxy = E55914D81C0EC92E00CE9102 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -413,7 +477,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Mimamoro/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.totyu.Mimamoro;
+				PRODUCT_BUNDLE_IDENTIFIER = com.totyu.Mimamori;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -424,7 +488,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Mimamoro/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.totyu.Mimamoro;
+				PRODUCT_BUNDLE_IDENTIFIER = com.totyu.Mimamori;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -489,7 +553,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E55914E01C0EC92E00CE9102 /* Build configuration list for PBXNativeTarget "Mimamoro" */ = {
+		E55914E01C0EC92E00CE9102 /* Build configuration list for PBXNativeTarget "Mimamori" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E55914E11C0EC92E00CE9102 /* Debug */,
