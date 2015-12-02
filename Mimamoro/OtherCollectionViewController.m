@@ -7,6 +7,7 @@
 //
 
 #import "OtherCollectionViewController.h"
+#import "SettingCollectionViewCell.h"
 
 @interface OtherCollectionViewController ()
 
@@ -24,7 +25,7 @@ static NSString * const reuseIdentifier = @"settingcell";
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Register cell classes
-    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
+    //[self.collectionView registerClass:[SettingCollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
     
     // Do any additional setup after loading the view.
 }
@@ -47,25 +48,46 @@ static NSString * const reuseIdentifier = @"settingcell";
 #pragma mark <UICollectionViewDataSource>
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+    return 2;
 }
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of items
-    return 0;
+    return 2;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    SettingCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
-    // Configure the cell
+    if (indexPath.section ==0 && indexPath.row ==0) {
+        cell.imageview.image = [UIImage imageNamed:@"settingimage.png"];
+        cell.label.text =@"設定";
+    }
+    if (indexPath.section ==0 && indexPath.row ==1) {
+        cell.imageview.image = [UIImage imageNamed:@"homeimage.png"];
+        cell.label.text =@"ポケットドクター";
+    }
+    if (indexPath.section ==1 && indexPath.row ==0) {
+        cell.imageview.image = [UIImage imageNamed:@"lightimage.png"];
+        cell.label.text =@"電気守り";
+    }
+    if (indexPath.section ==1 && indexPath.row ==1) {
+        cell.imageview.image = [UIImage imageNamed:@"plusimage.png"];
+        cell.label.text =@"";
+    }
+    
+    
     
     return cell;
 }
 
 #pragma mark <UICollectionViewDelegate>
+
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.section ==0 && indexPath.row ==0) {
+        [self performSegueWithIdentifier:@"gotoSettingVC" sender:self];
+    }
+}
 
 /*
 // Uncomment this method to specify if the specified item should be highlighted during tracking

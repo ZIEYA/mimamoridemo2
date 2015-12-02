@@ -9,6 +9,10 @@
 #import "WorryViewController.h"
 
 @interface WorryViewController ()
+@property (strong, nonatomic) IBOutlet UITextView *contactListTextView;
+@property (strong, nonatomic) IBOutlet UISlider *healthSlider;
+@property (strong, nonatomic) IBOutlet UISlider *spiritSlider;
+@property (strong, nonatomic) IBOutlet UISlider *happinessSlider;
 
 @end
 

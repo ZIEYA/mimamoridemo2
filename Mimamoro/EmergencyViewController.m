@@ -9,6 +9,8 @@
 #import "EmergencyViewController.h"
 
 @interface EmergencyViewController ()
+@property (strong, nonatomic) IBOutlet UITextView *contactListTextView;
+@property (strong, nonatomic) IBOutlet UITextView *messageTextView;
 
 @end
 
