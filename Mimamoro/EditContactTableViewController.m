@@ -14,6 +14,7 @@
 @interface EditContactTableViewController ()<UITextFieldDelegate,CNContactPickerDelegate>{
     ContactModel *contactModel;
     NSMutableDictionary *_cotactDict;
+    NSMutableDictionary *_exitDict;
 }
 @property (strong, nonatomic) IBOutlet UITextField *nameTextField;
 @property (strong, nonatomic) IBOutlet UITextField *emaiTextField;
@@ -31,12 +32,31 @@
     if (!_cotactDict) {
         _cotactDict = [[NSMutableDictionary alloc]init];
     }
+    _cotactDict = [[NSMutableDictionary alloc]initWithDictionary:[[NSUserDefaults standardUserDefaults]objectForKey:@"contact"]];
     
     if(_editType == 0){
         contactModel.worryType = [NSString stringWithFormat:@"0"];
         contactModel.emergencyType = [NSString stringWithFormat:@"0"];
         [_worrySwitch setOn:NO];
         [_emergencySwitch setOn:NO];
+    }else if (_editType == 1){
+        _exitDict = [_cotactDict objectForKey:_tempName];
+        _nameTextField.text = _tempName;
+        contactModel.name = _tempName;
+        _emaiTextField.text = [_exitDict valueForKey:@"email"];
+        contactModel.email = [_exitDict valueForKey:@"email"];
+        contactModel.worryType = [_exitDict valueForKey:@"worrytype"];
+        contactModel.emergencyType = [_exitDict valueForKey:@"emergencytype"];
+        if ([contactModel.worryType isEqualToString:@"1"]) {
+            [_worrySwitch setOn:YES];
+        }else{
+            [_worrySwitch setOn:NO];
+        }
+        if ([contactModel.emergencyType isEqualToString:@"1"]) {
+            [_emergencySwitch setOn:YES];
+        }else{
+            [_emergencySwitch setOn:NO];
+        }
     }
 }
 
@@ -50,6 +70,12 @@
 }
 
 - (IBAction)saveAction:(id)sender {
+    if (_editType == 0) {
+        
+    }
+    else if (_editType == 1){
+        [_cotactDict removeObjectForKey:_tempName];
+    }
     contactModel.name = _nameTextField.text;
     contactModel.email = _emaiTextField.text;
     NSMutableDictionary *temp = [[NSMutableDictionary alloc]init];
@@ -57,8 +83,9 @@
     [temp setValue:contactModel.email forKey:@"email"];
     [temp setValue:contactModel.worryType forKey:@"worrytype"];
     [temp setValue:contactModel.emergencyType forKey:@"emergencytype"];
+    [temp setValue:contactModel.groupType forKey:@"group"];
     
-    [_cotactDict setObject:temp forKey:contactModel.groupType];
+    [_cotactDict setObject:temp forKey:contactModel.name];
     [[NSUserDefaults standardUserDefaults]setObject:_cotactDict forKey:@"contact"];
     
     [self.navigationController popViewControllerAnimated:YES];

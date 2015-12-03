@@ -8,10 +8,13 @@
 
 #import "ContactTableViewController.h"
 #import "EditContactTableViewController.h"
+#import "ContactModel.h"
 
-@interface ContactTableViewController (){
+@interface ContactTableViewController ()<UITextFieldDelegate>{
     int edittype; //0:追加 1:編集
-    NSMutableArray *_contactArray;
+    NSMutableArray *_currentArray;
+    NSMutableDictionary *_contactDict;
+    NSString *tempname;
 }
 
 @end
@@ -20,8 +23,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    
+    if (!_currentArray) {
+        _currentArray = [[NSMutableArray alloc]init];
+    }
+
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    [self reloadContact];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -30,13 +39,25 @@
 }
 
 -(void)reloadContact{
+    [_currentArray removeAllObjects];
     NSDictionary *tempdict = [[NSUserDefaults standardUserDefaults]objectForKey:@"contact"];
+    _contactDict = [[NSMutableDictionary alloc]initWithDictionary:tempdict];
     NSLog(@"contact:%@",tempdict);
     NSArray *keysArr = [tempdict allKeys];
+    //Models
     for (int i = 0; i<keysArr.count; i++) {
-        NSDictionary *tempDict = [tempdict objectForKey:keysArr[i]];
-        [_contactArray addObject:tempDict];
+        NSDictionary *dict = [tempdict objectForKey:keysArr[i]];
+        ContactModel *model = [[ContactModel alloc]init];
+        model.name = [dict valueForKey:@"name"];
+        model.email = [dict valueForKey:@"email"];
+        model.groupType = [dict valueForKey:@"group"];
+        if ([_groupid isEqualToString:model.groupType]) {
+            [_currentArray addObject:model];
+        }
+
     }
+    NSLog(@"%lu",(unsigned long)_currentArray.count);
+    [self.tableView reloadData];
 }
 
 #pragma mark - Table view data source
@@ -47,8 +68,9 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    
 
-    return 5;
+    return _currentArray.count;
 }
 
 
@@ -58,7 +80,9 @@
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"contactCell"];
     }
     
-    cell.textLabel.text = @"test";
+    ContactModel *contactmodel = [_currentArray objectAtIndex:indexPath.row];
+    cell.textLabel.text = contactmodel.name;
+    cell.detailTextLabel.text = contactmodel.email;
     
     
     return cell;
@@ -66,9 +90,28 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     edittype = 1;
+    ContactModel *contactmodel = [_currentArray objectAtIndex:indexPath.row];
+    tempname = contactmodel.name;
     [self performSegueWithIdentifier:@"gotoEditContactVC" sender:self];
 }
 
+
+-(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        ContactModel *model = [_currentArray objectAtIndex:indexPath.row];
+        [_contactDict removeObjectForKey:model.name];
+        [[NSUserDefaults standardUserDefaults]setObject:_contactDict forKey:@"contact"];
+        
+        [self reloadContact];
+    }
+}
+
+#pragma mark - UITextField Delegate
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [textField resignFirstResponder];
+    return YES;
+}     
 
 #pragma mark - Navigation
 
@@ -79,9 +122,10 @@
         editVC.editType = 0;
     }else if (edittype == 1){
         editVC.editType = 1;
+        editVC.tempName = tempname;
     }
     editVC.gruopname = self.groupid;
-}
+};
 
 
 - (IBAction)addContactAction:(id)sender {

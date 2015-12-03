@@ -9,15 +9,12 @@
 #import "ContactCollectionViewController.h"
 #import "ContactCollectionViewCell.h"
 #import "ContactTableViewController.h"
+#import "AddGroupTableViewController.h"
 
 @interface ContactCollectionViewController (){
     NSMutableDictionary *_contactDict;
-    NSMutableArray *_groupArr;
-    NSMutableArray *_wifeArr;
-    NSMutableArray *_daughterArr;
-    NSMutableArray *_sonArr;
-    NSMutableArray *_friendArr;
-    NSMutableArray *_doctorArr;
+    NSMutableArray *_groupArray;
+  
     NSInteger *groupcount;
     
     NSString *groupID;
@@ -32,29 +29,15 @@ static NSString * const reuseIdentifier = @"mycell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    if (!_groupArr) {
-        _groupArr = [[NSMutableArray alloc]init];
+    if (!_groupArray) {
+        _groupArray = [[NSMutableArray alloc]init];
+        [_groupArray addObject:@"配偶者"];
+        [_groupArray addObject:@"息子"];
+        [_groupArray addObject:@"娘"];
+        [_groupArray addObject:@"親友"];
+        [[NSUserDefaults standardUserDefaults]setObject:_groupArray forKey:@"group"];
     }
-    [_groupArr addObject:@"配偶者"];
-    [_groupArr addObject:@"息子"];
-    [_groupArr addObject:@"娘"];
-    [_groupArr addObject:@"親友"];
     
-    if (!_wifeArr) {
-        _wifeArr = [[NSMutableArray alloc]init];
-    }
-    if (!_daughterArr) {
-        _daughterArr =[[NSMutableArray alloc]init];
-    }
-    if (!_sonArr) {
-        _sonArr =[[NSMutableArray alloc]init];
-    }
-    if (!_friendArr) {
-        _friendArr =[[NSMutableArray alloc]init];
-    }
-    if (!_doctorArr) {
-        _doctorArr =[[NSMutableArray alloc]init];
-    }
     // Register cell classes
     //[self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
     
@@ -100,59 +83,64 @@ static NSString * const reuseIdentifier = @"mycell";
 #pragma mark <UICollectionViewDataSource>
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-    return 3;
+    return 1;
 }
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
 
-    return 2;
+    return _groupArray.count +1;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    ContactCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
-    if (indexPath.section == 0 && indexPath.row == 0) {
-        cell.label.text = @"配偶者";
-        cell.imageview.image = [UIImage imageNamed:@"spouse.png"];
-        groupID = @"配偶者";
-    }
-    else if (indexPath.section == 0 && indexPath.row == 1) {
-        cell.label.text = @"息子";
-        cell.imageview.image = [UIImage imageNamed:@"son.png"];
-        groupID = @"息子";
-    }
-    else if (indexPath.section == 1 && indexPath.row == 0) {
-        cell.label.text = @"娘";
-        cell.imageview.image = [UIImage imageNamed:@"daughter.png"];
-        groupID = @"娘";
-    }
-    else if (indexPath.section == 1 && indexPath.row == 1) {
-        cell.label.text = @"親友";
-        cell.imageview.image = [UIImage imageNamed:@"friend.png"];
-        groupID = @"親友";
-    }
-    else{
+    if ((indexPath.section *2 + indexPath.row) == _groupArray.count) {
+        
+        ContactCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+        cell.imageview.image =[UIImage imageNamed:@"addgroup.png"];
         cell.label.text = @"追加";
-        cell.imageview.image = [UIImage imageNamed:@"addgroup.png"];
+        return cell;
+    }
+    ContactCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    cell.label.text = [_groupArray objectAtIndex:(indexPath.section*2 + indexPath.row )];
+    if ([cell.label.text isEqualToString:@"配偶者"]) {
+        cell.imageview.image = [UIImage imageNamed:@"spouse.png"];
+    }
+    if ([cell.label.text isEqualToString:@"息子"]) {
+        cell.imageview.image = [UIImage imageNamed:@"son.png"];
+    }
+    if ([cell.label.text isEqualToString:@"娘"]) {
+        cell.imageview.image = [UIImage imageNamed:@"daughter.png"];
+    }
+    if ([cell.label.text isEqualToString:@"親友"]) {
+        cell.imageview.image = [UIImage imageNamed:@"friend.png"];
     }
     
     return cell;
 }
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    if (indexPath.section == 3) {
-    [self performSegueWithIdentifier:@"gotoAddGroupVC" sender:self];
+    if (_groupArray.count == (indexPath.section *2 + indexPath.row)){
+        groupID = @"";
+        [self performSegueWithIdentifier:@"gotoAddGroupVC" sender:self];
+        
+    }else{
+        groupID = [_groupArray objectAtIndex:(indexPath.section*2 + indexPath.row)];
+        [self performSegueWithIdentifier:@"gotoContactTVC" sender:self];
     }
-    else{
-    [self performSegueWithIdentifier:@"gotoContactTVC" sender:self];
-    }
+
+
     
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    ContactTableViewController *contactTVC = segue.destinationViewController;
-    contactTVC.groupid = groupID;
+    if ([segue.identifier isEqualToString:@"gotoContactTVC"]) {
+        ContactTableViewController *contactTVC = segue.destinationViewController;
+        contactTVC.groupid = groupID;
+    }else if ([segue.identifier isEqualToString:@"gotoAddGroupVC"]){
+        AddGroupTableViewController *addTVC = segue.destinationViewController;
+    }
+
 }
 
 

@@ -59,6 +59,21 @@
 		E57B2BEE1C0FDB5100EF2948 /* friend.png in Resources */ = {isa = PBXBuildFile; fileRef = E57B2BED1C0FDB5100EF2948 /* friend.png */; };
 		E57B2BF11C0FE04700EF2948 /* EditContactTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E57B2BF01C0FE04700EF2948 /* EditContactTableViewController.m */; };
 		E57B2BF41C0FE08F00EF2948 /* ContactModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E57B2BF31C0FE08F00EF2948 /* ContactModel.m */; };
+		E57B2C001C101D8800EF2948 /* item-0.png in Resources */ = {isa = PBXBuildFile; fileRef = E57B2BF61C101D8800EF2948 /* item-0.png */; };
+		E57B2C011C101D8800EF2948 /* item-1.png in Resources */ = {isa = PBXBuildFile; fileRef = E57B2BF71C101D8800EF2948 /* item-1.png */; };
+		E57B2C021C101D8800EF2948 /* item-8.png in Resources */ = {isa = PBXBuildFile; fileRef = E57B2BF81C101D8800EF2948 /* item-8.png */; };
+		E57B2C031C101D8800EF2948 /* item-2.png in Resources */ = {isa = PBXBuildFile; fileRef = E57B2BF91C101D8800EF2948 /* item-2.png */; };
+		E57B2C041C101D8800EF2948 /* item-3.png in Resources */ = {isa = PBXBuildFile; fileRef = E57B2BFA1C101D8800EF2948 /* item-3.png */; };
+		E57B2C061C101D8800EF2948 /* item-9.png in Resources */ = {isa = PBXBuildFile; fileRef = E57B2BFC1C101D8800EF2948 /* item-9.png */; };
+		E57B2C071C101D8800EF2948 /* item-7.png in Resources */ = {isa = PBXBuildFile; fileRef = E57B2BFD1C101D8800EF2948 /* item-7.png */; };
+		E57B2C0C1C101E3900EF2948 /* item-6.png in Resources */ = {isa = PBXBuildFile; fileRef = E57B2C0A1C101E3900EF2948 /* item-6.png */; };
+		E57B2C0D1C101E3900EF2948 /* item-4.png in Resources */ = {isa = PBXBuildFile; fileRef = E57B2C0B1C101E3900EF2948 /* item-4.png */; };
+		E57B2C101C101EC600EF2948 /* PersonCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E57B2C0F1C101EC600EF2948 /* PersonCollectionViewCell.m */; };
+		E57B2C131C101F2200EF2948 /* PersonImageCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E57B2C121C101F2200EF2948 /* PersonImageCollectionViewController.m */; };
+		E57B2C171C10218300EF2948 /* item-5.png in Resources */ = {isa = PBXBuildFile; fileRef = E57B2C161C10218300EF2948 /* item-5.png */; };
+		E57B2C191C1021A500EF2948 /* item-10.png in Resources */ = {isa = PBXBuildFile; fileRef = E57B2C181C1021A500EF2948 /* item-10.png */; };
+		E57B2C1B1C1021E700EF2948 /* item-11.png in Resources */ = {isa = PBXBuildFile; fileRef = E57B2C1A1C1021E700EF2948 /* item-11.png */; };
+		E57B2C1D1C102B7900EF2948 /* addimage.png in Resources */ = {isa = PBXBuildFile; fileRef = E57B2C1C1C102B7900EF2948 /* addimage.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -161,6 +176,23 @@
 		E57B2BF01C0FE04700EF2948 /* EditContactTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditContactTableViewController.m; sourceTree = "<group>"; };
 		E57B2BF21C0FE08F00EF2948 /* ContactModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactModel.h; sourceTree = "<group>"; };
 		E57B2BF31C0FE08F00EF2948 /* ContactModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactModel.m; sourceTree = "<group>"; };
+		E57B2BF61C101D8800EF2948 /* item-0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "item-0.png"; sourceTree = "<group>"; };
+		E57B2BF71C101D8800EF2948 /* item-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "item-1.png"; sourceTree = "<group>"; };
+		E57B2BF81C101D8800EF2948 /* item-8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "item-8.png"; sourceTree = "<group>"; };
+		E57B2BF91C101D8800EF2948 /* item-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "item-2.png"; sourceTree = "<group>"; };
+		E57B2BFA1C101D8800EF2948 /* item-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "item-3.png"; sourceTree = "<group>"; };
+		E57B2BFC1C101D8800EF2948 /* item-9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "item-9.png"; sourceTree = "<group>"; };
+		E57B2BFD1C101D8800EF2948 /* item-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "item-7.png"; sourceTree = "<group>"; };
+		E57B2C0A1C101E3900EF2948 /* item-6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "item-6.png"; sourceTree = "<group>"; };
+		E57B2C0B1C101E3900EF2948 /* item-4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "item-4.png"; sourceTree = "<group>"; };
+		E57B2C0E1C101EC600EF2948 /* PersonCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonCollectionViewCell.h; sourceTree = "<group>"; };
+		E57B2C0F1C101EC600EF2948 /* PersonCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonCollectionViewCell.m; sourceTree = "<group>"; };
+		E57B2C111C101F2200EF2948 /* PersonImageCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonImageCollectionViewController.h; sourceTree = "<group>"; };
+		E57B2C121C101F2200EF2948 /* PersonImageCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonImageCollectionViewController.m; sourceTree = "<group>"; };
+		E57B2C161C10218300EF2948 /* item-5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "item-5.png"; sourceTree = "<group>"; };
+		E57B2C181C1021A500EF2948 /* item-10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "item-10.png"; sourceTree = "<group>"; };
+		E57B2C1A1C1021E700EF2948 /* item-11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "item-11.png"; sourceTree = "<group>"; };
+		E57B2C1C1C102B7900EF2948 /* addimage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = addimage.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -239,6 +271,7 @@
 			isa = PBXGroup;
 			children = (
 				E55914B71C0EC92E00CE9102 /* main.m */,
+				E57B2BF51C101D8800EF2948 /* person-image */,
 				E559150B1C0ED99000CE9102 /* contactlist-0.png */,
 				E559150D1C0ED99400CE9102 /* emergency-0.png */,
 				E559150F1C0ED99700CE9102 /* worry-0.png */,
@@ -261,6 +294,7 @@
 				E57B2BE91C0FD49F00EF2948 /* daughter.png */,
 				E57B2BEB1C0FD57B00EF2948 /* addgroup.png */,
 				E57B2BED1C0FDB5100EF2948 /* friend.png */,
+				E57B2C1C1C102B7900EF2948 /* addimage.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -290,6 +324,8 @@
 				E559151A1C0EE45800CE9102 /* ContactCollectionViewCell.m */,
 				E559151C1C0EE47900CE9102 /* SettingCollectionViewCell.h */,
 				E559151D1C0EE47900CE9102 /* SettingCollectionViewCell.m */,
+				E57B2C0E1C101EC600EF2948 /* PersonCollectionViewCell.h */,
+				E57B2C0F1C101EC600EF2948 /* PersonCollectionViewCell.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -303,6 +339,8 @@
 				E57B2BF01C0FE04700EF2948 /* EditContactTableViewController.m */,
 				E57B2BE21C0FD20D00EF2948 /* AddGroupTableViewController.h */,
 				E57B2BE31C0FD20D00EF2948 /* AddGroupTableViewController.m */,
+				E57B2C111C101F2200EF2948 /* PersonImageCollectionViewController.h */,
+				E57B2C121C101F2200EF2948 /* PersonImageCollectionViewController.m */,
 				E55915371C0EF04900CE9102 /* SettingTableViewController.h */,
 				E55915381C0EF04900CE9102 /* SettingTableViewController.m */,
 				E55915341C0EEEA000CE9102 /* ProfileTableViewController.h */,
@@ -338,6 +376,25 @@
 				E55915501C0EF4AE00CE9102 /* KusuriModel.m */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		E57B2BF51C101D8800EF2948 /* person-image */ = {
+			isa = PBXGroup;
+			children = (
+				E57B2BF61C101D8800EF2948 /* item-0.png */,
+				E57B2BF71C101D8800EF2948 /* item-1.png */,
+				E57B2BF81C101D8800EF2948 /* item-8.png */,
+				E57B2BF91C101D8800EF2948 /* item-2.png */,
+				E57B2BFA1C101D8800EF2948 /* item-3.png */,
+				E57B2BFC1C101D8800EF2948 /* item-9.png */,
+				E57B2BFD1C101D8800EF2948 /* item-7.png */,
+				E57B2C161C10218300EF2948 /* item-5.png */,
+				E57B2C0A1C101E3900EF2948 /* item-6.png */,
+				E57B2C0B1C101E3900EF2948 /* item-4.png */,
+				E57B2C181C1021A500EF2948 /* item-10.png */,
+				E57B2C1A1C1021E700EF2948 /* item-11.png */,
+			);
+			path = "person-image";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -444,18 +501,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				E559152C1C0EECF700CE9102 /* userprofile.png in Resources */,
+				E57B2C071C101D8800EF2948 /* item-7.png in Resources */,
 				E55915241C0EE6CE00CE9102 /* homeimage.png in Resources */,
+				E57B2C171C10218300EF2948 /* item-5.png in Resources */,
+				E57B2C021C101D8800EF2948 /* item-8.png in Resources */,
 				E57B2BEA1C0FD49F00EF2948 /* daughter.png in Resources */,
 				E55914C61C0EC92E00CE9102 /* LaunchScreen.storyboard in Resources */,
+				E57B2C191C1021A500EF2948 /* item-10.png in Resources */,
 				E57B2BEC1C0FD57B00EF2948 /* addgroup.png in Resources */,
 				E55915081C0ED88300CE9102 /* worry.png in Resources */,
 				E559150A1C0ED88600CE9102 /* setting.png in Resources */,
+				E57B2C0C1C101E3900EF2948 /* item-6.png in Resources */,
 				E55915171C0EDD5E00CE9102 /* worrybtn.png in Resources */,
+				E57B2C061C101D8800EF2948 /* item-9.png in Resources */,
 				E55915151C0EDD5B00CE9102 /* emergencybtn.png in Resources */,
 				E57B2BE81C0FD46900EF2948 /* son.png in Resources */,
 				E55914C31C0EC92E00CE9102 /* Assets.xcassets in Resources */,
 				E55915041C0ED73A00CE9102 /* contactlist.png in Resources */,
 				E55915301C0EED3200CE9102 /* personaldata.png in Resources */,
+				E57B2C011C101D8800EF2948 /* item-1.png in Resources */,
 				E55915261C0EEB9200CE9102 /* plusimage.png in Resources */,
 				E55915101C0ED99700CE9102 /* worry-0.png in Resources */,
 				E55915221C0EE6CA00CE9102 /* lightimage.png in Resources */,
@@ -463,7 +527,13 @@
 				E55915201C0EE65000CE9102 /* settingimage.png in Resources */,
 				E559152E1C0EED0200CE9102 /* takelist.png in Resources */,
 				E55915061C0ED87F00CE9102 /* emergency.png in Resources */,
+				E57B2C031C101D8800EF2948 /* item-2.png in Resources */,
+				E57B2C041C101D8800EF2948 /* item-3.png in Resources */,
+				E57B2C001C101D8800EF2948 /* item-0.png in Resources */,
+				E57B2C1D1C102B7900EF2948 /* addimage.png in Resources */,
+				E57B2C0D1C101E3900EF2948 /* item-4.png in Resources */,
 				E559150C1C0ED99000CE9102 /* contactlist-0.png in Resources */,
+				E57B2C1B1C1021E700EF2948 /* item-11.png in Resources */,
 				E55915121C0ED99B00CE9102 /* setting-0.png in Resources */,
 				E559150E1C0ED99400CE9102 /* emergency-0.png in Resources */,
 				E55914C11C0EC92E00CE9102 /* Main.storyboard in Resources */,
@@ -493,6 +563,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E55915331C0EEE6B00CE9102 /* EditProfileTableViewController.m in Sources */,
+				E57B2C131C101F2200EF2948 /* PersonImageCollectionViewController.m in Sources */,
 				E559151E1C0EE47900CE9102 /* SettingCollectionViewCell.m in Sources */,
 				E55915431C0EF21200CE9102 /* PersonalDataTableViewController.m in Sources */,
 				E55915021C0ED54C00CE9102 /* TabBarController.m in Sources */,
@@ -503,6 +574,7 @@
 				E57B2BF11C0FE04700EF2948 /* EditContactTableViewController.m in Sources */,
 				E55915511C0EF4AE00CE9102 /* KennkoModel.m in Sources */,
 				E559154B1C0EF23700CE9102 /* EditKennkoTableViewController.m in Sources */,
+				E57B2C101C101EC600EF2948 /* PersonCollectionViewCell.m in Sources */,
 				E559153D1C0EF07400CE9102 /* UserProfileModel.m in Sources */,
 				E55915391C0EF04900CE9102 /* SettingTableViewController.m in Sources */,
 				E559154C1C0EF23700CE9102 /* EditKusiriTableViewController.m in Sources */,
