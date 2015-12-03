@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface ContactCollectionViewCell : UICollectionViewCell
-
+@property (weak, nonatomic) IBOutlet UIImageView *image;
+@property (weak, nonatomic) IBOutlet UILabel *name;
 @end

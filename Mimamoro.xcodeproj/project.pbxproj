@@ -7,6 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1839A5C41C0FDD38008B4ADA /* ContactTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1839A5C31C0FDD38008B4ADA /* ContactTableViewController.m */; };
+		1839A5C71C0FDD93008B4ADA /* EditContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1839A5C61C0FDD93008B4ADA /* EditContactViewController.m */; };
+		1839A5CA1C0FDDA8008B4ADA /* contactAddressModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1839A5C91C0FDDA8008B4ADA /* contactAddressModel.m */; };
+		1839A5D01C0FDEA6008B4ADA /* ContactsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1839A5CF1C0FDEA6008B4ADA /* ContactsUI.framework */; };
+		1839A5D21C0FDEB2008B4ADA /* Contacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1839A5D11C0FDEB2008B4ADA /* Contacts.framework */; };
+		1839A5D71C0FE4BE008B4ADA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1839A5D61C0FE4BE008B4ADA /* UIKit.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		1839A5D91C0FE4DA008B4ADA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1839A5D81C0FE4DA008B4ADA /* CoreGraphics.framework */; };
+		1839A5E81C0FFD5A008B4ADA /* 医者.png in Resources */ = {isa = PBXBuildFile; fileRef = 1839A5DD1C0FFD5A008B4ADA /* 医者.png */; };
+		1839A5E91C0FFD5A008B4ADA /* 孫娘.png in Resources */ = {isa = PBXBuildFile; fileRef = 1839A5DE1C0FFD5A008B4ADA /* 孫娘.png */; };
+		1839A5EA1C0FFD5A008B4ADA /* 妻.png in Resources */ = {isa = PBXBuildFile; fileRef = 1839A5DF1C0FFD5A008B4ADA /* 妻.png */; };
+		1839A5EB1C0FFD5A008B4ADA /* 夫.png in Resources */ = {isa = PBXBuildFile; fileRef = 1839A5E01C0FFD5A008B4ADA /* 夫.png */; };
+		1839A5EC1C0FFD5A008B4ADA /* 看護婦.png in Resources */ = {isa = PBXBuildFile; fileRef = 1839A5E11C0FFD5A008B4ADA /* 看護婦.png */; };
+		1839A5ED1C0FFD5A008B4ADA /* 親友.png in Resources */ = {isa = PBXBuildFile; fileRef = 1839A5E21C0FFD5A008B4ADA /* 親友.png */; };
+		1839A5EE1C0FFD5A008B4ADA /* 孫.png in Resources */ = {isa = PBXBuildFile; fileRef = 1839A5E31C0FFD5A008B4ADA /* 孫.png */; };
+		1839A5EF1C0FFD5A008B4ADA /* 息子.png in Resources */ = {isa = PBXBuildFile; fileRef = 1839A5E41C0FFD5A008B4ADA /* 息子.png */; };
+		1839A5F01C0FFD5A008B4ADA /* 嫁.png in Resources */ = {isa = PBXBuildFile; fileRef = 1839A5E51C0FFD5A008B4ADA /* 嫁.png */; };
+		1839A5F11C0FFD5A008B4ADA /* 娘.png in Resources */ = {isa = PBXBuildFile; fileRef = 1839A5E61C0FFD5A008B4ADA /* 娘.png */; };
+		1839A5F21C0FFD5A008B4ADA /* 婿.png in Resources */ = {isa = PBXBuildFile; fileRef = 1839A5E71C0FFD5A008B4ADA /* 婿.png */; };
 		E55914B81C0EC92E00CE9102 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E55914B71C0EC92E00CE9102 /* main.m */; };
 		E55914BB1C0EC92E00CE9102 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E55914BA1C0EC92E00CE9102 /* AppDelegate.m */; };
 		E55914C11C0EC92E00CE9102 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E55914BF1C0EC92E00CE9102 /* Main.storyboard */; };
@@ -70,6 +88,27 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1839A5C21C0FDD38008B4ADA /* ContactTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactTableViewController.h; sourceTree = "<group>"; };
+		1839A5C31C0FDD38008B4ADA /* ContactTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactTableViewController.m; sourceTree = "<group>"; };
+		1839A5C51C0FDD93008B4ADA /* EditContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditContactViewController.h; sourceTree = "<group>"; };
+		1839A5C61C0FDD93008B4ADA /* EditContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditContactViewController.m; sourceTree = "<group>"; };
+		1839A5C81C0FDDA8008B4ADA /* contactAddressModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = contactAddressModel.h; sourceTree = "<group>"; };
+		1839A5C91C0FDDA8008B4ADA /* contactAddressModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = contactAddressModel.m; sourceTree = "<group>"; };
+		1839A5CF1C0FDEA6008B4ADA /* ContactsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ContactsUI.framework; path = System/Library/Frameworks/ContactsUI.framework; sourceTree = SDKROOT; };
+		1839A5D11C0FDEB2008B4ADA /* Contacts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Contacts.framework; path = System/Library/Frameworks/Contacts.framework; sourceTree = SDKROOT; };
+		1839A5D61C0FE4BE008B4ADA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		1839A5D81C0FE4DA008B4ADA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		1839A5DD1C0FFD5A008B4ADA /* 医者.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "医者.png"; sourceTree = "<group>"; };
+		1839A5DE1C0FFD5A008B4ADA /* 孫娘.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "孫娘.png"; sourceTree = "<group>"; };
+		1839A5DF1C0FFD5A008B4ADA /* 妻.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "妻.png"; sourceTree = "<group>"; };
+		1839A5E01C0FFD5A008B4ADA /* 夫.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "夫.png"; sourceTree = "<group>"; };
+		1839A5E11C0FFD5A008B4ADA /* 看護婦.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "看護婦.png"; sourceTree = "<group>"; };
+		1839A5E21C0FFD5A008B4ADA /* 親友.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "親友.png"; sourceTree = "<group>"; };
+		1839A5E31C0FFD5A008B4ADA /* 孫.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "孫.png"; sourceTree = "<group>"; };
+		1839A5E41C0FFD5A008B4ADA /* 息子.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "息子.png"; sourceTree = "<group>"; };
+		1839A5E51C0FFD5A008B4ADA /* 嫁.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "嫁.png"; sourceTree = "<group>"; };
+		1839A5E61C0FFD5A008B4ADA /* 娘.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "娘.png"; sourceTree = "<group>"; };
+		1839A5E71C0FFD5A008B4ADA /* 婿.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "婿.png"; sourceTree = "<group>"; };
 		E55914B31C0EC92E00CE9102 /* Mimamori.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mimamori.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E55914B71C0EC92E00CE9102 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E55914B91C0EC92E00CE9102 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -146,6 +185,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1839A5D91C0FE4DA008B4ADA /* CoreGraphics.framework in Frameworks */,
+				1839A5D71C0FE4BE008B4ADA /* UIKit.framework in Frameworks */,
+				1839A5D21C0FDEB2008B4ADA /* Contacts.framework in Frameworks */,
+				1839A5D01C0FDEA6008B4ADA /* ContactsUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,6 +212,10 @@
 		E55914AA1C0EC92E00CE9102 = {
 			isa = PBXGroup;
 			children = (
+				1839A5D81C0FE4DA008B4ADA /* CoreGraphics.framework */,
+				1839A5D61C0FE4BE008B4ADA /* UIKit.framework */,
+				1839A5D11C0FDEB2008B4ADA /* Contacts.framework */,
+				1839A5CF1C0FDEA6008B4ADA /* ContactsUI.framework */,
 				E55914B51C0EC92E00CE9102 /* Mimamoro */,
 				E55914CF1C0EC92E00CE9102 /* MimamoroTests */,
 				E55914DA1C0EC92E00CE9102 /* MimamoroUITests */,
@@ -198,6 +245,8 @@
 				E55915011C0ED54C00CE9102 /* TabBarController.m */,
 				E55914FD1C0ED0DA00CE9102 /* ContactCollectionViewController.h */,
 				E55914FE1C0ED0DA00CE9102 /* ContactCollectionViewController.m */,
+				1839A5C21C0FDD38008B4ADA /* ContactTableViewController.h */,
+				1839A5C31C0FDD38008B4ADA /* ContactTableViewController.m */,
 				E55914F41C0ED0A300CE9102 /* EmergencyViewController.h */,
 				E55914F51C0ED0A300CE9102 /* EmergencyViewController.m */,
 				E55914F71C0ED0B000CE9102 /* WorryViewController.h */,
@@ -234,6 +283,17 @@
 				E559152B1C0EECF700CE9102 /* userprofile.png */,
 				E559152D1C0EED0200CE9102 /* takelist.png */,
 				E559152F1C0EED3200CE9102 /* personaldata.png */,
+				1839A5DD1C0FFD5A008B4ADA /* 医者.png */,
+				1839A5DE1C0FFD5A008B4ADA /* 孫娘.png */,
+				1839A5DF1C0FFD5A008B4ADA /* 妻.png */,
+				1839A5E01C0FFD5A008B4ADA /* 夫.png */,
+				1839A5E11C0FFD5A008B4ADA /* 看護婦.png */,
+				1839A5E21C0FFD5A008B4ADA /* 親友.png */,
+				1839A5E31C0FFD5A008B4ADA /* 孫.png */,
+				1839A5E41C0FFD5A008B4ADA /* 息子.png */,
+				1839A5E51C0FFD5A008B4ADA /* 嫁.png */,
+				1839A5E61C0FFD5A008B4ADA /* 娘.png */,
+				1839A5E71C0FFD5A008B4ADA /* 婿.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -286,6 +346,8 @@
 				E55915481C0EF23700CE9102 /* EditKennkoTableViewController.m */,
 				E55915491C0EF23700CE9102 /* EditKusiriTableViewController.h */,
 				E559154A1C0EF23700CE9102 /* EditKusiriTableViewController.m */,
+				1839A5C51C0FDD93008B4ADA /* EditContactViewController.h */,
+				1839A5C61C0FDD93008B4ADA /* EditContactViewController.m */,
 			);
 			name = SubViewControllers;
 			sourceTree = "<group>";
@@ -301,6 +363,8 @@
 				E559154E1C0EF4AE00CE9102 /* KennkoModel.m */,
 				E559154F1C0EF4AE00CE9102 /* KusuriModel.h */,
 				E55915501C0EF4AE00CE9102 /* KusuriModel.m */,
+				1839A5C81C0FDDA8008B4ADA /* contactAddressModel.h */,
+				1839A5C91C0FDDA8008B4ADA /* contactAddressModel.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -408,24 +472,35 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1839A5ED1C0FFD5A008B4ADA /* 親友.png in Resources */,
 				E559152C1C0EECF700CE9102 /* userprofile.png in Resources */,
 				E55915241C0EE6CE00CE9102 /* homeimage.png in Resources */,
+				1839A5F01C0FFD5A008B4ADA /* 嫁.png in Resources */,
 				E55914C61C0EC92E00CE9102 /* LaunchScreen.storyboard in Resources */,
+				1839A5EB1C0FFD5A008B4ADA /* 夫.png in Resources */,
 				E55915081C0ED88300CE9102 /* worry.png in Resources */,
+				1839A5E91C0FFD5A008B4ADA /* 孫娘.png in Resources */,
 				E559150A1C0ED88600CE9102 /* setting.png in Resources */,
+				1839A5F21C0FFD5A008B4ADA /* 婿.png in Resources */,
 				E55915171C0EDD5E00CE9102 /* worrybtn.png in Resources */,
 				E55915151C0EDD5B00CE9102 /* emergencybtn.png in Resources */,
 				E55914C31C0EC92E00CE9102 /* Assets.xcassets in Resources */,
 				E55915041C0ED73A00CE9102 /* contactlist.png in Resources */,
 				E55915301C0EED3200CE9102 /* personaldata.png in Resources */,
 				E55915261C0EEB9200CE9102 /* plusimage.png in Resources */,
+				1839A5EC1C0FFD5A008B4ADA /* 看護婦.png in Resources */,
 				E55915101C0ED99700CE9102 /* worry-0.png in Resources */,
+				1839A5EF1C0FFD5A008B4ADA /* 息子.png in Resources */,
+				1839A5F11C0FFD5A008B4ADA /* 娘.png in Resources */,
 				E55915221C0EE6CA00CE9102 /* lightimage.png in Resources */,
 				E55915201C0EE65000CE9102 /* settingimage.png in Resources */,
 				E559152E1C0EED0200CE9102 /* takelist.png in Resources */,
 				E55915061C0ED87F00CE9102 /* emergency.png in Resources */,
+				1839A5E81C0FFD5A008B4ADA /* 医者.png in Resources */,
 				E559150C1C0ED99000CE9102 /* contactlist-0.png in Resources */,
 				E55915121C0ED99B00CE9102 /* setting-0.png in Resources */,
+				1839A5EA1C0FFD5A008B4ADA /* 妻.png in Resources */,
+				1839A5EE1C0FFD5A008B4ADA /* 孫.png in Resources */,
 				E559150E1C0ED99400CE9102 /* emergency-0.png in Resources */,
 				E55914C11C0EC92E00CE9102 /* Main.storyboard in Resources */,
 			);
@@ -453,9 +528,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				E55915331C0EEE6B00CE9102 /* EditProfileTableViewController.m in Sources */,
+				1839A5C71C0FDD93008B4ADA /* EditContactViewController.m in Sources */,
 				E559151E1C0EE47900CE9102 /* SettingCollectionViewCell.m in Sources */,
+				1839A5CA1C0FDDA8008B4ADA /* contactAddressModel.m in Sources */,
 				E55915431C0EF21200CE9102 /* PersonalDataTableViewController.m in Sources */,
 				E55915021C0ED54C00CE9102 /* TabBarController.m in Sources */,
+				1839A5C41C0FDD38008B4ADA /* ContactTableViewController.m in Sources */,
 				E55915461C0EF22400CE9102 /* EditListViewController.m in Sources */,
 				E55915401C0EF20B00CE9102 /* ListTableViewController.m in Sources */,
 				E55915361C0EEEA000CE9102 /* ProfileTableViewController.m in Sources */,
@@ -611,6 +689,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Mimamoro/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.totyu.Mimamori;
@@ -622,6 +704,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Mimamoro/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.totyu.Mimamori;
@@ -696,6 +782,7 @@
 				E55914E21C0EC92E00CE9102 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E55914E31C0EC92E00CE9102 /* Build configuration list for PBXNativeTarget "MimamoroTests" */ = {
 			isa = XCConfigurationList;
@@ -704,6 +791,7 @@
 				E55914E51C0EC92E00CE9102 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E55914E61C0EC92E00CE9102 /* Build configuration list for PBXNativeTarget "MimamoroUITests" */ = {
 			isa = XCConfigurationList;
@@ -712,6 +800,7 @@
 				E55914E81C0EC92E00CE9102 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
