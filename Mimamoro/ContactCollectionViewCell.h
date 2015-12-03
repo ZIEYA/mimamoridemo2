@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface ContactCollectionViewCell : UICollectionViewCell
+@property (strong, nonatomic) IBOutlet UIImageView *imageview;
+@property (strong, nonatomic) IBOutlet UILabel *label;
 
 @end
