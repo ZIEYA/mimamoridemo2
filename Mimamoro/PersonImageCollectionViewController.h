@@ -10,7 +10,7 @@
 
 @protocol imageDelegate <NSObject>
 
--(void)setSelectedImage:(UIImage*)image;
+-(void)setSelectedImage:(NSString*)imagename;
 
 @end
 

@@ -9,14 +9,12 @@
 #import "ContactCollectionViewController.h"
 #import "ContactCollectionViewCell.h"
 #import "ContactTableViewController.h"
-#import "AddGroupTableViewController.h"
+#import "GroupModel.h"
 
 @interface ContactCollectionViewController (){
     NSMutableDictionary *_contactDict;
+    NSMutableArray *_defaultGroupArray;
     NSMutableArray *_groupArray;
-  
-    NSInteger *groupcount;
-    
     NSString *groupID;
 }
 
@@ -29,45 +27,48 @@ static NSString * const reuseIdentifier = @"mycell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    if (!_groupArray) {
-        _groupArray = [[NSMutableArray alloc]init];
-        [_groupArray addObject:@"配偶者"];
-        [_groupArray addObject:@"息子"];
-        [_groupArray addObject:@"娘"];
-        [_groupArray addObject:@"親友"];
-        [[NSUserDefaults standardUserDefaults]setObject:_groupArray forKey:@"group"];
+    _groupArray = [[NSMutableArray alloc]init];
+    if (!_defaultGroupArray) {
+        _defaultGroupArray = [[NSMutableArray alloc]init];
+        //Setting default groups
+        NSDictionary *temp1 = [self addDefaultGroupName:@"配偶者" WithImage:@"spouse.png"];
+        NSDictionary *temp2 = [self addDefaultGroupName:@"息子" WithImage:@"son.png"];
+        NSDictionary *temp3 = [self addDefaultGroupName:@"娘" WithImage:@"daughter.png"];
+        NSDictionary *temp4 = [self addDefaultGroupName:@"親友" WithImage:@"friend.png"];
+        [_defaultGroupArray addObject:temp1];
+        [_defaultGroupArray addObject:temp2];
+        [_defaultGroupArray addObject:temp3];
+        [_defaultGroupArray addObject:temp4];
+
+        [[NSUserDefaults standardUserDefaults]setObject:_defaultGroupArray forKey:@"group"];
     }
-    
-    // Register cell classes
-    //[self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
-    
-    // Do any additional setup after loading the view.
 }
 
+
 -(void)viewWillAppear:(BOOL)animated{
-    
+    [self reloadGroups];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
--(void)reloadContactList{
-    NSDictionary *tempdict = [[NSUserDefaults standardUserDefaults]objectForKey:@"contactlist"];
-    _contactDict = [[NSMutableDictionary alloc]initWithDictionary:tempdict];
-    NSArray *keysArr = [_contactDict allKeys];
-    for (int i = 0; i<keysArr.count; i++) {
-        NSDictionary *tempDict = [_contactDict objectForKey:keysArr[i]];
-        //NSLog(@"tempdict:%@",tempDict);
-        NSString *type = [tempDict valueForKey:@"contacttype"];
-//        if ([type isEqualToString:@"0"]) {
-//            [_emergencyArr addObject:tempDict];
-//        }else if ([type isEqualToString:@"1"]){
-//            [_worryArr addObject:tempDict];
-//        }
-    }
+-(NSDictionary *)addDefaultGroupName:(NSString*)groupname WithImage:(NSString*)image{
+    NSMutableDictionary *temp = [[NSMutableDictionary alloc]initWithCapacity:0];
+    [temp setValue:groupname forKey:@"groupname"];
+    [temp setValue:image forKey:@"image"];
+    return temp;
+}
 
+-(void)reloadGroups{
+    [_groupArray removeAllObjects];
+    NSArray *temp = [[NSUserDefaults standardUserDefaults]objectForKey:@"group"];
+    for (NSDictionary *tmpdict in temp) {
+        GroupModel *model = [[GroupModel alloc]init];
+        model.groupname = [tmpdict valueForKey:@"groupname"];
+        model.groupimage = [tmpdict valueForKey:@"image"];
+        [_groupArray addObject:model];
+    }
 }
 
 /*
@@ -89,57 +90,33 @@ static NSString * const reuseIdentifier = @"mycell";
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
 
-    return _groupArray.count +1;
+    return _groupArray.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     
-    if ((indexPath.section *2 + indexPath.row) == _groupArray.count) {
-        
-        ContactCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
-        cell.imageview.image =[UIImage imageNamed:@"addgroup.png"];
-        cell.label.text = @"追加";
-        return cell;
-    }
     ContactCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
-    cell.label.text = [_groupArray objectAtIndex:(indexPath.section*2 + indexPath.row )];
-    if ([cell.label.text isEqualToString:@"配偶者"]) {
-        cell.imageview.image = [UIImage imageNamed:@"spouse.png"];
-    }
-    if ([cell.label.text isEqualToString:@"息子"]) {
-        cell.imageview.image = [UIImage imageNamed:@"son.png"];
-    }
-    if ([cell.label.text isEqualToString:@"娘"]) {
-        cell.imageview.image = [UIImage imageNamed:@"daughter.png"];
-    }
-    if ([cell.label.text isEqualToString:@"親友"]) {
-        cell.imageview.image = [UIImage imageNamed:@"friend.png"];
-    }
-    
+    GroupModel *model = [_groupArray objectAtIndex:indexPath.row];
+    cell.label.text = model.groupname;
+    cell.imageview.image = [UIImage imageNamed:model.groupimage];
+     
     return cell;
 }
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    if (_groupArray.count == (indexPath.section *2 + indexPath.row)){
-        groupID = @"";
-        [self performSegueWithIdentifier:@"gotoAddGroupVC" sender:self];
-        
-    }else{
-        groupID = [_groupArray objectAtIndex:(indexPath.section*2 + indexPath.row)];
-        [self performSegueWithIdentifier:@"gotoContactTVC" sender:self];
-    }
-
-
-    
+    GroupModel *model = [_groupArray objectAtIndex:indexPath.row];
+    groupID = model.groupname;
+    [self performSegueWithIdentifier:@"gotoContactTVC" sender:self];
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if ([segue.identifier isEqualToString:@"gotoContactTVC"]) {
         ContactTableViewController *contactTVC = segue.destinationViewController;
         contactTVC.groupid = groupID;
-    }else if ([segue.identifier isEqualToString:@"gotoAddGroupVC"]){
-        AddGroupTableViewController *addTVC = segue.destinationViewController;
     }
+//    else if ([segue.identifier isEqualToString:@"gotoAddGroupVC"]){
+//        AddGroupTableViewController *addTVC = segue.destinationViewController;
+//    }
 
 }
 

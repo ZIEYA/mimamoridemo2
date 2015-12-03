@@ -51,12 +51,7 @@
 		E55915521C0EF4AE00CE9102 /* KusuriModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E55915501C0EF4AE00CE9102 /* KusuriModel.m */; };
 		E55915551C0EF4B600CE9102 /* ListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E55915541C0EF4B600CE9102 /* ListModel.m */; };
 		E57B2BE11C0FCF0400EF2948 /* ContactTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E57B2BE01C0FCF0400EF2948 /* ContactTableViewController.m */; };
-		E57B2BE41C0FD20D00EF2948 /* AddGroupTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E57B2BE31C0FD20D00EF2948 /* AddGroupTableViewController.m */; };
-		E57B2BE61C0FD3CD00EF2948 /* spouse.png in Resources */ = {isa = PBXBuildFile; fileRef = E57B2BE51C0FD3CD00EF2948 /* spouse.png */; };
-		E57B2BE81C0FD46900EF2948 /* son.png in Resources */ = {isa = PBXBuildFile; fileRef = E57B2BE71C0FD46900EF2948 /* son.png */; };
-		E57B2BEA1C0FD49F00EF2948 /* daughter.png in Resources */ = {isa = PBXBuildFile; fileRef = E57B2BE91C0FD49F00EF2948 /* daughter.png */; };
 		E57B2BEC1C0FD57B00EF2948 /* addgroup.png in Resources */ = {isa = PBXBuildFile; fileRef = E57B2BEB1C0FD57B00EF2948 /* addgroup.png */; };
-		E57B2BEE1C0FDB5100EF2948 /* friend.png in Resources */ = {isa = PBXBuildFile; fileRef = E57B2BED1C0FDB5100EF2948 /* friend.png */; };
 		E57B2BF11C0FE04700EF2948 /* EditContactTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E57B2BF01C0FE04700EF2948 /* EditContactTableViewController.m */; };
 		E57B2BF41C0FE08F00EF2948 /* ContactModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E57B2BF31C0FE08F00EF2948 /* ContactModel.m */; };
 		E57B2C001C101D8800EF2948 /* item-0.png in Resources */ = {isa = PBXBuildFile; fileRef = E57B2BF61C101D8800EF2948 /* item-0.png */; };
@@ -74,6 +69,13 @@
 		E57B2C191C1021A500EF2948 /* item-10.png in Resources */ = {isa = PBXBuildFile; fileRef = E57B2C181C1021A500EF2948 /* item-10.png */; };
 		E57B2C1B1C1021E700EF2948 /* item-11.png in Resources */ = {isa = PBXBuildFile; fileRef = E57B2C1A1C1021E700EF2948 /* item-11.png */; };
 		E57B2C1D1C102B7900EF2948 /* addimage.png in Resources */ = {isa = PBXBuildFile; fileRef = E57B2C1C1C102B7900EF2948 /* addimage.png */; };
+		E57B2C201C10305700EF2948 /* GroupTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E57B2C1F1C10305700EF2948 /* GroupTableViewController.m */; };
+		E57B2C241C10370900EF2948 /* EditGroupTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E57B2C231C10370900EF2948 /* EditGroupTableViewController.m */; };
+		E57B2C271C103B3700EF2948 /* GroupModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E57B2C261C103B3700EF2948 /* GroupModel.m */; };
+		E57B2C291C103E4000EF2948 /* spouse.png in Resources */ = {isa = PBXBuildFile; fileRef = E57B2C281C103E4000EF2948 /* spouse.png */; };
+		E57B2C2B1C103E5700EF2948 /* son.png in Resources */ = {isa = PBXBuildFile; fileRef = E57B2C2A1C103E5700EF2948 /* son.png */; };
+		E57B2C2D1C103E5D00EF2948 /* daughter.png in Resources */ = {isa = PBXBuildFile; fileRef = E57B2C2C1C103E5D00EF2948 /* daughter.png */; };
+		E57B2C2F1C10482F00EF2948 /* friend.png in Resources */ = {isa = PBXBuildFile; fileRef = E57B2C2E1C10482F00EF2948 /* friend.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -165,13 +167,7 @@
 		E55915541C0EF4B600CE9102 /* ListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListModel.m; sourceTree = "<group>"; };
 		E57B2BDF1C0FCF0400EF2948 /* ContactTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactTableViewController.h; sourceTree = "<group>"; };
 		E57B2BE01C0FCF0400EF2948 /* ContactTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactTableViewController.m; sourceTree = "<group>"; };
-		E57B2BE21C0FD20D00EF2948 /* AddGroupTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddGroupTableViewController.h; sourceTree = "<group>"; };
-		E57B2BE31C0FD20D00EF2948 /* AddGroupTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddGroupTableViewController.m; sourceTree = "<group>"; };
-		E57B2BE51C0FD3CD00EF2948 /* spouse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spouse.png; sourceTree = "<group>"; };
-		E57B2BE71C0FD46900EF2948 /* son.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = son.png; sourceTree = "<group>"; };
-		E57B2BE91C0FD49F00EF2948 /* daughter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = daughter.png; sourceTree = "<group>"; };
 		E57B2BEB1C0FD57B00EF2948 /* addgroup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = addgroup.png; sourceTree = "<group>"; };
-		E57B2BED1C0FDB5100EF2948 /* friend.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = friend.png; sourceTree = "<group>"; };
 		E57B2BEF1C0FE04700EF2948 /* EditContactTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditContactTableViewController.h; sourceTree = "<group>"; };
 		E57B2BF01C0FE04700EF2948 /* EditContactTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditContactTableViewController.m; sourceTree = "<group>"; };
 		E57B2BF21C0FE08F00EF2948 /* ContactModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactModel.h; sourceTree = "<group>"; };
@@ -193,6 +189,16 @@
 		E57B2C181C1021A500EF2948 /* item-10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "item-10.png"; sourceTree = "<group>"; };
 		E57B2C1A1C1021E700EF2948 /* item-11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "item-11.png"; sourceTree = "<group>"; };
 		E57B2C1C1C102B7900EF2948 /* addimage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = addimage.png; sourceTree = "<group>"; };
+		E57B2C1E1C10305700EF2948 /* GroupTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupTableViewController.h; sourceTree = "<group>"; };
+		E57B2C1F1C10305700EF2948 /* GroupTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupTableViewController.m; sourceTree = "<group>"; };
+		E57B2C221C10370900EF2948 /* EditGroupTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditGroupTableViewController.h; sourceTree = "<group>"; };
+		E57B2C231C10370900EF2948 /* EditGroupTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditGroupTableViewController.m; sourceTree = "<group>"; };
+		E57B2C251C103B3700EF2948 /* GroupModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupModel.h; sourceTree = "<group>"; };
+		E57B2C261C103B3700EF2948 /* GroupModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupModel.m; sourceTree = "<group>"; };
+		E57B2C281C103E4000EF2948 /* spouse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spouse.png; sourceTree = "<group>"; };
+		E57B2C2A1C103E5700EF2948 /* son.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = son.png; sourceTree = "<group>"; };
+		E57B2C2C1C103E5D00EF2948 /* daughter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = daughter.png; sourceTree = "<group>"; };
+		E57B2C2E1C10482F00EF2948 /* friend.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = friend.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -289,11 +295,11 @@
 				E559152B1C0EECF700CE9102 /* userprofile.png */,
 				E559152D1C0EED0200CE9102 /* takelist.png */,
 				E559152F1C0EED3200CE9102 /* personaldata.png */,
-				E57B2BE51C0FD3CD00EF2948 /* spouse.png */,
-				E57B2BE71C0FD46900EF2948 /* son.png */,
-				E57B2BE91C0FD49F00EF2948 /* daughter.png */,
+				E57B2C281C103E4000EF2948 /* spouse.png */,
+				E57B2C2A1C103E5700EF2948 /* son.png */,
+				E57B2C2C1C103E5D00EF2948 /* daughter.png */,
 				E57B2BEB1C0FD57B00EF2948 /* addgroup.png */,
-				E57B2BED1C0FDB5100EF2948 /* friend.png */,
+				E57B2C2E1C10482F00EF2948 /* friend.png */,
 				E57B2C1C1C102B7900EF2948 /* addimage.png */,
 			);
 			name = "Supporting Files";
@@ -333,14 +339,11 @@
 		E55915271C0EEC2800CE9102 /* SubViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				E57B2C211C1036C500EF2948 /* GroupManageViewControllers */,
 				E57B2BDF1C0FCF0400EF2948 /* ContactTableViewController.h */,
 				E57B2BE01C0FCF0400EF2948 /* ContactTableViewController.m */,
 				E57B2BEF1C0FE04700EF2948 /* EditContactTableViewController.h */,
 				E57B2BF01C0FE04700EF2948 /* EditContactTableViewController.m */,
-				E57B2BE21C0FD20D00EF2948 /* AddGroupTableViewController.h */,
-				E57B2BE31C0FD20D00EF2948 /* AddGroupTableViewController.m */,
-				E57B2C111C101F2200EF2948 /* PersonImageCollectionViewController.h */,
-				E57B2C121C101F2200EF2948 /* PersonImageCollectionViewController.m */,
 				E55915371C0EF04900CE9102 /* SettingTableViewController.h */,
 				E55915381C0EF04900CE9102 /* SettingTableViewController.m */,
 				E55915341C0EEEA000CE9102 /* ProfileTableViewController.h */,
@@ -370,6 +373,8 @@
 				E57B2BF31C0FE08F00EF2948 /* ContactModel.m */,
 				E55915531C0EF4B600CE9102 /* ListModel.h */,
 				E55915541C0EF4B600CE9102 /* ListModel.m */,
+				E57B2C251C103B3700EF2948 /* GroupModel.h */,
+				E57B2C261C103B3700EF2948 /* GroupModel.m */,
 				E559154D1C0EF4AE00CE9102 /* KennkoModel.h */,
 				E559154E1C0EF4AE00CE9102 /* KennkoModel.m */,
 				E559154F1C0EF4AE00CE9102 /* KusuriModel.h */,
@@ -395,6 +400,19 @@
 				E57B2C1A1C1021E700EF2948 /* item-11.png */,
 			);
 			path = "person-image";
+			sourceTree = "<group>";
+		};
+		E57B2C211C1036C500EF2948 /* GroupManageViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E57B2C1E1C10305700EF2948 /* GroupTableViewController.h */,
+				E57B2C1F1C10305700EF2948 /* GroupTableViewController.m */,
+				E57B2C221C10370900EF2948 /* EditGroupTableViewController.h */,
+				E57B2C231C10370900EF2948 /* EditGroupTableViewController.m */,
+				E57B2C111C101F2200EF2948 /* PersonImageCollectionViewController.h */,
+				E57B2C121C101F2200EF2948 /* PersonImageCollectionViewController.m */,
+			);
+			name = GroupManageViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -503,19 +521,19 @@
 				E559152C1C0EECF700CE9102 /* userprofile.png in Resources */,
 				E57B2C071C101D8800EF2948 /* item-7.png in Resources */,
 				E55915241C0EE6CE00CE9102 /* homeimage.png in Resources */,
+				E57B2C2D1C103E5D00EF2948 /* daughter.png in Resources */,
 				E57B2C171C10218300EF2948 /* item-5.png in Resources */,
 				E57B2C021C101D8800EF2948 /* item-8.png in Resources */,
-				E57B2BEA1C0FD49F00EF2948 /* daughter.png in Resources */,
 				E55914C61C0EC92E00CE9102 /* LaunchScreen.storyboard in Resources */,
 				E57B2C191C1021A500EF2948 /* item-10.png in Resources */,
 				E57B2BEC1C0FD57B00EF2948 /* addgroup.png in Resources */,
 				E55915081C0ED88300CE9102 /* worry.png in Resources */,
 				E559150A1C0ED88600CE9102 /* setting.png in Resources */,
 				E57B2C0C1C101E3900EF2948 /* item-6.png in Resources */,
+				E57B2C291C103E4000EF2948 /* spouse.png in Resources */,
 				E55915171C0EDD5E00CE9102 /* worrybtn.png in Resources */,
 				E57B2C061C101D8800EF2948 /* item-9.png in Resources */,
 				E55915151C0EDD5B00CE9102 /* emergencybtn.png in Resources */,
-				E57B2BE81C0FD46900EF2948 /* son.png in Resources */,
 				E55914C31C0EC92E00CE9102 /* Assets.xcassets in Resources */,
 				E55915041C0ED73A00CE9102 /* contactlist.png in Resources */,
 				E55915301C0EED3200CE9102 /* personaldata.png in Resources */,
@@ -523,12 +541,13 @@
 				E55915261C0EEB9200CE9102 /* plusimage.png in Resources */,
 				E55915101C0ED99700CE9102 /* worry-0.png in Resources */,
 				E55915221C0EE6CA00CE9102 /* lightimage.png in Resources */,
-				E57B2BE61C0FD3CD00EF2948 /* spouse.png in Resources */,
 				E55915201C0EE65000CE9102 /* settingimage.png in Resources */,
 				E559152E1C0EED0200CE9102 /* takelist.png in Resources */,
+				E57B2C2B1C103E5700EF2948 /* son.png in Resources */,
 				E55915061C0ED87F00CE9102 /* emergency.png in Resources */,
 				E57B2C031C101D8800EF2948 /* item-2.png in Resources */,
 				E57B2C041C101D8800EF2948 /* item-3.png in Resources */,
+				E57B2C2F1C10482F00EF2948 /* friend.png in Resources */,
 				E57B2C001C101D8800EF2948 /* item-0.png in Resources */,
 				E57B2C1D1C102B7900EF2948 /* addimage.png in Resources */,
 				E57B2C0D1C101E3900EF2948 /* item-4.png in Resources */,
@@ -537,7 +556,6 @@
 				E55915121C0ED99B00CE9102 /* setting-0.png in Resources */,
 				E559150E1C0ED99400CE9102 /* emergency-0.png in Resources */,
 				E55914C11C0EC92E00CE9102 /* Main.storyboard in Resources */,
-				E57B2BEE1C0FDB5100EF2948 /* friend.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -567,6 +585,8 @@
 				E559151E1C0EE47900CE9102 /* SettingCollectionViewCell.m in Sources */,
 				E55915431C0EF21200CE9102 /* PersonalDataTableViewController.m in Sources */,
 				E55915021C0ED54C00CE9102 /* TabBarController.m in Sources */,
+				E57B2C201C10305700EF2948 /* GroupTableViewController.m in Sources */,
+				E57B2C271C103B3700EF2948 /* GroupModel.m in Sources */,
 				E57B2BE11C0FCF0400EF2948 /* ContactTableViewController.m in Sources */,
 				E55915461C0EF22400CE9102 /* EditListViewController.m in Sources */,
 				E55915401C0EF20B00CE9102 /* ListTableViewController.m in Sources */,
@@ -581,10 +601,10 @@
 				E57B2BF41C0FE08F00EF2948 /* ContactModel.m in Sources */,
 				E55915551C0EF4B600CE9102 /* ListModel.m in Sources */,
 				E559151B1C0EE45800CE9102 /* ContactCollectionViewCell.m in Sources */,
-				E57B2BE41C0FD20D00EF2948 /* AddGroupTableViewController.m in Sources */,
 				E55914BB1C0EC92E00CE9102 /* AppDelegate.m in Sources */,
 				E55914F61C0ED0A300CE9102 /* EmergencyViewController.m in Sources */,
 				E55914FC1C0ED0BD00CE9102 /* OtherCollectionViewController.m in Sources */,
+				E57B2C241C10370900EF2948 /* EditGroupTableViewController.m in Sources */,
 				E55915521C0EF4AE00CE9102 /* KusuriModel.m in Sources */,
 				E55914FF1C0ED0DA00CE9102 /* ContactCollectionViewController.m in Sources */,
 				E55914F91C0ED0B000CE9102 /* WorryViewController.m in Sources */,
