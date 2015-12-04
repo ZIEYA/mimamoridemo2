@@ -1,24 +1,28 @@
 //
-//  SettingTableViewController.m
-//  Mimamori
+//  AddContactTableViewController.m
+//  Mimamoro
 //
-//  Created by totyu1 on 2015/11/16.
+//  Created by totyu3 on 15/12/4.
 //  Copyright © 2015年 totyu1. All rights reserved.
 //
 
-#import "SettingTableViewController.h"
+#import "AddContactTableViewController.h"
 
-@interface SettingTableViewController ()
+@interface AddContactTableViewController ()
 
 @end
 
-@implementation SettingTableViewController
+@implementation AddContactTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    // Uncomment the following line to preserve selection between presentations.
+    // self.clearsSelectionOnViewWillAppear = NO;
+    
+    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -27,26 +31,14 @@
 
 #pragma mark - Table view data source
 
-//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-//
-//    return 0;
-//}
-//
-//- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-//
-//    return 0;
-//}
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+#warning Incomplete implementation, return the number of sections
+    return 0;
+}
 
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    if (indexPath.row == 0) {
-        [self performSegueWithIdentifier:@"gotoProfileVC" sender:self];
-    }else if (indexPath.row ==1){
-        [self performSegueWithIdentifier:@"gotoListVC" sender:self];
-    }else if (indexPath.row ==2){
-        [self performSegueWithIdentifier:@"gotoPersonaDataVC" sender:self];
-    }else if (indexPath.row ==3){
-        [self performSegueWithIdentifier:@"gotoContactTVC" sender:self];
-    }
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+#warning Incomplete implementation, return the number of rows
+    return 0;
 }
 
 /*

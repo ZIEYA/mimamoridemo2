@@ -1,24 +1,28 @@
 //
-//  SettingTableViewController.m
-//  Mimamori
+//  SeeContactTableViewController.m
+//  Mimamoro
 //
-//  Created by totyu1 on 2015/11/16.
+//  Created by totyu3 on 15/12/4.
 //  Copyright © 2015年 totyu1. All rights reserved.
 //
 
-#import "SettingTableViewController.h"
+#import "SeeContactTableViewController.h"
 
-@interface SettingTableViewController ()
+@interface SeeContactTableViewController ()
 
 @end
 
-@implementation SettingTableViewController
+@implementation SeeContactTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    // Uncomment the following line to preserve selection between presentations.
+    // self.clearsSelectionOnViewWillAppear = NO;
+    
+    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -27,37 +31,32 @@
 
 #pragma mark - Table view data source
 
-//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-//
-//    return 0;
-//}
-//
-//- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-//
-//    return 0;
-//}
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    if (indexPath.row == 0) {
-        [self performSegueWithIdentifier:@"gotoProfileVC" sender:self];
-    }else if (indexPath.row ==1){
-        [self performSegueWithIdentifier:@"gotoListVC" sender:self];
-    }else if (indexPath.row ==2){
-        [self performSegueWithIdentifier:@"gotoPersonaDataVC" sender:self];
-    }else if (indexPath.row ==3){
-        [self performSegueWithIdentifier:@"gotoContactTVC" sender:self];
-    }
+    return 1;
 }
 
-/*
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+
+  //  NSArray *na = self.seedata;
+    return self.seedata.count;
+}
+
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
+    static NSString *cellId = @"mycell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
+    }
+    NSDictionary *nameDic = self.seedata[indexPath.row];
+    NSString * nameStr = [nameDic valueForKey:@"name"];
+    cell.textLabel.text = nameStr;
     // Configure the cell...
     
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.

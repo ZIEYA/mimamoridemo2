@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EmergencyViewController : UIViewController
+@interface EmergencyViewController : UIViewController<UITextViewDelegate,UITableViewDataSource>
 
 @end

@@ -15,7 +15,6 @@
 @property (strong, nonatomic) IBOutlet UILabel *birthdayLabel;
 @property (strong, nonatomic) IBOutlet UILabel *addressLabel;
 @property (strong, nonatomic) IBOutlet UILabel *emailTextField;
-@property (strong, nonatomic) IBOutlet UILabel *passwordTextField;
 @property (strong, nonatomic) IBOutlet UILabel *hospitalLabel;
 @property (strong, nonatomic) IBOutlet UILabel *doctorLabel;
 @property(strong, nonatomic) NSMutableDictionary *userdefaultdict;
@@ -26,18 +25,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+
 }
 
 -(void)viewWillAppear:(BOOL)animated{
-    
-//    UserProfileModel *temp=[[NSUserDefaults standardUserDefaults]objectForKey:@"userprofilemodel"];
-//    _nameLabel.text = temp.name;
     
     if (!_userdefaultdict) {
         _userdefaultdict = [[NSMutableDictionary alloc]init];
