@@ -58,8 +58,6 @@
 		E57B2C011C101D8800EF2948 /* item-1.png in Resources */ = {isa = PBXBuildFile; fileRef = E57B2BF71C101D8800EF2948 /* item-1.png */; };
 		E57B2C021C101D8800EF2948 /* item-8.png in Resources */ = {isa = PBXBuildFile; fileRef = E57B2BF81C101D8800EF2948 /* item-8.png */; };
 		E57B2C031C101D8800EF2948 /* item-2.png in Resources */ = {isa = PBXBuildFile; fileRef = E57B2BF91C101D8800EF2948 /* item-2.png */; };
-		E57B2C041C101D8800EF2948 /* item-3.png in Resources */ = {isa = PBXBuildFile; fileRef = E57B2BFA1C101D8800EF2948 /* item-3.png */; };
-		E57B2C061C101D8800EF2948 /* item-9.png in Resources */ = {isa = PBXBuildFile; fileRef = E57B2BFC1C101D8800EF2948 /* item-9.png */; };
 		E57B2C071C101D8800EF2948 /* item-7.png in Resources */ = {isa = PBXBuildFile; fileRef = E57B2BFD1C101D8800EF2948 /* item-7.png */; };
 		E57B2C0C1C101E3900EF2948 /* item-6.png in Resources */ = {isa = PBXBuildFile; fileRef = E57B2C0A1C101E3900EF2948 /* item-6.png */; };
 		E57B2C0D1C101E3900EF2948 /* item-4.png in Resources */ = {isa = PBXBuildFile; fileRef = E57B2C0B1C101E3900EF2948 /* item-4.png */; };
@@ -80,6 +78,9 @@
 		E57B2C501C1174BC00EF2948 /* libMailCore-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E57B2C431C11741700EF2948 /* libMailCore-ios.a */; };
 		E57B2C521C1174C400EF2948 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E57B2C511C1174C400EF2948 /* CFNetwork.framework */; };
 		E57B2C541C1174CD00EF2948 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E57B2C531C1174CD00EF2948 /* Security.framework */; };
+		E57B2C641C11878800EF2948 /* item-3.png in Resources */ = {isa = PBXBuildFile; fileRef = E57B2C631C11878800EF2948 /* item-3.png */; };
+		E57B2C6D1C1187C700EF2948 /* item-9.png in Resources */ = {isa = PBXBuildFile; fileRef = E57B2C6C1C1187C700EF2948 /* item-9.png */; };
+		E57B2C711C11964400EF2948 /* PickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = E57B2C701C11964400EF2948 /* PickerView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -243,8 +244,6 @@
 		E57B2BF71C101D8800EF2948 /* item-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "item-1.png"; sourceTree = "<group>"; };
 		E57B2BF81C101D8800EF2948 /* item-8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "item-8.png"; sourceTree = "<group>"; };
 		E57B2BF91C101D8800EF2948 /* item-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "item-2.png"; sourceTree = "<group>"; };
-		E57B2BFA1C101D8800EF2948 /* item-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "item-3.png"; sourceTree = "<group>"; };
-		E57B2BFC1C101D8800EF2948 /* item-9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "item-9.png"; sourceTree = "<group>"; };
 		E57B2BFD1C101D8800EF2948 /* item-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "item-7.png"; sourceTree = "<group>"; };
 		E57B2C0A1C101E3900EF2948 /* item-6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "item-6.png"; sourceTree = "<group>"; };
 		E57B2C0B1C101E3900EF2948 /* item-4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "item-4.png"; sourceTree = "<group>"; };
@@ -271,6 +270,10 @@
 		E57B2C351C11741700EF2948 /* mailcore2.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = mailcore2.xcodeproj; path = "../../../../Downloads/mailcore2-master/build-mac/mailcore2.xcodeproj"; sourceTree = "<group>"; };
 		E57B2C511C1174C400EF2948 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		E57B2C531C1174CD00EF2948 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		E57B2C631C11878800EF2948 /* item-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "item-3.png"; sourceTree = "<group>"; };
+		E57B2C6C1C1187C700EF2948 /* item-9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "item-9.png"; sourceTree = "<group>"; };
+		E57B2C6F1C11964400EF2948 /* PickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickerView.h; sourceTree = "<group>"; };
+		E57B2C701C11964400EF2948 /* PickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickerView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -405,6 +408,8 @@
 		E55915181C0EE43400CE9102 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				E57B2C6F1C11964400EF2948 /* PickerView.h */,
+				E57B2C701C11964400EF2948 /* PickerView.m */,
 				E55915191C0EE45800CE9102 /* ContactCollectionViewCell.h */,
 				E559151A1C0EE45800CE9102 /* ContactCollectionViewCell.m */,
 				E559151C1C0EE47900CE9102 /* SettingCollectionViewCell.h */,
@@ -466,8 +471,8 @@
 				E57B2BF71C101D8800EF2948 /* item-1.png */,
 				E57B2BF81C101D8800EF2948 /* item-8.png */,
 				E57B2BF91C101D8800EF2948 /* item-2.png */,
-				E57B2BFA1C101D8800EF2948 /* item-3.png */,
-				E57B2BFC1C101D8800EF2948 /* item-9.png */,
+				E57B2C631C11878800EF2948 /* item-3.png */,
+				E57B2C6C1C1187C700EF2948 /* item-9.png */,
 				E57B2BFD1C101D8800EF2948 /* item-7.png */,
 				E57B2C161C10218300EF2948 /* item-5.png */,
 				E57B2C0A1C101E3900EF2948 /* item-6.png */,
@@ -701,6 +706,7 @@
 				E57B2C2D1C103E5D00EF2948 /* daughter.png in Resources */,
 				E57B2C171C10218300EF2948 /* item-5.png in Resources */,
 				E57B2C021C101D8800EF2948 /* item-8.png in Resources */,
+				E57B2C641C11878800EF2948 /* item-3.png in Resources */,
 				E55914C61C0EC92E00CE9102 /* LaunchScreen.storyboard in Resources */,
 				E57B2C191C1021A500EF2948 /* item-10.png in Resources */,
 				E57B2BEC1C0FD57B00EF2948 /* addgroup.png in Resources */,
@@ -709,7 +715,6 @@
 				E57B2C0C1C101E3900EF2948 /* item-6.png in Resources */,
 				E57B2C291C103E4000EF2948 /* spouse.png in Resources */,
 				E55915171C0EDD5E00CE9102 /* worrybtn.png in Resources */,
-				E57B2C061C101D8800EF2948 /* item-9.png in Resources */,
 				E55915151C0EDD5B00CE9102 /* emergencybtn.png in Resources */,
 				E55914C31C0EC92E00CE9102 /* Assets.xcassets in Resources */,
 				E55915041C0ED73A00CE9102 /* contactlist.png in Resources */,
@@ -723,10 +728,10 @@
 				E57B2C2B1C103E5700EF2948 /* son.png in Resources */,
 				E55915061C0ED87F00CE9102 /* emergency.png in Resources */,
 				E57B2C031C101D8800EF2948 /* item-2.png in Resources */,
-				E57B2C041C101D8800EF2948 /* item-3.png in Resources */,
 				E57B2C2F1C10482F00EF2948 /* friend.png in Resources */,
 				E57B2C001C101D8800EF2948 /* item-0.png in Resources */,
 				E57B2C1D1C102B7900EF2948 /* addimage.png in Resources */,
+				E57B2C6D1C1187C700EF2948 /* item-9.png in Resources */,
 				E57B2C0D1C101E3900EF2948 /* item-4.png in Resources */,
 				E559150C1C0ED99000CE9102 /* contactlist-0.png in Resources */,
 				E57B2C1B1C1021E700EF2948 /* item-11.png in Resources */,
@@ -757,6 +762,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E57B2C711C11964400EF2948 /* PickerView.m in Sources */,
 				E55915331C0EEE6B00CE9102 /* EditProfileTableViewController.m in Sources */,
 				E57B2C131C101F2200EF2948 /* PersonImageCollectionViewController.m in Sources */,
 				E559151E1C0EE47900CE9102 /* SettingCollectionViewCell.m in Sources */,

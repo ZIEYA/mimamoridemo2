@@ -66,7 +66,7 @@
 }
 -(instancetype)initWithController:(UIViewController *)controller text:(NSString *)text{
 
-    if([self initWithFrame:CGRectMake(0, 2, controller.view.bounds.size.width*DEFAULT_RATE_WIDTH, DEFAULT_HEIGHT)]){
+    if([self initWithFrame:CGRectMake(0, 65, controller.view.bounds.size.width*DEFAULT_RATE_WIDTH, DEFAULT_HEIGHT)]){
         self.text = text;
         self.controller = controller;
         self.textLabel.text = text;
