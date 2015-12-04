@@ -28,7 +28,8 @@ static NSString * const reuseIdentifier = @"mycell";
     [super viewDidLoad];
     
     _groupArray = [[NSMutableArray alloc]init];
-    if (!_defaultGroupArray) {
+    NSArray *tmparr = [[NSUserDefaults standardUserDefaults]objectForKey:@"group"];
+    if (!tmparr) {
         _defaultGroupArray = [[NSMutableArray alloc]init];
         //Setting default groups
         NSDictionary *temp1 = [self addDefaultGroupName:@"配偶者" WithImage:@"spouse.png"];
@@ -39,8 +40,10 @@ static NSString * const reuseIdentifier = @"mycell";
         [_defaultGroupArray addObject:temp2];
         [_defaultGroupArray addObject:temp3];
         [_defaultGroupArray addObject:temp4];
-
+        
         [[NSUserDefaults standardUserDefaults]setObject:_defaultGroupArray forKey:@"group"];
+    }else{
+        _groupArray = [[NSMutableArray alloc]initWithArray:tmparr];
     }
 }
 

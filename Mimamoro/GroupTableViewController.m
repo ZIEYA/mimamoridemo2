@@ -10,7 +10,8 @@
 #import "EditGroupTableViewController.h"
 
 @interface GroupTableViewController (){
-    NSMutableArray *_groupArray;
+    NSMutableArray *_groupArray;//model array
+    NSMutableArray *_groArray;
     int edittype;//0:新規　1:編集
     NSString *groupname;
     GroupModel *tmpmodel;
@@ -40,6 +41,7 @@
 -(void)reloadGroups{
     [_groupArray removeAllObjects];
     NSArray *temp = [[NSUserDefaults standardUserDefaults]objectForKey:@"group"];
+    _groArray = [[NSMutableArray alloc]initWithArray:temp];
     for (NSDictionary *tmpdict in temp) {
         GroupModel *model = [[GroupModel alloc]init];
         model.groupname = [tmpdict valueForKey:@"groupname"];
@@ -81,17 +83,23 @@
 }
 
 
-/*
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+        GroupModel *deleteItem = [_groupArray objectAtIndex:indexPath.row];
+        [_groupArray removeObject:deleteItem];
+        for (int i=0; i<_groArray.count; i++) {
+            NSString *tmpname = [[_groArray objectAtIndex:i]valueForKey:@"groupname"];
+            if ([deleteItem.groupname isEqualToString:tmpname]) {
+                [_groArray removeObjectAtIndex:i];
+            }
+        }
+        [[NSUserDefaults standardUserDefaults]setObject:_groArray forKey:@"group"];
+        [self reloadGroups];
+        
+    }
 }
-*/
+
 //新規
 - (IBAction)addAction:(id)sender {
     edittype = 0;

@@ -42,6 +42,10 @@
 -(void)reloadContact{
     [_currentArray removeAllObjects];
     NSDictionary *tempdict = [[NSUserDefaults standardUserDefaults]objectForKey:@"contact"];
+    if (!tempdict) {
+        [LeafNotification showInController:self withText:@"連絡人を追加してみてください"];
+        return;
+    }
     _contactDict = [[NSMutableDictionary alloc]initWithDictionary:tempdict];
     NSLog(@"contact:%@",tempdict);
     NSArray *keysArr = [tempdict allKeys];

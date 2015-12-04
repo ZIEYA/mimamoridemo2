@@ -10,6 +10,7 @@
 #import "PersonImageCollectionViewController.h"
 #import "GroupModel.h"
 #import "ContactModel.h"
+#import "LeafNotification.h"
 
 
 @interface EditGroupTableViewController ()<UITextFieldDelegate,imageDelegate>{
@@ -28,9 +29,6 @@
     [super viewDidLoad];
     oldGroup = self.groupmodel.groupname;
     contactModel = [[ContactModel alloc]init];
-    NSLog(@"%@ %@",_groupmodel.groupname,_groupmodel.groupimage);
-    _groupNameTextField.text = _groupmodel.groupname;
-    _imageview.image = [UIImage imageNamed:_groupmodel.groupimage];
 
     NSArray *temp = [[NSUserDefaults standardUserDefaults]objectForKey:@"group"];
     groupArr = [[NSMutableArray alloc]initWithArray:temp];
@@ -39,6 +37,8 @@
     }
     //Delete the old one and add new one
     else if (_editType ==1){
+        _groupNameTextField.text = _groupmodel.groupname;
+        _imageview.image = [UIImage imageNamed:_groupmodel.groupimage];
         for (int i=0 ;i<groupArr.count;i++) {
             NSDictionary *tmp = [groupArr objectAtIndex:i];
             NSString *key = [tmp valueForKey:@"groupname"];
@@ -47,8 +47,7 @@
             }
         }
     }
-
-    
+    self.tableView.tableFooterView = [[UIView alloc]initWithFrame:CGRectZero];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -56,6 +55,10 @@
 }
 
 - (IBAction)savaAction:(id)sender {
+    if ([_groupNameTextField.text isEqual:@""]||_imageview.image == nil) {
+        [LeafNotification showInController:self withText:@"画像或いはグループ名を設定してください"];
+        return;
+    }
      _groupmodel.groupname = _groupNameTextField.text;
     contactModel.groupType = _groupNameTextField.text;
 
@@ -133,17 +136,5 @@
     return YES;
 }
 
-
-
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

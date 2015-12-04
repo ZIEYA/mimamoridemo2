@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LeafNotification.h"
 
 @interface EditContactTableViewController : UITableViewController
 @property int editType;//0:追加  1:編集

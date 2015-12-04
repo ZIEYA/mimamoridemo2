@@ -58,6 +58,7 @@
             [_emergencySwitch setOn:NO];
         }
     }
+     self.tableView.tableFooterView = [[UIView alloc]initWithFrame:CGRectZero];
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -70,6 +71,10 @@
 }
 
 - (IBAction)saveAction:(id)sender {
+    if ([_nameTextField.text isEqual: @""]||[_emaiTextField.text isEqual:@""]) {
+        [LeafNotification showInController:self withText:@"氏名とメールアドレスを入力してください"];
+        return;
+    }    
     if (_editType == 0) {
         
     }
