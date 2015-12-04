@@ -8,12 +8,12 @@
 
 #import "GroupTableViewController.h"
 #import "EditGroupTableViewController.h"
-#import "GroupModel.h"
 
 @interface GroupTableViewController (){
     NSMutableArray *_groupArray;
     int edittype;//0:新規　1:編集
     NSString *groupname;
+    GroupModel *tmpmodel;
 }
 
 @end
@@ -29,6 +29,7 @@
 }
 
 -(void)viewWillAppear:(BOOL)animated{
+    tmpmodel = [[GroupModel alloc]init];
     [self reloadGroups];
 }
 
@@ -44,8 +45,10 @@
         model.groupname = [tmpdict valueForKey:@"groupname"];
         model.groupimage = [tmpdict valueForKey:@"image"];
         [_groupArray addObject:model];
+        NSLog(@"%@",tmpdict);
     }
-    NSLog(@"group array:%@",_groupArray);
+    //NSLog(@"group array:%@",_groupArray);
+    [self.tableView reloadData];
 }
 
 #pragma mark - Table view data source
@@ -69,19 +72,14 @@
     return cell;
 }
 
+//編集
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     edittype = 1;//編集
-    groupname = [_groupArray objectAtIndex:indexPath.row];
+    //groupname = [_groupArray objectAtIndex:indexPath.row];
+    tmpmodel = [_groupArray objectAtIndex:indexPath.row];
     [self performSegueWithIdentifier:@"gotoEditGroupTVC" sender:self];
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
 
 /*
 // Override to support editing the table view.
@@ -94,20 +92,13 @@
     }   
 }
 */
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
+//新規
+- (IBAction)addAction:(id)sender {
+    edittype = 0;
+    //groupname = @"";
+    [self performSegueWithIdentifier:@"gotoEditGroupTVC" sender:self];
 }
-*/
 
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
 
 
 #pragma mark - Navigation
@@ -115,7 +106,8 @@
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     EditGroupTableViewController *editTVC = segue.destinationViewController;
-    editTVC.tempname = groupname;
+    editTVC.groupmodel = tmpmodel;
+    editTVC.editType = edittype;
 }
 
 @end

@@ -69,6 +69,8 @@ static NSString * const reuseIdentifier = @"mycell";
         model.groupimage = [tmpdict valueForKey:@"image"];
         [_groupArray addObject:model];
     }
+
+    [self.collectionView reloadData];
 }
 
 /*

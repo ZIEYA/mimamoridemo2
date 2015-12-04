@@ -546,7 +546,13 @@
                             <outlet property="delegate" destination="O0P-xK-g1H" id="7Kz-Hj-Rou"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="グループ管理" id="myp-7D-K70"/>
+                    <navigationItem key="navigationItem" title="グループ管理" id="myp-7D-K70">
+                        <barButtonItem key="rightBarButtonItem" title="追加" id="w4Y-en-Vwj">
+                            <connections>
+                                <action selector="addAction:" destination="O0P-xK-g1H" id="Ejg-xx-uFA"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <segue destination="QCJ-ut-wqa" kind="push" identifier="gotoEditGroupTVC" id="Kmt-m2-pSA"/>

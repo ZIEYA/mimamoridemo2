@@ -23,6 +23,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSLog(@"%@",_groupid);
     if (!_currentArray) {
         _currentArray = [[NSMutableArray alloc]init];
     }
@@ -54,6 +55,7 @@
         if ([_groupid isEqualToString:model.groupType]) {
             [_currentArray addObject:model];
         }
+        NSLog(@"%@",model.groupType);
 
     }
     NSLog(@"%lu",(unsigned long)_currentArray.count);

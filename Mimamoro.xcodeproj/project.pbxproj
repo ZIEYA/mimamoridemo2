@@ -339,11 +339,8 @@
 		E55915271C0EEC2800CE9102 /* SubViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				E57B2C301C1125BA00EF2948 /* ContactManageViewControllers */,
 				E57B2C211C1036C500EF2948 /* GroupManageViewControllers */,
-				E57B2BDF1C0FCF0400EF2948 /* ContactTableViewController.h */,
-				E57B2BE01C0FCF0400EF2948 /* ContactTableViewController.m */,
-				E57B2BEF1C0FE04700EF2948 /* EditContactTableViewController.h */,
-				E57B2BF01C0FE04700EF2948 /* EditContactTableViewController.m */,
 				E55915371C0EF04900CE9102 /* SettingTableViewController.h */,
 				E55915381C0EF04900CE9102 /* SettingTableViewController.m */,
 				E55915341C0EEEA000CE9102 /* ProfileTableViewController.h */,
@@ -413,6 +410,17 @@
 				E57B2C121C101F2200EF2948 /* PersonImageCollectionViewController.m */,
 			);
 			name = GroupManageViewControllers;
+			sourceTree = "<group>";
+		};
+		E57B2C301C1125BA00EF2948 /* ContactManageViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E57B2BDF1C0FCF0400EF2948 /* ContactTableViewController.h */,
+				E57B2BE01C0FCF0400EF2948 /* ContactTableViewController.m */,
+				E57B2BEF1C0FE04700EF2948 /* EditContactTableViewController.h */,
+				E57B2BF01C0FE04700EF2948 /* EditContactTableViewController.m */,
+			);
+			name = ContactManageViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

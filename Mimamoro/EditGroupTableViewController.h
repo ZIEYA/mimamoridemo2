@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GroupModel.h"
 
 @interface EditGroupTableViewController : UITableViewController
 @property int editType;
-@property NSString *tempname;
+@property GroupModel *groupmodel;
+//@property NSString *tempname;
 
 @end
