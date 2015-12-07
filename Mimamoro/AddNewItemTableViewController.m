@@ -30,7 +30,7 @@
     if (tmparr) {
          itemArray = [[NSMutableArray alloc]initWithArray:tmparr];
     }
-    if (self.edittype == 0) {
+    if (self.edittype == 0 || self.tmpitemImage==nil || [self.tmpitemImage isEqualToString:@""]) {
         self.imageview.image = [UIImage imageNamed:@"addimage.png"];
     }else if (self.edittype ==1){
         _imageview.image = [UIImage imageNamed:_tmpitemImage];
