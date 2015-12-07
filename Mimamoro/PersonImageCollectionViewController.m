@@ -31,7 +31,7 @@ static NSString * const reuseIdentifier = @"personcell";
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
 }
 
 
@@ -49,7 +49,7 @@ static NSString * const reuseIdentifier = @"personcell";
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
      PersonCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
-    NSString *tmp = [_imageStrArray objectAtIndex:(indexPath.section * 4 + indexPath.row)];
+    NSString *tmp = [_imageStrArray objectAtIndex:(indexPath.section * 3 + indexPath.row)];
     cell.imageview.image = [UIImage imageNamed:tmp];
     
     

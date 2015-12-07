@@ -33,7 +33,6 @@
 		E559151E1C0EE47900CE9102 /* SettingCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E559151D1C0EE47900CE9102 /* SettingCollectionViewCell.m */; };
 		E55915201C0EE65000CE9102 /* settingimage.png in Resources */ = {isa = PBXBuildFile; fileRef = E559151F1C0EE65000CE9102 /* settingimage.png */; };
 		E55915221C0EE6CA00CE9102 /* lightimage.png in Resources */ = {isa = PBXBuildFile; fileRef = E55915211C0EE6CA00CE9102 /* lightimage.png */; };
-		E55915241C0EE6CE00CE9102 /* homeimage.png in Resources */ = {isa = PBXBuildFile; fileRef = E55915231C0EE6CE00CE9102 /* homeimage.png */; };
 		E55915261C0EEB9200CE9102 /* plusimage.png in Resources */ = {isa = PBXBuildFile; fileRef = E55915251C0EEB9200CE9102 /* plusimage.png */; };
 		E559152C1C0EECF700CE9102 /* userprofile.png in Resources */ = {isa = PBXBuildFile; fileRef = E559152B1C0EECF700CE9102 /* userprofile.png */; };
 		E559152E1C0EED0200CE9102 /* takelist.png in Resources */ = {isa = PBXBuildFile; fileRef = E559152D1C0EED0200CE9102 /* takelist.png */; };
@@ -50,8 +49,25 @@
 		E55915521C0EF4AE00CE9102 /* KusuriModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E55915501C0EF4AE00CE9102 /* KusuriModel.m */; };
 		E55915551C0EF4B600CE9102 /* ListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E55915541C0EF4B600CE9102 /* ListModel.m */; };
 		E5705A621C15304D00D6B995 /* EditListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5705A611C15304D00D6B995 /* EditListTableViewController.m */; };
+		E5705A701C15345800D6B995 /* ABFillButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E5705A6F1C15345800D6B995 /* ABFillButton.m */; };
+		E5705A751C154ACC00D6B995 /* AddNewItemTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5705A741C154ACC00D6B995 /* AddNewItemTableViewController.m */; };
+		E5705A781C154C0300D6B995 /* ItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E5705A771C154C0300D6B995 /* ItemModel.m */; };
+		E5705A7B1C15537700D6B995 /* ItemImageCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5705A7A1C15537700D6B995 /* ItemImageCollectionViewController.m */; };
+		E5705A7E1C1553BC00D6B995 /* ItemImageCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E5705A7D1C1553BC00D6B995 /* ItemImageCollectionViewCell.m */; };
+		E5705A8C1C15571C00D6B995 /* image-10.png in Resources */ = {isa = PBXBuildFile; fileRef = E5705A801C15571C00D6B995 /* image-10.png */; };
+		E5705A8D1C15571C00D6B995 /* image-1.png in Resources */ = {isa = PBXBuildFile; fileRef = E5705A811C15571C00D6B995 /* image-1.png */; };
+		E5705A8E1C15571C00D6B995 /* image-9.png in Resources */ = {isa = PBXBuildFile; fileRef = E5705A821C15571C00D6B995 /* image-9.png */; };
+		E5705A8F1C15571C00D6B995 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = E5705A831C15571C00D6B995 /* home.png */; };
+		E5705A901C15571C00D6B995 /* image-2.png in Resources */ = {isa = PBXBuildFile; fileRef = E5705A841C15571C00D6B995 /* image-2.png */; };
+		E5705A911C15571C00D6B995 /* hospital.png in Resources */ = {isa = PBXBuildFile; fileRef = E5705A851C15571C00D6B995 /* hospital.png */; };
+		E5705A921C15571C00D6B995 /* image-3.png in Resources */ = {isa = PBXBuildFile; fileRef = E5705A861C15571C00D6B995 /* image-3.png */; };
+		E5705A941C15571C00D6B995 /* image-8.png in Resources */ = {isa = PBXBuildFile; fileRef = E5705A881C15571C00D6B995 /* image-8.png */; };
+		E5705A951C15571C00D6B995 /* image-7.png in Resources */ = {isa = PBXBuildFile; fileRef = E5705A891C15571C00D6B995 /* image-7.png */; };
+		E5705A961C15571C00D6B995 /* image-5.png in Resources */ = {isa = PBXBuildFile; fileRef = E5705A8A1C15571C00D6B995 /* image-5.png */; };
+		E5705A991C1557ED00D6B995 /* image-6.png in Resources */ = {isa = PBXBuildFile; fileRef = E5705A981C1557ED00D6B995 /* image-6.png */; };
+		E5705A9B1C1557FE00D6B995 /* image-4.png in Resources */ = {isa = PBXBuildFile; fileRef = E5705A9A1C1557FE00D6B995 /* image-4.png */; };
+		E5705A9D1C15592600D6B995 /* add.png in Resources */ = {isa = PBXBuildFile; fileRef = E5705A9C1C15592600D6B995 /* add.png */; };
 		E57B2BE11C0FCF0400EF2948 /* ContactTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E57B2BE01C0FCF0400EF2948 /* ContactTableViewController.m */; };
-		E57B2BEC1C0FD57B00EF2948 /* addgroup.png in Resources */ = {isa = PBXBuildFile; fileRef = E57B2BEB1C0FD57B00EF2948 /* addgroup.png */; };
 		E57B2BF11C0FE04700EF2948 /* EditContactTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E57B2BF01C0FE04700EF2948 /* EditContactTableViewController.m */; };
 		E57B2BF41C0FE08F00EF2948 /* ContactModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E57B2BF31C0FE08F00EF2948 /* ContactModel.m */; };
 		E57B2C001C101D8800EF2948 /* item-0.png in Resources */ = {isa = PBXBuildFile; fileRef = E57B2BF61C101D8800EF2948 /* item-0.png */; };
@@ -204,7 +220,6 @@
 		E559151D1C0EE47900CE9102 /* SettingCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingCollectionViewCell.m; sourceTree = "<group>"; };
 		E559151F1C0EE65000CE9102 /* settingimage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settingimage.png; sourceTree = "<group>"; };
 		E55915211C0EE6CA00CE9102 /* lightimage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lightimage.png; sourceTree = "<group>"; };
-		E55915231C0EE6CE00CE9102 /* homeimage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = homeimage.png; sourceTree = "<group>"; };
 		E55915251C0EEB9200CE9102 /* plusimage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plusimage.png; sourceTree = "<group>"; };
 		E559152B1C0EECF700CE9102 /* userprofile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = userprofile.png; sourceTree = "<group>"; };
 		E559152D1C0EED0200CE9102 /* takelist.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = takelist.png; sourceTree = "<group>"; };
@@ -233,9 +248,32 @@
 		E55915541C0EF4B600CE9102 /* ListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListModel.m; sourceTree = "<group>"; };
 		E5705A601C15304D00D6B995 /* EditListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditListTableViewController.h; sourceTree = "<group>"; };
 		E5705A611C15304D00D6B995 /* EditListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditListTableViewController.m; sourceTree = "<group>"; };
+		E5705A6E1C15345800D6B995 /* ABFillButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABFillButton.h; sourceTree = "<group>"; };
+		E5705A6F1C15345800D6B995 /* ABFillButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABFillButton.m; sourceTree = "<group>"; };
+		E5705A711C15346D00D6B995 /* ABFillButtonExample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ABFillButtonExample-Prefix.pch"; sourceTree = "<group>"; };
+		E5705A731C154ACC00D6B995 /* AddNewItemTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddNewItemTableViewController.h; sourceTree = "<group>"; };
+		E5705A741C154ACC00D6B995 /* AddNewItemTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddNewItemTableViewController.m; sourceTree = "<group>"; };
+		E5705A761C154C0300D6B995 /* ItemModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemModel.h; sourceTree = "<group>"; };
+		E5705A771C154C0300D6B995 /* ItemModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemModel.m; sourceTree = "<group>"; };
+		E5705A791C15537700D6B995 /* ItemImageCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemImageCollectionViewController.h; sourceTree = "<group>"; };
+		E5705A7A1C15537700D6B995 /* ItemImageCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemImageCollectionViewController.m; sourceTree = "<group>"; };
+		E5705A7C1C1553BC00D6B995 /* ItemImageCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemImageCollectionViewCell.h; sourceTree = "<group>"; };
+		E5705A7D1C1553BC00D6B995 /* ItemImageCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemImageCollectionViewCell.m; sourceTree = "<group>"; };
+		E5705A801C15571C00D6B995 /* image-10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "image-10.png"; sourceTree = "<group>"; };
+		E5705A811C15571C00D6B995 /* image-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "image-1.png"; sourceTree = "<group>"; };
+		E5705A821C15571C00D6B995 /* image-9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "image-9.png"; sourceTree = "<group>"; };
+		E5705A831C15571C00D6B995 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
+		E5705A841C15571C00D6B995 /* image-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "image-2.png"; sourceTree = "<group>"; };
+		E5705A851C15571C00D6B995 /* hospital.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hospital.png; sourceTree = "<group>"; };
+		E5705A861C15571C00D6B995 /* image-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "image-3.png"; sourceTree = "<group>"; };
+		E5705A881C15571C00D6B995 /* image-8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "image-8.png"; sourceTree = "<group>"; };
+		E5705A891C15571C00D6B995 /* image-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "image-7.png"; sourceTree = "<group>"; };
+		E5705A8A1C15571C00D6B995 /* image-5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "image-5.png"; sourceTree = "<group>"; };
+		E5705A981C1557ED00D6B995 /* image-6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "image-6.png"; sourceTree = "<group>"; };
+		E5705A9A1C1557FE00D6B995 /* image-4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "image-4.png"; sourceTree = "<group>"; };
+		E5705A9C1C15592600D6B995 /* add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add.png; sourceTree = "<group>"; };
 		E57B2BDF1C0FCF0400EF2948 /* ContactTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactTableViewController.h; sourceTree = "<group>"; };
 		E57B2BE01C0FCF0400EF2948 /* ContactTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactTableViewController.m; sourceTree = "<group>"; };
-		E57B2BEB1C0FD57B00EF2948 /* addgroup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = addgroup.png; sourceTree = "<group>"; };
 		E57B2BEF1C0FE04700EF2948 /* EditContactTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditContactTableViewController.h; sourceTree = "<group>"; };
 		E57B2BF01C0FE04700EF2948 /* EditContactTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditContactTableViewController.m; sourceTree = "<group>"; };
 		E57B2BF21C0FE08F00EF2948 /* ContactModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactModel.h; sourceTree = "<group>"; };
@@ -358,7 +396,9 @@
 		E55914B61C0EC92E00CE9102 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E5705A711C15346D00D6B995 /* ABFillButtonExample-Prefix.pch */,
 				E55914B71C0EC92E00CE9102 /* main.m */,
+				E5705A7F1C15571C00D6B995 /* item-image */,
 				E57B2BF51C101D8800EF2948 /* person-image */,
 				E559150B1C0ED99000CE9102 /* contactlist-0.png */,
 				E559150D1C0ED99400CE9102 /* emergency-0.png */,
@@ -372,7 +412,6 @@
 				E55915161C0EDD5E00CE9102 /* worrybtn.png */,
 				E559151F1C0EE65000CE9102 /* settingimage.png */,
 				E55915211C0EE6CA00CE9102 /* lightimage.png */,
-				E55915231C0EE6CE00CE9102 /* homeimage.png */,
 				E55915251C0EEB9200CE9102 /* plusimage.png */,
 				E559152B1C0EECF700CE9102 /* userprofile.png */,
 				E559152D1C0EED0200CE9102 /* takelist.png */,
@@ -380,7 +419,6 @@
 				E57B2C281C103E4000EF2948 /* spouse.png */,
 				E57B2C2A1C103E5700EF2948 /* son.png */,
 				E57B2C2C1C103E5D00EF2948 /* daughter.png */,
-				E57B2BEB1C0FD57B00EF2948 /* addgroup.png */,
 				E57B2C2E1C10482F00EF2948 /* friend.png */,
 				E57B2C1C1C102B7900EF2948 /* addimage.png */,
 			);
@@ -410,12 +448,16 @@
 			children = (
 				E57B2C6F1C11964400EF2948 /* PickerView.h */,
 				E57B2C701C11964400EF2948 /* PickerView.m */,
+				E5705A6E1C15345800D6B995 /* ABFillButton.h */,
+				E5705A6F1C15345800D6B995 /* ABFillButton.m */,
 				E55915191C0EE45800CE9102 /* ContactCollectionViewCell.h */,
 				E559151A1C0EE45800CE9102 /* ContactCollectionViewCell.m */,
 				E559151C1C0EE47900CE9102 /* SettingCollectionViewCell.h */,
 				E559151D1C0EE47900CE9102 /* SettingCollectionViewCell.m */,
 				E57B2C0E1C101EC600EF2948 /* PersonCollectionViewCell.h */,
 				E57B2C0F1C101EC600EF2948 /* PersonCollectionViewCell.m */,
+				E5705A7C1C1553BC00D6B995 /* ItemImageCollectionViewCell.h */,
+				E5705A7D1C1553BC00D6B995 /* ItemImageCollectionViewCell.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -428,6 +470,7 @@
 				E5705A6A1C1532E900D6B995 /* ProfileManageViewControllers */,
 				E5705A6B1C15332E00D6B995 /* ListManageViewControllers */,
 				E5705A6C1C15339900D6B995 /* PersonalDataManageViewControllers */,
+				E5705A721C154A9F00D6B995 /* AddNewItemViewControllers */,
 				E55915371C0EF04900CE9102 /* SettingTableViewController.h */,
 				E55915381C0EF04900CE9102 /* SettingTableViewController.m */,
 			);
@@ -449,6 +492,8 @@
 				E559154E1C0EF4AE00CE9102 /* KennkoModel.m */,
 				E559154F1C0EF4AE00CE9102 /* KusuriModel.h */,
 				E55915501C0EF4AE00CE9102 /* KusuriModel.m */,
+				E5705A761C154C0300D6B995 /* ItemModel.h */,
+				E5705A771C154C0300D6B995 /* ItemModel.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -486,6 +531,37 @@
 				E559154A1C0EF23700CE9102 /* EditKusiriTableViewController.m */,
 			);
 			name = PersonalDataManageViewControllers;
+			sourceTree = "<group>";
+		};
+		E5705A721C154A9F00D6B995 /* AddNewItemViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E5705A731C154ACC00D6B995 /* AddNewItemTableViewController.h */,
+				E5705A741C154ACC00D6B995 /* AddNewItemTableViewController.m */,
+				E5705A791C15537700D6B995 /* ItemImageCollectionViewController.h */,
+				E5705A7A1C15537700D6B995 /* ItemImageCollectionViewController.m */,
+			);
+			name = AddNewItemViewControllers;
+			sourceTree = "<group>";
+		};
+		E5705A7F1C15571C00D6B995 /* item-image */ = {
+			isa = PBXGroup;
+			children = (
+				E5705A801C15571C00D6B995 /* image-10.png */,
+				E5705A811C15571C00D6B995 /* image-1.png */,
+				E5705A821C15571C00D6B995 /* image-9.png */,
+				E5705A831C15571C00D6B995 /* home.png */,
+				E5705A841C15571C00D6B995 /* image-2.png */,
+				E5705A851C15571C00D6B995 /* hospital.png */,
+				E5705A861C15571C00D6B995 /* image-3.png */,
+				E5705A881C15571C00D6B995 /* image-8.png */,
+				E5705A891C15571C00D6B995 /* image-7.png */,
+				E5705A9A1C1557FE00D6B995 /* image-4.png */,
+				E5705A8A1C15571C00D6B995 /* image-5.png */,
+				E5705A981C1557ED00D6B995 /* image-6.png */,
+				E5705A9C1C15592600D6B995 /* add.png */,
+			);
+			path = "item-image";
 			sourceTree = "<group>";
 		};
 		E57B2BF51C101D8800EF2948 /* person-image */ = {
@@ -726,26 +802,34 @@
 			files = (
 				E559152C1C0EECF700CE9102 /* userprofile.png in Resources */,
 				E57B2C071C101D8800EF2948 /* item-7.png in Resources */,
-				E55915241C0EE6CE00CE9102 /* homeimage.png in Resources */,
 				E57B2C2D1C103E5D00EF2948 /* daughter.png in Resources */,
+				E5705A951C15571C00D6B995 /* image-7.png in Resources */,
+				E5705A901C15571C00D6B995 /* image-2.png in Resources */,
 				E57B2C171C10218300EF2948 /* item-5.png in Resources */,
 				E57B2C021C101D8800EF2948 /* item-8.png in Resources */,
 				E57B2C641C11878800EF2948 /* item-3.png in Resources */,
+				E5705A941C15571C00D6B995 /* image-8.png in Resources */,
+				E5705A8D1C15571C00D6B995 /* image-1.png in Resources */,
 				E55914C61C0EC92E00CE9102 /* LaunchScreen.storyboard in Resources */,
 				E57B2C191C1021A500EF2948 /* item-10.png in Resources */,
-				E57B2BEC1C0FD57B00EF2948 /* addgroup.png in Resources */,
 				E55915081C0ED88300CE9102 /* worry.png in Resources */,
+				E5705A8C1C15571C00D6B995 /* image-10.png in Resources */,
 				E559150A1C0ED88600CE9102 /* setting.png in Resources */,
 				E57B2C0C1C101E3900EF2948 /* item-6.png in Resources */,
 				E57B2C291C103E4000EF2948 /* spouse.png in Resources */,
 				E55915171C0EDD5E00CE9102 /* worrybtn.png in Resources */,
 				E55915151C0EDD5B00CE9102 /* emergencybtn.png in Resources */,
 				E55914C31C0EC92E00CE9102 /* Assets.xcassets in Resources */,
+				E5705A8E1C15571C00D6B995 /* image-9.png in Resources */,
 				E55915041C0ED73A00CE9102 /* contactlist.png in Resources */,
 				E55915301C0EED3200CE9102 /* personaldata.png in Resources */,
 				E57B2C011C101D8800EF2948 /* item-1.png in Resources */,
+				E5705A8F1C15571C00D6B995 /* home.png in Resources */,
 				E55915261C0EEB9200CE9102 /* plusimage.png in Resources */,
 				E55915101C0ED99700CE9102 /* worry-0.png in Resources */,
+				E5705A991C1557ED00D6B995 /* image-6.png in Resources */,
+				E5705A9D1C15592600D6B995 /* add.png in Resources */,
+				E5705A9B1C1557FE00D6B995 /* image-4.png in Resources */,
 				E55915221C0EE6CA00CE9102 /* lightimage.png in Resources */,
 				E55915201C0EE65000CE9102 /* settingimage.png in Resources */,
 				E559152E1C0EED0200CE9102 /* takelist.png in Resources */,
@@ -753,12 +837,15 @@
 				E55915061C0ED87F00CE9102 /* emergency.png in Resources */,
 				E57B2C031C101D8800EF2948 /* item-2.png in Resources */,
 				E57B2C2F1C10482F00EF2948 /* friend.png in Resources */,
+				E5705A961C15571C00D6B995 /* image-5.png in Resources */,
 				E57B2C001C101D8800EF2948 /* item-0.png in Resources */,
 				E57B2C1D1C102B7900EF2948 /* addimage.png in Resources */,
 				E57B2C6D1C1187C700EF2948 /* item-9.png in Resources */,
 				E57B2C0D1C101E3900EF2948 /* item-4.png in Resources */,
+				E5705A921C15571C00D6B995 /* image-3.png in Resources */,
 				E559150C1C0ED99000CE9102 /* contactlist-0.png in Resources */,
 				E57B2C1B1C1021E700EF2948 /* item-11.png in Resources */,
+				E5705A911C15571C00D6B995 /* hospital.png in Resources */,
 				E55915121C0ED99B00CE9102 /* setting-0.png in Resources */,
 				E559150E1C0ED99400CE9102 /* emergency-0.png in Resources */,
 				E55914C11C0EC92E00CE9102 /* Main.storyboard in Resources */,
@@ -790,6 +877,7 @@
 				E5705A621C15304D00D6B995 /* EditListTableViewController.m in Sources */,
 				E55915331C0EEE6B00CE9102 /* EditProfileTableViewController.m in Sources */,
 				E57B2C131C101F2200EF2948 /* PersonImageCollectionViewController.m in Sources */,
+				E5705A751C154ACC00D6B995 /* AddNewItemTableViewController.m in Sources */,
 				E559151E1C0EE47900CE9102 /* SettingCollectionViewCell.m in Sources */,
 				E55915431C0EF21200CE9102 /* PersonalDataTableViewController.m in Sources */,
 				E55915021C0ED54C00CE9102 /* TabBarController.m in Sources */,
@@ -799,8 +887,11 @@
 				E55915401C0EF20B00CE9102 /* ListTableViewController.m in Sources */,
 				E55915361C0EEEA000CE9102 /* ProfileTableViewController.m in Sources */,
 				E57B2BF11C0FE04700EF2948 /* EditContactTableViewController.m in Sources */,
+				E5705A781C154C0300D6B995 /* ItemModel.m in Sources */,
+				E5705A7B1C15537700D6B995 /* ItemImageCollectionViewController.m in Sources */,
 				E55915511C0EF4AE00CE9102 /* KennkoModel.m in Sources */,
 				E559154B1C0EF23700CE9102 /* EditKennkoTableViewController.m in Sources */,
+				E5705A701C15345800D6B995 /* ABFillButton.m in Sources */,
 				E57B2C101C101EC600EF2948 /* PersonCollectionViewCell.m in Sources */,
 				E559153D1C0EF07400CE9102 /* UserProfileModel.m in Sources */,
 				E55915391C0EF04900CE9102 /* SettingTableViewController.m in Sources */,
@@ -811,6 +902,7 @@
 				E55914BB1C0EC92E00CE9102 /* AppDelegate.m in Sources */,
 				E57B2C341C1151F000EF2948 /* LeafNotification.m in Sources */,
 				E55914F61C0ED0A300CE9102 /* EmergencyViewController.m in Sources */,
+				E5705A7E1C1553BC00D6B995 /* ItemImageCollectionViewCell.m in Sources */,
 				E55914FC1C0ED0BD00CE9102 /* OtherCollectionViewController.m in Sources */,
 				E57B2C241C10370900EF2948 /* EditGroupTableViewController.m in Sources */,
 				E55915521C0EF4AE00CE9102 /* KusuriModel.m in Sources */,
@@ -960,6 +1052,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Mimamoro/ABFillButtonExample-Prefix.pch";
 				INFOPLIST_FILE = Mimamoro/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -984,6 +1078,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Mimamoro/ABFillButtonExample-Prefix.pch";
 				INFOPLIST_FILE = Mimamoro/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (

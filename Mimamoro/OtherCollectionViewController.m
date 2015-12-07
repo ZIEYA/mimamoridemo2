@@ -8,8 +8,18 @@
 
 #import "OtherCollectionViewController.h"
 #import "SettingCollectionViewCell.h"
+#import "ItemModel.h"
+#import "AddNewItemTableViewController.h"
 
-@interface OtherCollectionViewController ()
+@interface OtherCollectionViewController (){
+    //NSMutableArray *_newItemArray;
+    //NSMutableArray *_showItemArray;
+    NSMutableArray *_defaultItemArray;
+    NSMutableArray *_itemArray;
+    int editType;//0:新規 1:編集
+    NSString *tempItemName;
+    NSString *tempItemImage;
+}
 
 @end
 
@@ -20,63 +30,91 @@ static NSString * const reuseIdentifier = @"settingcell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.tabBarItem setImage:[[UIImage imageNamed:@"contactlist"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
-    
-    // Uncomment the following line to preserve selection between presentations
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Register cell classes
-    //[self.collectionView registerClass:[SettingCollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
-    
-    // Do any additional setup after loading the view.
+    _itemArray = [[NSMutableArray alloc]init];
+    NSMutableArray *tmparr = [[NSUserDefaults standardUserDefaults]objectForKey:@"item"];
+    if (!tmparr) {
+        //Default items
+        _defaultItemArray = [[NSMutableArray alloc]init];
+        NSDictionary *temp1 = [self addDefaultItemName:@"設定" WithImage:@"image-7.png"];
+        NSDictionary *temp2 = [self addDefaultItemName:@"ポケットドクター" WithImage:@"hospital.png"];
+        NSDictionary *temp3 = [self addDefaultItemName:@"電気見守り" WithImage:@"home.png"];
+        [_defaultItemArray addObject:temp1];
+        [_defaultItemArray addObject:temp2];
+        [_defaultItemArray addObject:temp3];
+        [[NSUserDefaults standardUserDefaults]setObject:_defaultItemArray forKey:@"item"];
+    }else{
+        _itemArray = [[NSMutableArray alloc]initWithArray:tmparr];
+    }
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    [self reloadItems];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
 }
 
-/*
+-(void)reloadItems{
+    
+
+    [_itemArray  removeAllObjects];
+    NSMutableArray *temp = [[NSUserDefaults standardUserDefaults]objectForKey:@"item"];
+    for (NSDictionary *tmpdict in temp) {
+        ItemModel *model = [[ItemModel alloc]init];
+        model.itemname = [tmpdict valueForKey:@"name"];
+        model.itemimage = [tmpdict valueForKey:@"image"];
+        [_itemArray addObject:model];
+    }
+    
+    [self.collectionView reloadData];
+}
+
+-(NSDictionary*)addDefaultItemName:(NSString*)itemname WithImage:(NSString*)image{
+    NSMutableDictionary *temp = [[NSMutableDictionary alloc]init];
+    [temp setValue:itemname forKey:@"name"];
+    [temp setValue:image forKey:@"image"];
+    return temp;
+}
+
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if([segue.identifier  isEqual: @"gotoAddNewItemTVC"]){
+        AddNewItemTableViewController *addVC = segue.destinationViewController;
+        addVC.tmpitemName = tempItemName;
+        addVC.tmpitemImage = tempItemImage;
+        addVC.edittype = editType;
+    }
+
 }
-*/
 
 #pragma mark <UICollectionViewDataSource>
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-    return 2;
+    return 1;
 }
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 2;
+    return _itemArray.count + 1;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    SettingCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
-    
-    if (indexPath.section ==0 && indexPath.row ==0) {
-        cell.imageview.image = [UIImage imageNamed:@"settingimage.png"];
-        cell.label.text =@"設定";
+    SettingCollectionViewCell *cell;
+    if ((indexPath.section *2 + indexPath.row) ==_itemArray.count) {
+       cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+        cell.label.text = @"";
+        cell.imageview.image = [UIImage imageNamed:@"add.png"];
+        return cell;
+    }else{
+        cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+        
+        ItemModel *model= [_itemArray objectAtIndex:(indexPath.section *2 +indexPath.row)];
+        cell.imageview.image = [UIImage imageNamed:model.itemimage];
+        cell.label.text = model.itemname;
     }
-    if (indexPath.section ==0 && indexPath.row ==1) {
-        cell.imageview.image = [UIImage imageNamed:@"homeimage.png"];
-        cell.label.text =@"ポケットドクター";
-    }
-    if (indexPath.section ==1 && indexPath.row ==0) {
-        cell.imageview.image = [UIImage imageNamed:@"lightimage.png"];
-        cell.label.text =@"電気守り";
-    }
-    if (indexPath.section ==1 && indexPath.row ==1) {
-        cell.imageview.image = [UIImage imageNamed:@"plusimage.png"];
-        cell.label.text =@"";
-    }
-    
-    
     
     return cell;
 }
@@ -84,38 +122,23 @@ static NSString * const reuseIdentifier = @"settingcell";
 #pragma mark <UICollectionViewDelegate>
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    tempItemName = nil;
+    tempItemImage =nil;
     if (indexPath.section ==0 && indexPath.row ==0) {
         [self performSegueWithIdentifier:@"gotoSettingVC" sender:self];
     }
+    else if ((indexPath.section *2+indexPath.row) == _itemArray.count){
+        [self performSegueWithIdentifier:@"gotoAddNewItemTVC" sender:self];
+        editType = 0;
+    }else{
+        ItemModel *model= [_itemArray objectAtIndex:(indexPath.section *2 +indexPath.row )];
+        editType = 1;
+        tempItemName = model.itemname;
+        tempItemImage = model.itemimage;
+        [self performSegueWithIdentifier:@"gotoAddNewItemTVC" sender:self];
+        
+    }
 }
 
-/*
-// Uncomment this method to specify if the specified item should be highlighted during tracking
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldHighlightItemAtIndexPath:(NSIndexPath *)indexPath {
-	return YES;
-}
-*/
-
-/*
-// Uncomment this method to specify if the specified item should be selected
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    return YES;
-}
-*/
-
-/*
-// Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldShowMenuForItemAtIndexPath:(NSIndexPath *)indexPath {
-	return NO;
-}
-
-- (BOOL)collectionView:(UICollectionView *)collectionView canPerformAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
-	return NO;
-}
-
-- (void)collectionView:(UICollectionView *)collectionView performAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
-	
-}
-*/
 
 @end

@@ -41,6 +41,13 @@
     if (!_currentArray) {
         _currentArray = [[NSMutableArray alloc]init];
     }
+    //Setting default value
+    _sliderValue1.text = @"全然不安ではない";
+    _sliderValue2.text = @"全然不安ではない";
+    _sliderValue3.text = @"全然不安ではない";
+    _healthSlider.value = 0;
+    _spiritSlider.value = 0;
+    _happinessSlider.value = 0;
 }
 
 -(void)viewWillAppear:(BOOL)animated{

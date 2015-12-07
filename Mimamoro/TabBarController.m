@@ -27,6 +27,8 @@
     [[self.tabBar.items objectAtIndex:2]setSelectedImage:[[UIImage imageNamed:@"worry.png"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
     [[self.tabBar.items objectAtIndex:3]setSelectedImage:[[UIImage imageNamed:@"setting.png"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
     
+    [[UITabBarItem appearance]setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor lightGrayColor]} forState:UIControlStateNormal];
+    [[UITabBarItem appearance]setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor colorWithRed:255.0/255.0 green:100.0/255.0 blue:110.0/255.0 alpha:1.0f]} forState:UIControlStateSelected];
     
 }
 

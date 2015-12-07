@@ -9,9 +9,10 @@
 #import "EmergencyViewController.h"
 #import "ContactModel.h"
 #import "LeafNotification.h"
+#import "ABFillButton.h"
 #import <MailCore/MailCore.h>
 
-@interface EmergencyViewController ()<UITableViewDataSource,UITableViewDelegate,UITextViewDelegate>{
+@interface EmergencyViewController ()<UITableViewDataSource,UITableViewDelegate,UITextViewDelegate,ABFillButtonDelegate>{
     NSMutableDictionary *_contactDict;
     NSMutableArray *_currentArray;
     NSString *userEmail;
@@ -22,6 +23,7 @@
 }
 @property (strong, nonatomic) IBOutlet UITextView *messageTextView;
 @property (strong, nonatomic) IBOutlet UITableView *tableview;
+@property (strong, nonatomic) IBOutlet ABFillButton *button;
 
 @end
 
@@ -29,6 +31,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _button.delegate = self;
+    [_button setFillPercent:1.0];
+    [_button configureButtonWithHightlightedShadowAndZoom:YES];
+    [_button setEmptyButtonPressing:YES];
     if (!_currentArray) {
         _currentArray = [[NSMutableArray alloc]init];
     }
@@ -164,7 +170,7 @@
         }else{
             NSLog(@"Successfully send email!");
             dispatch_async(dispatch_get_main_queue(), ^{
-                [LeafNotification showInController:self withText:@"メール送信が成功しました！" type:LeafNotificationTypeSuccess];
+                [LeafNotification showInController:self withText:@"メール送信完了！！" type:LeafNotificationTypeSuccess];
             });
             
         }
@@ -204,6 +210,11 @@
 }
 
 - (IBAction)btnAction:(id)sender {
+    [_button setFillPercent:1.0];
+}
+
+-(void)buttonIsEmpty:(ABFillButton *)button{
+    NSLog(@"button is pressedd");
     [self sendEmail:message];
 }
 
