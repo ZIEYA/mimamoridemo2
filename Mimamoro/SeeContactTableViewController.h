@@ -10,4 +10,8 @@
 
 @interface SeeContactTableViewController : UITableViewController
 @property (strong, nonatomic) NSArray * seedata;
+@property long indexRow;
+@property int type;
+@property (strong, nonatomic) NSMutableArray *rootArr;
+@property (strong, nonatomic) NSMutableArray *rootData;
 @end

@@ -51,8 +51,9 @@
 		E55915521C0EF4AE00CE9102 /* KusuriModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E55915501C0EF4AE00CE9102 /* KusuriModel.m */; };
 		E55915551C0EF4B600CE9102 /* ListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E55915541C0EF4B600CE9102 /* ListModel.m */; };
 		E93ED66F1C0FD76100B9C46D /* slider.png in Resources */ = {isa = PBXBuildFile; fileRef = E93ED66E1C0FD76100B9C46D /* slider.png */; };
+		E9468E1E1C151E18009E4919 /* AddContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9468E1D1C151E18009E4919 /* AddContactViewController.m */; };
+		E9468E221C1587DF009E4919 /* AddContViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9468E211C1587DF009E4919 /* AddContViewController.m */; };
 		E94C5C4B1C1126B100612971 /* ContactTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E94C5C4A1C1126B100612971 /* ContactTableViewController.m */; };
-		E94C5C621C11667300612971 /* AddContactTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E94C5C611C11667300612971 /* AddContactTableViewController.m */; };
 		E94C5C721C118A4100612971 /* SeeContactTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E94C5C711C118A4100612971 /* SeeContactTableViewController.m */; };
 		E94C5C761C118CED00612971 /* EditContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E94C5C751C118CED00612971 /* EditContactViewController.m */; };
 /* End PBXBuildFile section */
@@ -202,10 +203,12 @@
 		E55915541C0EF4B600CE9102 /* ListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListModel.m; sourceTree = "<group>"; };
 		E93ED66E1C0FD76100B9C46D /* slider.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slider.png; sourceTree = "<group>"; };
 		E93ED6701C104E1100B9C46D /* mailcore2.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = mailcore2.xcodeproj; path = "../../Downloads/mailcore2-master/build-mac/mailcore2.xcodeproj"; sourceTree = "<group>"; };
+		E9468E1C1C151E17009E4919 /* AddContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddContactViewController.h; sourceTree = "<group>"; };
+		E9468E1D1C151E18009E4919 /* AddContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddContactViewController.m; sourceTree = "<group>"; };
+		E9468E201C1587DF009E4919 /* AddContViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddContViewController.h; sourceTree = "<group>"; };
+		E9468E211C1587DF009E4919 /* AddContViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddContViewController.m; sourceTree = "<group>"; };
 		E94C5C491C1126B100612971 /* ContactTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactTableViewController.h; sourceTree = "<group>"; };
 		E94C5C4A1C1126B100612971 /* ContactTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactTableViewController.m; sourceTree = "<group>"; };
-		E94C5C601C11667300612971 /* AddContactTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddContactTableViewController.h; sourceTree = "<group>"; };
-		E94C5C611C11667300612971 /* AddContactTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddContactTableViewController.m; sourceTree = "<group>"; };
 		E94C5C701C118A4100612971 /* SeeContactTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeeContactTableViewController.h; sourceTree = "<group>"; };
 		E94C5C711C118A4100612971 /* SeeContactTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeeContactTableViewController.m; sourceTree = "<group>"; };
 		E94C5C741C118CED00612971 /* EditContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditContactViewController.h; sourceTree = "<group>"; };
@@ -361,12 +364,14 @@
 				E559154A1C0EF23700CE9102 /* EditKusiriTableViewController.m */,
 				E94C5C491C1126B100612971 /* ContactTableViewController.h */,
 				E94C5C4A1C1126B100612971 /* ContactTableViewController.m */,
+				E9468E201C1587DF009E4919 /* AddContViewController.h */,
+				E9468E211C1587DF009E4919 /* AddContViewController.m */,
 				E94C5C701C118A4100612971 /* SeeContactTableViewController.h */,
 				E94C5C711C118A4100612971 /* SeeContactTableViewController.m */,
 				E94C5C741C118CED00612971 /* EditContactViewController.h */,
 				E94C5C751C118CED00612971 /* EditContactViewController.m */,
-				E94C5C601C11667300612971 /* AddContactTableViewController.h */,
-				E94C5C611C11667300612971 /* AddContactTableViewController.m */,
+				E9468E1C1C151E17009E4919 /* AddContactViewController.h */,
+				E9468E1D1C151E18009E4919 /* AddContactViewController.m */,
 			);
 			name = SubViewControllers;
 			sourceTree = "<group>";
@@ -618,6 +623,7 @@
 				E559151E1C0EE47900CE9102 /* SettingCollectionViewCell.m in Sources */,
 				E55915431C0EF21200CE9102 /* PersonalDataTableViewController.m in Sources */,
 				E55915021C0ED54C00CE9102 /* TabBarController.m in Sources */,
+				E9468E221C1587DF009E4919 /* AddContViewController.m in Sources */,
 				E94C5C4B1C1126B100612971 /* ContactTableViewController.m in Sources */,
 				E55915461C0EF22400CE9102 /* EditListViewController.m in Sources */,
 				E55915401C0EF20B00CE9102 /* ListTableViewController.m in Sources */,
@@ -629,7 +635,6 @@
 				E559154C1C0EF23700CE9102 /* EditKusiriTableViewController.m in Sources */,
 				E94C5C721C118A4100612971 /* SeeContactTableViewController.m in Sources */,
 				E55915551C0EF4B600CE9102 /* ListModel.m in Sources */,
-				E94C5C621C11667300612971 /* AddContactTableViewController.m in Sources */,
 				E559151B1C0EE45800CE9102 /* ContactCollectionViewCell.m in Sources */,
 				E55914BB1C0EC92E00CE9102 /* AppDelegate.m in Sources */,
 				E55914F61C0ED0A300CE9102 /* EmergencyViewController.m in Sources */,
@@ -638,6 +643,7 @@
 				E55914FF1C0ED0DA00CE9102 /* ContactCollectionViewController.m in Sources */,
 				E55914F91C0ED0B000CE9102 /* WorryViewController.m in Sources */,
 				E55914B81C0EC92E00CE9102 /* main.m in Sources */,
+				E9468E1E1C151E18009E4919 /* AddContactViewController.m in Sources */,
 				E94C5C761C118CED00612971 /* EditContactViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

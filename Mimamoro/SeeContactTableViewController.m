@@ -7,22 +7,41 @@
 //
 
 #import "SeeContactTableViewController.h"
-
+#import "EditContactViewController.h"
+#import "AddContactViewController.h"
 @interface SeeContactTableViewController ()
 
 @end
 
 @implementation SeeContactTableViewController
 
+//-(void)viewDidAppear:(BOOL)animated
+//{
+//    [self.tableView reloadData];
+//}
+-(void)viewWillAppear:(BOOL)animated
+{
+    [self.tableView reloadData];
+    self.rootArr = [[NSUserDefaults standardUserDefaults]objectForKey:@"root"];
+    self.seedata = self.rootArr[self.indexRow];
+}
+
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    UIBarButtonItem *add = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(AddContact)];
+    self.navigationItem.rightBarButtonItem = add;
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
+-(void)AddContact
+{
+    AddContactViewController *add = [[AddContactViewController alloc]init];
+    [self.navigationController pushViewController:add animated:YES];
+    
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -38,7 +57,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
-  //  NSArray *na = self.seedata;
+  
     return self.seedata.count;
 }
 
@@ -49,14 +68,26 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
     }
-    NSDictionary *nameDic = self.seedata[indexPath.row];
-    NSString * nameStr = [nameDic valueForKey:@"name"];
+    
+    
+    NSDictionary *nameDic = (self.rootArr[self.indexRow])[indexPath.row];
+    NSString *nameStr = [nameDic valueForKey:@"name"];
     cell.textLabel.text = nameStr;
-    // Configure the cell...
     
     return cell;
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    EditContactViewController *edit = [[EditContactViewController alloc]init];
+    
+    edit.type =2;
+    edit.oldIndexRow = self.indexRow;
+    edit.indexRow = indexPath.row;
+    edit.rootData = self.rootData;
+    [self.navigationController pushViewController:edit animated:YES];
+    
+}
 
 /*
 // Override to support conditional editing of the table view.

@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EditContactViewController : UIViewController
+@interface EditContactViewController : UIViewController<UITextFieldDelegate>
 @property (strong, nonatomic) NSArray *editdata;
+@property long indexRow;
+@property long oldIndexRow;
+@property int type;
+@property (strong, nonatomic) NSMutableArray *rootArr;
+@property (strong, nonatomic) NSMutableArray *rootData;
 @end
