@@ -45,6 +45,7 @@
 }
 
 -(void)viewWillDisappear:(BOOL)animated{
+     message = _messageTextView.text;
     [[NSUserDefaults standardUserDefaults]setValue:message forKey:@"message1"];
 }
 
@@ -57,7 +58,7 @@
     [_currentArray removeAllObjects];
     NSDictionary *tempdict = [[NSUserDefaults standardUserDefaults]objectForKey:@"contact"];
     if (!tempdict) {
-        [LeafNotification showInController:self withText:@"連絡人を追加してみてください"];
+        [LeafNotification showInController:self withText:@"連絡人を追加してください"];
         return;
     }
     _contactDict = [[NSMutableDictionary alloc]initWithDictionary:tempdict];
@@ -149,7 +150,7 @@
     [[builder header]setSubject:@"!!見守りアプリの緊急通報メールです"];
     //メールの本体
     //NSString *urlStr = [NSString stringWithFormat:@"http://maps.loco.yahoo.co.jp/maps?lat=%@&%@&ei=utf-8&v=2&sc=3&datum=wgs&gov=13108.30#",latitude,longitude];
-    [builder setTextBody:[NSString stringWithFormat:@"▼メッセージ:\n \n%@ \n \n 見守りアプリで緊急ボタンが押されてメール送信しました。\n このメールには返信しないでください。\nこのメールに覚えがない場合は、お手数ですが削除してください。",mes]];
+    [builder setTextBody:[NSString stringWithFormat:@"▼メッセージ:\n \n %@ \n \n *.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.\n▼見守りアプリで緊急ボタンが押されてメール送信しました。\n \n＊このメールには返信しないでください。\nこのメールに覚えがない場合は、お手数ですが削除してください。",mes]];
     
     //send mail
     NSData *rfc822Data=[builder data];
@@ -184,10 +185,6 @@
     cell.textLabel.text = [NSString stringWithFormat:@"%@ : ",contactmodel.name];
     cell.detailTextLabel.text = [NSString stringWithFormat:@"    %@",contactmodel.email];
     return cell;
-}
-
--(void)textViewDidEndEditing:(UITextView *)textView{
-    message = _messageTextView.text;
 }
 
 
