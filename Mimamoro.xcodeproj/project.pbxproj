@@ -44,12 +44,12 @@
 		E559153D1C0EF07400CE9102 /* UserProfileModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E559153C1C0EF07400CE9102 /* UserProfileModel.m */; };
 		E55915401C0EF20B00CE9102 /* ListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E559153F1C0EF20B00CE9102 /* ListTableViewController.m */; };
 		E55915431C0EF21200CE9102 /* PersonalDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E55915421C0EF21200CE9102 /* PersonalDataTableViewController.m */; };
-		E55915461C0EF22400CE9102 /* EditListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E55915451C0EF22400CE9102 /* EditListViewController.m */; };
 		E559154B1C0EF23700CE9102 /* EditKennkoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E55915481C0EF23700CE9102 /* EditKennkoTableViewController.m */; };
 		E559154C1C0EF23700CE9102 /* EditKusiriTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E559154A1C0EF23700CE9102 /* EditKusiriTableViewController.m */; };
 		E55915511C0EF4AE00CE9102 /* KennkoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E559154E1C0EF4AE00CE9102 /* KennkoModel.m */; };
 		E55915521C0EF4AE00CE9102 /* KusuriModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E55915501C0EF4AE00CE9102 /* KusuriModel.m */; };
 		E55915551C0EF4B600CE9102 /* ListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E55915541C0EF4B600CE9102 /* ListModel.m */; };
+		E5705A621C15304D00D6B995 /* EditListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5705A611C15304D00D6B995 /* EditListTableViewController.m */; };
 		E57B2BE11C0FCF0400EF2948 /* ContactTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E57B2BE01C0FCF0400EF2948 /* ContactTableViewController.m */; };
 		E57B2BEC1C0FD57B00EF2948 /* addgroup.png in Resources */ = {isa = PBXBuildFile; fileRef = E57B2BEB1C0FD57B00EF2948 /* addgroup.png */; };
 		E57B2BF11C0FE04700EF2948 /* EditContactTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E57B2BF01C0FE04700EF2948 /* EditContactTableViewController.m */; };
@@ -221,8 +221,6 @@
 		E559153F1C0EF20B00CE9102 /* ListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListTableViewController.m; sourceTree = "<group>"; };
 		E55915411C0EF21200CE9102 /* PersonalDataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonalDataTableViewController.h; sourceTree = "<group>"; };
 		E55915421C0EF21200CE9102 /* PersonalDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonalDataTableViewController.m; sourceTree = "<group>"; };
-		E55915441C0EF22400CE9102 /* EditListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditListViewController.h; sourceTree = "<group>"; };
-		E55915451C0EF22400CE9102 /* EditListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditListViewController.m; sourceTree = "<group>"; };
 		E55915471C0EF23700CE9102 /* EditKennkoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditKennkoTableViewController.h; sourceTree = "<group>"; };
 		E55915481C0EF23700CE9102 /* EditKennkoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditKennkoTableViewController.m; sourceTree = "<group>"; };
 		E55915491C0EF23700CE9102 /* EditKusiriTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditKusiriTableViewController.h; sourceTree = "<group>"; };
@@ -233,6 +231,8 @@
 		E55915501C0EF4AE00CE9102 /* KusuriModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KusuriModel.m; sourceTree = "<group>"; };
 		E55915531C0EF4B600CE9102 /* ListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListModel.h; sourceTree = "<group>"; };
 		E55915541C0EF4B600CE9102 /* ListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListModel.m; sourceTree = "<group>"; };
+		E5705A601C15304D00D6B995 /* EditListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditListTableViewController.h; sourceTree = "<group>"; };
+		E5705A611C15304D00D6B995 /* EditListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditListTableViewController.m; sourceTree = "<group>"; };
 		E57B2BDF1C0FCF0400EF2948 /* ContactTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactTableViewController.h; sourceTree = "<group>"; };
 		E57B2BE01C0FCF0400EF2948 /* ContactTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactTableViewController.m; sourceTree = "<group>"; };
 		E57B2BEB1C0FD57B00EF2948 /* addgroup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = addgroup.png; sourceTree = "<group>"; };
@@ -425,22 +425,11 @@
 			children = (
 				E57B2C301C1125BA00EF2948 /* ContactManageViewControllers */,
 				E57B2C211C1036C500EF2948 /* GroupManageViewControllers */,
+				E5705A6A1C1532E900D6B995 /* ProfileManageViewControllers */,
+				E5705A6B1C15332E00D6B995 /* ListManageViewControllers */,
+				E5705A6C1C15339900D6B995 /* PersonalDataManageViewControllers */,
 				E55915371C0EF04900CE9102 /* SettingTableViewController.h */,
 				E55915381C0EF04900CE9102 /* SettingTableViewController.m */,
-				E55915341C0EEEA000CE9102 /* ProfileTableViewController.h */,
-				E55915351C0EEEA000CE9102 /* ProfileTableViewController.m */,
-				E55915311C0EEE6B00CE9102 /* EditProfileTableViewController.h */,
-				E55915321C0EEE6B00CE9102 /* EditProfileTableViewController.m */,
-				E559153E1C0EF20B00CE9102 /* ListTableViewController.h */,
-				E559153F1C0EF20B00CE9102 /* ListTableViewController.m */,
-				E55915441C0EF22400CE9102 /* EditListViewController.h */,
-				E55915451C0EF22400CE9102 /* EditListViewController.m */,
-				E55915411C0EF21200CE9102 /* PersonalDataTableViewController.h */,
-				E55915421C0EF21200CE9102 /* PersonalDataTableViewController.m */,
-				E55915471C0EF23700CE9102 /* EditKennkoTableViewController.h */,
-				E55915481C0EF23700CE9102 /* EditKennkoTableViewController.m */,
-				E55915491C0EF23700CE9102 /* EditKusiriTableViewController.h */,
-				E559154A1C0EF23700CE9102 /* EditKusiriTableViewController.m */,
 			);
 			name = SubViewControllers;
 			sourceTree = "<group>";
@@ -462,6 +451,41 @@
 				E55915501C0EF4AE00CE9102 /* KusuriModel.m */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		E5705A6A1C1532E900D6B995 /* ProfileManageViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E55915341C0EEEA000CE9102 /* ProfileTableViewController.h */,
+				E55915351C0EEEA000CE9102 /* ProfileTableViewController.m */,
+				E55915311C0EEE6B00CE9102 /* EditProfileTableViewController.h */,
+				E55915321C0EEE6B00CE9102 /* EditProfileTableViewController.m */,
+			);
+			name = ProfileManageViewControllers;
+			sourceTree = "<group>";
+		};
+		E5705A6B1C15332E00D6B995 /* ListManageViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E559153E1C0EF20B00CE9102 /* ListTableViewController.h */,
+				E559153F1C0EF20B00CE9102 /* ListTableViewController.m */,
+				E5705A601C15304D00D6B995 /* EditListTableViewController.h */,
+				E5705A611C15304D00D6B995 /* EditListTableViewController.m */,
+			);
+			name = ListManageViewControllers;
+			sourceTree = "<group>";
+		};
+		E5705A6C1C15339900D6B995 /* PersonalDataManageViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E55915411C0EF21200CE9102 /* PersonalDataTableViewController.h */,
+				E55915421C0EF21200CE9102 /* PersonalDataTableViewController.m */,
+				E55915471C0EF23700CE9102 /* EditKennkoTableViewController.h */,
+				E55915481C0EF23700CE9102 /* EditKennkoTableViewController.m */,
+				E55915491C0EF23700CE9102 /* EditKusiriTableViewController.h */,
+				E559154A1C0EF23700CE9102 /* EditKusiriTableViewController.m */,
+			);
+			name = PersonalDataManageViewControllers;
 			sourceTree = "<group>";
 		};
 		E57B2BF51C101D8800EF2948 /* person-image */ = {
@@ -763,6 +787,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E57B2C711C11964400EF2948 /* PickerView.m in Sources */,
+				E5705A621C15304D00D6B995 /* EditListTableViewController.m in Sources */,
 				E55915331C0EEE6B00CE9102 /* EditProfileTableViewController.m in Sources */,
 				E57B2C131C101F2200EF2948 /* PersonImageCollectionViewController.m in Sources */,
 				E559151E1C0EE47900CE9102 /* SettingCollectionViewCell.m in Sources */,
@@ -771,7 +796,6 @@
 				E57B2C201C10305700EF2948 /* GroupTableViewController.m in Sources */,
 				E57B2C271C103B3700EF2948 /* GroupModel.m in Sources */,
 				E57B2BE11C0FCF0400EF2948 /* ContactTableViewController.m in Sources */,
-				E55915461C0EF22400CE9102 /* EditListViewController.m in Sources */,
 				E55915401C0EF20B00CE9102 /* ListTableViewController.m in Sources */,
 				E55915361C0EEEA000CE9102 /* ProfileTableViewController.m in Sources */,
 				E57B2BF11C0FE04700EF2948 /* EditContactTableViewController.m in Sources */,

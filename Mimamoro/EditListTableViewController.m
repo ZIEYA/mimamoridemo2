@@ -1,15 +1,15 @@
 //
-//  EditListViewController.m
-//  Mimamori
+//  EditListTableViewController.m
+//  Mimamoro
 //
-//  Created by totyu1 on 2015/11/23.
+//  Created by totyu1 on 2015/12/07.
 //  Copyright © 2015年 totyu1. All rights reserved.
 //
 
-#import "EditListViewController.h"
+#import "EditListTableViewController.h"
 #import "ListModel.h"
 
-@interface EditListViewController ()<UITextViewDelegate>{
+@interface EditListTableViewController ()<UITextViewDelegate>{
     NSMutableDictionary *listDict;
     NSMutableDictionary *exitDict;
     ListModel *listmodel;
@@ -19,7 +19,7 @@
 
 @end
 
-@implementation EditListViewController
+@implementation EditListTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -45,6 +45,7 @@
             [_minomawariSwitch setOn:NO];
         }
     }
+    self.tableView.tableFooterView = [[UIView alloc]initWithFrame:CGRectZero];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -86,6 +87,7 @@
     }
     return  YES;
 }
+
 
 
 @end

@@ -7,7 +7,7 @@
 //
 
 #import "ListTableViewController.h"
-#import "EditListViewController.h"
+#import "EditListTableViewController.h"
 
 @interface ListTableViewController (){
     NSMutableDictionary *listContentDict;
@@ -39,7 +39,6 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 -(void)reloadList{
@@ -115,14 +114,6 @@
     [self performSegueWithIdentifier:@"gotoEditListVC" sender:self];
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
 
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -158,7 +149,7 @@
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    EditListViewController *editListVC = segue.destinationViewController;
+    EditListTableViewController *editListVC = segue.destinationViewController;
     editListVC.editType = edittype;
     editListVC.tempContent = tempcotent;
 }
