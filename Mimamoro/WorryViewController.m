@@ -18,6 +18,10 @@
 @property (strong, nonatomic) NSString *spiritValue;
 @property (strong, nonatomic) NSString *happinessValue;
 
+
+@property (strong, nonatomic) UILabel *Lab1;
+@property (strong, nonatomic) UILabel *Lab2;
+@property (strong, nonatomic) UILabel *Lab3;
 @property (strong, nonatomic) NSArray *contArr;
 @end
 
@@ -49,12 +53,13 @@
     state.text = @"•状態";
     [self.view addSubview:state];
     
-    UILabel * good = [[UILabel alloc]initWithFrame:CGRectMake(self.view.bounds.size.width*0.2, self.view.bounds.size.height*0.66, self.view.bounds.size.width*0.2, 10)];
-    good.text = @"悪い";
-    [self.view addSubview:good];
-    UILabel * bad = [[UILabel alloc]initWithFrame:CGRectMake(self.view.bounds.size.width*0.85, self.view.bounds.size.height*0.66, self.view.bounds.size.width*0.2, 10)];
-    bad.text = @"良い";
-    [self.view addSubview:bad];
+//    UILabel * good = [[UILabel alloc]initWithFrame:CGRectMake(self.view.bounds.size.width*0.2, self.view.bounds.size.height*0.66, self.view.bounds.size.width*0.2, 10)];
+//    good.text = @"悪い";
+//    [self.view addSubview:good];
+//    UILabel * bad = [[UILabel alloc]initWithFrame:CGRectMake(self.view.bounds.size.width*0.85, self.view.bounds.size.height*0.66, self.view.bounds.size.width*0.2, 10)];
+//    bad.text = @"良い";
+//    [self.view addSubview:bad];
+    
     
     //UISlider设置
     UILabel *health = [[UILabel alloc]initWithFrame:CGRectMake(self.view.bounds.size.width*0.05, self.view.bounds.size.height*0.73, self.view.bounds.size.width*0.2, 10)];
@@ -64,21 +69,31 @@
     [self.healthSlider setMinimumValue:0];
     [self.healthSlider setMaximumValue:5];
     [self.healthSlider setValue:2.5];
-    healthyValue = @"ちょうどいい";
-    self.healthSlider.frame = CGRectMake(self.view.bounds.size.width*0.2, self.view.bounds.size.height*0.73, self.view.bounds.size.width*0.75, 5);
+    healthyValue = @"适中";
+    
+    _Lab1 = [[UILabel alloc]initWithFrame:CGRectMake(self.view.bounds.size.width*0.16, self.view.bounds.size.height*0.73, self.view.bounds.size.width*0.2, 10)];
+    _Lab1.text = healthyValue;
+    _Lab1.font = [UIFont fontWithName:@"AmericanTypewriter" size:12];
+    [self.view addSubview:_Lab1];
+    
+    self.healthSlider.frame = CGRectMake(self.view.bounds.size.width*0.3, self.view.bounds.size.height*0.73, self.view.bounds.size.width*0.65, 5);
     //身体sliderAction
     [self.healthSlider addTarget:self action:@selector(healthSliderChange:) forControlEvents:UIControlEventValueChanged];
     [self.view addSubview:self.healthSlider];
     
     UILabel *spirit = [[UILabel alloc]initWithFrame:CGRectMake(self.view.bounds.size.width*0.05, self.view.bounds.size.height*0.80, self.view.bounds.size.width*0.2, 10)];
     spirit.text = @"精神";
+    _Lab2 = [[UILabel alloc]initWithFrame:CGRectMake(self.view.bounds.size.width*0.16, self.view.bounds.size.height*0.8, self.view.bounds.size.width*0.2, 10)];
+    _Lab2.text = healthyValue;
+    _Lab2.font = [UIFont fontWithName:@"AmericanTypewriter" size:12];
+    [self.view addSubview:_Lab2];
     [self.view addSubview:spirit];
     self.spiritSlider = [[UISlider alloc]init];
-    self.spiritSlider.frame = CGRectMake(self.view.bounds.size.width*0.2, self.view.bounds.size.height*0.80, self.view.bounds.size.width*0.75, 5);
+    self.spiritSlider.frame = CGRectMake(self.view.bounds.size.width*0.3, self.view.bounds.size.height*0.80, self.view.bounds.size.width*0.65, 5);
     [self.spiritSlider setMinimumValue:0];
     [self.spiritSlider setMaximumValue:5];
     [self.spiritSlider setValue:2.5];
-    spiritValue = @"ちょうどいい";
+    spiritValue = @"适中";
     NSLog(@"%@",spiritValue);
     //健康sliderAction
     [self.spiritSlider addTarget:self action:@selector(spiritSliderChange:) forControlEvents:UIControlEventValueChanged];
@@ -86,13 +101,17 @@
     
     UILabel *happiness = [[UILabel alloc]initWithFrame:CGRectMake(self.view.bounds.size.width*0.05, self.view.bounds.size.height*0.87, self.view.bounds.size.width*0.2, 10)];
     happiness.text = @"幸せ";
+    _Lab3 = [[UILabel alloc]initWithFrame:CGRectMake(self.view.bounds.size.width*0.16, self.view.bounds.size.height*0.87, self.view.bounds.size.width*0.2, 10)];
+    _Lab3.text = healthyValue;
+    _Lab3.font = [UIFont fontWithName:@"AmericanTypewriter" size:12];
+    [self.view addSubview:_Lab3];
     [self.view addSubview:happiness];
     self.happinessSlider = [[UISlider alloc]init];
-    self.happinessSlider.frame = CGRectMake(self.view.bounds.size.width*0.2, self.view.bounds.size.height*0.87, self.view.bounds.size.width*0.75, 5);
+    self.happinessSlider.frame = CGRectMake(self.view.bounds.size.width*0.3, self.view.bounds.size.height*0.87, self.view.bounds.size.width*0.65, 5);
     [self.happinessSlider setMinimumValue:0];
     [self.happinessSlider setMaximumValue:5];
     [self.happinessSlider setValue:2.5];
-    happinessValue = @"ちょうどいい";
+    happinessValue = @"适中";
     //幸せsliderAction
     [self.happinessSlider addTarget:self action:@selector(happinessSliderChange:) forControlEvents:UIControlEventValueChanged];
     [self.view addSubview:self.happinessSlider];
@@ -110,12 +129,13 @@
     }if (sender.value>=1 && sender.value<2) {
         healthyValue = @"少し悪い";
     }if (sender.value>=2 && sender.value<3) {
-        healthyValue = @"ちょうどいい";
+        healthyValue = @"适中";
     }if (sender.value>=3 && sender.value<4) {
         healthyValue = @"良い";
     }if (sender.value>=4 && sender.value<=5) {
-        healthyValue = @"とても良い";
+        healthyValue = @"優秀";
     }
+    self.Lab1.text = healthyValue;
     NSLog(@"身体状态：%@",healthyValue);
 }
 -(void)spiritSliderChange:(UISlider *)sender
@@ -125,12 +145,13 @@
     }if (sender.value>=1 && sender.value<2) {
         spiritValue = @"少し悪い";
     }if (sender.value>=2 && sender.value<3) {
-        spiritValue = @"ちょうどいい";
+        spiritValue = @"适中";
     }if (sender.value>=3 && sender.value<4) {
         spiritValue = @"良い";
     }if (sender.value>=4 && sender.value<=5) {
-        spiritValue = @"とても良い";
+        spiritValue = @"優秀";
     }
+    self.Lab2.text = spiritValue;
     NSLog(@"精神状态：%@",spiritValue);
 }
 -(void)happinessSliderChange:(UISlider*)sender
@@ -140,12 +161,13 @@
     }if (sender.value>=1 && sender.value<2) {
         happinessValue = @"少し悪い";
     }if (sender.value>=2 && sender.value<3) {
-        happinessValue = @"ちょうどいい";
+        happinessValue = @"适中";
     }if (sender.value>=3 && sender.value<4) {
         happinessValue = @"良い";
     }if (sender.value>=4 && sender.value<=5) {
-        happinessValue = @"とても良い";
+        happinessValue = @"優秀";
     }
+    self.Lab3.text = happinessValue;
     NSLog(@"幸せわ：%@",happinessValue);
 }
 #pragma mark - buttonAction
