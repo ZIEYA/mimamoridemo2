@@ -19,14 +19,6 @@
 		E55914FC1C0ED0BD00CE9102 /* OtherCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E55914FB1C0ED0BD00CE9102 /* OtherCollectionViewController.m */; };
 		E55914FF1C0ED0DA00CE9102 /* ContactCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E55914FE1C0ED0DA00CE9102 /* ContactCollectionViewController.m */; };
 		E55915021C0ED54C00CE9102 /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = E55915011C0ED54C00CE9102 /* TabBarController.m */; };
-		E55915041C0ED73A00CE9102 /* contactlist.png in Resources */ = {isa = PBXBuildFile; fileRef = E55915031C0ED73A00CE9102 /* contactlist.png */; };
-		E55915061C0ED87F00CE9102 /* emergency.png in Resources */ = {isa = PBXBuildFile; fileRef = E55915051C0ED87F00CE9102 /* emergency.png */; };
-		E55915081C0ED88300CE9102 /* worry.png in Resources */ = {isa = PBXBuildFile; fileRef = E55915071C0ED88300CE9102 /* worry.png */; };
-		E559150A1C0ED88600CE9102 /* setting.png in Resources */ = {isa = PBXBuildFile; fileRef = E55915091C0ED88600CE9102 /* setting.png */; };
-		E559150C1C0ED99000CE9102 /* contactlist-0.png in Resources */ = {isa = PBXBuildFile; fileRef = E559150B1C0ED99000CE9102 /* contactlist-0.png */; };
-		E559150E1C0ED99400CE9102 /* emergency-0.png in Resources */ = {isa = PBXBuildFile; fileRef = E559150D1C0ED99400CE9102 /* emergency-0.png */; };
-		E55915101C0ED99700CE9102 /* worry-0.png in Resources */ = {isa = PBXBuildFile; fileRef = E559150F1C0ED99700CE9102 /* worry-0.png */; };
-		E55915121C0ED99B00CE9102 /* setting-0.png in Resources */ = {isa = PBXBuildFile; fileRef = E55915111C0ED99B00CE9102 /* setting-0.png */; };
 		E55915151C0EDD5B00CE9102 /* emergencybtn.png in Resources */ = {isa = PBXBuildFile; fileRef = E55915141C0EDD5B00CE9102 /* emergencybtn.png */; };
 		E55915171C0EDD5E00CE9102 /* worrybtn.png in Resources */ = {isa = PBXBuildFile; fileRef = E55915161C0EDD5E00CE9102 /* worrybtn.png */; };
 		E559151B1C0EE45800CE9102 /* ContactCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E559151A1C0EE45800CE9102 /* ContactCollectionViewCell.m */; };
@@ -48,6 +40,25 @@
 		E55915511C0EF4AE00CE9102 /* KennkoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E559154E1C0EF4AE00CE9102 /* KennkoModel.m */; };
 		E55915521C0EF4AE00CE9102 /* KusuriModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E55915501C0EF4AE00CE9102 /* KusuriModel.m */; };
 		E55915551C0EF4B600CE9102 /* ListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E55915541C0EF4B600CE9102 /* ListModel.m */; };
+		E562506E1C166EC9008FD1DF /* DenkiManageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E562506D1C166EC9008FD1DF /* DenkiManageViewController.m */; };
+		E56250711C166FFA008FD1DF /* PocketDoctorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E56250701C166FFA008FD1DF /* PocketDoctorViewController.m */; };
+		E56250761C167F25008FD1DF /* group.png in Resources */ = {isa = PBXBuildFile; fileRef = E56250751C167F25008FD1DF /* group.png */; };
+		E56250A51C1696E6008FD1DF /* setting-0.png in Resources */ = {isa = PBXBuildFile; fileRef = E56250A31C1696E6008FD1DF /* setting-0.png */; };
+		E56250A61C1696E6008FD1DF /* setting-0@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E56250A41C1696E6008FD1DF /* setting-0@2x.png */; };
+		E56250A91C1696EA008FD1DF /* setting.png in Resources */ = {isa = PBXBuildFile; fileRef = E56250A71C1696EA008FD1DF /* setting.png */; };
+		E56250AA1C1696EA008FD1DF /* setting@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E56250A81C1696EA008FD1DF /* setting@2x.png */; };
+		E56250AF1C16973B008FD1DF /* worry-0.png in Resources */ = {isa = PBXBuildFile; fileRef = E56250AB1C16973B008FD1DF /* worry-0.png */; };
+		E56250B01C16973B008FD1DF /* worry-0@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E56250AC1C16973B008FD1DF /* worry-0@2x.png */; };
+		E56250B11C16973B008FD1DF /* worry.png in Resources */ = {isa = PBXBuildFile; fileRef = E56250AD1C16973B008FD1DF /* worry.png */; };
+		E56250B21C16973B008FD1DF /* worry@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E56250AE1C16973B008FD1DF /* worry@2x.png */; };
+		E56250B71C16976D008FD1DF /* emergency-0.png in Resources */ = {isa = PBXBuildFile; fileRef = E56250B31C16976D008FD1DF /* emergency-0.png */; };
+		E56250B81C16976D008FD1DF /* emergency-0@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E56250B41C16976D008FD1DF /* emergency-0@2x.png */; };
+		E56250B91C16976D008FD1DF /* emergency.png in Resources */ = {isa = PBXBuildFile; fileRef = E56250B51C16976D008FD1DF /* emergency.png */; };
+		E56250BA1C16976D008FD1DF /* emergency@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E56250B61C16976D008FD1DF /* emergency@2x.png */; };
+		E56250BF1C16979A008FD1DF /* contactlist-0.png in Resources */ = {isa = PBXBuildFile; fileRef = E56250BB1C16979A008FD1DF /* contactlist-0.png */; };
+		E56250C01C16979A008FD1DF /* contactlist-0@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E56250BC1C16979A008FD1DF /* contactlist-0@2x.png */; };
+		E56250C11C16979A008FD1DF /* contactlist.png in Resources */ = {isa = PBXBuildFile; fileRef = E56250BD1C16979A008FD1DF /* contactlist.png */; };
+		E56250C21C16979A008FD1DF /* contactlist@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E56250BE1C16979A008FD1DF /* contactlist@2x.png */; };
 		E5705A621C15304D00D6B995 /* EditListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5705A611C15304D00D6B995 /* EditListTableViewController.m */; };
 		E5705A701C15345800D6B995 /* ABFillButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E5705A6F1C15345800D6B995 /* ABFillButton.m */; };
 		E5705A751C154ACC00D6B995 /* AddNewItemTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5705A741C154ACC00D6B995 /* AddNewItemTableViewController.m */; };
@@ -204,14 +215,6 @@
 		E55914FE1C0ED0DA00CE9102 /* ContactCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactCollectionViewController.m; sourceTree = "<group>"; };
 		E55915001C0ED54C00CE9102 /* TabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
 		E55915011C0ED54C00CE9102 /* TabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
-		E55915031C0ED73A00CE9102 /* contactlist.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = contactlist.png; sourceTree = "<group>"; };
-		E55915051C0ED87F00CE9102 /* emergency.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emergency.png; sourceTree = "<group>"; };
-		E55915071C0ED88300CE9102 /* worry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = worry.png; sourceTree = "<group>"; };
-		E55915091C0ED88600CE9102 /* setting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = setting.png; sourceTree = "<group>"; };
-		E559150B1C0ED99000CE9102 /* contactlist-0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "contactlist-0.png"; sourceTree = "<group>"; };
-		E559150D1C0ED99400CE9102 /* emergency-0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "emergency-0.png"; sourceTree = "<group>"; };
-		E559150F1C0ED99700CE9102 /* worry-0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "worry-0.png"; sourceTree = "<group>"; };
-		E55915111C0ED99B00CE9102 /* setting-0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "setting-0.png"; sourceTree = "<group>"; };
 		E55915141C0EDD5B00CE9102 /* emergencybtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emergencybtn.png; sourceTree = "<group>"; };
 		E55915161C0EDD5E00CE9102 /* worrybtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = worrybtn.png; sourceTree = "<group>"; };
 		E55915191C0EE45800CE9102 /* ContactCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactCollectionViewCell.h; sourceTree = "<group>"; };
@@ -246,6 +249,27 @@
 		E55915501C0EF4AE00CE9102 /* KusuriModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KusuriModel.m; sourceTree = "<group>"; };
 		E55915531C0EF4B600CE9102 /* ListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListModel.h; sourceTree = "<group>"; };
 		E55915541C0EF4B600CE9102 /* ListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListModel.m; sourceTree = "<group>"; };
+		E562506C1C166EC9008FD1DF /* DenkiManageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DenkiManageViewController.h; sourceTree = "<group>"; };
+		E562506D1C166EC9008FD1DF /* DenkiManageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DenkiManageViewController.m; sourceTree = "<group>"; };
+		E562506F1C166FFA008FD1DF /* PocketDoctorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PocketDoctorViewController.h; sourceTree = "<group>"; };
+		E56250701C166FFA008FD1DF /* PocketDoctorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PocketDoctorViewController.m; sourceTree = "<group>"; };
+		E56250751C167F25008FD1DF /* group.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = group.png; sourceTree = "<group>"; };
+		E56250A31C1696E6008FD1DF /* setting-0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "setting-0.png"; sourceTree = "<group>"; };
+		E56250A41C1696E6008FD1DF /* setting-0@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "setting-0@2x.png"; sourceTree = "<group>"; };
+		E56250A71C1696EA008FD1DF /* setting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = setting.png; sourceTree = "<group>"; };
+		E56250A81C1696EA008FD1DF /* setting@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "setting@2x.png"; sourceTree = "<group>"; };
+		E56250AB1C16973B008FD1DF /* worry-0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "worry-0.png"; sourceTree = "<group>"; };
+		E56250AC1C16973B008FD1DF /* worry-0@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "worry-0@2x.png"; sourceTree = "<group>"; };
+		E56250AD1C16973B008FD1DF /* worry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = worry.png; sourceTree = "<group>"; };
+		E56250AE1C16973B008FD1DF /* worry@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "worry@2x.png"; sourceTree = "<group>"; };
+		E56250B31C16976D008FD1DF /* emergency-0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "emergency-0.png"; sourceTree = "<group>"; };
+		E56250B41C16976D008FD1DF /* emergency-0@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "emergency-0@2x.png"; sourceTree = "<group>"; };
+		E56250B51C16976D008FD1DF /* emergency.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emergency.png; sourceTree = "<group>"; };
+		E56250B61C16976D008FD1DF /* emergency@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "emergency@2x.png"; sourceTree = "<group>"; };
+		E56250BB1C16979A008FD1DF /* contactlist-0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "contactlist-0.png"; sourceTree = "<group>"; };
+		E56250BC1C16979A008FD1DF /* contactlist-0@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "contactlist-0@2x.png"; sourceTree = "<group>"; };
+		E56250BD1C16979A008FD1DF /* contactlist.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = contactlist.png; sourceTree = "<group>"; };
+		E56250BE1C16979A008FD1DF /* contactlist@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "contactlist@2x.png"; sourceTree = "<group>"; };
 		E5705A601C15304D00D6B995 /* EditListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditListTableViewController.h; sourceTree = "<group>"; };
 		E5705A611C15304D00D6B995 /* EditListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditListTableViewController.m; sourceTree = "<group>"; };
 		E5705A6E1C15345800D6B995 /* ABFillButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABFillButton.h; sourceTree = "<group>"; };
@@ -398,16 +422,9 @@
 			children = (
 				E5705A711C15346D00D6B995 /* ABFillButtonExample-Prefix.pch */,
 				E55914B71C0EC92E00CE9102 /* main.m */,
+				E56250741C167EE1008FD1DF /* tabbar-image */,
 				E5705A7F1C15571C00D6B995 /* item-image */,
 				E57B2BF51C101D8800EF2948 /* person-image */,
-				E559150B1C0ED99000CE9102 /* contactlist-0.png */,
-				E559150D1C0ED99400CE9102 /* emergency-0.png */,
-				E559150F1C0ED99700CE9102 /* worry-0.png */,
-				E55915111C0ED99B00CE9102 /* setting-0.png */,
-				E55915031C0ED73A00CE9102 /* contactlist.png */,
-				E55915051C0ED87F00CE9102 /* emergency.png */,
-				E55915071C0ED88300CE9102 /* worry.png */,
-				E55915091C0ED88600CE9102 /* setting.png */,
 				E55915141C0EDD5B00CE9102 /* emergencybtn.png */,
 				E55915161C0EDD5E00CE9102 /* worrybtn.png */,
 				E559151F1C0EE65000CE9102 /* settingimage.png */,
@@ -416,6 +433,7 @@
 				E559152B1C0EECF700CE9102 /* userprofile.png */,
 				E559152D1C0EED0200CE9102 /* takelist.png */,
 				E559152F1C0EED3200CE9102 /* personaldata.png */,
+				E56250751C167F25008FD1DF /* group.png */,
 				E57B2C281C103E4000EF2948 /* spouse.png */,
 				E57B2C2A1C103E5700EF2948 /* son.png */,
 				E57B2C2C1C103E5D00EF2948 /* daughter.png */,
@@ -471,8 +489,11 @@
 				E5705A6B1C15332E00D6B995 /* ListManageViewControllers */,
 				E5705A6C1C15339900D6B995 /* PersonalDataManageViewControllers */,
 				E5705A721C154A9F00D6B995 /* AddNewItemViewControllers */,
-				E55915371C0EF04900CE9102 /* SettingTableViewController.h */,
-				E55915381C0EF04900CE9102 /* SettingTableViewController.m */,
+				E56250641C166E6C008FD1DF /* SettingManageViewControllers */,
+				E562506C1C166EC9008FD1DF /* DenkiManageViewController.h */,
+				E562506D1C166EC9008FD1DF /* DenkiManageViewController.m */,
+				E562506F1C166FFA008FD1DF /* PocketDoctorViewController.h */,
+				E56250701C166FFA008FD1DF /* PocketDoctorViewController.m */,
 			);
 			name = SubViewControllers;
 			sourceTree = "<group>";
@@ -496,6 +517,38 @@
 				E5705A771C154C0300D6B995 /* ItemModel.m */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		E56250641C166E6C008FD1DF /* SettingManageViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E55915371C0EF04900CE9102 /* SettingTableViewController.h */,
+				E55915381C0EF04900CE9102 /* SettingTableViewController.m */,
+			);
+			name = SettingManageViewControllers;
+			sourceTree = "<group>";
+		};
+		E56250741C167EE1008FD1DF /* tabbar-image */ = {
+			isa = PBXGroup;
+			children = (
+				E56250BB1C16979A008FD1DF /* contactlist-0.png */,
+				E56250BC1C16979A008FD1DF /* contactlist-0@2x.png */,
+				E56250BD1C16979A008FD1DF /* contactlist.png */,
+				E56250BE1C16979A008FD1DF /* contactlist@2x.png */,
+				E56250B31C16976D008FD1DF /* emergency-0.png */,
+				E56250B41C16976D008FD1DF /* emergency-0@2x.png */,
+				E56250B51C16976D008FD1DF /* emergency.png */,
+				E56250B61C16976D008FD1DF /* emergency@2x.png */,
+				E56250AB1C16973B008FD1DF /* worry-0.png */,
+				E56250AC1C16973B008FD1DF /* worry-0@2x.png */,
+				E56250AD1C16973B008FD1DF /* worry.png */,
+				E56250AE1C16973B008FD1DF /* worry@2x.png */,
+				E56250A31C1696E6008FD1DF /* setting-0.png */,
+				E56250A41C1696E6008FD1DF /* setting-0@2x.png */,
+				E56250A71C1696EA008FD1DF /* setting.png */,
+				E56250A81C1696EA008FD1DF /* setting@2x.png */,
+			);
+			name = "tabbar-image";
 			sourceTree = "<group>";
 		};
 		E5705A6A1C1532E900D6B995 /* ProfileManageViewControllers */ = {
@@ -806,48 +859,57 @@
 				E5705A951C15571C00D6B995 /* image-7.png in Resources */,
 				E5705A901C15571C00D6B995 /* image-2.png in Resources */,
 				E57B2C171C10218300EF2948 /* item-5.png in Resources */,
+				E56250BA1C16976D008FD1DF /* emergency@2x.png in Resources */,
 				E57B2C021C101D8800EF2948 /* item-8.png in Resources */,
 				E57B2C641C11878800EF2948 /* item-3.png in Resources */,
 				E5705A941C15571C00D6B995 /* image-8.png in Resources */,
 				E5705A8D1C15571C00D6B995 /* image-1.png in Resources */,
+				E56250C11C16979A008FD1DF /* contactlist.png in Resources */,
 				E55914C61C0EC92E00CE9102 /* LaunchScreen.storyboard in Resources */,
 				E57B2C191C1021A500EF2948 /* item-10.png in Resources */,
-				E55915081C0ED88300CE9102 /* worry.png in Resources */,
 				E5705A8C1C15571C00D6B995 /* image-10.png in Resources */,
-				E559150A1C0ED88600CE9102 /* setting.png in Resources */,
+				E56250A91C1696EA008FD1DF /* setting.png in Resources */,
 				E57B2C0C1C101E3900EF2948 /* item-6.png in Resources */,
 				E57B2C291C103E4000EF2948 /* spouse.png in Resources */,
 				E55915171C0EDD5E00CE9102 /* worrybtn.png in Resources */,
 				E55915151C0EDD5B00CE9102 /* emergencybtn.png in Resources */,
 				E55914C31C0EC92E00CE9102 /* Assets.xcassets in Resources */,
+				E56250B21C16973B008FD1DF /* worry@2x.png in Resources */,
+				E56250AF1C16973B008FD1DF /* worry-0.png in Resources */,
 				E5705A8E1C15571C00D6B995 /* image-9.png in Resources */,
-				E55915041C0ED73A00CE9102 /* contactlist.png in Resources */,
+				E56250BF1C16979A008FD1DF /* contactlist-0.png in Resources */,
 				E55915301C0EED3200CE9102 /* personaldata.png in Resources */,
 				E57B2C011C101D8800EF2948 /* item-1.png in Resources */,
 				E5705A8F1C15571C00D6B995 /* home.png in Resources */,
+				E56250B81C16976D008FD1DF /* emergency-0@2x.png in Resources */,
+				E56250B91C16976D008FD1DF /* emergency.png in Resources */,
 				E55915261C0EEB9200CE9102 /* plusimage.png in Resources */,
-				E55915101C0ED99700CE9102 /* worry-0.png in Resources */,
+				E56250C01C16979A008FD1DF /* contactlist-0@2x.png in Resources */,
+				E56250B01C16973B008FD1DF /* worry-0@2x.png in Resources */,
 				E5705A991C1557ED00D6B995 /* image-6.png in Resources */,
+				E56250B71C16976D008FD1DF /* emergency-0.png in Resources */,
 				E5705A9D1C15592600D6B995 /* add.png in Resources */,
+				E56250AA1C1696EA008FD1DF /* setting@2x.png in Resources */,
+				E56250761C167F25008FD1DF /* group.png in Resources */,
+				E56250A61C1696E6008FD1DF /* setting-0@2x.png in Resources */,
+				E56250B11C16973B008FD1DF /* worry.png in Resources */,
 				E5705A9B1C1557FE00D6B995 /* image-4.png in Resources */,
 				E55915221C0EE6CA00CE9102 /* lightimage.png in Resources */,
 				E55915201C0EE65000CE9102 /* settingimage.png in Resources */,
 				E559152E1C0EED0200CE9102 /* takelist.png in Resources */,
 				E57B2C2B1C103E5700EF2948 /* son.png in Resources */,
-				E55915061C0ED87F00CE9102 /* emergency.png in Resources */,
 				E57B2C031C101D8800EF2948 /* item-2.png in Resources */,
 				E57B2C2F1C10482F00EF2948 /* friend.png in Resources */,
+				E56250A51C1696E6008FD1DF /* setting-0.png in Resources */,
 				E5705A961C15571C00D6B995 /* image-5.png in Resources */,
+				E56250C21C16979A008FD1DF /* contactlist@2x.png in Resources */,
 				E57B2C001C101D8800EF2948 /* item-0.png in Resources */,
 				E57B2C1D1C102B7900EF2948 /* addimage.png in Resources */,
 				E57B2C6D1C1187C700EF2948 /* item-9.png in Resources */,
 				E57B2C0D1C101E3900EF2948 /* item-4.png in Resources */,
 				E5705A921C15571C00D6B995 /* image-3.png in Resources */,
-				E559150C1C0ED99000CE9102 /* contactlist-0.png in Resources */,
 				E57B2C1B1C1021E700EF2948 /* item-11.png in Resources */,
 				E5705A911C15571C00D6B995 /* hospital.png in Resources */,
-				E55915121C0ED99B00CE9102 /* setting-0.png in Resources */,
-				E559150E1C0ED99400CE9102 /* emergency-0.png in Resources */,
 				E55914C11C0EC92E00CE9102 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -877,6 +939,7 @@
 				E5705A621C15304D00D6B995 /* EditListTableViewController.m in Sources */,
 				E55915331C0EEE6B00CE9102 /* EditProfileTableViewController.m in Sources */,
 				E57B2C131C101F2200EF2948 /* PersonImageCollectionViewController.m in Sources */,
+				E562506E1C166EC9008FD1DF /* DenkiManageViewController.m in Sources */,
 				E5705A751C154ACC00D6B995 /* AddNewItemTableViewController.m in Sources */,
 				E559151E1C0EE47900CE9102 /* SettingCollectionViewCell.m in Sources */,
 				E55915431C0EF21200CE9102 /* PersonalDataTableViewController.m in Sources */,
@@ -905,6 +968,7 @@
 				E5705A7E1C1553BC00D6B995 /* ItemImageCollectionViewCell.m in Sources */,
 				E55914FC1C0ED0BD00CE9102 /* OtherCollectionViewController.m in Sources */,
 				E57B2C241C10370900EF2948 /* EditGroupTableViewController.m in Sources */,
+				E56250711C166FFA008FD1DF /* PocketDoctorViewController.m in Sources */,
 				E55915521C0EF4AE00CE9102 /* KusuriModel.m in Sources */,
 				E55914FF1C0ED0DA00CE9102 /* ContactCollectionViewController.m in Sources */,
 				E55914F91C0ED0B000CE9102 /* WorryViewController.m in Sources */,

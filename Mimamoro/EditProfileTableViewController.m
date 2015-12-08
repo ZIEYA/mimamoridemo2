@@ -108,11 +108,18 @@
 }
 
 - (void)contactPicker:(CNContactPickerViewController *)picker didSelectContact:(CNContact *)contact{
-    _nameTextField.text =[NSString stringWithFormat:@"%@ %@",contact.familyName,contact.givenName];
-    _birthdayTextField.text = [NSString stringWithFormat:@"%ld/%ld/%ld",contact.birthday.year,contact.birthday.month,contact.birthday.day];
-    _addressTextField.text = [NSString stringWithFormat:@"%@ %@ %@",[contact.postalAddresses firstObject].value.state,[contact.postalAddresses firstObject].value.city,[contact.postalAddresses firstObject].value.street];
-    _emailTextField.text = [NSString stringWithFormat:@"%@",[contact.emailAddresses firstObject].value];
-    NSLog(@"name:%@,birthday:%@,address:%@,email:%@",_userprofilemodel.name,_userprofilemodel.birthday,_userprofilemodel.address,_userprofilemodel.email);
+    if (contact.familyName || contact.givenName) {
+       _nameTextField.text =[NSString stringWithFormat:@"%@ %@",contact.familyName,contact.givenName];
+    }
+    if (contact.birthday) {
+        _birthdayTextField.text = [NSString stringWithFormat:@"%ld/%ld/%ld",contact.birthday.year,contact.birthday.month,contact.birthday.day];
+    }
+    if (contact.postalAddresses) {
+         _addressTextField.text = [NSString stringWithFormat:@"%@ %@ %@",[contact.postalAddresses firstObject].value.state,[contact.postalAddresses firstObject].value.city,[contact.postalAddresses firstObject].value.street];
+    }
+    if (contact.emailAddresses) {
+         _emailTextField.text = [NSString stringWithFormat:@"%@",[contact.emailAddresses firstObject].value];
+    }
     
 }
 

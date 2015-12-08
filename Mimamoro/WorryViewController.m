@@ -45,9 +45,13 @@
     _sliderValue1.text = @"全然不安ではない";
     _sliderValue2.text = @"全然不安ではない";
     _sliderValue3.text = @"全然不安ではない";
+    _health = @"全然不安ではない";
+    _spirit = @"全然不安ではない";
+    _happiness = @"全然不安ではない";
     _healthSlider.value = 0;
     _spiritSlider.value = 0;
     _happinessSlider.value = 0;
+    
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -153,7 +157,7 @@
     //メールのタイトル
     [[builder header]setSubject:@"!!見守りアプリの不安通報メールです"];
     //メールの本体
-    [builder setTextBody:[NSString stringWithFormat:@"▼メッセージ:\n \n ◎身体：%@\n◎精神： %@ \n◎幸せ： %@ \n \n*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.\n▼見守りアプリで緊急ボタンが押されてメール送信しました。\n \n ＊このメールには返信しないでください。\nこのメールに覚えがない場合は、お手数ですが削除してください。",value,value2,value3]];
+    [builder setTextBody:[NSString stringWithFormat:@"▼メッセージ:\n \n◎身体：%@\n◎精神： %@ \n◎幸せ： %@ \n \n*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.\n▼見守りアプリで不安ボタンが押されてメール送信しました。\n \n ＊このメールには返信しないでください。\nこのメールに覚えがない場合は、お手数ですが削除してください。",value,value2,value3]];
     
     //send mail
     NSData *rfc822Data=[builder data];
@@ -167,7 +171,7 @@
         }else{
             NSLog(@"Successfully send email!");
             dispatch_async(dispatch_get_main_queue(), ^{
-                [LeafNotification showInController:self withText:@"メール送信が成功しました！" type:LeafNotificationTypeSuccess];
+                [LeafNotification showInController:self withText:@"メール送信完了！！" type:LeafNotificationTypeSuccess];
             });
             
         }

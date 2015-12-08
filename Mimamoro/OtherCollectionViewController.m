@@ -124,9 +124,20 @@ static NSString * const reuseIdentifier = @"settingcell";
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     tempItemName = nil;
     tempItemImage =nil;
+    //Setting table view controller
+    NSLog(@"%ld,%ld",(long)indexPath.section,(long)indexPath.row);
     if (indexPath.section ==0 && indexPath.row ==0) {
         [self performSegueWithIdentifier:@"gotoSettingVC" sender:self];
     }
+    //DenkiManage view controller
+    else if(indexPath.section ==0 && indexPath.row ==2){
+        [self performSegueWithIdentifier:@"gotoDenkiManageVC" sender:self
+         ];
+    }
+    else if (indexPath.section ==0 && indexPath.row ==1){
+        [self performSegueWithIdentifier:@"gotoPocketDoctorVC" sender:self];
+    }
+    //Add new item view controller
     else if ((indexPath.section *2+indexPath.row) == _itemArray.count){
         [self performSegueWithIdentifier:@"gotoAddNewItemTVC" sender:self];
         editType = 0;

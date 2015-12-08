@@ -38,9 +38,10 @@
     if (!_currentArray) {
         _currentArray = [[NSMutableArray alloc]init];
     }
-    NSString *tmp = message = [[NSUserDefaults standardUserDefaults]valueForKey:@"message1"];
+    NSString *tmp = [[NSUserDefaults standardUserDefaults]valueForKey:@"message1"];
     if (tmp) {
         message = [[NSUserDefaults standardUserDefaults]valueForKey:@"message1"];
+        _messageTextView.text = message;
     };
     
 }
@@ -111,7 +112,7 @@
         [LeafNotification showInController:self withText:@"サーバポート未設定"];
         return;
     }
-
+    NSLog(@"useremail:%@ password:%@ hostname:%@ port:%d",userEmail,password,hostname,port);
 }
 
 -(void)sendEmail:(NSString*)mes{

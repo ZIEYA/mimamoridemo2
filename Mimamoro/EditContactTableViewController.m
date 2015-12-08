@@ -118,14 +118,25 @@
     [self presentViewController:cvc animated:YES completion:nil];
 }
 
--(void)contactPicker:(CNContactPickerViewController *)picker didSelectContactProperty:(CNContactProperty *)contactProperty{
-    NSString *name = contactProperty.contact.familyName;
-    NSString *email = contactProperty.value;
-    contactModel.name = name;
-    contactModel.email = email;
-    _nameTextField.text = name;
-    _emaiTextField.text = email;
-    NSLog(@"name:%@ email:%@",name,email);
+//-(void)contactPicker:(CNContactPickerViewController *)picker didSelectContactProperty:(CNContactProperty *)contactProperty{
+//    NSString *name = contactProperty.contact.familyName;
+//    NSString *email = contactProperty.value;
+//    contactModel.name = name;
+//    contactModel.email = email;
+//    _nameTextField.text = name;
+//    _emaiTextField.text = email;
+//    NSLog(@"name:%@ email:%@",name,email);
+//}
+
+- (void)contactPicker:(CNContactPickerViewController *)picker didSelectContact:(CNContact *)contact{
+    if (contact.familyName || contact.givenName) {
+        contactModel.name = [NSString stringWithFormat:@"%@ %@",contact.familyName,contact.givenName];
+        _nameTextField.text = contactModel.name;
+    }
+    if (contact.emailAddresses) {
+        contactModel.email = [contact.emailAddresses firstObject].value;
+        _emaiTextField.text = contactModel.email;
+    }
 }
 
 #pragma mark - UISwitch Action
