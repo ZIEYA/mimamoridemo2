@@ -10,6 +10,7 @@
 #import "LeafNotification.h"
 #import "ContactModel.h"
 #import <MailCore/MailCore.h>
+#import "AppDelegate.h"
 
 @interface WorryViewController ()<UITableViewDelegate,UITableViewDataSource>{
     NSMutableDictionary *_contactDict;
@@ -22,6 +23,9 @@
     NSString *password;
     NSString *hostname;
     int port;
+    
+    NSString *latitude;
+    NSString *longitude;
 }
 
 @property (strong, nonatomic) IBOutlet UITableView *tableview;
@@ -42,12 +46,12 @@
         _currentArray = [[NSMutableArray alloc]init];
     }
     //Setting default value
-    _sliderValue1.text = @"全然不安ではない";
-    _sliderValue2.text = @"全然不安ではない";
-    _sliderValue3.text = @"全然不安ではない";
-    _health = @"全然不安ではない";
-    _spirit = @"全然不安ではない";
-    _happiness = @"全然不安ではない";
+    _sliderValue1.text = @"大丈夫";
+    _sliderValue2.text = @"大丈夫";
+    _sliderValue3.text = @"大丈夫";
+    _health = @"大丈夫";
+    _spirit = @"大丈夫";
+    _happiness = @"大丈夫";
     _healthSlider.value = 0;
     _spiritSlider.value = 0;
     _happinessSlider.value = 0;
@@ -134,6 +138,12 @@
         [LeafNotification showInController:self withText:@"サーバポート未設定"];
         return;
     }
+    
+    //get current location
+    AppDelegate *myDelegate = [[UIApplication sharedApplication]delegate];
+    latitude = myDelegate.latitude;
+    longitude = myDelegate.longitude;
+
     MCOSMTPSession *session = [[MCOSMTPSession alloc]init];
     [session setHostname:hostname];
     [session setPort:port];
@@ -155,9 +165,10 @@
     [[builder header]setTo:to];
     
     //メールのタイトル
-    [[builder header]setSubject:@"!!見守りアプリの不安通報メールです"];
+    [[builder header]setSubject:@"!!「見守りアプリ」の不安通報メールです"];
     //メールの本体
-    [builder setTextBody:[NSString stringWithFormat:@"▼メッセージ:\n \n◎身体：%@\n◎精神： %@ \n◎幸せ： %@ \n \n*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.\n▼見守りアプリで不安ボタンが押されてメール送信しました。\n \n ＊このメールには返信しないでください。\nこのメールに覚えがない場合は、お手数ですが削除してください。",value,value2,value3]];
+    NSString *urlStr = [NSString stringWithFormat:@"http://maps.loco.yahoo.co.jp/maps?lat=%@&%@&ei=utf-8&v=2&sc=3&datum=wgs&gov=13108.30#",latitude,longitude];
+    [builder setTextBody:[NSString stringWithFormat:@"▼メッセージ:\n \n　　◎身体： %@\n　　◎精神： %@ \n　　◎幸せ： %@ \n\n▼送信者の位置情報はこちらで確認できる⇨\n　　　%@\n\n*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.\n▼見守りアプリで不安ボタンが押されてメール送信しました。\n \n＊このメールには返信しないでください。\n＊このメールに覚えがない場合は、お手数ですが削除してください。",value,value2,value3,urlStr]];
     
     //send mail
     NSData *rfc822Data=[builder data];
@@ -198,9 +209,9 @@
 - (IBAction)healthValueChanged:(id)sender {
     int proggressAsInt = (int)(_healthSlider.value+1);
     if (proggressAsInt >=1 & proggressAsInt <=2) {
-        _health = @"全然不安ではない";
+        _health = @"大丈夫";
     }else if (proggressAsInt>=3 && proggressAsInt <=4){
-        _health = @"あまり不安ではない";
+        _health = @"少し不安";
     }else if (proggressAsInt>=5 && proggressAsInt <=6){
         _health=@"不安";
     }else if (proggressAsInt >=7 && proggressAsInt <=8){
@@ -212,9 +223,9 @@
 - (IBAction)spiritValueChanged:(id)sender {
     int proggressAsInt = (int)(_spiritSlider.value+1);
     if (proggressAsInt >=1 & proggressAsInt <=2) {
-        _spirit = @"全然不安ではない";
+        _spirit = @"大丈夫";
     }else if (proggressAsInt>=3 && proggressAsInt <=4){
-        _spirit = @"あまり不安ではない";
+        _spirit = @"少し不安";
     }else if (proggressAsInt>=5 && proggressAsInt <=6){
         _spirit=@"不安";
     }else if (proggressAsInt >=7 && proggressAsInt <=8){
@@ -226,9 +237,9 @@
 - (IBAction)happinessValueChanged:(id)sender {
     int proggressAsInt = (int)(_happinessSlider.value+1);
     if (proggressAsInt >=1 & proggressAsInt <=2) {
-        _happiness = @"全然不安ではない";
+        _happiness = @"大丈夫";
     }else if (proggressAsInt>=3 && proggressAsInt <=4){
-        _happiness = @"あまり不安ではない";
+        _happiness = @"少し不安";
     }else if (proggressAsInt>=5 && proggressAsInt <=6){
         _happiness=@"不安";
     }else if (proggressAsInt >=7 && proggressAsInt <=8){

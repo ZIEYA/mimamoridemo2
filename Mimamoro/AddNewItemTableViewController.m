@@ -32,6 +32,8 @@
     }
     if (self.edittype == 0 || self.tmpitemImage==nil || [self.tmpitemImage isEqualToString:@""]) {
         self.imageview.image = [UIImage imageNamed:@"addimage.png"];
+        [_deleteBtn setEnabled:NO];
+        [_deleteBtn setAlpha:0.5];
     }else if (self.edittype ==1){
         _imageview.image = [UIImage imageNamed:_tmpitemImage];
         _itemNameTextField.text = _tmpitemName;
@@ -61,10 +63,13 @@
 
 - (IBAction)saveAction:(id)sender {
     if ([_itemNameTextField.text isEqualToString:@""]) {
-        [LeafNotification showInController:self withText:@"アイテム名を記入してください"];
+        [LeafNotification showInController:self.navigationController withText:@"アイテム名を記入してください"];
         return;
     }
-
+    if([itemmodel.itemimage isEqualToString:@""]||itemmodel.itemimage == nil){
+        [LeafNotification showInController:self.navigationController withText:@"イメージを設定してください"];
+        return;
+    }
 
     // Add new item
     itemmodel.itemname = _itemNameTextField.text;
@@ -77,6 +82,7 @@
 }
 
 - (IBAction)deleteAction:(id)sender {
+    
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:@"削除でよろしいですか？" preferredStyle:UIAlertControllerStyleActionSheet];
     //添加按钮
     [alert addAction:[UIAlertAction actionWithTitle:@"キャンセル" style:UIAlertActionStyleCancel handler:nil]];
@@ -89,10 +95,13 @@
             }
         }
         [[NSUserDefaults standardUserDefaults]setObject:itemArray forKey:@"item"];
-        [self dismissViewControllerAnimated:YES completion:nil];
+        dispatch_async(dispatch_get_main_queue(),^{
+            [self.navigationController popViewControllerAnimated:YES];
+        });
+        
     }]];
     [self presentViewController:alert animated:YES completion:nil];
-   
+
 }
 
 -(void)setSelectedImage:(NSString *)imagename{

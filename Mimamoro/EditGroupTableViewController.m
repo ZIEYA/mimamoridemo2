@@ -55,8 +55,12 @@
 }
 
 - (IBAction)savaAction:(id)sender {
-    if ([_groupNameTextField.text isEqual:@""]||_imageview.image == nil) {
-        [LeafNotification showInController:self withText:@"画像或いはグループ名を設定してください"];
+    if ([_groupNameTextField.text isEqual:@""]) {
+        [LeafNotification showInController:self.navigationController withText:@"グループ名を入力してください"];
+        return;
+    }
+    if (_groupmodel.groupimage == nil ||[_groupmodel.groupimage isEqualToString:@""]) {
+        [LeafNotification showInController:self.navigationController withText:@"イメージを設定してください"];
         return;
     }
      _groupmodel.groupname = _groupNameTextField.text;

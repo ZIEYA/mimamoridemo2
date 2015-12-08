@@ -7,16 +7,28 @@
 //
 
 #import "AppDelegate.h"
+#import <CoreLocation/CoreLocation.h>
 
-@interface AppDelegate ()
+@interface AppDelegate ()<CLLocationManagerDelegate>
+@property (nonatomic,strong) CLLocationManager *locationManager;
 
 @end
 
 @implementation AppDelegate
+@synthesize latitude;
+@synthesize longitude;
+@synthesize span;
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    _locationManager = [[CLLocationManager alloc]init];
+    _locationManager.delegate = self;
+    _locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    _locationManager.distanceFilter = 50.0f;
+    [_locationManager requestAlwaysAuthorization];
+    
+    [_locationManager startUpdatingLocation];
+    
     return YES;
 }
 
@@ -40,6 +52,13 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+-(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations{
+    CLLocation *currLocation = [locations lastObject];
+    latitude = [NSString stringWithFormat:@"%3.6f",currLocation.coordinate.latitude];
+    longitude = [NSString stringWithFormat:@"%3.6f",currLocation.coordinate.longitude];
+    //NSLog(@"%@ %@",latitude,longitude);
 }
 
 @end

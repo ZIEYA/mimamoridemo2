@@ -42,7 +42,6 @@
 		E55915551C0EF4B600CE9102 /* ListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E55915541C0EF4B600CE9102 /* ListModel.m */; };
 		E562506E1C166EC9008FD1DF /* DenkiManageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E562506D1C166EC9008FD1DF /* DenkiManageViewController.m */; };
 		E56250711C166FFA008FD1DF /* PocketDoctorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E56250701C166FFA008FD1DF /* PocketDoctorViewController.m */; };
-		E56250761C167F25008FD1DF /* group.png in Resources */ = {isa = PBXBuildFile; fileRef = E56250751C167F25008FD1DF /* group.png */; };
 		E56250A51C1696E6008FD1DF /* setting-0.png in Resources */ = {isa = PBXBuildFile; fileRef = E56250A31C1696E6008FD1DF /* setting-0.png */; };
 		E56250A61C1696E6008FD1DF /* setting-0@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E56250A41C1696E6008FD1DF /* setting-0@2x.png */; };
 		E56250A91C1696EA008FD1DF /* setting.png in Resources */ = {isa = PBXBuildFile; fileRef = E56250A71C1696EA008FD1DF /* setting.png */; };
@@ -59,6 +58,10 @@
 		E56250C01C16979A008FD1DF /* contactlist-0@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E56250BC1C16979A008FD1DF /* contactlist-0@2x.png */; };
 		E56250C11C16979A008FD1DF /* contactlist.png in Resources */ = {isa = PBXBuildFile; fileRef = E56250BD1C16979A008FD1DF /* contactlist.png */; };
 		E56250C21C16979A008FD1DF /* contactlist@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E56250BE1C16979A008FD1DF /* contactlist@2x.png */; };
+		E56250C71C16B05A008FD1DF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E56250C61C16B05A008FD1DF /* CoreLocation.framework */; };
+		E56250C91C16B0B9008FD1DF /* Contacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E56250C81C16B0B9008FD1DF /* Contacts.framework */; };
+		E56250CB1C16B0C0008FD1DF /* ContactsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E56250CA1C16B0C0008FD1DF /* ContactsUI.framework */; };
+		E56250D01C16BC0A008FD1DF /* group.png in Resources */ = {isa = PBXBuildFile; fileRef = E56250CF1C16BC0A008FD1DF /* group.png */; };
 		E5705A621C15304D00D6B995 /* EditListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5705A611C15304D00D6B995 /* EditListTableViewController.m */; };
 		E5705A701C15345800D6B995 /* ABFillButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E5705A6F1C15345800D6B995 /* ABFillButton.m */; };
 		E5705A751C154ACC00D6B995 /* AddNewItemTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5705A741C154ACC00D6B995 /* AddNewItemTableViewController.m */; };
@@ -253,7 +256,6 @@
 		E562506D1C166EC9008FD1DF /* DenkiManageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DenkiManageViewController.m; sourceTree = "<group>"; };
 		E562506F1C166FFA008FD1DF /* PocketDoctorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PocketDoctorViewController.h; sourceTree = "<group>"; };
 		E56250701C166FFA008FD1DF /* PocketDoctorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PocketDoctorViewController.m; sourceTree = "<group>"; };
-		E56250751C167F25008FD1DF /* group.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = group.png; sourceTree = "<group>"; };
 		E56250A31C1696E6008FD1DF /* setting-0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "setting-0.png"; sourceTree = "<group>"; };
 		E56250A41C1696E6008FD1DF /* setting-0@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "setting-0@2x.png"; sourceTree = "<group>"; };
 		E56250A71C1696EA008FD1DF /* setting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = setting.png; sourceTree = "<group>"; };
@@ -270,6 +272,10 @@
 		E56250BC1C16979A008FD1DF /* contactlist-0@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "contactlist-0@2x.png"; sourceTree = "<group>"; };
 		E56250BD1C16979A008FD1DF /* contactlist.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = contactlist.png; sourceTree = "<group>"; };
 		E56250BE1C16979A008FD1DF /* contactlist@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "contactlist@2x.png"; sourceTree = "<group>"; };
+		E56250C61C16B05A008FD1DF /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		E56250C81C16B0B9008FD1DF /* Contacts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Contacts.framework; path = System/Library/Frameworks/Contacts.framework; sourceTree = SDKROOT; };
+		E56250CA1C16B0C0008FD1DF /* ContactsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ContactsUI.framework; path = System/Library/Frameworks/ContactsUI.framework; sourceTree = SDKROOT; };
+		E56250CF1C16BC0A008FD1DF /* group.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = group.png; sourceTree = "<group>"; };
 		E5705A601C15304D00D6B995 /* EditListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditListTableViewController.h; sourceTree = "<group>"; };
 		E5705A611C15304D00D6B995 /* EditListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditListTableViewController.m; sourceTree = "<group>"; };
 		E5705A6E1C15345800D6B995 /* ABFillButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABFillButton.h; sourceTree = "<group>"; };
@@ -343,6 +349,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E56250CB1C16B0C0008FD1DF /* ContactsUI.framework in Frameworks */,
+				E56250C91C16B0B9008FD1DF /* Contacts.framework in Frameworks */,
+				E56250C71C16B05A008FD1DF /* CoreLocation.framework in Frameworks */,
 				E57B2C541C1174CD00EF2948 /* Security.framework in Frameworks */,
 				E57B2C521C1174C400EF2948 /* CFNetwork.framework in Frameworks */,
 				E57B2C501C1174BC00EF2948 /* libMailCore-ios.a in Frameworks */,
@@ -369,6 +378,9 @@
 		E55914AA1C0EC92E00CE9102 = {
 			isa = PBXGroup;
 			children = (
+				E56250CA1C16B0C0008FD1DF /* ContactsUI.framework */,
+				E56250C81C16B0B9008FD1DF /* Contacts.framework */,
+				E56250C61C16B05A008FD1DF /* CoreLocation.framework */,
 				E57B2C531C1174CD00EF2948 /* Security.framework */,
 				E57B2C511C1174C400EF2948 /* CFNetwork.framework */,
 				E55914B51C0EC92E00CE9102 /* Mimamoro */,
@@ -433,7 +445,7 @@
 				E559152B1C0EECF700CE9102 /* userprofile.png */,
 				E559152D1C0EED0200CE9102 /* takelist.png */,
 				E559152F1C0EED3200CE9102 /* personaldata.png */,
-				E56250751C167F25008FD1DF /* group.png */,
+				E56250CF1C16BC0A008FD1DF /* group.png */,
 				E57B2C281C103E4000EF2948 /* spouse.png */,
 				E57B2C2A1C103E5700EF2948 /* son.png */,
 				E57B2C2C1C103E5D00EF2948 /* daughter.png */,
@@ -890,9 +902,9 @@
 				E56250B71C16976D008FD1DF /* emergency-0.png in Resources */,
 				E5705A9D1C15592600D6B995 /* add.png in Resources */,
 				E56250AA1C1696EA008FD1DF /* setting@2x.png in Resources */,
-				E56250761C167F25008FD1DF /* group.png in Resources */,
 				E56250A61C1696E6008FD1DF /* setting-0@2x.png in Resources */,
 				E56250B11C16973B008FD1DF /* worry.png in Resources */,
+				E56250D01C16BC0A008FD1DF /* group.png in Resources */,
 				E5705A9B1C1557FE00D6B995 /* image-4.png in Resources */,
 				E55915221C0EE6CA00CE9102 /* lightimage.png in Resources */,
 				E55915201C0EE65000CE9102 /* settingimage.png in Resources */,

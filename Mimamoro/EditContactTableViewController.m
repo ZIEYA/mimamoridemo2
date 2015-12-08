@@ -72,7 +72,7 @@
 
 - (IBAction)saveAction:(id)sender {
     if ([_nameTextField.text isEqual: @""]||[_emaiTextField.text isEqual:@""]) {
-        [LeafNotification showInController:self withText:@"氏名とメールアドレスを入力してください"];
+        [LeafNotification showInController:self.navigationController withText:@"氏名とメールアドレスを入力してください"];
         return;
     }    
     if (_editType == 0) {

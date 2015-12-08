@@ -96,7 +96,22 @@
         }
         [[NSUserDefaults standardUserDefaults]setObject:_groArray forKey:@"group"];
         [self reloadGroups];
-        
+        //Delete group's contacts
+        NSDictionary *tempdict = [[NSUserDefaults standardUserDefaults]objectForKey:@"contact"];
+        if (tempdict) {
+            NSMutableDictionary *contactDict = [[NSMutableDictionary alloc]initWithDictionary:tempdict];
+            for (int i = 0; i<tempdict.allKeys.count; i++) {
+                NSString *tmpstr = [tempdict.allKeys objectAtIndex:i];
+                NSDictionary *tmp = [tempdict objectForKey:tmpstr];
+                NSString *name = [tmp valueForKey:@"name"];
+                NSString *tmpgname = [tmp valueForKey:@"group"];
+                if ([deleteItem.groupname isEqualToString:tmpgname]) {
+                    [contactDict removeObjectForKey:name];
+                }
+            }
+            [[NSUserDefaults standardUserDefaults]setObject:contactDict forKey:@"contact"];
+        }
+
     }
 }
 

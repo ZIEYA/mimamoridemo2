@@ -11,6 +11,7 @@
 #import "LeafNotification.h"
 #import "ABFillButton.h"
 #import <MailCore/MailCore.h>
+#import "AppDelegate.h"
 
 @interface EmergencyViewController ()<UITableViewDataSource,UITableViewDelegate,UITextViewDelegate,ABFillButtonDelegate>{
     NSMutableDictionary *_contactDict;
@@ -20,6 +21,8 @@
     NSString *hostname;
     int port;
     NSString *message;
+    NSString *latitude;
+    NSString *longitude;
 }
 @property (strong, nonatomic) IBOutlet UITextView *messageTextView;
 @property (strong, nonatomic) IBOutlet UITableView *tableview;
@@ -132,6 +135,9 @@
         [LeafNotification showInController:self withText:@"サーバポート未設定"];
         return;
     }
+    AppDelegate *myDelegate = [[UIApplication sharedApplication]delegate];
+    latitude = myDelegate.latitude;
+    longitude = myDelegate.longitude;
     
     MCOSMTPSession *session = [[MCOSMTPSession alloc]init];
     [session setHostname:hostname];
@@ -154,10 +160,10 @@
     [[builder header]setTo:to];
     
     //メールのタイトル
-    [[builder header]setSubject:@"!!見守りアプリの緊急通報メールです"];
+    [[builder header]setSubject:@"!!「見守りアプリ」の緊急通報メールです"];
     //メールの本体
-    //NSString *urlStr = [NSString stringWithFormat:@"http://maps.loco.yahoo.co.jp/maps?lat=%@&%@&ei=utf-8&v=2&sc=3&datum=wgs&gov=13108.30#",latitude,longitude];
-    [builder setTextBody:[NSString stringWithFormat:@"▼メッセージ:\n \n %@ \n \n *.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.\n▼見守りアプリで緊急ボタンが押されてメール送信しました。\n \n＊このメールには返信しないでください。\nこのメールに覚えがない場合は、お手数ですが削除してください。",mes]];
+    NSString *urlStr = [NSString stringWithFormat:@"http://maps.loco.yahoo.co.jp/maps?lat=%@&%@&ei=utf-8&v=2&sc=3&datum=wgs&gov=13108.30#",latitude,longitude];
+    [builder setTextBody:[NSString stringWithFormat:@"▼メッセージ:\n \n　　%@ \n \n▼送信者の位置情報はこちらで確認できる⇨\n　%@\n\n *.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.\n◎＜見守りアプリ＞で緊急ボタンが押されてメール送信しました。\n \n＊このメールには返信しないでください。\n\n＊このメールに覚えがない場合は、お手数ですが削除してください。",mes,urlStr]];
     
     //send mail
     NSData *rfc822Data=[builder data];
@@ -196,6 +202,7 @@
 
 
 -(BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text{
+    message = _messageTextView.text;
     if ([text isEqualToString:@"\n"]) {
         [textView resignFirstResponder];
         return NO;
@@ -209,6 +216,7 @@
     [textField resignFirstResponder];
     return YES;
 }
+
 
 - (IBAction)btnAction:(id)sender {
     [_button setFillPercent:1.0];
