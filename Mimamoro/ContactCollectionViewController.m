@@ -10,16 +10,15 @@
 #import "ContactTableViewController.h"
 #import "ContactCollectionViewCell.h"
 #import "EditContactViewController.h"
-@interface ContactCollectionViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout,UIPickerViewDelegate,UIPickerViewDataSource>
+#import "LeafNotification.h"
+@interface ContactCollectionViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
 {
     ContactCollectionViewCell*cell;
     NSArray*connectionTitle;
-    NSMutableArray *connection;
-    NSArray *connection2;
-    UIPickerView *Choice;
-    UIToolbar *ChoiceBar;
-    NSString *SelectedName;
-    
+    //NSMutableDictionary *_contactDict1;
+    NSMutableDictionary *connectionbtn;
+    NSMutableArray *connectionnum;
+    NSDictionary *fatitl;
 }
 
 @end
@@ -28,85 +27,79 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    //长按手势
-    UILongPressGestureRecognizer * longPressGr = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(delete:)];
-    longPressGr.minimumPressDuration = 2.0;
-    [self.collectionView addGestureRecognizer:longPressGr];
-    
-    Choice = [[UIPickerView alloc]initWithFrame:CGRectMake(0, self.view.frame.size.height+self.view.frame.size.height/4, self.view.frame.size.width, self.view.frame.size.height/4)];
-    Choice.backgroundColor = [UIColor lightGrayColor];
-    Choice.delegate = self;
-    Choice.dataSource = self;
-    [Choice reloadComponent:1];
-    [self.view addSubview:Choice];
-    
-    ChoiceBar = [[UIToolbar alloc] initWithFrame:CGRectMake(0,self.view.frame.size.height+40, self.view.frame.size.width, 60)];
-    ChoiceBar.barStyle = UIBarStyleBlackOpaque;
-    [ChoiceBar sizeToFit];
-    NSMutableArray *barItems = [[NSMutableArray alloc] init];
-    UIBarButtonItem *Cancel = [[UIBarButtonItem alloc] initWithTitle:@"キャンセル" style:UIBarButtonItemStyleDone target:self action:@selector(Cancel)];
-    [barItems addObject:Cancel];
-    UIBarButtonItem *flexSpace = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:self action:nil];
-    [barItems addObject:flexSpace];
-    UIBarButtonItem *Confirm = [[UIBarButtonItem alloc] initWithTitle:@"確認" style:UIBarButtonItemStyleDone target:self action:@selector(Confirm)];
-    [barItems addObject:Confirm];
-    [ChoiceBar setItems:barItems animated:YES];
-    [self.view addSubview:ChoiceBar];
-    
-    self.collectionView.userInteractionEnabled = YES;
-    
+    //复原
+    //    [[NSUserDefaults standardUserDefaults]removeObjectForKey:@"famTitleArrr"];
+    //    [[NSUserDefaults standardUserDefaults]removeObjectForKey:@"famImgArr"];
+    //    [[NSUserDefaults standardUserDefaults]removeObjectForKey:@"famNumArr"];
+    //    [[NSUserDefaults standardUserDefaults]removeObjectForKey:@"contactlist"];
+    //    [[NSUserDefaults standardUserDefaults]removeObjectForKey:@"dmm"];
+    //    [[NSUserDefaults standardUserDefaults]removeObjectForKey:@"mm"];
+    //    static dispatch_once_t onceToken;
+    //    dispatch_once(&onceToken, ^{
+    //        [LeafNotification showInController:self withText:[NSString stringWithFormat:@"長押しアイコンを削除できる"]];
+    //    });
+    //    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(call) name:@"Contactreload" object:nil];
+    //self.collectionView.userInteractionEnabled = YES;
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
-    connection = [[NSMutableArray alloc]init];
-    connection2 = [[NSMutableArray alloc]init];
-
-    NSLog(@"%@",connection);
-    connection2 = [[NSUserDefaults standardUserDefaults]objectForKey:@"connection"];
-    
-    connection =[[NSMutableArray alloc]initWithArray:connection2];
-    
+    fatitl = [[NSDictionary alloc]init];
+    fatitl = [[NSUserDefaults standardUserDefaults]objectForKey:@"famTitleArrr"];
+    connectionbtn =[[NSMutableDictionary alloc]initWithDictionary:fatitl];
+    connectionnum =[[NSMutableArray alloc]init];
     connectionTitle = [[NSArray alloc]initWithObjects:@"妻",@"夫",@"親友",@"息子",@"嫁",@"娘",@"婿",@"孫",@"孫娘",@"医者",@"看護婦", nil];
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    [self reloadContactList];
+    [self.collectionView reloadData];
+}
+-(void)reloadContactList{
+    [connectionnum removeAllObjects];
+    fatitl = [[NSUserDefaults standardUserDefaults]objectForKey:@"famTitleArrr"];
+    connectionbtn =[[NSMutableDictionary alloc]initWithDictionary:fatitl];
+    NSArray *keysArr = [connectionbtn allKeys];
+    for (int i = 0; i<keysArr.count; i++) {
+        NSDictionary *tempDict = [connectionbtn objectForKey:keysArr[i]];
+        [connectionnum addObject:tempDict];
+    }
 }
 
 #pragma mark <UICollectionViewDataSource>
 //定义展示的UICollectionViewCell的个数
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return connection.count;
+    return connectionnum.count;
 }
-//定义展示的Section的个数
--(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
-{
-    return 1;
-}
+
 //每个UICollectionView展示的内容
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    static NSString * CellIdentifier = @"mycell";
-    cell = [self.collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
-    [cell.image setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@.png",[connection objectAtIndex:indexPath.row]]]];
-    cell.name.text = [connection objectAtIndex:indexPath.row];
+    cell = [self.collectionView dequeueReusableCellWithReuseIdentifier:@"mycell" forIndexPath:indexPath];
+    NSDictionary *temp = [connectionnum objectAtIndex:indexPath.row];
+    
+    [cell.image setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@.png",[temp valueForKey:@"imagee"]]]];
+    cell.name.text = [temp valueForKey:@"titlee"];
+    
+    
+    UIView*selview = [[UIView alloc]initWithFrame:cell.frame];
+    selview.backgroundColor = [UIColor colorWithRed:215.0/255.0 green:215.0/255.0 blue:215.0/255.0 alpha:1];
+    selview.layer.cornerRadius = 11;
+    cell.selectedBackgroundView = selview;
     return cell;
 }
-#pragma mark --UICollectionViewDelegateFlowLayout
+
 //定义每个UICollectionView 的大小
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    return CGSizeMake(110, 125);
+    return CGSizeMake(85, 100);
 }
 //定义每个UICollectionView 的 margin
 -(UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
 {
-    return UIEdgeInsetsMake(0, 35, 0, 35);
+    return UIEdgeInsetsMake(0, 15, 0, 15);
 }
-#pragma mark --UICollectionViewDelegate
-//UICollectionView被选中时调用的方法
--(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
-{
-//    cell = (ContactCollectionViewCell *)[self.collectionView cellForItemAtIndexPath:indexPath];
-//    cell.backgroundColor = [UIColor blackColor];
-}
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if([segue.identifier isEqualToString:@"lai"])
     {
@@ -114,110 +107,12 @@
         NSArray *indexPath = [self.collectionView indexPathsForSelectedItems];
         cell = (ContactCollectionViewCell *)[self.collectionView cellForItemAtIndexPath:indexPath[0]];
         ContactTableView.family = cell.name.text;
-        
     }
 }
 //返回这个UICollectionView是否可以被选择
 -(BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     return YES;
-}
--(void)Confirm{
-    if(SelectedName == nil){
-        [connection addObject: @"妻"];
-    }else{
-    [connection addObject: SelectedName];
-    }
-    [self.collectionView reloadData];
-    
-    [[NSUserDefaults standardUserDefaults]setObject:connection forKey:@"connection"];
-    NSLog(@"%@",connection);
-    
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    [UIView beginAnimations:nil context:context];
-    [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
-    [UIView setAnimationDuration:0.03];//动画时间长度，单位秒，浮点数
-    Choice.frame  = CGRectMake(0, self.view.frame.size.height+self.view.frame.size.height/4, self.view.frame.size.width, self.view.frame.size.height/3);
-    ChoiceBar.frame = CGRectMake(0, self.view.frame.size.height+40, self.view.frame.size.width, 40);
-    [UIView setAnimationDelegate:self];
-    // 动画完毕后调用animationFinished
-    [UIView setAnimationDidStopSelector:@selector(animationFinished)];
-    [UIView commitAnimations];
-}
--(void)Cancel{
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    [UIView beginAnimations:nil context:context];
-    [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
-    [UIView setAnimationDuration:0.03];//动画时间长度，单位秒，浮点数
-    Choice.frame  = CGRectMake(0, self.view.frame.size.height+self.view.frame.size.height/4, self.view.frame.size.width, self.view.frame.size.height/3);
-    ChoiceBar.frame = CGRectMake(0, self.view.frame.size.height+40, self.view.frame.size.width, 40);
-    [UIView setAnimationDelegate:self];
-    // 动画完毕后调用animationFinished
-    [UIView setAnimationDidStopSelector:@selector(animationFinished)];
-    [UIView commitAnimations];
-}
-- (IBAction)Addd:(id)sender {
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    [UIView beginAnimations:nil context:context];
-    [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
-    [UIView setAnimationDuration:0.01];//动画时间长度，单位秒，浮点数
-    [self.view exchangeSubviewAtIndex:1 withSubviewAtIndex:1];
-    Choice.frame = CGRectMake(0, self.view.frame.size.height/1.5, self.view.frame.size.width, self.view.frame.size.height/4);
-    ChoiceBar.frame = CGRectMake(0, self.view.frame.size.height/1.5-40, self.view.frame.size.width, 40);
-    [UIView setAnimationDelegate:self];
-    // 动画完毕后调用animationFinished
-    [UIView setAnimationDidStopSelector:@selector(animationFinished)];
-    [UIView commitAnimations];
-}
--(void)animationFinished{
-    NSLog(@"动画结束!");
-}
-
-//列数
--(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
-    return 1;
-}
-//行数
--(NSInteger) pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
-    return connectionTitle.count;
-}
-//行的高度
--(CGFloat)pickerView:(UIPickerView *)pickerView rowHeightForComponent:(NSInteger)component{
-    return  50;
-}
-//行的宽度
--(CGFloat)pickerView:(UIPickerView *)pickerView widthForComponent:(NSInteger)component{
-    return self.view.frame.size.width;
-}
-//每行显示
--(UIView*)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view{
-    if (!view) {
-        view=[[UIView alloc]init];
-    }
-    UILabel *text=[[UILabel alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 50)];
-    text.textColor = [UIColor blackColor];
-    text.textAlignment = NSTextAlignmentCenter;
-    text.font = [UIFont fontWithName:@"Arial" size:50.0f];
-    text.text = [connectionTitle objectAtIndex:row];
-    [view addSubview:text];
-    return view;
-}
-//被选择的行
--(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
-        SelectedName = [connectionTitle objectAtIndex:row];
-}
-
--(void)delete:(UILongPressGestureRecognizer *)gesture
-{
-    if(gesture.state == UIGestureRecognizerStateBegan)
-    {
-        CGPoint point = [gesture locationInView:self.collectionView];
-        NSIndexPath * indexPath = [self.collectionView indexPathForItemAtPoint:point];
-        if(indexPath == nil) return ;
-        [connection removeObjectAtIndex:indexPath.row];
-        [[NSUserDefaults standardUserDefaults]setObject:connection forKey:@"connection"];
-        [self.collectionView reloadData];
-    }
 }
 
 @end

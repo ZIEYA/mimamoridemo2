@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EditContactViewController : UIViewController
+@interface EditContactViewController : UITableViewController
 @property int editType;//0:追加  1:編集
 @property NSString *tempName;
 @property NSString *familytype;

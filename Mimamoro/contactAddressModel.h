@@ -13,5 +13,5 @@
 @property NSString *emailaddress;
 @property NSString *contactType;//0:家族 1:その他
 @property NSString *emergencyType;//0:通常 1:緊急
-@property NSString *familyName;
+//@property NSString *familyName;
 @end

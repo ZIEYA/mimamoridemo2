@@ -10,17 +10,18 @@
 #import <Contacts/Contacts.h>
 #import <ContactsUI/ContactsUI.h>
 #import "contactAddressModel.h"
-
 @interface EditContactViewController ()<UITextFieldDelegate,CNContactPickerDelegate>{
     contactAddressModel *contactModel;
     NSMutableDictionary *_contactDict;
-    
     NSMutableDictionary *_exitDict;
 }
 @property (strong, nonatomic) IBOutlet UITextField *nameTextField;
 @property (strong, nonatomic) IBOutlet UITextField *emailTextField;
 @property (strong, nonatomic) IBOutlet UISwitch *contactTypeSwitch;
 @property (strong, nonatomic) IBOutlet UISwitch *emergencySwitch;
+@property (weak, nonatomic) IBOutlet UIButton *lanlaku;
+@property (weak, nonatomic) IBOutlet UIButton *baoc;
+
 
 @end
 
@@ -29,18 +30,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     NSLog(@"_jiarentype%@",_familytype);
-    
+    _nameTextField.delegate = self;
+    _emailTextField.delegate = self;
+    _baoc.layer.borderColor = [UIColor darkGrayColor].CGColor;
+    _baoc.layer.borderWidth = 3;
     contactModel = [[contactAddressModel alloc]init];
-    contactModel.familyName = _familytype;
+    //contactModel.familyName = _familytype;
     _exitDict = [[NSMutableDictionary alloc]initWithCapacity:0];
     if (!_contactDict) {
         _contactDict = [[NSMutableDictionary alloc]initWithCapacity:0];
     }
-    _contactDict = [[NSMutableDictionary alloc]initWithDictionary:[[NSUserDefaults standardUserDefaults]objectForKey:@"contactlist"]];
+    _contactDict = [[NSMutableDictionary alloc]initWithDictionary:[[NSUserDefaults standardUserDefaults]objectForKey:_familytype]];
 
     // If add a new contact
     if (_editType == 0) {
-        contactModel.contactType = @"1";
+        contactModel.contactType = @"0";
         [_contactTypeSwitch setOn:NO];
         contactModel.emergencyType = @"0";
         [_emergencySwitch setOn:NO];
@@ -52,15 +56,15 @@
         _nameTextField.text = _tempName;
         contactModel.name = _tempName;
         _emailTextField.text = [_exitDict valueForKey:@"email"];
+        
         contactModel.contactType = [_exitDict valueForKey:@"contacttype"];
-        
+        //是否不安
         if ([contactModel.contactType isEqualToString:@"0"]) {
-            [_contactTypeSwitch setOn:YES];
-        }else if([contactModel.contactType isEqualToString:@"1"]){
             [_contactTypeSwitch setOn:NO];
-            
+        }else if([contactModel.contactType isEqualToString:@"1"]){
+            [_contactTypeSwitch setOn:YES];
         }
-        
+        //是否警急
         contactModel.emergencyType = [_exitDict valueForKey:@"emergencytype"];
         if ([contactModel.emergencyType isEqualToString:@"0"]) {
             [_emergencySwitch setOn:NO];
@@ -94,9 +98,9 @@
 - (IBAction)contantTypeChanged:(id)sender {
     BOOL setting = _contactTypeSwitch.isOn;
     if (setting == YES) {
-        contactModel.contactType = [NSString stringWithFormat:@"%d",0];
-    }else if(setting == NO){
         contactModel.contactType = [NSString stringWithFormat:@"%d",1];
+    }else if(setting == NO){
+        contactModel.contactType = [NSString stringWithFormat:@"%d",0];
     }
 }
 
@@ -105,8 +109,6 @@
     //Save data as model
     contactModel.name =_nameTextField.text;
     contactModel.emailaddress = _emailTextField.text;
-
-    
     if (_editType == 0) {
         
     }else if (_editType == 1){
@@ -117,31 +119,10 @@
     [temp setValue:contactModel.emailaddress forKey:@"email"];
     [temp setValue:contactModel.emergencyType forKey:@"emergencytype"];
     [temp setValue:contactModel.contactType forKey:@"contacttype"];
-    [temp setValue:contactModel.familyName forKey:@"familyName"];
     [_contactDict setObject:temp forKey:contactModel.name];
-
-    //NSLog(@"contactdict:%@",_contactDict);
     [self.navigationController popViewControllerAnimated:YES];
-        
-//    }else if ([contactModel.contactType isEqualToString:@"1"]){
-//        NSMutableDictionary *temp = [[NSMutableDictionary alloc]init];
-//        [temp setValue:contactModel.name forKey:@"name"];
-//        [temp setValue:contactModel.emailaddress forKey:@"email"];
-//        [temp setValue:contactModel.emergencyType forKey:@"emergencytype"];
-//        [temp setValue:contactModel.contactType forKey:@"contacttype"];
-//        [_otherContactDict setObject:temp forKey:contactModel.name];
-//    }
-    
-//    NSMutableDictionary *temp = [[NSMutableDictionary alloc]init];
-//    [temp setValue:contactModel.name forKey:@"name"];
-//    [temp setValue:contactModel.emailaddress forKey:@"email"];
-//    [temp setValue:contactModel.emergencyType forKey:@"emergencytype"];
-//    [temp setValue:contactModel.contactType forKey:@"contacttype"];
-//    [_contactDict setObject:temp forKey:contactModel.name];
-//    [[NSUserDefaults standardUserDefaults]setObject:_contactDict forKey:@"contact"];
-    //[[NSUserDefaults standardUserDefaults]setObject:_familyContactDict forKey:@"familycontact"];
-    //[[NSUserDefaults standardUserDefaults]setObject:_otherContactDict forKey:@"othercontact"];
-    [[NSUserDefaults standardUserDefaults]setObject:_contactDict forKey:@"contactlist"];
+    [[NSUserDefaults standardUserDefaults]setObject:_contactDict forKey:_familytype];
+
 }
 
 - (IBAction)cancelAction:(id)sender {
@@ -182,14 +163,6 @@
     _emailTextField.text = email;
     NSLog(@"name:%@ email:%@",name,email);
 }
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

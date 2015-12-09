@@ -44,6 +44,8 @@
         [self performSegueWithIdentifier:@"gotoListVC" sender:self];
     }else if (indexPath.row ==2){
         [self performSegueWithIdentifier:@"gotoPersonaDataVC" sender:self];
+    }else if (indexPath.row ==3){
+        [self performSegueWithIdentifier:@"gotoFamilyDataVC" sender:self];
     }
 }
 
