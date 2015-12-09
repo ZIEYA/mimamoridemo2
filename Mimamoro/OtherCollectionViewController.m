@@ -13,8 +13,6 @@
 @interface OtherCollectionViewController ()
 {
     SettingCollectionViewCell *cell;
-    NSArray *other;
-    NSArray *other2;
     NSDictionary *othersft;
     NSMutableDictionary *othersft2;
     NSMutableArray *othersft3;
@@ -30,13 +28,9 @@ static NSString * const reuseIdentifier = @"settingcell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    
     UILongPressGestureRecognizer * longPressGr = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(deletee:)];
     longPressGr.minimumPressDuration = 1.0;
     [self.collectionView addGestureRecognizer:longPressGr];
-
-    
     othersft3 = [[NSMutableArray alloc]init];
     editt = [[NSMutableDictionary alloc]init];
     system = [[NSMutableDictionary alloc]init];
@@ -49,7 +43,6 @@ static NSString * const reuseIdentifier = @"settingcell";
     othersft = [[NSDictionary alloc]init];
     othersft = [[NSUserDefaults standardUserDefaults]objectForKey:@"otherSoftTotyu123"];
     othersft2 = [[NSMutableDictionary alloc]initWithDictionary:othersft];
-    //NSLog(@"othersft2:%@",othersft2);
     NSArray *keysArr = [othersft2 allKeys];
     for (int i = 0; i<keysArr.count; i++) {
         NSDictionary *tempDict = [othersft2 objectForKey:keysArr[i]];
@@ -59,15 +52,10 @@ static NSString * const reuseIdentifier = @"settingcell";
     [editt setValue:@"" forKey:@"otherNameTitle"];
     [othersft3 addObject:editt];
     [self.tabBarItem setImage:[[UIImage imageNamed:@"contactlist"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
-    //@"homeimage.png",@"lightimage.png",
-    //@"ポケットドクター",@"電気守り",
-    other = [[NSArray alloc]initWithObjects:@"other1",@"edit.png", nil];
-    other2 = [[NSArray alloc]initWithObjects:@"設定",@"", nil];
 }
 - (IBAction)delsoft:(id)sender {
     [LeafNotification showInController:self withText:[NSString stringWithFormat:@"長押しのアイコンを削除する"]];
 }
-
 -(void)viewWillAppear:(BOOL)animated{
     [self viewDidLoad];
     [self.collectionView reloadData];
@@ -76,13 +64,11 @@ static NSString * const reuseIdentifier = @"settingcell";
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 //定义展示的UICollectionViewCell的个数
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
     return othersft3.count;
 }
-
 //每个UICollectionView展示的内容
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -107,14 +93,10 @@ static NSString * const reuseIdentifier = @"settingcell";
     return UIEdgeInsetsMake(15, 35, 15, 35);
 }
 
-
-
-#pragma mark <UICollectionViewDelegate>
-
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    if (indexPath.section ==0 && indexPath.row ==0) {
+    if (indexPath.row ==0) {
         [self performSegueWithIdentifier:@"gotoSettingVC" sender:self];
-    }else if (indexPath.section ==0 && indexPath.row ==othersft3.count-1) {
+    }else if (indexPath.row ==othersft3.count-1) {
         [self performSegueWithIdentifier:@"gotoeditother" sender:self];
     }else{
         [self performSegueWithIdentifier:@"softDetails" sender:self];
@@ -130,7 +112,6 @@ static NSString * const reuseIdentifier = @"settingcell";
     }
 }
 
-
 -(void)deletee:(UILongPressGestureRecognizer *)gesture
 {
     if(gesture.state == UIGestureRecognizerStateBegan)
@@ -139,6 +120,7 @@ static NSString * const reuseIdentifier = @"settingcell";
         NSIndexPath * indexPath = [self.collectionView indexPathForItemAtPoint:point];
         if(indexPath == nil) return ;
         cell = (SettingCollectionViewCell *)[self.collectionView cellForItemAtIndexPath:indexPath];
+        if (!(indexPath.row ==0)&&!(indexPath.row ==othersft3.count-1)) {
         UIAlertController *alert2 = [UIAlertController alertControllerWithTitle:@"ヒント" message:@"削除しますか" preferredStyle: UIAlertControllerStyleAlert];
         [alert2 addAction:[UIAlertAction actionWithTitle:@"はい" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action){
             NSLog(@"成功删除");
@@ -150,6 +132,7 @@ static NSString * const reuseIdentifier = @"settingcell";
         [alert2 addAction:[UIAlertAction actionWithTitle:@"まだ" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         }]];
         [self presentViewController:alert2 animated:true completion:nil];
+        }
     }
 }
 

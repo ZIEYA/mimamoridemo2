@@ -34,10 +34,6 @@
     _healthSlider.minimumValue = 0.0;
     _healthSlider.maximumValue = 255.0;
     _healthSlider.value = 255.0;
-    //_zhuangtai.text = 255.0;
-    [_healthSlider setMinimumTrackTintColor:[UIColor colorWithRed:1.0/255.0 green:255.0/255.0 blue:1.0/255.0 alpha:1]];
-    [_healthSlider setMaximumTrackTintColor:[UIColor colorWithRed:1.0/255.0 green:255.0/255.0 blue:1.0/255.0 alpha:1]];
-    [_healthSlider setThumbTintColor:[UIColor colorWithRed:1.0/255.0 green:255.0/255.0 blue:1.0/255.0 alpha:1]];
     famtitl = [[NSArray alloc]init];
     worryArray = [[NSMutableArray alloc]init];
     worryDict = [[NSMutableDictionary alloc]init];
@@ -55,7 +51,12 @@
             }
         }
     }
+    //_zhuangtai.text = 255.0;
+    [_healthSlider setMinimumTrackTintColor:[UIColor colorWithRed:1.0/255.0 green:255.0/255.0 blue:1.0/255.0 alpha:1]];
+    [_healthSlider setMaximumTrackTintColor:[UIColor colorWithRed:1.0/255.0 green:255.0/255.0 blue:1.0/255.0 alpha:1]];
+    [_healthSlider setThumbTintColor:[UIColor colorWithRed:1.0/255.0 green:255.0/255.0 blue:1.0/255.0 alpha:1]];
 }
+
 -(IBAction)updateValue:(id)sender{
     float f = _healthSlider.value; //读取滑块的值
     [_healthSlider setMinimumTrackTintColor:[UIColor colorWithRed:(255.0-f)/255.0 green:f/255.0 blue:1.0/255.0 alpha:1]];

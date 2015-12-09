@@ -32,7 +32,6 @@ static NSString * const reuseIdentifier = @"Cell";
     othersoft2 = [[NSMutableDictionary alloc]initWithDictionary:[[NSUserDefaults standardUserDefaults]objectForKey:@"otherSoftTotyu123"]];
     otherImgTitle = [[NSArray alloc]initWithObjects:@"other1000",@"other222",@"other111",@"other1300",@"other333",@"other555",@"other1100",@"other999",@"other888",@"other777",@"other1200", nil];
     otherNameTitle = [[NSArray alloc]initWithObjects:@"脈拍測定",@"電気守り",@"ポケット医者",@"老人たち",@"電卓",@"音楽",@"メモ帳",@"メール管理",@"診察を予約",@"病院連絡",@"老人用品", nil];
-    //[self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
 }
 //定义展示的UICollectionViewCell的个数
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section

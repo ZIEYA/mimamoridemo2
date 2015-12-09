@@ -18,7 +18,7 @@
     NSMutableArray *_allContactArray;
     NSDictionary *tempdict;
     int edittype; //0:追加 1:編集
-    NSString *tempname;//Deliver a key(name)to edit view controller
+    NSString *tempname;
 
 }
 
@@ -116,9 +116,11 @@
         [self.tableView reloadData];
     }
 }
+
 - (void)getNotofocation{
     [[NSNotificationCenter defaultCenter] postNotificationName:@"Emergency" object:self];
 }
+
 - (IBAction)addContactAction:(id)sender {
     edittype = 0;
     [self performSegueWithIdentifier:@"gotoEditContactVC" sender:self];

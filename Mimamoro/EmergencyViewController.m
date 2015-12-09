@@ -24,7 +24,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [super viewDidLoad];
     _contactListTableView2.delegate = self;
     _contactListTableView2.dataSource = self;
     famtitl = [[NSArray alloc]init];

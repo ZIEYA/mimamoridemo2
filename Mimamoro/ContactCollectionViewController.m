@@ -15,7 +15,6 @@
 {
     ContactCollectionViewCell*cell;
     NSArray*connectionTitle;
-    //NSMutableDictionary *_contactDict1;
     NSMutableDictionary *connectionbtn;
     NSMutableArray *connectionnum;
     NSDictionary *fatitl;
@@ -27,19 +26,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    //复原
-    //    [[NSUserDefaults standardUserDefaults]removeObjectForKey:@"famTitleArrr"];
-    //    [[NSUserDefaults standardUserDefaults]removeObjectForKey:@"famImgArr"];
-    //    [[NSUserDefaults standardUserDefaults]removeObjectForKey:@"famNumArr"];
-    //    [[NSUserDefaults standardUserDefaults]removeObjectForKey:@"contactlist"];
-    //    [[NSUserDefaults standardUserDefaults]removeObjectForKey:@"dmm"];
-    //    [[NSUserDefaults standardUserDefaults]removeObjectForKey:@"mm"];
-    //    static dispatch_once_t onceToken;
-    //    dispatch_once(&onceToken, ^{
-    //        [LeafNotification showInController:self withText:[NSString stringWithFormat:@"長押しアイコンを削除できる"]];
-    //    });
-    //    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(call) name:@"Contactreload" object:nil];
-    //self.collectionView.userInteractionEnabled = YES;
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
     fatitl = [[NSDictionary alloc]init];
@@ -64,7 +50,6 @@
     }
 }
 
-#pragma mark <UICollectionViewDataSource>
 //定义展示的UICollectionViewCell的个数
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
