@@ -2299,12 +2299,18 @@
                                             <color key="textColor" red="0.45575221240000002" green="0.1369989073" blue="0.17022380070000001" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bwz-Ge-bRR">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Bwz-Ge-bRR">
                                             <rect key="frame" x="231" y="23" width="89" height="34"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="34" id="UZx-ht-wSG"/>
+                                                <constraint firstAttribute="width" constant="89" id="Ugt-fp-hhF"/>
+                                            </constraints>
                                         </imageView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="trailingMargin" secondItem="Bwz-Ge-bRR" secondAttribute="trailing" constant="-8" id="Wu5-tM-Bwl"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="Bwz-Ge-bRR" secondAttribute="bottom" constant="14.5" id="4Uv-k6-wHi"/>
+                                        <constraint firstItem="Bwz-Ge-bRR" firstAttribute="top" secondItem="cZx-B5-mmS" secondAttribute="topMargin" constant="15" id="8T7-3E-Exs"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Bwz-Ge-bRR" secondAttribute="trailing" constant="-8" id="m45-V0-iBZ"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
