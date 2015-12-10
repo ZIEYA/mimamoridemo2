@@ -27,6 +27,7 @@
 @implementation ContactTableViewController
 
 - (void)viewDidLoad {
+  //  [[NSUserDefaults standardUserDefaults]removeObjectForKey:@"famTitleArr"];
     [super viewDidLoad];
     self.navigationItem.title = _family;
     _allContactArray = [[NSMutableArray alloc]init];

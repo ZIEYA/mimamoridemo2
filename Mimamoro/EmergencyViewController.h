@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface EmergencyViewController : UIViewController
+#import "ABFillButton.h"
+@interface EmergencyViewController : UIViewController<UITextViewDelegate,UITableViewDataSource,ABFillButtonDelegate>
 
 @end
