@@ -56,6 +56,7 @@
     [self.emergencybtn addTarget:self action:@selector(time:) forControlEvents:UIControlEventTouchUpInside];
     [self.emergencybtn setImage:emyimg forState:UIControlStateNormal];
     [self.view addSubview:self.emergencybtn];
+    // 动画的设置
     self.emergencybtn.delegate =self;
     [self.emergencybtn setFillPercent:1.0];
     [self.emergencybtn configureButtonWithHightlightedShadowAndZoom:YES];
@@ -77,6 +78,12 @@
     self.messageTextView = [[UITextView alloc]initWithFrame:CGRectMake(self.view.bounds.size.width*0.05, self.view.bounds.size.height*0.70, self.view.bounds.size.width*0.9, self.view.bounds.size.width*0.3)];
    // self.messageTextView.backgroundColor = [UIColor brownColor];
     [self.view addSubview:self.messageTextView];
+    NSString *messageView = [[NSUserDefaults standardUserDefaults]objectForKey:@"message"];
+    if ([messageView isEqualToString:@""] || messageView ==nil) {
+        self.messageTextView.text = @"紧急通知";
+    }else{
+        self.messageTextView.text = [[NSUserDefaults standardUserDefaults]objectForKey:@"message"];
+    }
     
     
     self.contactListTableView.dataSource = self;
