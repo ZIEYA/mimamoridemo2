@@ -55,6 +55,8 @@
     self.emergencybtn = [[ABFillButton alloc]initWithFrame:CGRectMake(self.view.bounds.size.width*0.3, self.view.bounds.size.height*0.2, self.view.bounds.size.width*0.4, self.view.bounds.size.width*0.4)];
     [self.emergencybtn addTarget:self action:@selector(time:) forControlEvents:UIControlEventTouchUpInside];
     [self.emergencybtn setImage:emyimg forState:UIControlStateNormal];
+    self.emergencybtn.layer.borderWidth = 4.0;
+    self.emergencybtn.layer.borderColor = [[UIColor blackColor]CGColor];
     [self.view addSubview:self.emergencybtn];
     // 动画的设置
     self.emergencybtn.delegate =self;
@@ -65,18 +67,22 @@
     UILabel *message1 = [[UILabel alloc]initWithFrame:CGRectMake(self.view.bounds.size.width*0.05, self.view.bounds.size.height*0.42, self.view.bounds.size.width*0.3, self.view.bounds.size.width*0.1)];
     message1.text = @"•通知先";
     [self.view addSubview:message1];
-    
+    //tableview
     self.contactListTableView = [[UITableView alloc]initWithFrame:CGRectMake(self.view.bounds.size.width*0.05, self.view.bounds.size.height*0.48, self.view.bounds.size.width*0.9, self.view.bounds.size.width*0.3)];
-    //self.contactListTableView.backgroundColor = [UIColor redColor];
     self.contactListTableView.dataSource =self;
+    self.contactListTableView.layer.borderWidth = 5.0;
+    self.contactListTableView.layer.borderColor= [[UIColor orangeColor]CGColor];
+    
     [self.view addSubview:self.contactListTableView];
     
     UILabel *message2 = [[UILabel alloc]initWithFrame:CGRectMake(self.view.bounds.size.width*0.05, self.view.bounds.size.height*0.65, self.view.bounds.size.width*0.3, self.view.bounds.size.width*0.1)];
     message2.text = @"•メッセージ";
     [self.view addSubview:message2];
     
-    self.messageTextView = [[UITextView alloc]initWithFrame:CGRectMake(self.view.bounds.size.width*0.05, self.view.bounds.size.height*0.70, self.view.bounds.size.width*0.9, self.view.bounds.size.width*0.3)];
-   // self.messageTextView.backgroundColor = [UIColor brownColor];
+    self.messageTextView = [[UITextView alloc]initWithFrame:CGRectMake(self.view.bounds.size.width*0.05, self.view.bounds.size.height*0.70, self.view.bounds.size.width*0.9, self.view.bounds.size.width*0.25)];
+   
+    self.messageTextView.layer.borderWidth = 4.0;
+    self.messageTextView.layer.borderColor = [[UIColor orangeColor]CGColor];
     [self.view addSubview:self.messageTextView];
     NSString *messageView = [[NSUserDefaults standardUserDefaults]objectForKey:@"message"];
     if ([messageView isEqualToString:@""] || messageView ==nil) {
@@ -84,7 +90,7 @@
     }else{
         self.messageTextView.text = [[NSUserDefaults standardUserDefaults]objectForKey:@"message"];
     }
-    
+    self.messageTextView.font = [UIFont fontWithName:@"AmericanTypewriter" size:16];
     
     self.contactListTableView.dataSource = self;
     //uitextview delegate
@@ -93,7 +99,9 @@
 
 -(void)viewWillAppear:(BOOL)animated
 {
+    [self setEmail];
     [self setData];
+    [self setData2];
     [self.contactListTableView reloadData];
 }
 
@@ -108,7 +116,7 @@
     [self emergencyAction];
 }
 
--(void)setData{
+-(void)setEmail{
     //get email address who will send email
     NSDictionary *temp = [[NSUserDefaults standardUserDefaults]objectForKey:@"userprofile"];
     userEmail = [temp valueForKey:@"email"];
@@ -132,7 +140,9 @@
         [LeafNotification showInController:self withText:@"メール設定してください"];
         return;
     }
-    
+}
+-(void)setData{
+
     //get email address who send to
     //配置邮箱参数
     NSDictionary *user = [[NSUserDefaults standardUserDefaults]objectForKey:@"userprofile"];
@@ -153,7 +163,8 @@
         [LeafNotification showInController:self withText:@"サーバポート未設定"];
         return;
     }
-    
+}
+-(void)setData2{
     //设置接受人邮箱
     NSDictionary *tempdict =[[NSDictionary alloc]initWithDictionary:[[NSUserDefaults standardUserDefaults]objectForKey:@"famTitleArrr"]];
     NSLog(@"dic is:%@",tempdict);
@@ -197,7 +208,7 @@
 }
 -(void)textViewDidBeginEditing:(UITextView *)textView{
     CGRect frame = textView.frame;
-    int offset = frame.origin.y +180 - (self.view.frame.size.height - 216);
+    int offset = frame.origin.y  - self.view.frame.size.height*0.35;
     NSTimeInterval animationDuration = 0.3f;
     [UIView beginAnimations:@"RessizeForKeyboard" context:nil];
     [UIView setAnimationDuration:animationDuration];
@@ -216,45 +227,52 @@
 -(void)emergencyAction{
     NSLog(@"chick me !");
     MCOSMTPSession *session = [[MCOSMTPSession alloc]init];
-    session.username = userEmail;
-    session.password = password;
-    session.hostname = hostname;
-    session.port = port;
-    session.connectionType = MCOConnectionTypeTLS;
-    //构建邮件头
-    MCOMessageBuilder *build = [[MCOMessageBuilder alloc]init];
-    //设置邮件头
-    [[build header]setFrom:[MCOAddress addressWithDisplayName:nil mailbox:userEmail]];
-    NSMutableArray *to = [[NSMutableArray alloc]init];
-    for (int i = 0; i<contactArr.count; i++) {
-        NSDictionary *toemailDic = [contactArr objectAtIndex:i];
-        MCOAddress *toAddress = [MCOAddress addressWithDisplayName:nil mailbox:[toemailDic valueForKey:@"toemail"]];
-        [to addObject:toAddress];
-    }
-    [[build header]setTo:to];//who is send to
-    //设置邮件标题
-    [[build header]setSubject:@"緊急通報メールです"];
-    //设置邮件正文
-    NSString *messageSend = self.messageTextView.text;
-    [build setTextBody:messageSend];
-    //发送构建好的邮件体
-    NSData *sendData = [build data];
-    MCOSMTPOperation *sendOpertion = [session sendOperationWithData:sendData];
-    [sendOpertion start:^(NSError *_Nullable error) {
-        if (error) {
-            NSLog(@"Error sending email:%@",error);
-            dispatch_async(dispatch_get_main_queue(), ^{
-                [LeafNotification showInController:self withText:@"メール送信が失敗しました！"];
-            });
-        }else{
-            NSLog(@"Successfully send email!");
-            dispatch_async(dispatch_get_main_queue(), ^{
-                [LeafNotification showInController:self withText:@"メール送信が成功しました！" type:LeafNotificationTypeSuccess];
-            });
-            self.emyLabel.text = @"送信完了！！";
+    if (userEmail ==nil || password == nil || hostname ==nil || !port) {
+        [LeafNotification showInController:self withText:@"自分の情報の未完成"];
+    }else{
+        session.username = userEmail;
+        session.password = password;
+        session.hostname = hostname;
+        session.port = port;
+        session.connectionType = MCOConnectionTypeTLS;
+        //构建邮件头
+        MCOMessageBuilder *build = [[MCOMessageBuilder alloc]init];
+        //设置邮件头
+        [[build header]setFrom:[MCOAddress addressWithDisplayName:nil mailbox:userEmail]];
+        NSMutableArray *to = [[NSMutableArray alloc]init];
+        for (int i = 0; i<contactArr.count; i++) {
+            NSDictionary *toemailDic = [contactArr objectAtIndex:i];
+            MCOAddress *toAddress = [MCOAddress addressWithDisplayName:nil mailbox:[toemailDic valueForKey:@"toemail"]];
+            [to addObject:toAddress];
         }
-    }];
-    
+        if (to.count ==0) {
+            [LeafNotification showInController:self withText:@"通信の人がない"];
+        }else {
+            [[build header]setTo:to];//who is send to
+            //设置邮件标题
+            [[build header]setSubject:@"緊急通報メールです"];
+            //设置邮件正文
+            NSString *messageSend = self.messageTextView.text;
+            [build setTextBody:messageSend];
+            //发送构建好的邮件体
+            NSData *sendData = [build data];
+            MCOSMTPOperation *sendOpertion = [session sendOperationWithData:sendData];
+            [sendOpertion start:^(NSError *_Nullable error) {
+                if (error) {
+                    NSLog(@"Error sending email:%@",error);
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        [LeafNotification showInController:self withText:@"メール送信が失敗しました！"];
+                    });
+                }else{
+                    NSLog(@"Successfully send email!");
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        [LeafNotification showInController:self withText:@"メール送信が成功しました！" type:LeafNotificationTypeSuccess];
+                    });
+                    self.emyLabel.text = @"送信完了！！";
+                }
+            }];
+        }
+    }
 }
 
 #pragma mark - tableview datedource
@@ -278,6 +296,7 @@
     cell.textLabel.text = [cellname valueForKey:@"toname"];
     cell.detailTextLabel.text = [cellname valueForKey:@"toemail"];
     return cell;
+    
 }
 
 - (void)didReceiveMemoryWarning {

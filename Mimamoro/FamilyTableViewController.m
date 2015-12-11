@@ -87,7 +87,7 @@
             NSArray *temp = [connectionbtn1 allKeys];
             [connectionbtn1 removeObjectForKey:temp[indexPath.row]];
             [[NSUserDefaults standardUserDefaults]setObject:connectionbtn1 forKey:@"famTitleArrr"];
-            [[NSUserDefaults standardUserDefaults]removeObjectForKey:cell.famtitl1.text];
+            [[NSUserDefaults standardUserDefaults]removeObjectForKey:temp[indexPath.row]];
             [self reloadContactList];
             [self.tableView reloadData];
         }]];

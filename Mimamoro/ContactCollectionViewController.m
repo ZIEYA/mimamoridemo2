@@ -18,6 +18,11 @@
     NSMutableDictionary *connectionbtn;
     NSMutableArray *connectionnum;
     NSDictionary *fatitl;
+    NSArray * titlll;
+    NSArray * imgeee;
+    NSMutableDictionary*dddd;
+    NSMutableDictionary*ffff;
+    NSDictionary *cccc;
 }
 
 @end
@@ -28,7 +33,26 @@
     [super viewDidLoad];
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
-    fatitl = [[NSDictionary alloc]init];
+    cccc =[[NSUserDefaults standardUserDefaults]objectForKey:@"famTitleArrr"];
+    if (cccc.count == 0) {
+        dddd = [[NSMutableDictionary alloc]init];
+        ffff = [[NSMutableDictionary alloc]init];
+        
+        titlll =[[NSArray alloc]initWithObjects:@"妻",@"親友",@"娘",@"息子", nil];
+        imgeee =[[NSArray alloc]initWithObjects:@"妻",@"親友",@"娘",@"息子", nil];
+        NSLog(@"%lu",(unsigned long)titlll.count);
+        for (int i = 0; i<imgeee.count; i++) {
+            ffff =[[NSMutableDictionary alloc]initWithDictionary:[[NSUserDefaults standardUserDefaults]objectForKey:@"famTitleArrr"]];
+            [dddd setValue:titlll[i] forKey:@"titlee"];
+            [dddd setValue:imgeee[i] forKey:@"imagee"];
+            [dddd setValue:[NSString stringWithFormat:@"%d",i] forKey:@"numberr"];
+            [ffff setObject:dddd forKey:titlll[i]];
+            [[NSUserDefaults standardUserDefaults]setObject:ffff forKey:@"famTitleArrr"];
+            NSLog(@"dddd%@",dddd);
+            NSLog(@"ffff%@",ffff);
+        }
+        
+    }    fatitl = [[NSDictionary alloc]init];
     fatitl = [[NSUserDefaults standardUserDefaults]objectForKey:@"famTitleArrr"];
     connectionbtn =[[NSMutableDictionary alloc]initWithDictionary:fatitl];
     connectionnum =[[NSMutableArray alloc]init];

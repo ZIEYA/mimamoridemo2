@@ -53,7 +53,8 @@
     [self.view addSubview:message];
     //uitableview
     self.contactListTableView = [[UITableView alloc]initWithFrame:CGRectMake(self.view.bounds.size.width*0.05, self.view.bounds.size.height*0.43, self.view.bounds.size.width*0.9, self.view.bounds.size.height*0.18)];
-    //self.contactListTableView.backgroundColor = [UIColor redColor];
+    self.contactListTableView.layer.borderWidth = 4.0;
+    self.contactListTableView.layer.borderColor = [[UIColor orangeColor]CGColor];
     [self.view addSubview:self.contactListTableView];
     
     //title
@@ -122,6 +123,7 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     [self setData];
+    [self setData2];
     [self.contactListTableView reloadData];
 }
 -(void)setData
@@ -146,6 +148,8 @@
         [LeafNotification showInController:self withText:@"サーバポート未設定"];
         return;
     }
+}
+-(void)setData2{
     //设置接受人邮箱
     NSDictionary *tempdict =[[NSDictionary alloc]initWithDictionary:[[NSUserDefaults standardUserDefaults]objectForKey:@"famTitleArrr"]];
     NSLog(@"dic is:%@",tempdict);
@@ -226,57 +230,55 @@
 - (void)upsetAction {
     //发送邮件
     MCOSMTPSession *session = [[MCOSMTPSession alloc]init];
-//    session.username = @"m18506823136@163.com";
-//    session.password = @"CyY187124";
-//    session.hostname = @"smtp.163.com";
-//    session.port = 465;
-//    [session setUsername:@"yyl17173@163.com"];
-//    [session setPassword:@"581076"];
-//    [session setPort:465];
-//    [session setHostname:@"smtp.163.com"];
-    session.username = userEmail;
-    session.password = password;
-    session.hostname = hostname;
-    session.port = port;
-    session.connectionType = MCOConnectionTypeTLS;
-    session.authType = MCOAuthTypeSASLPlain;
-    //构建邮件头
-    MCOMessageBuilder *build = [[MCOMessageBuilder alloc]init];
-    //设置发送人
-    [[build header]setFrom:[MCOAddress addressWithDisplayName:nil mailbox:userEmail]];
-    //设置接受人
-    NSMutableArray *to = [[NSMutableArray alloc]init];
-    for (int i = 0; i<contArr.count; i++) {
-        NSDictionary *toemailDic = [contArr objectAtIndex:i];
-        MCOAddress *toAddress = [MCOAddress addressWithDisplayName:nil mailbox:[toemailDic valueForKey:@"toemail"]];
-        [to addObject:toAddress];
-    }
-   //[[build header]setTo:@[[MCOAddress addressWithDisplayName:nil mailbox:@"cyy20101028@163.com"]]];
-    [[build header]setTo:to];//who is send to
-    //[to release];
-    //设置邮件标题
-    [[build header]setSubject:@"worry Email "];
-    //设置邮件正文
-    self.emailMessage = [NSString stringWithFormat:@"身体状态：%@,精神状态：%@,幸せわ：%@",self.healthyValue,self.spiritValue,self.happinessValue];
-    NSString *messageSend = self.emailMessage;
-    [build setTextBody:messageSend];
-    //发送构建好的邮件体
-    NSData *rfc822Data = [build data];
-    MCOSMTPOperation *sendOpertion = [session sendOperationWithData:rfc822Data];
-    [sendOpertion start:^(NSError * _Nullable error) {
-        if (error) {
-            NSLog(@"Error sending email:%@",error);
-            dispatch_async(dispatch_get_main_queue(), ^{
-                [LeafNotification showInController:self withText:@"メール送信が失敗しました！"];
-            });
-        }else{
-            NSLog(@"Successfully send email!");
-            dispatch_async(dispatch_get_main_queue(), ^{
-                [LeafNotification showInController:self withText:@"メール送信が成功しました！" type:LeafNotificationTypeSuccess];
-            });
+    if (userEmail ==nil || password == nil || hostname ==nil || !port) {
+        [LeafNotification showInController:self withText:@"自分の情報の未完成"];
+    }else{
+        session.username = userEmail;
+        session.password = password;
+        session.hostname = hostname;
+        session.port = port;
+        session.connectionType = MCOConnectionTypeTLS;
+        session.authType = MCOAuthTypeSASLPlain;
+        //构建邮件头
+        MCOMessageBuilder *build = [[MCOMessageBuilder alloc]init];
+        //设置发送人
+        [[build header]setFrom:[MCOAddress addressWithDisplayName:nil mailbox:userEmail]];
+        //设置接受人
+        NSMutableArray *to = [[NSMutableArray alloc]init];
+        for (int i = 0; i<contArr.count; i++) {
+            NSDictionary *toemailDic = [contArr objectAtIndex:i];
+            MCOAddress *toAddress = [MCOAddress addressWithDisplayName:nil mailbox:[toemailDic valueForKey:@"toemail"]];
+            [to addObject:toAddress];
         }
-    }];
-
+        if (to.count ==0) {
+            [LeafNotification showInController:self withText:@"通信の人がない"];
+        }else {
+            [[build header]setTo:to];//who is send to
+            //[to release];
+            //设置邮件标题
+            [[build header]setSubject:@"worry Email "];
+            //设置邮件正文
+            self.emailMessage = [NSString stringWithFormat:@"身体状态：%@,精神状态：%@,幸せわ：%@",self.healthyValue,self.spiritValue,self.happinessValue];
+            NSString *messageSend = self.emailMessage;
+            [build setTextBody:messageSend];
+            //发送构建好的邮件体
+            NSData *rfc822Data = [build data];
+            MCOSMTPOperation *sendOpertion = [session sendOperationWithData:rfc822Data];
+            [sendOpertion start:^(NSError * _Nullable error) {
+                if (error) {
+                    NSLog(@"Error sending email:%@",error);
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        [LeafNotification showInController:self withText:@"メール送信が失敗しました！"];
+                    });
+                }else{
+                    NSLog(@"Successfully send email!");
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        [LeafNotification showInController:self withText:@"メール送信が成功しました！" type:LeafNotificationTypeSuccess];
+                    });
+                }
+            }];
+        }
+    }
 }
 #pragma mark - uitableview datesource
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
