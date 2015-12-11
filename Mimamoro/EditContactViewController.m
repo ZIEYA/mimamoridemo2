@@ -29,6 +29,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     NSLog(@"_jiarentype%@",_familytype);
     _nameTextField.delegate = self;
     _emailTextField.delegate = self;
@@ -109,19 +110,33 @@
     //Save data as model
     contactModel.name =_nameTextField.text;
     contactModel.emailaddress = _emailTextField.text;
-    if (_editType == 0) {
-        
-    }else if (_editType == 1){
+    if (_editType == 0 && ![contactModel.name isEqualToString:@""]) {
+        NSMutableDictionary *temp = [[NSMutableDictionary alloc]init];
+        [temp setValue:contactModel.name forKey:@"name"];
+        [temp setValue:contactModel.emailaddress forKey:@"email"];
+        [temp setValue:contactModel.emergencyType forKey:@"emergencytype"];
+        [temp setValue:contactModel.contactType forKey:@"contacttype"];
+        [_contactDict setObject:temp forKey:contactModel.name];
+        [[NSUserDefaults standardUserDefaults]setObject:_contactDict forKey:_familytype];
+        [self.navigationController popViewControllerAnimated:YES];
+    }else if (_editType == 1 && ![contactModel.name isEqualToString:@""]){
         [_contactDict removeObjectForKey:_tempName];
+        NSMutableDictionary *temp = [[NSMutableDictionary alloc]init];
+        [temp setValue:contactModel.name forKey:@"name"];
+        [temp setValue:contactModel.emailaddress forKey:@"email"];
+        [temp setValue:contactModel.emergencyType forKey:@"emergencytype"];
+        [temp setValue:contactModel.contactType forKey:@"contacttype"];
+        [_contactDict setObject:temp forKey:contactModel.name];
+        [self.navigationController popViewControllerAnimated:YES];
+        [[NSUserDefaults standardUserDefaults]setObject:_contactDict forKey:_familytype];
+    }else{
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"message" message:@"请输入姓名" preferredStyle:UIAlertControllerStyleAlert];
+        [alert addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            
+        }]];
+        [self presentViewController:alert animated:true completion:nil];
     }
-    NSMutableDictionary *temp = [[NSMutableDictionary alloc]init];
-    [temp setValue:contactModel.name forKey:@"name"];
-    [temp setValue:contactModel.emailaddress forKey:@"email"];
-    [temp setValue:contactModel.emergencyType forKey:@"emergencytype"];
-    [temp setValue:contactModel.contactType forKey:@"contacttype"];
-    [_contactDict setObject:temp forKey:contactModel.name];
-    [self.navigationController popViewControllerAnimated:YES];
-    [[NSUserDefaults standardUserDefaults]setObject:_contactDict forKey:_familytype];
+    
 
 }
 
@@ -156,12 +171,19 @@
 
 -(void)contactPicker:(CNContactPickerViewController *)picker didSelectContactProperty:(CNContactProperty *)contactProperty{
     NSString *name = contactProperty.contact.familyName;
-    NSString *email = contactProperty.value;
     contactModel.name = name;
-    contactModel.emailaddress = email;
     _nameTextField.text = name;
-    _emailTextField.text = email;
-    NSLog(@"name:%@ email:%@",name,email);
+    
+    NSString *email = contactProperty.value;
+    NSString*selectName= contactProperty.key;
+    if ([selectName isEqualToString:@"emailAddresses"]) {
+        contactModel.emailaddress = email;
+        _emailTextField.text = email;
+    }else{
+        _emailTextField.text = @"";
+    }
+    
+   // NSLog(@"name:%@ email:%@",name,email);
 }
 
 

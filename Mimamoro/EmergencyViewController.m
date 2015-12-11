@@ -37,11 +37,7 @@
     if (!contactArr) {
         contactArr = [[NSMutableArray alloc]init];
     }
-    NSString*message = [[NSUserDefaults standardUserDefaults]objectForKey:@"message"];
-    if (message) {
-        self.messageTextView.text = [[NSUserDefaults standardUserDefaults]objectForKey:@"message"];
-    }
-    self.messageTextView.text=@"紧急！！";
+
     //设置控件
     //label
     self.emyLabel = [[UILabel alloc]initWithFrame:CGRectMake(self.view.bounds.size.width*0.3, self.view.bounds.size.height*0.14, self.view.bounds.size.width*0.4, self.view.bounds.size.width*0.1)];
@@ -84,11 +80,11 @@
     self.messageTextView.layer.borderWidth = 4.0;
     self.messageTextView.layer.borderColor = [[UIColor orangeColor]CGColor];
     [self.view addSubview:self.messageTextView];
-    NSString *messageView = [[NSUserDefaults standardUserDefaults]objectForKey:@"message"];
+    NSString *messageView = [[NSUserDefaults standardUserDefaults]objectForKey:@"message1"];
     if ([messageView isEqualToString:@""] || messageView ==nil) {
         self.messageTextView.text = @"紧急通知";
     }else{
-        self.messageTextView.text = [[NSUserDefaults standardUserDefaults]objectForKey:@"message"];
+        self.messageTextView.text = [[NSUserDefaults standardUserDefaults]objectForKey:@"message1"];
     }
     self.messageTextView.font = [UIFont fontWithName:@"AmericanTypewriter" size:16];
     
@@ -115,7 +111,7 @@
     NSLog(@"button is pressed");
     [self emergencyAction];
 }
-
+#pragma mark - 数据更新
 -(void)setEmail{
     //get email address who will send email
     NSDictionary *temp = [[NSUserDefaults standardUserDefaults]objectForKey:@"userprofile"];
@@ -198,13 +194,14 @@
 {
     if ([text isEqualToString:@"\n"]) {
         [textView resignFirstResponder];
+        NSUserDefaults *messageSet = [NSUserDefaults standardUserDefaults];
+        [messageSet removeObjectForKey:@"message1"];
+        [messageSet setObject:self.messageTextView.text forKey:@"message1"];
+        [messageSet synchronize];
         return NO;
     }
-    NSUserDefaults *messageSet = [NSUserDefaults standardUserDefaults];
-    [messageSet removeObjectForKey:@"message"];
-    [messageSet setObject:self.messageTextView.text forKey:@"message"];
-    [messageSet synchronize];
     return YES;
+    
 }
 -(void)textViewDidBeginEditing:(UITextView *)textView{
     CGRect frame = textView.frame;
@@ -222,7 +219,7 @@
     self.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
 }
 
-#pragma mark - emergrncy button
+#pragma mark - emergrncybtn 发送邮件
 
 -(void)emergencyAction{
     NSLog(@"chick me !");
@@ -244,6 +241,7 @@
             NSDictionary *toemailDic = [contactArr objectAtIndex:i];
             MCOAddress *toAddress = [MCOAddress addressWithDisplayName:nil mailbox:[toemailDic valueForKey:@"toemail"]];
             [to addObject:toAddress];
+            
         }
         if (to.count ==0) {
             [LeafNotification showInController:self withText:@"通信の人がない"];
@@ -284,6 +282,7 @@
 {
     
     return self.contactArr.count;
+
 }
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -291,7 +290,7 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"mycell"];
     }
-    //cell.accessoryType = UITableViewCellStyleValue1;
+
     NSDictionary *cellname = contactArr[indexPath.row];
     cell.textLabel.text = [cellname valueForKey:@"toname"];
     cell.detailTextLabel.text = [cellname valueForKey:@"toemail"];

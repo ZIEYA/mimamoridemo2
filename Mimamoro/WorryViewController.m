@@ -63,7 +63,7 @@
     [self.view addSubview:state];
     
     //UISlider设置
-    UILabel *health = [[UILabel alloc]initWithFrame:CGRectMake(self.view.bounds.size.width*0.05, self.view.bounds.size.height*0.73, self.view.bounds.size.width*0.2, 10)];
+    UILabel *health = [[UILabel alloc]initWithFrame:CGRectMake(self.view.bounds.size.width*0.05, self.view.bounds.size.height*0.7, self.view.bounds.size.width*0.2, 10)];
     health.text = @"身体";
     [self.view addSubview:health];
     self.healthSlider = [[UISlider alloc]init];
@@ -72,25 +72,25 @@
     [self.healthSlider setValue:2.5];
     healthyValue = @"适中";
     
-    _Lab1 = [[UILabel alloc]initWithFrame:CGRectMake(self.view.bounds.size.width*0.16, self.view.bounds.size.height*0.73, self.view.bounds.size.width*0.2, 10)];
+    _Lab1 = [[UILabel alloc]initWithFrame:CGRectMake(self.view.bounds.size.width*0.16, self.view.bounds.size.height*0.7, self.view.bounds.size.width*0.2, 10)];
     _Lab1.text = healthyValue;
     _Lab1.font = [UIFont fontWithName:@"AmericanTypewriter" size:12];
     [self.view addSubview:_Lab1];
     
-    self.healthSlider.frame = CGRectMake(self.view.bounds.size.width*0.3, self.view.bounds.size.height*0.73, self.view.bounds.size.width*0.65, 5);
+    self.healthSlider.frame = CGRectMake(self.view.bounds.size.width*0.3, self.view.bounds.size.height*0.7, self.view.bounds.size.width*0.65, 5);
     //身体sliderAction
     [self.healthSlider addTarget:self action:@selector(healthSliderChange:) forControlEvents:UIControlEventValueChanged];
     [self.view addSubview:self.healthSlider];
     
-    UILabel *spirit = [[UILabel alloc]initWithFrame:CGRectMake(self.view.bounds.size.width*0.05, self.view.bounds.size.height*0.80, self.view.bounds.size.width*0.2, 10)];
+    UILabel *spirit = [[UILabel alloc]initWithFrame:CGRectMake(self.view.bounds.size.width*0.05, self.view.bounds.size.height*0.78, self.view.bounds.size.width*0.2, 10)];
     spirit.text = @"精神";
-    _Lab2 = [[UILabel alloc]initWithFrame:CGRectMake(self.view.bounds.size.width*0.16, self.view.bounds.size.height*0.8, self.view.bounds.size.width*0.2, 10)];
+    _Lab2 = [[UILabel alloc]initWithFrame:CGRectMake(self.view.bounds.size.width*0.16, self.view.bounds.size.height*0.78, self.view.bounds.size.width*0.2, 10)];
     _Lab2.text = healthyValue;
     _Lab2.font = [UIFont fontWithName:@"AmericanTypewriter" size:12];
     [self.view addSubview:_Lab2];
     [self.view addSubview:spirit];
     self.spiritSlider = [[UISlider alloc]init];
-    self.spiritSlider.frame = CGRectMake(self.view.bounds.size.width*0.3, self.view.bounds.size.height*0.80, self.view.bounds.size.width*0.65, 5);
+    self.spiritSlider.frame = CGRectMake(self.view.bounds.size.width*0.3, self.view.bounds.size.height*0.78, self.view.bounds.size.width*0.65, 5);
     [self.spiritSlider setMinimumValue:0];
     [self.spiritSlider setMaximumValue:5];
     [self.spiritSlider setValue:2.5];
@@ -100,15 +100,15 @@
     [self.spiritSlider addTarget:self action:@selector(spiritSliderChange:) forControlEvents:UIControlEventValueChanged];
     [self.view addSubview:self.spiritSlider];
     
-    UILabel *happiness = [[UILabel alloc]initWithFrame:CGRectMake(self.view.bounds.size.width*0.05, self.view.bounds.size.height*0.87, self.view.bounds.size.width*0.2, 10)];
+    UILabel *happiness = [[UILabel alloc]initWithFrame:CGRectMake(self.view.bounds.size.width*0.05, self.view.bounds.size.height*0.86, self.view.bounds.size.width*0.2, 10)];
     happiness.text = @"幸せ";
-    _Lab3 = [[UILabel alloc]initWithFrame:CGRectMake(self.view.bounds.size.width*0.16, self.view.bounds.size.height*0.87, self.view.bounds.size.width*0.2, 10)];
+    _Lab3 = [[UILabel alloc]initWithFrame:CGRectMake(self.view.bounds.size.width*0.16, self.view.bounds.size.height*0.86, self.view.bounds.size.width*0.2, 10)];
     _Lab3.text = healthyValue;
     _Lab3.font = [UIFont fontWithName:@"AmericanTypewriter" size:12];
     [self.view addSubview:_Lab3];
     [self.view addSubview:happiness];
     self.happinessSlider = [[UISlider alloc]init];
-    self.happinessSlider.frame = CGRectMake(self.view.bounds.size.width*0.3, self.view.bounds.size.height*0.87, self.view.bounds.size.width*0.65, 5);
+    self.happinessSlider.frame = CGRectMake(self.view.bounds.size.width*0.3, self.view.bounds.size.height*0.86, self.view.bounds.size.width*0.65, 5);
     [self.happinessSlider setMinimumValue:0];
     [self.happinessSlider setMaximumValue:5];
     [self.happinessSlider setValue:2.5];
@@ -226,7 +226,7 @@
     self.Lab3.text = happinessValue;
     NSLog(@"幸せわ：%@",happinessValue);
 }
-#pragma mark - buttonAction
+#pragma mark - worrybtn 发送邮件
 - (void)upsetAction {
     //发送邮件
     MCOSMTPSession *session = [[MCOSMTPSession alloc]init];

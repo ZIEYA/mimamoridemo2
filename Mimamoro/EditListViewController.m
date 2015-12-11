@@ -64,19 +64,26 @@
 
 - (IBAction)saveAction:(id)sender {
     if (_editType == 0) {
+        listmodel.content = _contentTextView.text;
+        NSMutableDictionary *temp = [[NSMutableDictionary alloc]init];
+        [temp setValue:listmodel.content forKey:@"content"];
+        [temp setValue:listmodel.type forKey:@"type"];
+        [listDict setObject:temp forKey:listmodel.content];
+        //NSLog(@"%@",listDict);
+        [[NSUserDefaults standardUserDefaults]setObject:listDict forKey:@"listcontent"];
         
+        [self.navigationController popViewControllerAnimated:YES];
     }else if (_editType == 1){
         [listDict removeObjectForKey:_tempContent];
+        listmodel.content = _contentTextView.text;
+        NSMutableDictionary *temp = [[NSMutableDictionary alloc]init];
+        [temp setValue:listmodel.content forKey:@"content"];
+        [temp setValue:listmodel.type forKey:@"type"];
+        [listDict setObject:temp forKey:listmodel.content];
+        //NSLog(@"%@",listDict);
+        [[NSUserDefaults standardUserDefaults]setObject:listDict forKey:@"listcontent"];
+        [self.navigationController popViewControllerAnimated:YES];
     }
-    listmodel.content = _contentTextView.text;
-    NSMutableDictionary *temp = [[NSMutableDictionary alloc]init];
-    [temp setValue:listmodel.content forKey:@"content"];
-    [temp setValue:listmodel.type forKey:@"type"];
-    [listDict setObject:temp forKey:listmodel.content];
-    //NSLog(@"%@",listDict);
-    [[NSUserDefaults standardUserDefaults]setObject:listDict forKey:@"listcontent"];
-    
-    [self.navigationController popViewControllerAnimated:YES];
 }
 
 -(BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text{
