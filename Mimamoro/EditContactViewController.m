@@ -10,6 +10,7 @@
 #import <Contacts/Contacts.h>
 #import <ContactsUI/ContactsUI.h>
 #import "contactAddressModel.h"
+#import "LeafNotification.h"
 @interface EditContactViewController ()<UITextFieldDelegate,CNContactPickerDelegate>{
     contactAddressModel *contactModel;
     NSMutableDictionary *_contactDict;
@@ -42,7 +43,7 @@
         _contactDict = [[NSMutableDictionary alloc]initWithCapacity:0];
     }
     _contactDict = [[NSMutableDictionary alloc]initWithDictionary:[[NSUserDefaults standardUserDefaults]objectForKey:_familytype]];
-
+    
     // If add a new contact
     if (_editType == 0) {
         contactModel.contactType = @"0";
@@ -50,7 +51,7 @@
         contactModel.emergencyType = @"0";
         [_emergencySwitch setOn:NO];
         
-    // If edit an existed contact
+        // If edit an existed contact
     }else if (_editType == 1){
         _exitDict = [_contactDict objectForKey:_tempName];
         
@@ -77,7 +78,7 @@
 }
 
 -(void)viewWillAppear:(BOOL)animated{
-
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -107,37 +108,91 @@
 
 
 - (IBAction)saveAction:(id)sender {
-    //Save data as model
     contactModel.name =_nameTextField.text;
     contactModel.emailaddress = _emailTextField.text;
-    if (_editType == 0 && ![contactModel.name isEqualToString:@""]) {
-        NSMutableDictionary *temp = [[NSMutableDictionary alloc]init];
-        [temp setValue:contactModel.name forKey:@"name"];
-        [temp setValue:contactModel.emailaddress forKey:@"email"];
-        [temp setValue:contactModel.emergencyType forKey:@"emergencytype"];
-        [temp setValue:contactModel.contactType forKey:@"contacttype"];
-        [_contactDict setObject:temp forKey:contactModel.name];
-        [[NSUserDefaults standardUserDefaults]setObject:_contactDict forKey:_familytype];
-        [self.navigationController popViewControllerAnimated:YES];
-    }else if (_editType == 1 && ![contactModel.name isEqualToString:@""]){
+    NSArray *famtitl = [[NSArray alloc]init];
+    NSMutableArray*EmergencyEmailArray = [[NSMutableArray alloc]init];
+    NSMutableDictionary*EmergencyDict = [[NSMutableDictionary alloc]init];
+    if (_editType == 0) {
+        NSLog(@"222;");
+    }else if (_editType == 1){
         [_contactDict removeObjectForKey:_tempName];
-        NSMutableDictionary *temp = [[NSMutableDictionary alloc]init];
-        [temp setValue:contactModel.name forKey:@"name"];
-        [temp setValue:contactModel.emailaddress forKey:@"email"];
-        [temp setValue:contactModel.emergencyType forKey:@"emergencytype"];
-        [temp setValue:contactModel.contactType forKey:@"contacttype"];
-        [_contactDict setObject:temp forKey:contactModel.name];
-        [self.navigationController popViewControllerAnimated:YES];
-        [[NSUserDefaults standardUserDefaults]setObject:_contactDict forKey:_familytype];
-    }else{
-        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"message" message:@"请输入姓名" preferredStyle:UIAlertControllerStyleAlert];
-        [alert addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-            
-        }]];
-        [self presentViewController:alert animated:true completion:nil];
     }
-    
+    if ([_nameTextField.text isEqualToString:@""]||[_emailTextField.text isEqualToString:@""] ) {
+        [LeafNotification showInController:self withText:[NSString stringWithFormat:@"保存しないので、足を付ける名前とメールアドレス"]];
+    }else{
+        if (_editType == 0){
+            NSDictionary* famtitl2 = [[NSDictionary alloc]initWithDictionary:[[NSUserDefaults standardUserDefaults]objectForKey:@"famTitleArrr"]];
+            famtitl = [famtitl2 allKeys];
+            for (int i = 0; i<famtitl.count; i++) {
+                NSDictionary *tempdict = [[NSUserDefaults standardUserDefaults]objectForKey:famtitl[i]];
+                EmergencyDict = [[NSMutableDictionary alloc]initWithDictionary:tempdict];
+                NSArray *keysArr = [EmergencyDict allKeys];
+                for (int i = 0; i<keysArr.count; i++){
+                    NSDictionary *tempDict = [EmergencyDict objectForKey:keysArr[i]];
+                    NSLog(@"%@",tempDict);
+                    NSString *type = [tempDict valueForKey:@"emergencytype"];
+                    if ([type isEqualToString:@"1"]) {
+                        [EmergencyEmailArray addObject:[tempDict valueForKey:@"email"]];
+                    }
+                }
+            }
+            if([EmergencyEmailArray indexOfObject: contactModel.emailaddress] != NSNotFound){
+                [LeafNotification showInController:self withText:[NSString stringWithFormat:@"メールアドレス存在していた"]];
+            }else{
+                NSMutableDictionary *temp = [[NSMutableDictionary alloc]init];
+                [temp setValue:contactModel.name forKey:@"name"];
+                [temp setValue:contactModel.emailaddress forKey:@"email"];
+                [temp setValue:contactModel.emergencyType forKey:@"emergencytype"];
+                [temp setValue:contactModel.contactType forKey:@"contacttype"];
+                [_contactDict setObject:temp forKey:contactModel.name];
+                [self.navigationController popViewControllerAnimated:YES];
+                [[NSUserDefaults standardUserDefaults]setObject:_contactDict forKey:_familytype];
+            }
+        }else if (_editType == 1){
+            NSMutableDictionary *temp = [[NSMutableDictionary alloc]init];
+            [temp setValue:contactModel.name forKey:@"name"];
+            [temp setValue:contactModel.emailaddress forKey:@"email"];
+            [temp setValue:contactModel.emergencyType forKey:@"emergencytype"];
+            [temp setValue:contactModel.contactType forKey:@"contacttype"];
+            [_contactDict setObject:temp forKey:contactModel.name];
+            [self.navigationController popViewControllerAnimated:YES];
+            [[NSUserDefaults standardUserDefaults]setObject:_contactDict forKey:_familytype];
+        }
+    }
 
+    //Save data as model
+        //Save data as model
+    //    contactModel.name =_nameTextField.text;
+    //    contactModel.emailaddress = _emailTextField.text;
+    //    if (_editType == 0 && ![contactModel.name isEqualToString:@""]) {
+    //        NSMutableDictionary *temp = [[NSMutableDictionary alloc]init];
+    //        [temp setValue:contactModel.name forKey:@"name"];
+    //        [temp setValue:contactModel.emailaddress forKey:@"email"];
+    //        [temp setValue:contactModel.emergencyType forKey:@"emergencytype"];
+    //        [temp setValue:contactModel.contactType forKey:@"contacttype"];
+    //        [_contactDict setObject:temp forKey:contactModel.name];
+    //        [[NSUserDefaults standardUserDefaults]setObject:_contactDict forKey:_familytype];
+    //        [self.navigationController popViewControllerAnimated:YES];
+    //    }else if (_editType == 1 && ![contactModel.name isEqualToString:@""]){
+    //        [_contactDict removeObjectForKey:_tempName];
+    //        NSMutableDictionary *temp = [[NSMutableDictionary alloc]init];
+    //        [temp setValue:contactModel.name forKey:@"name"];
+    //        [temp setValue:contactModel.emailaddress forKey:@"email"];
+    //        [temp setValue:contactModel.emergencyType forKey:@"emergencytype"];
+    //        [temp setValue:contactModel.contactType forKey:@"contacttype"];
+    //        [_contactDict setObject:temp forKey:contactModel.name];
+    //        [self.navigationController popViewControllerAnimated:YES];
+    //        [[NSUserDefaults standardUserDefaults]setObject:_contactDict forKey:_familytype];
+    //    }else{
+    //        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"message" message:@"请输入姓名" preferredStyle:UIAlertControllerStyleAlert];
+    //        [alert addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    //
+    //        }]];
+    //        [self presentViewController:alert animated:true completion:nil];
+    //    }
+    
+    
 }
 
 - (IBAction)cancelAction:(id)sender {
@@ -183,7 +238,7 @@
         _emailTextField.text = @"";
     }
     
-   // NSLog(@"name:%@ email:%@",name,email);
+    // NSLog(@"name:%@ email:%@",name,email);
 }
 
 
