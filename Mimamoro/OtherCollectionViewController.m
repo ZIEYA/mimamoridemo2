@@ -122,11 +122,11 @@ static NSString * const reuseIdentifier = @"settingcell";
     //NSLog(@"%ld,%ld",(long)indexPath.section,(long)indexPath.row);
     //DenkiManage view controller
     if(indexPath.section ==0 && indexPath.row ==0){
-        [self performSegueWithIdentifier:@"gotoPocketDoctorVC" sender:self
+        [self performSegueWithIdentifier:@"gotoDenkiManageVC" sender:self
          ];
     }
     else if (indexPath.section ==0 && indexPath.row ==1){
-        [self performSegueWithIdentifier:@"gotoDenkiManageVC" sender:self];
+        [self performSegueWithIdentifier:@"gotoPocketDoctorVC" sender:self];
     }
     //Add new item view controller
     else if ((indexPath.section *2+indexPath.row) == _itemArray.count){
