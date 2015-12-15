@@ -104,7 +104,6 @@
 		E57B2C2D1C103E5D00EF2948 /* daughter.png in Resources */ = {isa = PBXBuildFile; fileRef = E57B2C2C1C103E5D00EF2948 /* daughter.png */; };
 		E57B2C2F1C10482F00EF2948 /* friend.png in Resources */ = {isa = PBXBuildFile; fileRef = E57B2C2E1C10482F00EF2948 /* friend.png */; };
 		E57B2C341C1151F000EF2948 /* LeafNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = E57B2C331C1151F000EF2948 /* LeafNotification.m */; };
-		E57B2C501C1174BC00EF2948 /* libMailCore-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E57B2C431C11741700EF2948 /* libMailCore-ios.a */; };
 		E57B2C521C1174C400EF2948 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E57B2C511C1174C400EF2948 /* CFNetwork.framework */; };
 		E57B2C541C1174CD00EF2948 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E57B2C531C1174CD00EF2948 /* Security.framework */; };
 		E57B2C641C11878800EF2948 /* item-3.png in Resources */ = {isa = PBXBuildFile; fileRef = E57B2C631C11878800EF2948 /* item-3.png */; };
@@ -117,12 +116,6 @@
 		E57D2A131C1FBA3D005F9F76 /* face.png in Resources */ = {isa = PBXBuildFile; fileRef = E57D2A0F1C1FBA3D005F9F76 /* face.png */; };
 		E57D2A141C1FBA3D005F9F76 /* face@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E57D2A101C1FBA3D005F9F76 /* face@2x.png */; };
 		E57D2A221C2011DA005F9F76 /* testdata1.plist in Resources */ = {isa = PBXBuildFile; fileRef = E57D2A211C2011DA005F9F76 /* testdata1.plist */; };
-		E57D2A301C20147D005F9F76 /* UUBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E57D2A251C20147D005F9F76 /* UUBar.m */; };
-		E57D2A311C20147D005F9F76 /* UUBarChart.m in Sources */ = {isa = PBXBuildFile; fileRef = E57D2A271C20147D005F9F76 /* UUBarChart.m */; };
-		E57D2A321C20147D005F9F76 /* UUChart.m in Sources */ = {isa = PBXBuildFile; fileRef = E57D2A291C20147D005F9F76 /* UUChart.m */; };
-		E57D2A331C20147D005F9F76 /* UUChartLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = E57D2A2B1C20147D005F9F76 /* UUChartLabel.m */; };
-		E57D2A341C20147D005F9F76 /* UUColor.m in Sources */ = {isa = PBXBuildFile; fileRef = E57D2A2D1C20147D005F9F76 /* UUColor.m */; };
-		E57D2A351C20147D005F9F76 /* UULineChart.m in Sources */ = {isa = PBXBuildFile; fileRef = E57D2A2F1C20147D005F9F76 /* UULineChart.m */; };
 		E57D2A381C20155E005F9F76 /* DenkiManageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E57D2A371C20155E005F9F76 /* DenkiManageTableViewController.m */; };
 		E57D2A3B1C201672005F9F76 /* DashboardTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E57D2A3A1C201672005F9F76 /* DashboardTableViewController.m */; };
 /* End PBXBuildFile section */
@@ -141,69 +134,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = E55914B21C0EC92E00CE9102;
 			remoteInfo = Mimamoro;
-		};
-		E57B2C401C11741700EF2948 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E57B2C351C11741700EF2948 /* mailcore2.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C64EA537169E772200778456;
-			remoteInfo = "static mailcore2 osx";
-		};
-		E57B2C421C11741700EF2948 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E57B2C351C11741700EF2948 /* mailcore2.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C6BA2C191705F4E6003F0E9E;
-			remoteInfo = "static mailcore2 ios";
-		};
-		E57B2C441C11741700EF2948 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E57B2C351C11741700EF2948 /* mailcore2.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C64EA78C169F259200778456;
-			remoteInfo = tests;
-		};
-		E57B2C461C11741700EF2948 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E57B2C351C11741700EF2948 /* mailcore2.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C6A81B911706840C00882C15;
-			remoteInfo = "test-ios";
-		};
-		E57B2C481C11741700EF2948 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E57B2C351C11741700EF2948 /* mailcore2.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C6BD288D170BD71100A91AC1;
-			remoteInfo = "mailcore osx";
-		};
-		E57B2C4A1C11741700EF2948 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E57B2C351C11741700EF2948 /* mailcore2.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 27780C3A19CF9CD100C77E44;
-			remoteInfo = "mailcore ios";
-		};
-		E57B2C4C1C11741700EF2948 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E57B2C351C11741700EF2948 /* mailcore2.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C6B5AE0219F630B3001352A6;
-			remoteInfo = unittest;
-		};
-		E57B2C4E1C11741700EF2948 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E57B2C351C11741700EF2948 /* mailcore2.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C600B6141A242C3F000728F1;
-			remoteInfo = unittestcpp;
-		};
-		E57B2C551C1175D300EF2948 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E57B2C351C11741700EF2948 /* mailcore2.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = C6BA2B091705F4E6003F0E9E;
-			remoteInfo = "static mailcore2 ios";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -347,7 +277,6 @@
 		E57B2C2E1C10482F00EF2948 /* friend.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = friend.png; sourceTree = "<group>"; };
 		E57B2C321C1151F000EF2948 /* LeafNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeafNotification.h; sourceTree = "<group>"; };
 		E57B2C331C1151F000EF2948 /* LeafNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeafNotification.m; sourceTree = "<group>"; };
-		E57B2C351C11741700EF2948 /* mailcore2.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = mailcore2.xcodeproj; path = "../../../../Downloads/mailcore2-master/build-mac/mailcore2.xcodeproj"; sourceTree = "<group>"; };
 		E57B2C511C1174C400EF2948 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		E57B2C531C1174CD00EF2948 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		E57B2C631C11878800EF2948 /* item-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "item-3.png"; sourceTree = "<group>"; };
@@ -363,18 +292,6 @@
 		E57D2A0F1C1FBA3D005F9F76 /* face.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = face.png; sourceTree = "<group>"; };
 		E57D2A101C1FBA3D005F9F76 /* face@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "face@2x.png"; sourceTree = "<group>"; };
 		E57D2A211C2011DA005F9F76 /* testdata1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = testdata1.plist; sourceTree = "<group>"; };
-		E57D2A241C20147D005F9F76 /* UUBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUBar.h; sourceTree = "<group>"; };
-		E57D2A251C20147D005F9F76 /* UUBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUBar.m; sourceTree = "<group>"; };
-		E57D2A261C20147D005F9F76 /* UUBarChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUBarChart.h; sourceTree = "<group>"; };
-		E57D2A271C20147D005F9F76 /* UUBarChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUBarChart.m; sourceTree = "<group>"; };
-		E57D2A281C20147D005F9F76 /* UUChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUChart.h; sourceTree = "<group>"; };
-		E57D2A291C20147D005F9F76 /* UUChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUChart.m; sourceTree = "<group>"; };
-		E57D2A2A1C20147D005F9F76 /* UUChartLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUChartLabel.h; sourceTree = "<group>"; };
-		E57D2A2B1C20147D005F9F76 /* UUChartLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUChartLabel.m; sourceTree = "<group>"; };
-		E57D2A2C1C20147D005F9F76 /* UUColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUColor.h; sourceTree = "<group>"; };
-		E57D2A2D1C20147D005F9F76 /* UUColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUColor.m; sourceTree = "<group>"; };
-		E57D2A2E1C20147D005F9F76 /* UULineChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UULineChart.h; sourceTree = "<group>"; };
-		E57D2A2F1C20147D005F9F76 /* UULineChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UULineChart.m; sourceTree = "<group>"; };
 		E57D2A361C20155E005F9F76 /* DenkiManageTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DenkiManageTableViewController.h; sourceTree = "<group>"; };
 		E57D2A371C20155E005F9F76 /* DenkiManageTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DenkiManageTableViewController.m; sourceTree = "<group>"; };
 		E57D2A391C201672005F9F76 /* DashboardTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DashboardTableViewController.h; sourceTree = "<group>"; };
@@ -391,7 +308,6 @@
 				E56250C71C16B05A008FD1DF /* CoreLocation.framework in Frameworks */,
 				E57B2C541C1174CD00EF2948 /* Security.framework in Frameworks */,
 				E57B2C521C1174C400EF2948 /* CFNetwork.framework in Frameworks */,
-				E57B2C501C1174BC00EF2948 /* libMailCore-ios.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,7 +356,6 @@
 		E55914B51C0EC92E00CE9102 /* Mimamoro */ = {
 			isa = PBXGroup;
 			children = (
-				E57B2C351C11741700EF2948 /* mailcore2.xcodeproj */,
 				E57B2C311C1151D900EF2948 /* NotificationView */,
 				E559153A1C0EF06900CE9102 /* Models */,
 				E55915271C0EEC2800CE9102 /* SubViewControllers */,
@@ -518,7 +433,6 @@
 		E55915181C0EE43400CE9102 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				E57D2A231C20147D005F9F76 /* UUChart */,
 				E57B2C6F1C11964400EF2948 /* PickerView.h */,
 				E57B2C701C11964400EF2948 /* PickerView.m */,
 				E5705A6E1C15345800D6B995 /* ABFillButton.h */,
@@ -730,40 +644,6 @@
 			name = NotificationView;
 			sourceTree = "<group>";
 		};
-		E57B2C361C11741700EF2948 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				E57B2C411C11741700EF2948 /* libMailCore.a */,
-				E57B2C431C11741700EF2948 /* libMailCore-ios.a */,
-				E57B2C451C11741700EF2948 /* tests */,
-				E57B2C471C11741700EF2948 /* test-ios.app */,
-				E57B2C491C11741700EF2948 /* MailCore.framework */,
-				E57B2C4B1C11741700EF2948 /* MailCore.framework */,
-				E57B2C4D1C11741700EF2948 /* unittest.xctest */,
-				E57B2C4F1C11741700EF2948 /* unittestcpp */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		E57D2A231C20147D005F9F76 /* UUChart */ = {
-			isa = PBXGroup;
-			children = (
-				E57D2A241C20147D005F9F76 /* UUBar.h */,
-				E57D2A251C20147D005F9F76 /* UUBar.m */,
-				E57D2A261C20147D005F9F76 /* UUBarChart.h */,
-				E57D2A271C20147D005F9F76 /* UUBarChart.m */,
-				E57D2A281C20147D005F9F76 /* UUChart.h */,
-				E57D2A291C20147D005F9F76 /* UUChart.m */,
-				E57D2A2A1C20147D005F9F76 /* UUChartLabel.h */,
-				E57D2A2B1C20147D005F9F76 /* UUChartLabel.m */,
-				E57D2A2C1C20147D005F9F76 /* UUColor.h */,
-				E57D2A2D1C20147D005F9F76 /* UUColor.m */,
-				E57D2A2E1C20147D005F9F76 /* UULineChart.h */,
-				E57D2A2F1C20147D005F9F76 /* UULineChart.m */,
-			);
-			path = UUChart;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -778,7 +658,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				E57B2C561C1175D300EF2948 /* PBXTargetDependency */,
 			);
 			name = Mimamori;
 			productName = Mimamoro;
@@ -854,12 +733,6 @@
 			mainGroup = E55914AA1C0EC92E00CE9102;
 			productRefGroup = E55914B41C0EC92E00CE9102 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = E57B2C361C11741700EF2948 /* Products */;
-					ProjectRef = E57B2C351C11741700EF2948 /* mailcore2.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				E55914B21C0EC92E00CE9102 /* Mimamori */,
@@ -868,65 +741,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		E57B2C411C11741700EF2948 /* libMailCore.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libMailCore.a;
-			remoteRef = E57B2C401C11741700EF2948 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		E57B2C431C11741700EF2948 /* libMailCore-ios.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = "libMailCore-ios.a";
-			remoteRef = E57B2C421C11741700EF2948 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		E57B2C451C11741700EF2948 /* tests */ = {
-			isa = PBXReferenceProxy;
-			fileType = "compiled.mach-o.executable";
-			path = tests;
-			remoteRef = E57B2C441C11741700EF2948 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		E57B2C471C11741700EF2948 /* test-ios.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = "test-ios.app";
-			remoteRef = E57B2C461C11741700EF2948 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		E57B2C491C11741700EF2948 /* MailCore.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = MailCore.framework;
-			remoteRef = E57B2C481C11741700EF2948 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		E57B2C4B1C11741700EF2948 /* MailCore.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = MailCore.framework;
-			remoteRef = E57B2C4A1C11741700EF2948 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		E57B2C4D1C11741700EF2948 /* unittest.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = unittest.xctest;
-			remoteRef = E57B2C4C1C11741700EF2948 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		E57B2C4F1C11741700EF2948 /* unittestcpp */ = {
-			isa = PBXReferenceProxy;
-			fileType = "compiled.mach-o.executable";
-			path = unittestcpp;
-			remoteRef = E57B2C4E1C11741700EF2948 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		E55914B11C0EC92E00CE9102 /* Resources */ = {
@@ -1025,25 +839,20 @@
 				E55915331C0EEE6B00CE9102 /* EditProfileTableViewController.m in Sources */,
 				E57B2C131C101F2200EF2948 /* PersonImageCollectionViewController.m in Sources */,
 				E5705A751C154ACC00D6B995 /* AddNewItemTableViewController.m in Sources */,
-				E57D2A351C20147D005F9F76 /* UULineChart.m in Sources */,
 				E559151E1C0EE47900CE9102 /* SettingCollectionViewCell.m in Sources */,
 				E55915431C0EF21200CE9102 /* PersonalDataTableViewController.m in Sources */,
-				E57D2A311C20147D005F9F76 /* UUBarChart.m in Sources */,
 				E55915021C0ED54C00CE9102 /* TabBarController.m in Sources */,
 				E57B2C201C10305700EF2948 /* GroupTableViewController.m in Sources */,
 				E57B2C271C103B3700EF2948 /* GroupModel.m in Sources */,
 				E57D2A011C1FA215005F9F76 /* SonotaCollectionViewController.m in Sources */,
-				E57D2A331C20147D005F9F76 /* UUChartLabel.m in Sources */,
 				E57B2BE11C0FCF0400EF2948 /* ContactTableViewController.m in Sources */,
 				E55915401C0EF20B00CE9102 /* ListTableViewController.m in Sources */,
-				E57D2A321C20147D005F9F76 /* UUChart.m in Sources */,
 				E55915361C0EEEA000CE9102 /* ProfileTableViewController.m in Sources */,
 				E57B2BF11C0FE04700EF2948 /* EditContactTableViewController.m in Sources */,
 				E5705A781C154C0300D6B995 /* ItemModel.m in Sources */,
 				E5705A7B1C15537700D6B995 /* ItemImageCollectionViewController.m in Sources */,
 				E55915511C0EF4AE00CE9102 /* KennkoModel.m in Sources */,
 				E559154B1C0EF23700CE9102 /* EditKennkoTableViewController.m in Sources */,
-				E57D2A301C20147D005F9F76 /* UUBar.m in Sources */,
 				E57D2A381C20155E005F9F76 /* DenkiManageTableViewController.m in Sources */,
 				E5705A701C15345800D6B995 /* ABFillButton.m in Sources */,
 				E57B2C101C101EC600EF2948 /* PersonCollectionViewCell.m in Sources */,
@@ -1059,7 +868,6 @@
 				E55914F61C0ED0A300CE9102 /* EmergencyViewController.m in Sources */,
 				E5705A7E1C1553BC00D6B995 /* ItemImageCollectionViewCell.m in Sources */,
 				E55914FC1C0ED0BD00CE9102 /* OtherCollectionViewController.m in Sources */,
-				E57D2A341C20147D005F9F76 /* UUColor.m in Sources */,
 				E57B2C241C10370900EF2948 /* EditGroupTableViewController.m in Sources */,
 				E56250711C166FFA008FD1DF /* PocketDoctorViewController.m in Sources */,
 				E55915521C0EF4AE00CE9102 /* KusuriModel.m in Sources */,
@@ -1098,11 +906,6 @@
 			isa = PBXTargetDependency;
 			target = E55914B21C0EC92E00CE9102 /* Mimamori */;
 			targetProxy = E55914D81C0EC92E00CE9102 /* PBXContainerItemProxy */;
-		};
-		E57B2C561C1175D300EF2948 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "static mailcore2 ios";
-			targetProxy = E57B2C551C1175D300EF2948 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1214,19 +1017,7 @@
 				GCC_PREFIX_HEADER = "Mimamoro/ABFillButtonExample-Prefix.pch";
 				INFOPLIST_FILE = Mimamoro/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_LDFLAGS = (
-					"-lctemplate-ios",
-					"-letpan-ios",
-					"-lxml2",
-					"-lsasl2",
-					"-liconv",
-					"-ltidy",
-					"-lz",
-					"-lc++",
-					"-lresolv",
-					"-stdlib=libc++",
-					"-ObjC",
-				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.totyu.Mimamori;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -1240,19 +1031,7 @@
 				GCC_PREFIX_HEADER = "Mimamoro/ABFillButtonExample-Prefix.pch";
 				INFOPLIST_FILE = Mimamoro/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_LDFLAGS = (
-					"-lctemplate-ios",
-					"-letpan-ios",
-					"-lxml2",
-					"-lsasl2",
-					"-liconv",
-					"-ltidy",
-					"-lz",
-					"-lc++",
-					"-lresolv",
-					"-stdlib=libc++",
-					"-ObjC",
-				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.totyu.Mimamori;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

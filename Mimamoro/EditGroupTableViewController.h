@@ -10,7 +10,7 @@
 #import "GroupModel.h"
 
 @interface EditGroupTableViewController : UITableViewController
-@property int editType;
+@property int editType;//0:追加  1:編集
 @property GroupModel *groupmodel;
 //@property NSString *tempname;
 

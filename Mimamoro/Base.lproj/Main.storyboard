@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="EXL-ub-Jvp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="EXL-ub-Jvp">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
@@ -323,7 +323,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3z4-xK-7cx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1853" y="4801"/>
+            <point key="canvasLocation" x="1853" y="4880"/>
         </scene>
         <!--Add New Item Table View Controller-->
         <scene sceneID="zvL-an-Opg">
@@ -966,7 +966,7 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="group.png" translatesAutoresizingMaskIntoConstraints="NO" id="3zg-P9-0Fw">
                                                     <rect key="frame" x="8" y="15" width="50" height="50"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="グループ管理" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ckx-13-CMZ">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="連絡先管理" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ckx-13-CMZ">
                                                     <rect key="frame" x="65" y="29" width="230" height="24"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -996,7 +996,7 @@
             </objects>
             <point key="canvasLocation" x="985" y="2605"/>
         </scene>
-        <!--グループ管理-->
+        <!--連絡先管理-->
         <scene sceneID="uAE-3d-met">
             <objects>
                 <tableViewController id="O0P-xK-g1H" customClass="GroupTableViewController" sceneMemberID="viewController">
@@ -1035,7 +1035,7 @@
                             <outlet property="delegate" destination="O0P-xK-g1H" id="7Kz-Hj-Rou"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="グループ管理" id="myp-7D-K70">
+                    <navigationItem key="navigationItem" title="連絡先管理" id="myp-7D-K70">
                         <barButtonItem key="rightBarButtonItem" title="追加" id="w4Y-en-Vwj">
                             <connections>
                                 <action selector="addAction:" destination="O0P-xK-g1H" id="Ejg-xx-uFA"/>
@@ -2858,7 +2858,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dX8-de-qLB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1688" y="1841"/>
+            <point key="canvasLocation" x="2252" y="4165"/>
         </scene>
         <!--Edit Group Table View Controller-->
         <scene sceneID="Hl9-YU-Kqs">
@@ -2902,28 +2902,136 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="グループ名:" id="RKl-FO-84W">
+                            <tableViewSection headerTitle="氏名:" id="fnX-Up-JIH">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="60" id="PNB-vl-EIb">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="60" id="iDK-sE-aF5">
                                         <rect key="frame" x="0.0" y="264" width="320" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PNB-vl-EIb" id="OL4-mC-92q">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iDK-sE-aF5" id="EFG-6x-sJw">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="59"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="親友" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0nH-EV-2db">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="桃太郎　たろう" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tgc-VA-9Wx">
                                                     <rect key="frame" x="15" y="18" width="290" height="24"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                     <connections>
-                                                        <outlet property="delegate" destination="QCJ-ut-wqa" id="Gfb-t3-zJP"/>
+                                                        <outlet property="delegate" destination="QCJ-ut-wqa" id="IqC-yY-6bu"/>
                                                     </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailingMargin" secondItem="0nH-EV-2db" secondAttribute="trailing" constant="7" id="goL-Fu-dR8"/>
-                                                <constraint firstItem="0nH-EV-2db" firstAttribute="leading" secondItem="OL4-mC-92q" secondAttribute="leadingMargin" constant="7" id="rHv-t0-QsI"/>
-                                                <constraint firstItem="0nH-EV-2db" firstAttribute="top" secondItem="OL4-mC-92q" secondAttribute="topMargin" constant="10" id="xV1-ju-QiU"/>
+                                                <constraint firstItem="Tgc-VA-9Wx" firstAttribute="top" secondItem="EFG-6x-sJw" secondAttribute="topMargin" constant="10" id="B4s-YH-xhc"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Tgc-VA-9Wx" secondAttribute="trailing" constant="7" id="FpM-Lb-WxO"/>
+                                                <constraint firstItem="Tgc-VA-9Wx" firstAttribute="leading" secondItem="EFG-6x-sJw" secondAttribute="leadingMargin" constant="7" id="dRi-uN-W2h"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="E-mail:" id="jrm-nI-Yv1">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="60" id="UDo-dP-0pU">
+                                        <rect key="frame" x="0.0" y="364" width="320" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UDo-dP-0pU" id="9FJ-PL-TTW">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="59"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="user@example.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SUc-Qy-tdg">
+                                                    <rect key="frame" x="15" y="18" width="290" height="24"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="QCJ-ut-wqa" id="xKp-Sy-WZg"/>
+                                                    </connections>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="SUc-Qy-tdg" firstAttribute="top" secondItem="9FJ-PL-TTW" secondAttribute="topMargin" constant="10" id="FTW-Fe-k9Y"/>
+                                                <constraint firstItem="SUc-Qy-tdg" firstAttribute="leading" secondItem="9FJ-PL-TTW" secondAttribute="leadingMargin" constant="7" id="bHj-8v-cvG"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="SUc-Qy-tdg" secondAttribute="trailing" constant="7" id="tPm-uQ-r5Q"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="不安時の連絡先" id="B1b-P3-KDE">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="60" id="OvM-Fk-UjS">
+                                        <rect key="frame" x="0.0" y="464" width="320" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OvM-Fk-UjS" id="nW3-ac-Ac8">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="59"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nHJ-6J-vtf">
+                                                    <rect key="frame" x="234" y="14" width="51" height="31"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="49" id="U1C-xC-0vf"/>
+                                                    </constraints>
+                                                    <connections>
+                                                        <action selector="upsetSwitch:" destination="QCJ-ut-wqa" eventType="valueChanged" id="fUF-2V-z0a"/>
+                                                    </connections>
+                                                </switch>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="nHJ-6J-vtf" firstAttribute="centerY" secondItem="nW3-ac-Ac8" secondAttribute="centerY" id="F5s-sf-kTb"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="nHJ-6J-vtf" secondAttribute="trailing" constant="29" id="ir7-Vv-Lpe"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="緊急時の通知先" id="7ie-dn-9D1">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="60" id="Eff-Zd-wlw">
+                                        <rect key="frame" x="0.0" y="564" width="320" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Eff-Zd-wlw" id="wh1-qq-XDj">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="59"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I4W-39-aZg">
+                                                    <rect key="frame" x="234" y="14" width="51" height="31"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="49" id="Tun-MM-YhF"/>
+                                                    </constraints>
+                                                    <connections>
+                                                        <action selector="emergencySwitch:" destination="QCJ-ut-wqa" eventType="valueChanged" id="xFR-wj-PoL"/>
+                                                    </connections>
+                                                </switch>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="I4W-39-aZg" secondAttribute="trailing" constant="29" id="4Rh-11-Q7D"/>
+                                                <constraint firstItem="I4W-39-aZg" firstAttribute="centerY" secondItem="wh1-qq-XDj" secondAttribute="centerY" id="fj4-Zp-f3S"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="アラートの連絡先" id="VKv-uM-Kuu">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="60" id="KSd-IB-8fz">
+                                        <rect key="frame" x="0.0" y="664" width="320" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KSd-IB-8fz" id="9cq-l3-tF1">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="59"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6M9-BO-3y3">
+                                                    <rect key="frame" x="234" y="14" width="51" height="31"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="49" id="uHA-Jk-ari"/>
+                                                    </constraints>
+                                                    <connections>
+                                                        <action selector="alertSwitch:" destination="QCJ-ut-wqa" eventType="valueChanged" id="cMY-bT-HXY"/>
+                                                    </connections>
+                                                </switch>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="6M9-BO-3y3" secondAttribute="trailing" constant="29" id="13X-Xr-QFI"/>
+                                                <constraint firstItem="6M9-BO-3y3" firstAttribute="centerY" secondItem="9cq-l3-tF1" secondAttribute="centerY" id="UNh-pc-BGY"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -2932,7 +3040,7 @@
                             <tableViewSection headerTitle="  " id="fwn-8K-Cv7">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="60" id="JQ5-mH-ffl">
-                                        <rect key="frame" x="0.0" y="364" width="320" height="60"/>
+                                        <rect key="frame" x="0.0" y="764" width="320" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JQ5-mH-ffl" id="X3S-vy-YuH">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="59"/>
@@ -2976,8 +3084,12 @@
                     <navigationItem key="navigationItem" id="0Rp-Os-6Sf"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <outlet property="groupNameTextField" destination="0nH-EV-2db" id="QNL-A4-Krx"/>
+                        <outlet property="alertSwitch" destination="6M9-BO-3y3" id="43J-z6-tka"/>
+                        <outlet property="contNameText" destination="Tgc-VA-9Wx" id="HrK-8l-Fzu"/>
+                        <outlet property="emailText" destination="SUc-Qy-tdg" id="Mve-cv-6eE"/>
+                        <outlet property="emergencySwitch" destination="I4W-39-aZg" id="7rz-ei-RnP"/>
                         <outlet property="imageview" destination="dNX-vw-1ye" id="cCn-ya-FzP"/>
+                        <outlet property="upsetSwitch" destination="nHJ-6J-vtf" id="9aV-yj-IBu"/>
                         <segue destination="urj-B5-Jlp" kind="modal" identifier="gotoPersonImageTVC" id="PMw-ea-lJu"/>
                     </connections>
                 </tableViewController>

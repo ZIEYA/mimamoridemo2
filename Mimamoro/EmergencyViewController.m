@@ -10,7 +10,7 @@
 #import "ContactModel.h"
 #import "LeafNotification.h"
 #import "ABFillButton.h"
-#import <MailCore/MailCore.h>
+//#import <MailCore/MailCore.h>
 #import "AppDelegate.h"
 
 @interface EmergencyViewController ()<UITableViewDataSource,UITableViewDelegate,UITextViewDelegate,ABFillButtonDelegate>{
@@ -118,72 +118,72 @@
     NSLog(@"useremail:%@ password:%@ hostname:%@ port:%d",userEmail,password,hostname,port);
 }
 
--(void)sendEmail:(NSString*)mes{
-    if (userEmail ==nil ||[userEmail isEqualToString:@""]) {
-        [LeafNotification showInController:self withText:@"メールアドレス未設定"];
-        return;
-    }
-    if (password ==nil ||[password isEqualToString:@""]) {
-        [LeafNotification showInController:self withText:@"パスワード未設定"];
-        return;
-    }
-    if (hostname ==nil ||[hostname isEqualToString:@""]) {
-        [LeafNotification showInController:self withText:@"ホスト未設定"];
-        return;
-    }
-    if (!port) {
-        [LeafNotification showInController:self withText:@"サーバポート未設定"];
-        return;
-    }
-    AppDelegate *myDelegate = [[UIApplication sharedApplication]delegate];
-    latitude = myDelegate.latitude;
-    longitude = myDelegate.longitude;
-    
-    MCOSMTPSession *session = [[MCOSMTPSession alloc]init];
-    [session setHostname:hostname];
-    [session setPort:port];
-    [session setUsername:userEmail];
-    [session setPassword:password];
-    [session setConnectionType:MCOConnectionTypeTLS];
-    
-    MCOMessageBuilder *builder = [[MCOMessageBuilder alloc]init];
-    [[builder header]setFrom:[MCOAddress addressWithDisplayName:nil mailbox:userEmail]];
-    //宛先
-    NSMutableArray *to = [[NSMutableArray alloc]init];
-    for (int i = 0; i<_currentArray.count; i++) {
-        ContactModel *model = [_currentArray objectAtIndex:i];
-        NSString *toAddress = model.email;
-        MCOAddress *newAddress = [MCOAddress addressWithMailbox:toAddress];
-        [to addObject:newAddress];
-    }
-
-    [[builder header]setTo:to];
-    
-    //メールのタイトル
-    [[builder header]setSubject:@"!!「見守りアプリ」の緊急通報メールです"];
-    //メールの本体
-    NSString *urlStr = [NSString stringWithFormat:@"http://maps.loco.yahoo.co.jp/maps?lat=%@&%@&ei=utf-8&v=2&sc=3&datum=wgs&gov=13108.30#",latitude,longitude];
-    [builder setTextBody:[NSString stringWithFormat:@"▼メッセージ:\n \n　　%@ \n \n▼送信者の位置情報はこちらで確認できる⇨\n　%@\n\n *.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.\n◎＜見守りアプリ＞で緊急ボタンが押されてメール送信しました。\n \n＊このメールには返信しないでください。\n\n＊このメールに覚えがない場合は、お手数ですが削除してください。",mes,urlStr]];
-    
-    //send mail
-    NSData *rfc822Data=[builder data];
-    MCOSMTPSendOperation *sendOperation = [session sendOperationWithData:rfc822Data];
-    [sendOperation start:^(NSError * _Nullable error) {
-        if (error) {
-            NSLog(@"Error sending email:%@",error);
-            dispatch_async(dispatch_get_main_queue(), ^{
-                [LeafNotification showInController:self withText:@"メール送信が失敗しました！"];
-            });
-        }else{
-            NSLog(@"Successfully send email!");
-            dispatch_async(dispatch_get_main_queue(), ^{
-                [LeafNotification showInController:self withText:@"メール送信完了！！" type:LeafNotificationTypeSuccess];
-            });
-            
-        }
-    }];
-
-}
+//-(void)sendEmail:(NSString*)mes{
+//    if (userEmail ==nil ||[userEmail isEqualToString:@""]) {
+//        [LeafNotification showInController:self withText:@"メールアドレス未設定"];
+//        return;
+//    }
+//    if (password ==nil ||[password isEqualToString:@""]) {
+//        [LeafNotification showInController:self withText:@"パスワード未設定"];
+//        return;
+//    }
+//    if (hostname ==nil ||[hostname isEqualToString:@""]) {
+//        [LeafNotification showInController:self withText:@"ホスト未設定"];
+//        return;
+//    }
+//    if (!port) {
+//        [LeafNotification showInController:self withText:@"サーバポート未設定"];
+//        return;
+//    }
+//    AppDelegate *myDelegate = [[UIApplication sharedApplication]delegate];
+//    latitude = myDelegate.latitude;
+//    longitude = myDelegate.longitude;
+//    
+//    MCOSMTPSession *session = [[MCOSMTPSession alloc]init];
+//    [session setHostname:hostname];
+//    [session setPort:port];
+//    [session setUsername:userEmail];
+//    [session setPassword:password];
+//    [session setConnectionType:MCOConnectionTypeTLS];
+//    
+//    MCOMessageBuilder *builder = [[MCOMessageBuilder alloc]init];
+//    [[builder header]setFrom:[MCOAddress addressWithDisplayName:nil mailbox:userEmail]];
+//    //宛先
+//    NSMutableArray *to = [[NSMutableArray alloc]init];
+//    for (int i = 0; i<_currentArray.count; i++) {
+//        ContactModel *model = [_currentArray objectAtIndex:i];
+//        NSString *toAddress = model.email;
+//        MCOAddress *newAddress = [MCOAddress addressWithMailbox:toAddress];
+//        [to addObject:newAddress];
+//    }
+//
+//    [[builder header]setTo:to];
+//    
+//    //メールのタイトル
+//    [[builder header]setSubject:@"!!「見守りアプリ」の緊急通報メールです"];
+//    //メールの本体
+//    NSString *urlStr = [NSString stringWithFormat:@"http://maps.loco.yahoo.co.jp/maps?lat=%@&%@&ei=utf-8&v=2&sc=3&datum=wgs&gov=13108.30#",latitude,longitude];
+//    [builder setTextBody:[NSString stringWithFormat:@"▼メッセージ:\n \n　　%@ \n \n▼送信者の位置情報はこちらで確認できる⇨\n　%@\n\n *.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.\n◎＜見守りアプリ＞で緊急ボタンが押されてメール送信しました。\n \n＊このメールには返信しないでください。\n\n＊このメールに覚えがない場合は、お手数ですが削除してください。",mes,urlStr]];
+//    
+//    //send mail
+//    NSData *rfc822Data=[builder data];
+//    MCOSMTPSendOperation *sendOperation = [session sendOperationWithData:rfc822Data];
+//    [sendOperation start:^(NSError * _Nullable error) {
+//        if (error) {
+//            NSLog(@"Error sending email:%@",error);
+//            dispatch_async(dispatch_get_main_queue(), ^{
+//                [LeafNotification showInController:self withText:@"メール送信が失敗しました！"];
+//            });
+//        }else{
+//            NSLog(@"Successfully send email!");
+//            dispatch_async(dispatch_get_main_queue(), ^{
+//                [LeafNotification showInController:self withText:@"メール送信完了！！" type:LeafNotificationTypeSuccess];
+//            });
+//            
+//        }
+//    }];
+//
+//}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return _currentArray.count;
@@ -222,9 +222,9 @@
     [_button setFillPercent:1.0];
 }
 
--(void)buttonIsEmpty:(ABFillButton *)button{
-    NSLog(@"button is pressedd");
-    [self sendEmail:message];
-}
+//-(void)buttonIsEmpty:(ABFillButton *)button{
+//    NSLog(@"button is pressedd");
+//    [self sendEmail:message];
+//}
 
 @end
