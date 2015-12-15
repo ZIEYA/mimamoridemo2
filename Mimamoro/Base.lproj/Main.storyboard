@@ -1165,36 +1165,22 @@
         <scene sceneID="1vm-rb-ye9">
             <objects>
                 <tableViewController id="ZTN-4R-UPJ" customClass="DashboardTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="200" sectionHeaderHeight="28" sectionFooterHeight="28" id="I6K-ld-IKU">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" id="I6K-ld-IKU">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <sections>
-                            <tableViewSection headerTitle="おじいちゃん" id="viL-cg-Tve">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="dlT-u4-HmG">
-                                        <rect key="frame" x="0.0" y="92" width="320" height="200"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dlT-u4-HmG" id="nX3-j2-ygW">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="199"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                            <tableViewSection headerTitle="おばあちゃん" id="oZ5-8P-4ZV">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="NUs-q9-FkJ">
-                                        <rect key="frame" x="0.0" y="320" width="320" height="200"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NUs-q9-FkJ" id="bum-cX-5qS">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="199"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                        </sections>
+                        <segmentedControl key="tableHeaderView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="gEI-0U-1qp">
+                            <rect key="frame" x="0.0" y="64" width="320" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="日"/>
+                                <segment title="週"/>
+                                <segment title="月"/>
+                                <segment title="年"/>
+                            </segments>
+                            <color key="tintColor" red="1" green="0.3921568627" blue="0.43137254899999999" alpha="1" colorSpace="calibratedRGB"/>
+                        </segmentedControl>
+                        <sections/>
                         <connections>
                             <outlet property="dataSource" destination="ZTN-4R-UPJ" id="4Yh-Vc-oX6"/>
                             <outlet property="delegate" destination="ZTN-4R-UPJ" id="7XB-qJ-IhM"/>
@@ -1202,6 +1188,9 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="DHk-h7-YPd"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="segmentControl" destination="gEI-0U-1qp" id="UbN-mv-2O0"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Jz-ac-zTz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

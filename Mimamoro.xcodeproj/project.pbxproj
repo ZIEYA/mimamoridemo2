@@ -125,6 +125,12 @@
 		E57D2A351C20147D005F9F76 /* UULineChart.m in Sources */ = {isa = PBXBuildFile; fileRef = E57D2A2F1C20147D005F9F76 /* UULineChart.m */; };
 		E57D2A381C20155E005F9F76 /* DenkiManageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E57D2A371C20155E005F9F76 /* DenkiManageTableViewController.m */; };
 		E57D2A3B1C201672005F9F76 /* DashboardTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E57D2A3A1C201672005F9F76 /* DashboardTableViewController.m */; };
+		E57D2A401C202680005F9F76 /* graph-0.png in Resources */ = {isa = PBXBuildFile; fileRef = E57D2A3C1C202680005F9F76 /* graph-0.png */; };
+		E57D2A411C202680005F9F76 /* graph-0@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E57D2A3D1C202680005F9F76 /* graph-0@2x.png */; };
+		E57D2A421C202680005F9F76 /* graph.png in Resources */ = {isa = PBXBuildFile; fileRef = E57D2A3E1C202680005F9F76 /* graph.png */; };
+		E57D2A431C202680005F9F76 /* graph@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E57D2A3F1C202680005F9F76 /* graph@2x.png */; };
+		E57D2A471C20298E005F9F76 /* DashBoardTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E57D2A451C20298E005F9F76 /* DashBoardTableViewCell.m */; };
+		E57D2A481C20298E005F9F76 /* DashBoardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E57D2A461C20298E005F9F76 /* DashBoardTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -379,6 +385,13 @@
 		E57D2A371C20155E005F9F76 /* DenkiManageTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DenkiManageTableViewController.m; sourceTree = "<group>"; };
 		E57D2A391C201672005F9F76 /* DashboardTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DashboardTableViewController.h; sourceTree = "<group>"; };
 		E57D2A3A1C201672005F9F76 /* DashboardTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DashboardTableViewController.m; sourceTree = "<group>"; };
+		E57D2A3C1C202680005F9F76 /* graph-0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "graph-0.png"; sourceTree = "<group>"; };
+		E57D2A3D1C202680005F9F76 /* graph-0@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "graph-0@2x.png"; sourceTree = "<group>"; };
+		E57D2A3E1C202680005F9F76 /* graph.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = graph.png; sourceTree = "<group>"; };
+		E57D2A3F1C202680005F9F76 /* graph@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "graph@2x.png"; sourceTree = "<group>"; };
+		E57D2A441C20298E005F9F76 /* DashBoardTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DashBoardTableViewCell.h; sourceTree = "<group>"; };
+		E57D2A451C20298E005F9F76 /* DashBoardTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DashBoardTableViewCell.m; sourceTree = "<group>"; };
+		E57D2A461C20298E005F9F76 /* DashBoardTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DashBoardTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -518,6 +531,9 @@
 		E55915181C0EE43400CE9102 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				E57D2A441C20298E005F9F76 /* DashBoardTableViewCell.h */,
+				E57D2A451C20298E005F9F76 /* DashBoardTableViewCell.m */,
+				E57D2A461C20298E005F9F76 /* DashBoardTableViewCell.xib */,
 				E57D2A231C20147D005F9F76 /* UUChart */,
 				E57B2C6F1C11964400EF2948 /* PickerView.h */,
 				E57B2C701C11964400EF2948 /* PickerView.m */,
@@ -588,6 +604,10 @@
 		E56250741C167EE1008FD1DF /* tabbar-image */ = {
 			isa = PBXGroup;
 			children = (
+				E57D2A3C1C202680005F9F76 /* graph-0.png */,
+				E57D2A3D1C202680005F9F76 /* graph-0@2x.png */,
+				E57D2A3E1C202680005F9F76 /* graph.png */,
+				E57D2A3F1C202680005F9F76 /* graph@2x.png */,
 				E57D2A0D1C1FBA3D005F9F76 /* face-0.png */,
 				E57D2A0E1C1FBA3D005F9F76 /* face-0@2x.png */,
 				E57D2A0F1C1FBA3D005F9F76 /* face.png */,
@@ -946,6 +966,7 @@
 				E5705A8D1C15571C00D6B995 /* image-1.png in Resources */,
 				E56250C11C16979A008FD1DF /* contactlist.png in Resources */,
 				E55914C61C0EC92E00CE9102 /* LaunchScreen.storyboard in Resources */,
+				E57D2A411C202680005F9F76 /* graph-0@2x.png in Resources */,
 				E57B2C191C1021A500EF2948 /* item-10.png in Resources */,
 				E5705A8C1C15571C00D6B995 /* image-10.png in Resources */,
 				E56250A91C1696EA008FD1DF /* setting.png in Resources */,
@@ -954,6 +975,7 @@
 				E55915171C0EDD5E00CE9102 /* worrybtn.png in Resources */,
 				E55915151C0EDD5B00CE9102 /* emergencybtn.png in Resources */,
 				E55914C31C0EC92E00CE9102 /* Assets.xcassets in Resources */,
+				E57D2A481C20298E005F9F76 /* DashBoardTableViewCell.xib in Resources */,
 				E56250B21C16973B008FD1DF /* worry@2x.png in Resources */,
 				E56250AF1C16973B008FD1DF /* worry-0.png in Resources */,
 				E57D2A111C1FBA3D005F9F76 /* face-0.png in Resources */,
@@ -978,7 +1000,9 @@
 				E5705A9B1C1557FE00D6B995 /* image-4.png in Resources */,
 				E55915221C0EE6CA00CE9102 /* lightimage.png in Resources */,
 				E55915201C0EE65000CE9102 /* settingimage.png in Resources */,
+				E57D2A401C202680005F9F76 /* graph-0.png in Resources */,
 				E559152E1C0EED0200CE9102 /* takelist.png in Resources */,
+				E57D2A421C202680005F9F76 /* graph.png in Resources */,
 				E57B2C2B1C103E5700EF2948 /* son.png in Resources */,
 				E57D2A131C1FBA3D005F9F76 /* face.png in Resources */,
 				E57B2C031C101D8800EF2948 /* item-2.png in Resources */,
@@ -992,6 +1016,7 @@
 				E57B2C1D1C102B7900EF2948 /* addimage.png in Resources */,
 				E57B2C6D1C1187C700EF2948 /* item-9.png in Resources */,
 				E57B2C0D1C101E3900EF2948 /* item-4.png in Resources */,
+				E57D2A431C202680005F9F76 /* graph@2x.png in Resources */,
 				E5705A921C15571C00D6B995 /* image-3.png in Resources */,
 				E57B2C1B1C1021E700EF2948 /* item-11.png in Resources */,
 				E5705A911C15571C00D6B995 /* hospital.png in Resources */,
@@ -1066,6 +1091,7 @@
 				E55914FF1C0ED0DA00CE9102 /* ContactCollectionViewController.m in Sources */,
 				E55914F91C0ED0B000CE9102 /* WorryViewController.m in Sources */,
 				E55914B81C0EC92E00CE9102 /* main.m in Sources */,
+				E57D2A471C20298E005F9F76 /* DashBoardTableViewCell.m in Sources */,
 				E57D2A3B1C201672005F9F76 /* DashboardTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
