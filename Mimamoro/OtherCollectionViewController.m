@@ -12,8 +12,6 @@
 #import "AddNewItemTableViewController.h"
 
 @interface OtherCollectionViewController (){
-    //NSMutableArray *_newItemArray;
-    //NSMutableArray *_showItemArray;
     NSMutableArray *_defaultItemArray;
     NSMutableArray *_itemArray;
     int editType;//0:新規 1:編集
@@ -29,18 +27,15 @@ static NSString * const reuseIdentifier = @"settingcell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.tabBarItem setImage:[[UIImage imageNamed:@"contactlist"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
     _itemArray = [[NSMutableArray alloc]init];
     NSMutableArray *tmparr = [[NSUserDefaults standardUserDefaults]objectForKey:@"item"];
     if (!tmparr) {
         //Default items
         _defaultItemArray = [[NSMutableArray alloc]init];
-        NSDictionary *temp1 = [self addDefaultItemName:@"設定" WithImage:@"image-7.png"];
-        NSDictionary *temp2 = [self addDefaultItemName:@"ポケットドクター" WithImage:@"hospital.png"];
         NSDictionary *temp3 = [self addDefaultItemName:@"電気見守り" WithImage:@"home.png"];
-        [_defaultItemArray addObject:temp1];
-        [_defaultItemArray addObject:temp2];
+        NSDictionary *temp2 = [self addDefaultItemName:@"ポケットドクター" WithImage:@"hospital.png"];
         [_defaultItemArray addObject:temp3];
+        [_defaultItemArray addObject:temp2];
         [[NSUserDefaults standardUserDefaults]setObject:_defaultItemArray forKey:@"item"];
     }else{
         _itemArray = [[NSMutableArray alloc]initWithArray:tmparr];
@@ -124,18 +119,14 @@ static NSString * const reuseIdentifier = @"settingcell";
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     tempItemName = nil;
     tempItemImage =nil;
-    //Setting table view controller
-    NSLog(@"%ld,%ld",(long)indexPath.section,(long)indexPath.row);
-    if (indexPath.section ==0 && indexPath.row ==0) {
-        [self performSegueWithIdentifier:@"gotoSettingVC" sender:self];
-    }
+    //NSLog(@"%ld,%ld",(long)indexPath.section,(long)indexPath.row);
     //DenkiManage view controller
-    else if(indexPath.section ==0 && indexPath.row ==2){
-        [self performSegueWithIdentifier:@"gotoDenkiManageVC" sender:self
+    if(indexPath.section ==0 && indexPath.row ==0){
+        [self performSegueWithIdentifier:@"gotoPocketDoctorVC" sender:self
          ];
     }
     else if (indexPath.section ==0 && indexPath.row ==1){
-        [self performSegueWithIdentifier:@"gotoPocketDoctorVC" sender:self];
+        [self performSegueWithIdentifier:@"gotoDenkiManageVC" sender:self];
     }
     //Add new item view controller
     else if ((indexPath.section *2+indexPath.row) == _itemArray.count){
@@ -150,6 +141,7 @@ static NSString * const reuseIdentifier = @"settingcell";
         
     }
 }
+
 
 
 @end

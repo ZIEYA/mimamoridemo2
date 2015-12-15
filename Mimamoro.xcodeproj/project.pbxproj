@@ -111,6 +111,12 @@
 		E57B2C641C11878800EF2948 /* item-3.png in Resources */ = {isa = PBXBuildFile; fileRef = E57B2C631C11878800EF2948 /* item-3.png */; };
 		E57B2C6D1C1187C700EF2948 /* item-9.png in Resources */ = {isa = PBXBuildFile; fileRef = E57B2C6C1C1187C700EF2948 /* item-9.png */; };
 		E57B2C711C11964400EF2948 /* PickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = E57B2C701C11964400EF2948 /* PickerView.m */; };
+		E57D2A011C1FA215005F9F76 /* SonotaCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E57D2A001C1FA215005F9F76 /* SonotaCollectionViewController.m */; };
+		E57D2A041C1FA43D005F9F76 /* SonotaCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E57D2A031C1FA43D005F9F76 /* SonotaCollectionViewCell.m */; };
+		E57D2A111C1FBA3D005F9F76 /* face-0.png in Resources */ = {isa = PBXBuildFile; fileRef = E57D2A0D1C1FBA3D005F9F76 /* face-0.png */; };
+		E57D2A121C1FBA3D005F9F76 /* face-0@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E57D2A0E1C1FBA3D005F9F76 /* face-0@2x.png */; };
+		E57D2A131C1FBA3D005F9F76 /* face.png in Resources */ = {isa = PBXBuildFile; fileRef = E57D2A0F1C1FBA3D005F9F76 /* face.png */; };
+		E57D2A141C1FBA3D005F9F76 /* face@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E57D2A101C1FBA3D005F9F76 /* face@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -342,6 +348,14 @@
 		E57B2C6C1C1187C700EF2948 /* item-9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "item-9.png"; sourceTree = "<group>"; };
 		E57B2C6F1C11964400EF2948 /* PickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickerView.h; sourceTree = "<group>"; };
 		E57B2C701C11964400EF2948 /* PickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickerView.m; sourceTree = "<group>"; };
+		E57D29FF1C1FA215005F9F76 /* SonotaCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SonotaCollectionViewController.h; sourceTree = "<group>"; };
+		E57D2A001C1FA215005F9F76 /* SonotaCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SonotaCollectionViewController.m; sourceTree = "<group>"; };
+		E57D2A021C1FA43D005F9F76 /* SonotaCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SonotaCollectionViewCell.h; sourceTree = "<group>"; };
+		E57D2A031C1FA43D005F9F76 /* SonotaCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SonotaCollectionViewCell.m; sourceTree = "<group>"; };
+		E57D2A0D1C1FBA3D005F9F76 /* face-0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "face-0.png"; sourceTree = "<group>"; };
+		E57D2A0E1C1FBA3D005F9F76 /* face-0@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "face-0@2x.png"; sourceTree = "<group>"; };
+		E57D2A0F1C1FBA3D005F9F76 /* face.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = face.png; sourceTree = "<group>"; };
+		E57D2A101C1FBA3D005F9F76 /* face@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "face@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -412,14 +426,16 @@
 				E55914BA1C0EC92E00CE9102 /* AppDelegate.m */,
 				E55915001C0ED54C00CE9102 /* TabBarController.h */,
 				E55915011C0ED54C00CE9102 /* TabBarController.m */,
+				E55914FA1C0ED0BD00CE9102 /* OtherCollectionViewController.h */,
+				E55914FB1C0ED0BD00CE9102 /* OtherCollectionViewController.m */,
 				E55914FD1C0ED0DA00CE9102 /* ContactCollectionViewController.h */,
 				E55914FE1C0ED0DA00CE9102 /* ContactCollectionViewController.m */,
 				E55914F41C0ED0A300CE9102 /* EmergencyViewController.h */,
 				E55914F51C0ED0A300CE9102 /* EmergencyViewController.m */,
 				E55914F71C0ED0B000CE9102 /* WorryViewController.h */,
 				E55914F81C0ED0B000CE9102 /* WorryViewController.m */,
-				E55914FA1C0ED0BD00CE9102 /* OtherCollectionViewController.h */,
-				E55914FB1C0ED0BD00CE9102 /* OtherCollectionViewController.m */,
+				E57D29FF1C1FA215005F9F76 /* SonotaCollectionViewController.h */,
+				E57D2A001C1FA215005F9F76 /* SonotaCollectionViewController.m */,
 				E55914BF1C0EC92E00CE9102 /* Main.storyboard */,
 				E55914C21C0EC92E00CE9102 /* Assets.xcassets */,
 				E55914C41C0EC92E00CE9102 /* LaunchScreen.storyboard */,
@@ -488,6 +504,8 @@
 				E57B2C0F1C101EC600EF2948 /* PersonCollectionViewCell.m */,
 				E5705A7C1C1553BC00D6B995 /* ItemImageCollectionViewCell.h */,
 				E5705A7D1C1553BC00D6B995 /* ItemImageCollectionViewCell.m */,
+				E57D2A021C1FA43D005F9F76 /* SonotaCollectionViewCell.h */,
+				E57D2A031C1FA43D005F9F76 /* SonotaCollectionViewCell.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -543,6 +561,10 @@
 		E56250741C167EE1008FD1DF /* tabbar-image */ = {
 			isa = PBXGroup;
 			children = (
+				E57D2A0D1C1FBA3D005F9F76 /* face-0.png */,
+				E57D2A0E1C1FBA3D005F9F76 /* face-0@2x.png */,
+				E57D2A0F1C1FBA3D005F9F76 /* face.png */,
+				E57D2A101C1FBA3D005F9F76 /* face@2x.png */,
 				E56250BB1C16979A008FD1DF /* contactlist-0.png */,
 				E56250BC1C16979A008FD1DF /* contactlist-0@2x.png */,
 				E56250BD1C16979A008FD1DF /* contactlist.png */,
@@ -888,6 +910,7 @@
 				E55914C31C0EC92E00CE9102 /* Assets.xcassets in Resources */,
 				E56250B21C16973B008FD1DF /* worry@2x.png in Resources */,
 				E56250AF1C16973B008FD1DF /* worry-0.png in Resources */,
+				E57D2A111C1FBA3D005F9F76 /* face-0.png in Resources */,
 				E5705A8E1C15571C00D6B995 /* image-9.png in Resources */,
 				E56250BF1C16979A008FD1DF /* contactlist-0.png in Resources */,
 				E55915301C0EED3200CE9102 /* personaldata.png in Resources */,
@@ -898,6 +921,7 @@
 				E55915261C0EEB9200CE9102 /* plusimage.png in Resources */,
 				E56250C01C16979A008FD1DF /* contactlist-0@2x.png in Resources */,
 				E56250B01C16973B008FD1DF /* worry-0@2x.png in Resources */,
+				E57D2A121C1FBA3D005F9F76 /* face-0@2x.png in Resources */,
 				E5705A991C1557ED00D6B995 /* image-6.png in Resources */,
 				E56250B71C16976D008FD1DF /* emergency-0.png in Resources */,
 				E5705A9D1C15592600D6B995 /* add.png in Resources */,
@@ -910,11 +934,13 @@
 				E55915201C0EE65000CE9102 /* settingimage.png in Resources */,
 				E559152E1C0EED0200CE9102 /* takelist.png in Resources */,
 				E57B2C2B1C103E5700EF2948 /* son.png in Resources */,
+				E57D2A131C1FBA3D005F9F76 /* face.png in Resources */,
 				E57B2C031C101D8800EF2948 /* item-2.png in Resources */,
 				E57B2C2F1C10482F00EF2948 /* friend.png in Resources */,
 				E56250A51C1696E6008FD1DF /* setting-0.png in Resources */,
 				E5705A961C15571C00D6B995 /* image-5.png in Resources */,
 				E56250C21C16979A008FD1DF /* contactlist@2x.png in Resources */,
+				E57D2A141C1FBA3D005F9F76 /* face@2x.png in Resources */,
 				E57B2C001C101D8800EF2948 /* item-0.png in Resources */,
 				E57B2C1D1C102B7900EF2948 /* addimage.png in Resources */,
 				E57B2C6D1C1187C700EF2948 /* item-9.png in Resources */,
@@ -958,6 +984,7 @@
 				E55915021C0ED54C00CE9102 /* TabBarController.m in Sources */,
 				E57B2C201C10305700EF2948 /* GroupTableViewController.m in Sources */,
 				E57B2C271C103B3700EF2948 /* GroupModel.m in Sources */,
+				E57D2A011C1FA215005F9F76 /* SonotaCollectionViewController.m in Sources */,
 				E57B2BE11C0FCF0400EF2948 /* ContactTableViewController.m in Sources */,
 				E55915401C0EF20B00CE9102 /* ListTableViewController.m in Sources */,
 				E55915361C0EEEA000CE9102 /* ProfileTableViewController.m in Sources */,
@@ -970,6 +997,7 @@
 				E57B2C101C101EC600EF2948 /* PersonCollectionViewCell.m in Sources */,
 				E559153D1C0EF07400CE9102 /* UserProfileModel.m in Sources */,
 				E55915391C0EF04900CE9102 /* SettingTableViewController.m in Sources */,
+				E57D2A041C1FA43D005F9F76 /* SonotaCollectionViewCell.m in Sources */,
 				E559154C1C0EF23700CE9102 /* EditKusiriTableViewController.m in Sources */,
 				E57B2BF41C0FE08F00EF2948 /* ContactModel.m in Sources */,
 				E55915551C0EF4B600CE9102 /* ListModel.m in Sources */,

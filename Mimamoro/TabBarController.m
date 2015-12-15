@@ -17,12 +17,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [[self.tabBar.items objectAtIndex:0]setImage:[[UIImage imageNamed:@"contactlist-0.png"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+    [[self.tabBar.items objectAtIndex:0]setImage:[[UIImage imageNamed:@"face-0.png"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
     [[self.tabBar.items objectAtIndex:1]setImage:[[UIImage imageNamed:@"emergency-0.png"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
     [[self.tabBar.items objectAtIndex:2]setImage:[[UIImage imageNamed:@"worry-0.png"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
     [[self.tabBar.items objectAtIndex:3]setImage:[[UIImage imageNamed:@"setting-0.png"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
     
-    [[self.tabBar.items objectAtIndex:0]setSelectedImage:[[UIImage imageNamed:@"contactlist.png"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+    [[self.tabBar.items objectAtIndex:0]setSelectedImage:[[UIImage imageNamed:@"face.png"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
     [[self.tabBar.items objectAtIndex:1]setSelectedImage:[[UIImage imageNamed:@"emergency.png"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
     [[self.tabBar.items objectAtIndex:2]setSelectedImage:[[UIImage imageNamed:@"worry.png"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
     [[self.tabBar.items objectAtIndex:3]setSelectedImage:[[UIImage imageNamed:@"setting.png"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
