@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1818AAB71C182A6B000D0A6A /* ABFillButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1818AAB61C182A6B000D0A6A /* ABFillButton.m */; };
+		1818AACC1C1843F8000D0A6A /* EmergencyCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1818AACB1C1843F8000D0A6A /* EmergencyCollectionViewCell.m */; };
+		1818AACF1C184A83000D0A6A /* worryCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1818AACE1C184A83000D0A6A /* worryCollectionViewCell.m */; };
 		1839A5C41C0FDD38008B4ADA /* ContactTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1839A5C31C0FDD38008B4ADA /* ContactTableViewController.m */; };
 		1839A5D01C0FDEA6008B4ADA /* ContactsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1839A5CF1C0FDEA6008B4ADA /* ContactsUI.framework */; };
 		1839A5D21C0FDEB2008B4ADA /* Contacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1839A5D11C0FDEB2008B4ADA /* Contacts.framework */; };
@@ -23,6 +26,8 @@
 		1839A5F01C0FFD5A008B4ADA /* 嫁.png in Resources */ = {isa = PBXBuildFile; fileRef = 1839A5E51C0FFD5A008B4ADA /* 嫁.png */; };
 		1839A5F11C0FFD5A008B4ADA /* 娘.png in Resources */ = {isa = PBXBuildFile; fileRef = 1839A5E61C0FFD5A008B4ADA /* 娘.png */; };
 		1839A5F21C0FFD5A008B4ADA /* 婿.png in Resources */ = {isa = PBXBuildFile; fileRef = 1839A5E71C0FFD5A008B4ADA /* 婿.png */; };
+		185E98131C1817DE008732C2 /* EmergencyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185E980F1C1817DE008732C2 /* EmergencyViewController.m */; };
+		185E98141C1817DE008732C2 /* WorryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185E98101C1817DE008732C2 /* WorryViewController.m */; };
 		1863C4011C17CB6700E28A7B /* other444.png in Resources */ = {isa = PBXBuildFile; fileRef = 1863C3F61C17CB6700E28A7B /* other444.png */; };
 		1863C4021C17CB6700E28A7B /* other555.png in Resources */ = {isa = PBXBuildFile; fileRef = 1863C3F71C17CB6700E28A7B /* other555.png */; };
 		1863C4031C17CB6700E28A7B /* other1200.png in Resources */ = {isa = PBXBuildFile; fileRef = 1863C3F81C17CB6700E28A7B /* other1200.png */; };
@@ -40,6 +45,9 @@
 		1863C4171C17ED7000E28A7B /* emerWorr.png in Resources */ = {isa = PBXBuildFile; fileRef = 1863C4141C17ED7000E28A7B /* emerWorr.png */; };
 		1863C4181C17ED7000E28A7B /* worr.png in Resources */ = {isa = PBXBuildFile; fileRef = 1863C4151C17ED7000E28A7B /* worr.png */; };
 		1863C4191C17ED7000E28A7B /* emer.png in Resources */ = {isa = PBXBuildFile; fileRef = 1863C4161C17ED7000E28A7B /* emer.png */; };
+		1863C4371C180D8700E28A7B /* libMailCore-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1863C42A1C180D5200E28A7B /* libMailCore-ios.a */; };
+		1863C4391C180DA100E28A7B /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1863C4381C180DA100E28A7B /* CFNetwork.framework */; };
+		1863C43B1C180DC100E28A7B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1863C43A1C180DC100E28A7B /* Security.framework */; };
 		187980931C16B70400241111 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 187980911C16B70400241111 /* Main.storyboard */; };
 		187980991C16C0C600241111 /* editOtherCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 187980981C16C0C600241111 /* editOtherCollectionViewCell.m */; };
 		1879809F1C16C68500241111 /* editOtherCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1879809E1C16C68500241111 /* editOtherCollectionViewController.m */; };
@@ -47,10 +55,11 @@
 		187980B71C16D0E900241111 /* edit.png in Resources */ = {isa = PBXBuildFile; fileRef = 187980B61C16D0E900241111 /* edit.png */; };
 		187A8B921C154AB800BB1A58 /* EditContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 187A8B911C154AB800BB1A58 /* EditContactViewController.m */; };
 		187A8B951C154B5500BB1A58 /* contactAddressModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 187A8B941C154B5500BB1A58 /* contactAddressModel.m */; };
-		187A8B9A1C1562DD00BB1A58 /* worryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 187A8B991C1562DD00BB1A58 /* worryTableViewCell.m */; };
-		187A8B9D1C156AD200BB1A58 /* EmergencyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 187A8B9C1C156AD200BB1A58 /* EmergencyTableViewCell.m */; };
 		187A8B9F1C15923F00BB1A58 /* yao.png in Resources */ = {isa = PBXBuildFile; fileRef = 187A8B9E1C15923F00BB1A58 /* yao.png */; };
 		187A8BA31C15AEC200BB1A58 /* familyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 187A8BA21C15AEC200BB1A58 /* familyModel.m */; };
+		187AED931C1E708400ABB30F /* ciruViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 187AED921C1E708400ABB30F /* ciruViewController.m */; };
+		187AED9E1C1E7A9600ABB30F /* ciruCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 187AED9D1C1E7A9600ABB30F /* ciruCollectionViewCell.m */; };
+		187AEDA01C1E83A400ABB30F /* contacts.png in Resources */ = {isa = PBXBuildFile; fileRef = 187AED9F1C1E83A400ABB30F /* contacts.png */; };
 		188CC3AA1C1123EF00950365 /* FamilyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188CC3A91C1123EF00950365 /* FamilyTableViewController.m */; };
 		188CC3AD1C11279200950365 /* FamilyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188CC3AC1C11279200950365 /* FamilyViewController.m */; };
 		1892089C1C10379300A4A0E6 /* LeafNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 1892089B1C10379300A4A0E6 /* LeafNotification.m */; };
@@ -62,8 +71,6 @@
 		E55914C61C0EC92E00CE9102 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E55914C41C0EC92E00CE9102 /* LaunchScreen.storyboard */; };
 		E55914D11C0EC92E00CE9102 /* MimamoroTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E55914D01C0EC92E00CE9102 /* MimamoroTests.m */; };
 		E55914DC1C0EC92E00CE9102 /* MimamoroUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E55914DB1C0EC92E00CE9102 /* MimamoroUITests.m */; };
-		E55914F61C0ED0A300CE9102 /* EmergencyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E55914F51C0ED0A300CE9102 /* EmergencyViewController.m */; };
-		E55914F91C0ED0B000CE9102 /* WorryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E55914F81C0ED0B000CE9102 /* WorryViewController.m */; };
 		E55914FC1C0ED0BD00CE9102 /* OtherCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E55914FB1C0ED0BD00CE9102 /* OtherCollectionViewController.m */; };
 		E55914FF1C0ED0DA00CE9102 /* ContactCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E55914FE1C0ED0DA00CE9102 /* ContactCollectionViewController.m */; };
 		E55915021C0ED54C00CE9102 /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = E55915011C0ED54C00CE9102 /* TabBarController.m */; };
@@ -101,6 +108,62 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		1863C4271C180D5200E28A7B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1863C41C1C180D5200E28A7B /* mailcore2.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C64EA537169E772200778456;
+			remoteInfo = "static mailcore2 osx";
+		};
+		1863C4291C180D5200E28A7B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1863C41C1C180D5200E28A7B /* mailcore2.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C6BA2C191705F4E6003F0E9E;
+			remoteInfo = "static mailcore2 ios";
+		};
+		1863C42B1C180D5200E28A7B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1863C41C1C180D5200E28A7B /* mailcore2.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C64EA78C169F259200778456;
+			remoteInfo = tests;
+		};
+		1863C42D1C180D5200E28A7B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1863C41C1C180D5200E28A7B /* mailcore2.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C6A81B911706840C00882C15;
+			remoteInfo = "test-ios";
+		};
+		1863C42F1C180D5200E28A7B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1863C41C1C180D5200E28A7B /* mailcore2.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C6BD288D170BD71100A91AC1;
+			remoteInfo = "mailcore osx";
+		};
+		1863C4311C180D5200E28A7B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1863C41C1C180D5200E28A7B /* mailcore2.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 27780C3A19CF9CD100C77E44;
+			remoteInfo = "mailcore ios";
+		};
+		1863C4331C180D5200E28A7B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1863C41C1C180D5200E28A7B /* mailcore2.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C6B5AE0219F630B3001352A6;
+			remoteInfo = unittest;
+		};
+		1863C4351C180D5200E28A7B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1863C41C1C180D5200E28A7B /* mailcore2.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C600B6141A242C3F000728F1;
+			remoteInfo = unittestcpp;
+		};
 		E55914CD1C0EC92E00CE9102 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E55914AB1C0EC92E00CE9102 /* Project object */;
@@ -118,6 +181,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1818AAB51C182A6B000D0A6A /* ABFillButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABFillButton.h; sourceTree = "<group>"; };
+		1818AAB61C182A6B000D0A6A /* ABFillButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABFillButton.m; sourceTree = "<group>"; };
+		1818AAC01C182BC4000D0A6A /* ABFillButtonExample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ABFillButtonExample-Prefix.pch"; sourceTree = "<group>"; };
+		1818AACA1C1843F8000D0A6A /* EmergencyCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmergencyCollectionViewCell.h; sourceTree = "<group>"; };
+		1818AACB1C1843F8000D0A6A /* EmergencyCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmergencyCollectionViewCell.m; sourceTree = "<group>"; };
+		1818AACD1C184A83000D0A6A /* worryCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = worryCollectionViewCell.h; sourceTree = "<group>"; };
+		1818AACE1C184A83000D0A6A /* worryCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = worryCollectionViewCell.m; sourceTree = "<group>"; };
 		1839A5C21C0FDD38008B4ADA /* ContactTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactTableViewController.h; sourceTree = "<group>"; };
 		1839A5C31C0FDD38008B4ADA /* ContactTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactTableViewController.m; sourceTree = "<group>"; };
 		1839A5C51C0FDD93008B4ADA /* EditContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditContactViewController.h; sourceTree = "<group>"; };
@@ -136,6 +206,10 @@
 		1839A5E51C0FFD5A008B4ADA /* 嫁.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "嫁.png"; sourceTree = "<group>"; };
 		1839A5E61C0FFD5A008B4ADA /* 娘.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "娘.png"; sourceTree = "<group>"; };
 		1839A5E71C0FFD5A008B4ADA /* 婿.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "婿.png"; sourceTree = "<group>"; };
+		185E980F1C1817DE008732C2 /* EmergencyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmergencyViewController.m; sourceTree = "<group>"; };
+		185E98101C1817DE008732C2 /* WorryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorryViewController.m; sourceTree = "<group>"; };
+		185E98111C1817DE008732C2 /* EmergencyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmergencyViewController.h; sourceTree = "<group>"; };
+		185E98121C1817DE008732C2 /* WorryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorryViewController.h; sourceTree = "<group>"; };
 		1863C3F61C17CB6700E28A7B /* other444.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = other444.png; sourceTree = "<group>"; };
 		1863C3F71C17CB6700E28A7B /* other555.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = other555.png; sourceTree = "<group>"; };
 		1863C3F81C17CB6700E28A7B /* other1200.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = other1200.png; sourceTree = "<group>"; };
@@ -155,6 +229,9 @@
 		1863C4141C17ED7000E28A7B /* emerWorr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emerWorr.png; sourceTree = "<group>"; };
 		1863C4151C17ED7000E28A7B /* worr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = worr.png; sourceTree = "<group>"; };
 		1863C4161C17ED7000E28A7B /* emer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emer.png; sourceTree = "<group>"; };
+		1863C41C1C180D5200E28A7B /* mailcore2.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = mailcore2.xcodeproj; path = "mailcore2-master/build-mac/mailcore2.xcodeproj"; sourceTree = "<group>"; };
+		1863C4381C180DA100E28A7B /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		1863C43A1C180DC100E28A7B /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		187980921C16B70400241111 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		187980971C16C0C600241111 /* editOtherCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = editOtherCollectionViewCell.h; sourceTree = "<group>"; };
 		187980981C16C0C600241111 /* editOtherCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = editOtherCollectionViewCell.m; sourceTree = "<group>"; };
@@ -165,13 +242,14 @@
 		187A8B911C154AB800BB1A58 /* EditContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditContactViewController.m; sourceTree = "<group>"; };
 		187A8B931C154B5500BB1A58 /* contactAddressModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = contactAddressModel.h; sourceTree = "<group>"; };
 		187A8B941C154B5500BB1A58 /* contactAddressModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = contactAddressModel.m; sourceTree = "<group>"; };
-		187A8B981C1562DD00BB1A58 /* worryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = worryTableViewCell.h; sourceTree = "<group>"; };
-		187A8B991C1562DD00BB1A58 /* worryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = worryTableViewCell.m; sourceTree = "<group>"; };
-		187A8B9B1C156AD200BB1A58 /* EmergencyTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmergencyTableViewCell.h; sourceTree = "<group>"; };
-		187A8B9C1C156AD200BB1A58 /* EmergencyTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmergencyTableViewCell.m; sourceTree = "<group>"; };
 		187A8B9E1C15923F00BB1A58 /* yao.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yao.png; sourceTree = "<group>"; };
 		187A8BA11C15AEC200BB1A58 /* familyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = familyModel.h; sourceTree = "<group>"; };
 		187A8BA21C15AEC200BB1A58 /* familyModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = familyModel.m; sourceTree = "<group>"; };
+		187AED911C1E708400ABB30F /* ciruViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ciruViewController.h; sourceTree = "<group>"; };
+		187AED921C1E708400ABB30F /* ciruViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ciruViewController.m; sourceTree = "<group>"; };
+		187AED9C1C1E7A9600ABB30F /* ciruCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ciruCollectionViewCell.h; sourceTree = "<group>"; };
+		187AED9D1C1E7A9600ABB30F /* ciruCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ciruCollectionViewCell.m; sourceTree = "<group>"; };
+		187AED9F1C1E83A400ABB30F /* contacts.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = contacts.png; sourceTree = "<group>"; };
 		188CC3A81C1123EF00950365 /* FamilyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FamilyTableViewController.h; sourceTree = "<group>"; };
 		188CC3A91C1123EF00950365 /* FamilyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FamilyTableViewController.m; sourceTree = "<group>"; };
 		188CC3AB1C11279200950365 /* FamilyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FamilyViewController.h; sourceTree = "<group>"; };
@@ -195,10 +273,6 @@
 		E55914D71C0EC92E00CE9102 /* MimamoroUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MimamoroUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E55914DB1C0EC92E00CE9102 /* MimamoroUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MimamoroUITests.m; sourceTree = "<group>"; };
 		E55914DD1C0EC92E00CE9102 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E55914F41C0ED0A300CE9102 /* EmergencyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmergencyViewController.h; sourceTree = "<group>"; };
-		E55914F51C0ED0A300CE9102 /* EmergencyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmergencyViewController.m; sourceTree = "<group>"; };
-		E55914F71C0ED0B000CE9102 /* WorryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorryViewController.h; sourceTree = "<group>"; };
-		E55914F81C0ED0B000CE9102 /* WorryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorryViewController.m; sourceTree = "<group>"; };
 		E55914FA1C0ED0BD00CE9102 /* OtherCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtherCollectionViewController.h; sourceTree = "<group>"; };
 		E55914FB1C0ED0BD00CE9102 /* OtherCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtherCollectionViewController.m; sourceTree = "<group>"; };
 		E55914FD1C0ED0DA00CE9102 /* ContactCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactCollectionViewController.h; sourceTree = "<group>"; };
@@ -257,6 +331,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1863C43B1C180DC100E28A7B /* Security.framework in Frameworks */,
+				1863C4391C180DA100E28A7B /* CFNetwork.framework in Frameworks */,
+				1863C4371C180D8700E28A7B /* libMailCore-ios.a in Frameworks */,
 				1839A5D91C0FE4DA008B4ADA /* CoreGraphics.framework in Frameworks */,
 				1839A5D71C0FE4BE008B4ADA /* UIKit.framework in Frameworks */,
 				1839A5D21C0FDEB2008B4ADA /* Contacts.framework in Frameworks */,
@@ -281,9 +358,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1863C41D1C180D5200E28A7B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1863C4281C180D5200E28A7B /* libMailCore.a */,
+				1863C42A1C180D5200E28A7B /* libMailCore-ios.a */,
+				1863C42C1C180D5200E28A7B /* tests */,
+				1863C42E1C180D5200E28A7B /* test-ios.app */,
+				1863C4301C180D5200E28A7B /* MailCore.framework */,
+				1863C4321C180D5200E28A7B /* MailCore.framework */,
+				1863C4341C180D5200E28A7B /* unittest.xctest */,
+				1863C4361C180D5200E28A7B /* unittestcpp */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		E55914AA1C0EC92E00CE9102 = {
 			isa = PBXGroup;
 			children = (
+				1863C41C1C180D5200E28A7B /* mailcore2.xcodeproj */,
+				1863C43A1C180DC100E28A7B /* Security.framework */,
+				1863C4381C180DA100E28A7B /* CFNetwork.framework */,
 				1839A5D81C0FE4DA008B4ADA /* CoreGraphics.framework */,
 				1839A5D61C0FE4BE008B4ADA /* UIKit.framework */,
 				1839A5D11C0FDEB2008B4ADA /* Contacts.framework */,
@@ -317,18 +412,20 @@
 				E55915011C0ED54C00CE9102 /* TabBarController.m */,
 				E55914FA1C0ED0BD00CE9102 /* OtherCollectionViewController.h */,
 				E55914FB1C0ED0BD00CE9102 /* OtherCollectionViewController.m */,
+				187AED911C1E708400ABB30F /* ciruViewController.h */,
+				187AED921C1E708400ABB30F /* ciruViewController.m */,
 				1863C40E1C17D19900E28A7B /* softDetailsViewController.h */,
 				1863C40F1C17D19900E28A7B /* softDetailsViewController.m */,
 				E55914FD1C0ED0DA00CE9102 /* ContactCollectionViewController.h */,
 				E55914FE1C0ED0DA00CE9102 /* ContactCollectionViewController.m */,
+				185E98111C1817DE008732C2 /* EmergencyViewController.h */,
+				185E980F1C1817DE008732C2 /* EmergencyViewController.m */,
+				185E98121C1817DE008732C2 /* WorryViewController.h */,
+				185E98101C1817DE008732C2 /* WorryViewController.m */,
 				1892089A1C10379300A4A0E6 /* LeafNotification.h */,
 				1892089B1C10379300A4A0E6 /* LeafNotification.m */,
 				1839A5C21C0FDD38008B4ADA /* ContactTableViewController.h */,
 				1839A5C31C0FDD38008B4ADA /* ContactTableViewController.m */,
-				E55914F41C0ED0A300CE9102 /* EmergencyViewController.h */,
-				E55914F51C0ED0A300CE9102 /* EmergencyViewController.m */,
-				E55914F71C0ED0B000CE9102 /* WorryViewController.h */,
-				E55914F81C0ED0B000CE9102 /* WorryViewController.m */,
 				E55914C21C0EC92E00CE9102 /* Assets.xcassets */,
 				187980911C16B70400241111 /* Main.storyboard */,
 				E55914C41C0EC92E00CE9102 /* LaunchScreen.storyboard */,
@@ -341,7 +438,9 @@
 		E55914B61C0EC92E00CE9102 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1818AAC01C182BC4000D0A6A /* ABFillButtonExample-Prefix.pch */,
 				E55914B71C0EC92E00CE9102 /* main.m */,
+				187AED9F1C1E83A400ABB30F /* contacts.png */,
 				1863C4141C17ED7000E28A7B /* emerWorr.png */,
 				1863C4151C17ED7000E28A7B /* worr.png */,
 				1863C4161C17ED7000E28A7B /* emer.png */,
@@ -413,6 +512,8 @@
 		E55915181C0EE43400CE9102 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				1818AAB51C182A6B000D0A6A /* ABFillButton.h */,
+				1818AAB61C182A6B000D0A6A /* ABFillButton.m */,
 				187980971C16C0C600241111 /* editOtherCollectionViewCell.h */,
 				187980981C16C0C600241111 /* editOtherCollectionViewCell.m */,
 				E55915191C0EE45800CE9102 /* ContactCollectionViewCell.h */,
@@ -423,12 +524,14 @@
 				18F437ED1C112E5C005EFBB3 /* FamilyCollectionViewCell.m */,
 				18F437F01C116BD5005EFBB3 /* FamilyTableViewCell.h */,
 				18F437F11C116BD5005EFBB3 /* FamilyTableViewCell.m */,
-				187A8B981C1562DD00BB1A58 /* worryTableViewCell.h */,
-				187A8B991C1562DD00BB1A58 /* worryTableViewCell.m */,
-				187A8B9B1C156AD200BB1A58 /* EmergencyTableViewCell.h */,
-				187A8B9C1C156AD200BB1A58 /* EmergencyTableViewCell.m */,
 				1863C4111C17E75F00E28A7B /* ContactTableViewCell.h */,
 				1863C4121C17E75F00E28A7B /* ContactTableViewCell.m */,
+				1818AACA1C1843F8000D0A6A /* EmergencyCollectionViewCell.h */,
+				1818AACB1C1843F8000D0A6A /* EmergencyCollectionViewCell.m */,
+				1818AACD1C184A83000D0A6A /* worryCollectionViewCell.h */,
+				1818AACE1C184A83000D0A6A /* worryCollectionViewCell.m */,
+				187AED9C1C1E7A9600ABB30F /* ciruCollectionViewCell.h */,
+				187AED9D1C1E7A9600ABB30F /* ciruCollectionViewCell.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -572,6 +675,12 @@
 			mainGroup = E55914AA1C0EC92E00CE9102;
 			productRefGroup = E55914B41C0EC92E00CE9102 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 1863C41D1C180D5200E28A7B /* Products */;
+					ProjectRef = 1863C41C1C180D5200E28A7B /* mailcore2.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				E55914B21C0EC92E00CE9102 /* Mimamori */,
@@ -580,6 +689,65 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		1863C4281C180D5200E28A7B /* libMailCore.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libMailCore.a;
+			remoteRef = 1863C4271C180D5200E28A7B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1863C42A1C180D5200E28A7B /* libMailCore-ios.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libMailCore-ios.a";
+			remoteRef = 1863C4291C180D5200E28A7B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1863C42C1C180D5200E28A7B /* tests */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = tests;
+			remoteRef = 1863C42B1C180D5200E28A7B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1863C42E1C180D5200E28A7B /* test-ios.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "test-ios.app";
+			remoteRef = 1863C42D1C180D5200E28A7B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1863C4301C180D5200E28A7B /* MailCore.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = MailCore.framework;
+			remoteRef = 1863C42F1C180D5200E28A7B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1863C4321C180D5200E28A7B /* MailCore.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = MailCore.framework;
+			remoteRef = 1863C4311C180D5200E28A7B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1863C4341C180D5200E28A7B /* unittest.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = unittest.xctest;
+			remoteRef = 1863C4331C180D5200E28A7B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1863C4361C180D5200E28A7B /* unittestcpp */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = unittestcpp;
+			remoteRef = 1863C4351C180D5200E28A7B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		E55914B11C0EC92E00CE9102 /* Resources */ = {
@@ -600,6 +768,7 @@
 				1839A5E91C0FFD5A008B4ADA /* 孫娘.png in Resources */,
 				1863C40A1C17CB6700E28A7B /* other1300.png in Resources */,
 				1863C4021C17CB6700E28A7B /* other555.png in Resources */,
+				187AEDA01C1E83A400ABB30F /* contacts.png in Resources */,
 				E559150A1C0ED88600CE9102 /* setting.png in Resources */,
 				1839A5F21C0FFD5A008B4ADA /* 婿.png in Resources */,
 				1863C4171C17ED7000E28A7B /* emerWorr.png in Resources */,
@@ -663,6 +832,7 @@
 				188CC3AA1C1123EF00950365 /* FamilyTableViewController.m in Sources */,
 				E559151E1C0EE47900CE9102 /* SettingCollectionViewCell.m in Sources */,
 				E55915431C0EF21200CE9102 /* PersonalDataTableViewController.m in Sources */,
+				185E98131C1817DE008732C2 /* EmergencyViewController.m in Sources */,
 				E55915021C0ED54C00CE9102 /* TabBarController.m in Sources */,
 				1839A5C41C0FDD38008B4ADA /* ContactTableViewController.m in Sources */,
 				E55915461C0EF22400CE9102 /* EditListViewController.m in Sources */,
@@ -671,29 +841,31 @@
 				E55915401C0EF20B00CE9102 /* ListTableViewController.m in Sources */,
 				1879809F1C16C68500241111 /* editOtherCollectionViewController.m in Sources */,
 				187980991C16C0C600241111 /* editOtherCollectionViewCell.m in Sources */,
-				187A8B9A1C1562DD00BB1A58 /* worryTableViewCell.m in Sources */,
+				187AED931C1E708400ABB30F /* ciruViewController.m in Sources */,
+				187AED9E1C1E7A9600ABB30F /* ciruCollectionViewCell.m in Sources */,
+				185E98141C1817DE008732C2 /* WorryViewController.m in Sources */,
 				18F437EE1C112E5C005EFBB3 /* FamilyCollectionViewCell.m in Sources */,
+				1818AACF1C184A83000D0A6A /* worryCollectionViewCell.m in Sources */,
 				1863C4101C17D19900E28A7B /* softDetailsViewController.m in Sources */,
 				188CC3AD1C11279200950365 /* FamilyViewController.m in Sources */,
 				E55915361C0EEEA000CE9102 /* ProfileTableViewController.m in Sources */,
 				E55915511C0EF4AE00CE9102 /* KennkoModel.m in Sources */,
+				1818AACC1C1843F8000D0A6A /* EmergencyCollectionViewCell.m in Sources */,
 				E559154B1C0EF23700CE9102 /* EditKennkoTableViewController.m in Sources */,
 				E559153D1C0EF07400CE9102 /* UserProfileModel.m in Sources */,
 				E55915391C0EF04900CE9102 /* SettingTableViewController.m in Sources */,
 				E559154C1C0EF23700CE9102 /* EditKusiriTableViewController.m in Sources */,
-				187A8B9D1C156AD200BB1A58 /* EmergencyTableViewCell.m in Sources */,
 				E55915551C0EF4B600CE9102 /* ListModel.m in Sources */,
 				E559151B1C0EE45800CE9102 /* ContactCollectionViewCell.m in Sources */,
 				E55914BB1C0EC92E00CE9102 /* AppDelegate.m in Sources */,
-				E55914F61C0ED0A300CE9102 /* EmergencyViewController.m in Sources */,
 				E55914FC1C0ED0BD00CE9102 /* OtherCollectionViewController.m in Sources */,
 				E55915521C0EF4AE00CE9102 /* KusuriModel.m in Sources */,
 				18F437F21C116BD5005EFBB3 /* FamilyTableViewCell.m in Sources */,
 				E55914FF1C0ED0DA00CE9102 /* ContactCollectionViewController.m in Sources */,
 				187A8BA31C15AEC200BB1A58 /* familyModel.m in Sources */,
 				1892089C1C10379300A4A0E6 /* LeafNotification.m in Sources */,
+				1818AAB71C182A6B000D0A6A /* ABFillButton.m in Sources */,
 				187A8B951C154B5500BB1A58 /* contactAddressModel.m in Sources */,
-				E55914F91C0ED0B000CE9102 /* WorryViewController.m in Sources */,
 				E55914B81C0EC92E00CE9102 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -837,8 +1009,24 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Mimamoro/ABFillButtonExample-Prefix.pch";
 				INFOPLIST_FILE = Mimamoro/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-lctemplate-ios",
+					"-letpan-ios",
+					"-lxml2",
+					"-lsasl2",
+					"-liconv",
+					"-ltidy",
+					"-lz",
+					"-lc++",
+					"-lresolv",
+					"-stdlib=libc++",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.totyu.Mimamori;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -852,8 +1040,24 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Mimamoro/ABFillButtonExample-Prefix.pch";
 				INFOPLIST_FILE = Mimamoro/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-lctemplate-ios",
+					"-letpan-ios",
+					"-lxml2",
+					"-lsasl2",
+					"-liconv",
+					"-ltidy",
+					"-lz",
+					"-lc++",
+					"-lresolv",
+					"-stdlib=libc++",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.totyu.Mimamori;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

@@ -30,10 +30,8 @@
         // Initialization code
         self.layer.backgroundColor = [UIColor grayColor].CGColor;
         self.layer.cornerRadius = 5.0f;
-        self.layer.opacity = 0.25;
-        
+        self.layer.opacity = 0.25;;
         _textLabel = [[UILabel alloc] initWithFrame:frame];
-        //        self.textLabel.backgroundColor = [UIColor clearColor];
         self.textLabel.textColor = [UIColor whiteColor];
         _flagImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 0, DEFAULT_EDGE)];
         self.duration = DEFAULT_DURATION;
@@ -44,16 +42,7 @@
     return self;
 }
 
-/*
- // Only override drawRect: if you perform custom drawing.
- // An empty implementation adversely affects performance during animation.
- - (void)drawRect:(CGRect)rect
- {
- // Drawing code
- 
- 
- }
- */
+
 -(void)setType:(LeafNotificationType)type{
     if(LeafNotificationTypeWarrning == type){
         self.flagImageView.image = [UIImage imageNamed:@"notification_warring"];
@@ -72,7 +61,11 @@
         self.textLabel.numberOfLines = 5;
         self.textLabel.textAlignment = UITextAlignmentCenter;
         [self.textLabel sizeToFit];
-        
+        if (![_textLabel.text isEqualToString:@"長押しのアイコンを削除する"]) {
+            self.frame = CGRectMake(0, 0, self.frame.size.width,  self.frame.size.height);
+        }else{
+            
+        }
         CGSize size = self.textLabel.bounds.size;
         if(size.width>self.bounds.size.width-DEFAULT_EDGE-2*DEFAULT_SPACE_IMG_TEXT){
             self.flagImageView.center = CGPointMake(DEFAULT_EDGE/2+DEFAULT_SPACE_IMG_TEXT, DEFAULT_HEIGHT/2+DEFAULT_SPACE_IMG_TEXT/2);
@@ -135,6 +128,7 @@
     LeafNotification *notification = [[LeafNotification alloc] initWithController:controller text:text];
     [controller.view addSubview:notification];
     notification.type = type;
+   
     [notification showWithAnimation:YES];
     
 }

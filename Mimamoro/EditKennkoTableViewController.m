@@ -8,7 +8,7 @@
 
 #import "EditKennkoTableViewController.h"
 #import "KennkoModel.h"
-
+#import "LeafNotification.h"
 @interface EditKennkoTableViewController ()<UITextFieldDelegate,UITextViewDelegate>{
     KennkoModel *kennkomodel;
     NSMutableDictionary *kennkoDict;
@@ -75,6 +75,9 @@
     }else if (_editType == 1){
         [kennkoDict removeObjectForKey:_tempkey];
     }
+    if ([_checkdateTextField.text isEqualToString:@""]){
+     [LeafNotification showInController:self withText:[NSString stringWithFormat:@"どうぞ足を付ける検査日"]];   
+    }else{
     kennkomodel.checkdate = _checkdateTextField.text;
     kennkomodel.clinicname = _clinicnameTextField.text;
     kennkomodel.result = _resultTextView.text;
@@ -96,6 +99,7 @@
     [[NSUserDefaults standardUserDefaults]setObject:kennkoDict forKey:@"kennkolist"];
     
     [self.navigationController popViewControllerAnimated:YES];
+    }
 }
 
 @end

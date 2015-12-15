@@ -31,14 +31,12 @@
     fatitl1 = [[NSDictionary alloc]init];
     connectionbtn1 =[[NSMutableDictionary alloc]initWithDictionary:fatitl1];
     connectionnum1 =[[NSMutableArray alloc]init];
-    NSLog(@"connectionbtn1:%@",connectionbtn1);
-    NSLog(@"connectionnum1:%@",connectionnum1);
-    
 }
 
 -(void)viewWillAppear:(BOOL)animated{
     [self reloadContactList];
     [self.tableView reloadData];
+//    [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationNone];
 }
 -(void)reloadContactList{
     [connectionnum1 removeAllObjects];
@@ -85,11 +83,13 @@
         UIAlertController *alert2 = [UIAlertController alertControllerWithTitle:@"ヒント" message:@"削除しますか" preferredStyle: UIAlertControllerStyleAlert];
         [alert2 addAction:[UIAlertAction actionWithTitle:@"はい" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
             NSArray *temp = [connectionbtn1 allKeys];
+            NSLog(@"famtitl1%@",temp[indexPath.row]);
             [connectionbtn1 removeObjectForKey:temp[indexPath.row]];
+            [[NSUserDefaults standardUserDefaults]removeObjectForKey:temp[indexPath.row]];
             [[NSUserDefaults standardUserDefaults]setObject:connectionbtn1 forKey:@"famTitleArrr"];
-            [[NSUserDefaults standardUserDefaults]removeObjectForKey:cell.famtitl1.text];
             [self reloadContactList];
             [self.tableView reloadData];
+//            [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationNone];
         }]];
         [alert2 addAction:[UIAlertAction actionWithTitle:@"まだ" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         }]];

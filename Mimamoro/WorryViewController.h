@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WorryViewController : UIViewController
+@interface WorryViewController : UITableViewController
 
 @end

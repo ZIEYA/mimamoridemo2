@@ -83,7 +83,7 @@ static NSString * const reuseIdentifier = @"Cell";
     [cell.otherImg.layer addAnimation:keyAnima forKey:nil];
     //familyImg = familyTitle[indexPath.row];下載脈拍傍受か
     //familynumber = [NSString stringWithFormat:@"%ld",(long)indexPath.row];
-    UIAlertController *alert2 = [UIAlertController alertControllerWithTitle:@"ヒント" message:[NSString stringWithFormat:@"下載%@か",cell.otherLabel.text] preferredStyle: UIAlertControllerStyleAlert];
+    UIAlertController *alert2 = [UIAlertController alertControllerWithTitle:@"ヒント" message:[NSString stringWithFormat:@"ダウンロード%@か",cell.otherLabel.text] preferredStyle: UIAlertControllerStyleAlert];
     [alert2 addAction:[UIAlertAction actionWithTitle:@"はい" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         [othersoft setValue:[otherImgTitle objectAtIndex:indexPath.row] forKey:@"otherImgTitle"];
         [othersoft setValue:[otherNameTitle objectAtIndex:indexPath.row] forKey:@"otherNameTitle"];

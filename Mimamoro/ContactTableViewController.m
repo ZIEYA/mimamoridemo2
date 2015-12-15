@@ -34,7 +34,8 @@
 
 -(void)viewWillAppear:(BOOL)animated{
     [self reloadContactList];
-    [self.tableView reloadData];
+    //[self.tableView reloadData];
+    [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationNone];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -88,7 +89,7 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     edittype = 1;
 
-    tempname = [[_allContactArray objectAtIndex:indexPath.row]valueForKey:@"name"];
+    tempname = [[_allContactArray objectAtIndex:indexPath.row]valueForKey:@"email"];
     
     [self performSegueWithIdentifier:@"gotoEditContactVC" sender:self];
 }
@@ -113,7 +114,8 @@
         [[NSUserDefaults standardUserDefaults]setObject:_contactDict forKey:_family];
         [self reloadContactList];
         [self getNotofocation];
-        [self.tableView reloadData];
+        //[self.tableView reloadData];
+        [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationNone];
     }
 }
 

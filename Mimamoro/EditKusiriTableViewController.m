@@ -8,7 +8,7 @@
 
 #import "EditKusiriTableViewController.h"
 #import "KusuriModel.h"
-
+#import "LeafNotification.h"
 @interface EditKusiriTableViewController ()<UITextFieldDelegate,UITextViewDelegate>{
     KusuriModel *kusurimodel;
     NSMutableDictionary *kusuriDict;
@@ -71,6 +71,9 @@
     }else if (_editType == 1){
         [kusuriDict removeObjectForKey:_tempPillname];
     }
+    if ([_pillnameTextField.text isEqualToString:@""]){
+     [LeafNotification showInController:self withText:[NSString stringWithFormat:@"どうぞ足を付ける薬剤名"]];   
+    }else{
     kusurimodel.pillname = _pillnameTextField.text;
     kusurimodel.date = _dateTextField.text;
     kusurimodel.pharmacy = _pharmacyTextField.text;
@@ -91,6 +94,7 @@
     [[NSUserDefaults standardUserDefaults]setObject:kusuriDict forKey:@"kusurilist"];
     
     [self.navigationController popViewControllerAnimated:YES];
+    }
 }
 
 

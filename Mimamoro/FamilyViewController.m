@@ -49,7 +49,7 @@
     _famBtn.layer.borderColor = [UIColor colorWithRed:255.0/255.0 green:155.0/255.0 blue:155.0/255.0 alpha:1].CGColor;
     _famBtn.layer.borderWidth = 2;
     _famBtn.layer.cornerRadius = 8;
-    familyTitle = [[NSArray alloc]initWithObjects:@"妻",@"夫",@"親友",@"息子",@"嫁",@"娘",@"婿",@"孫",@"孫娘",@"医者",@"看護婦", nil];
+    familyTitle = [[NSArray alloc]initWithObjects:@"妻",@"親友",@"娘",@"息子",@"夫",@"嫁",@"婿",@"孫",@"孫娘",@"医者",@"看護婦", nil];
     _famImage.allowsSelection = YES;
     if (!famTitleArr) {
         famTitleArr = [[NSMutableDictionary alloc]initWithCapacity:0];
@@ -129,7 +129,6 @@
             if (![_famTitle.text isEqualToString:_titll]) {
                 [[NSUserDefaults standardUserDefaults]removeObjectForKey:_titll];
             }
-            
             [famTitleArr removeObjectForKey:_titll];
         }
         fammodel.titlee = _famTitle.text;
@@ -142,7 +141,6 @@
         [famTitleArr setObject:famm forKey:fammodel.titlee];
         [self.navigationController popViewControllerAnimated:YES];
         [[NSUserDefaults standardUserDefaults]setObject:famTitleArr forKey:@"famTitleArrr"];
-        
     }else{
         [LeafNotification showInController:self withText:[NSString stringWithFormat:@"保存できませんので、画像やタイトル添加"]];
     }
