@@ -1086,7 +1086,7 @@
                                                 <constraint firstAttribute="width" constant="120" id="qaC-aF-ftj"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -2869,10 +2869,48 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
+                            <tableViewSection headerTitle="" id="etq-ON-bIU">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="60" id="irV-2f-OQn">
+                                        <rect key="frame" x="0.0" y="64" width="320" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="irV-2f-OQn" id="m9v-TX-WrJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="59"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pq3-fe-dLc">
+                                                    <rect key="frame" x="18" y="12" width="294" height="35"/>
+                                                    <color key="backgroundColor" red="1" green="0.3921568627" blue="0.43137254899999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="35" id="ZxF-UN-u9Y"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <state key="normal" title="連絡先から追加">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="phoneSelect:" destination="QCJ-ut-wqa" eventType="touchUpInside" id="94j-tv-lAp"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="pq3-fe-dLc" firstAttribute="centerY" secondItem="m9v-TX-WrJ" secondAttribute="centerY" id="Fb4-mp-NLK"/>
+                                                <constraint firstItem="pq3-fe-dLc" firstAttribute="trailing" secondItem="m9v-TX-WrJ" secondAttribute="trailingMargin" id="mzB-Bo-dg1"/>
+                                                <constraint firstItem="pq3-fe-dLc" firstAttribute="leading" secondItem="m9v-TX-WrJ" secondAttribute="leadingMargin" constant="10" id="u0g-iu-mYh"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
                             <tableViewSection headerTitle="画像:" id="Say-PX-Zd3">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="120" id="Sea-bM-CjC">
-                                        <rect key="frame" x="0.0" y="104" width="320" height="120"/>
+                                        <rect key="frame" x="0.0" y="164" width="320" height="120"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Sea-bM-CjC" id="n3c-e8-N4k">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="119"/>
@@ -2905,7 +2943,7 @@
                             <tableViewSection headerTitle="氏名:" id="fnX-Up-JIH">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="60" id="iDK-sE-aF5">
-                                        <rect key="frame" x="0.0" y="264" width="320" height="60"/>
+                                        <rect key="frame" x="0.0" y="324" width="320" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iDK-sE-aF5" id="EFG-6x-sJw">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="59"/>
@@ -2932,7 +2970,7 @@
                             <tableViewSection headerTitle="E-mail:" id="jrm-nI-Yv1">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="60" id="UDo-dP-0pU">
-                                        <rect key="frame" x="0.0" y="364" width="320" height="60"/>
+                                        <rect key="frame" x="0.0" y="424" width="320" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UDo-dP-0pU" id="9FJ-PL-TTW">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="59"/>
@@ -2959,7 +2997,7 @@
                             <tableViewSection headerTitle="不安時の連絡先" id="B1b-P3-KDE">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="60" id="OvM-Fk-UjS">
-                                        <rect key="frame" x="0.0" y="464" width="320" height="60"/>
+                                        <rect key="frame" x="0.0" y="524" width="320" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OvM-Fk-UjS" id="nW3-ac-Ac8">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="59"/>
@@ -2986,7 +3024,7 @@
                             <tableViewSection headerTitle="緊急時の通知先" id="7ie-dn-9D1">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="60" id="Eff-Zd-wlw">
-                                        <rect key="frame" x="0.0" y="564" width="320" height="60"/>
+                                        <rect key="frame" x="0.0" y="624" width="320" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Eff-Zd-wlw" id="wh1-qq-XDj">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="59"/>
@@ -3013,7 +3051,7 @@
                             <tableViewSection headerTitle="アラートの連絡先" id="VKv-uM-Kuu">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="60" id="KSd-IB-8fz">
-                                        <rect key="frame" x="0.0" y="664" width="320" height="60"/>
+                                        <rect key="frame" x="0.0" y="724" width="320" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KSd-IB-8fz" id="9cq-l3-tF1">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="59"/>
@@ -3040,7 +3078,7 @@
                             <tableViewSection headerTitle="  " id="fwn-8K-Cv7">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="60" id="JQ5-mH-ffl">
-                                        <rect key="frame" x="0.0" y="764" width="320" height="60"/>
+                                        <rect key="frame" x="0.0" y="824" width="320" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JQ5-mH-ffl" id="X3S-vy-YuH">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="59"/>
@@ -3084,6 +3122,7 @@
                     <navigationItem key="navigationItem" id="0Rp-Os-6Sf"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="addFromphone" destination="pq3-fe-dLc" id="Xaa-pa-Jag"/>
                         <outlet property="alertSwitch" destination="6M9-BO-3y3" id="43J-z6-tka"/>
                         <outlet property="contNameText" destination="Tgc-VA-9Wx" id="HrK-8l-Fzu"/>
                         <outlet property="emailText" destination="SUc-Qy-tdg" id="Mve-cv-6eE"/>

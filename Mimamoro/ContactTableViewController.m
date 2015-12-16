@@ -50,21 +50,21 @@
     NSLog(@"contact:%@",tempdict);
     NSArray *keysArr = [tempdict allKeys];
     //Models
-    for (int i = 0; i<keysArr.count; i++) {
-        NSDictionary *dict = [tempdict objectForKey:keysArr[i]];
-        ContactModel *model = [[ContactModel alloc]init];
-        model.name = [dict valueForKey:@"name"];
-        model.email = [dict valueForKey:@"email"];
-        model.groupType = [dict valueForKey:@"group"];
-        if ([_groupid isEqualToString:model.groupType]) {
-            [_currentArray addObject:model];
-        }
-        NSLog(@"%@",model.groupType);
+//    for (int i = 0; i<keysArr.count; i++) {
+//        NSDictionary *dict = [tempdict objectForKey:keysArr[i]];
+//        ContactModel *model = [[ContactModel alloc]init];
+//        model.name = [dict valueForKey:@"name"];
+//        model.email = [dict valueForKey:@"email"];
+//        model.groupType = [dict valueForKey:@"group"];
+//        if ([_groupid isEqualToString:model.groupType]) {
+//            [_currentArray addObject:model];
+//        }
+//        NSLog(@"%@",model.groupType);
 
     }
-    NSLog(@"%lu",(unsigned long)_currentArray.count);
-    [self.tableView reloadData];
-}
+//    NSLog(@"%lu",(unsigned long)_currentArray.count);
+//    [self.tableView reloadData];
+//}
 
 #pragma mark - Table view data source
 

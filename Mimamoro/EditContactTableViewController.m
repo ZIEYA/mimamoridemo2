@@ -28,7 +28,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     contactModel = [[ContactModel alloc]init];
-    contactModel.groupType = self.gruopname;
+    //contactModel.groupType = self.gruopname;
     if (!_cotactDict) {
         _cotactDict = [[NSMutableDictionary alloc]init];
     }
@@ -88,7 +88,7 @@
     [temp setValue:contactModel.email forKey:@"email"];
     [temp setValue:contactModel.worryType forKey:@"worrytype"];
     [temp setValue:contactModel.emergencyType forKey:@"emergencytype"];
-    [temp setValue:contactModel.groupType forKey:@"group"];
+    //[temp setValue:contactModel.groupType forKey:@"group"];
     
     [_cotactDict setObject:temp forKey:contactModel.name];
     [[NSUserDefaults standardUserDefaults]setObject:_cotactDict forKey:@"contact"];
