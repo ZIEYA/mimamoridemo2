@@ -30,8 +30,8 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        self.backgroundColor = YLDarkGray;
-        //[self.backgroundColor = LightGray CGColor];
+        // Initialization code
+        self.backgroundColor = [UIColor whiteColor];
         self.clipsToBounds = NO;
     }
     return self;

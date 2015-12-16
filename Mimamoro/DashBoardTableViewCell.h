@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface DashBoardTableViewCell : UITableViewCell
--(void)configUI:(NSIndexPath*)indexPath type:(int)styletype unit:(int)segmentunitnum yArray:(NSArray*)yarray;
+-(void)configUI:(NSIndexPath*)indexPath type:(int)styletype unit:(int)segmentunitnum day:(NSArray*)day week:(NSArray*)week month:(NSArray*)month year:(NSArray*)year;
 @end

@@ -87,7 +87,7 @@
             [path addLineToPoint:CGPointMake(self.frame.size.width,UULabelHeight+i*levelHeight)];
             [path closePath];
             shapeLayer.path = path.CGPath;
-            shapeLayer.strokeColor = [[[UIColor whiteColor] colorWithAlphaComponent:0.1] CGColor];
+            shapeLayer.strokeColor = [[[UIColor blackColor] colorWithAlphaComponent:0.1] CGColor];
             shapeLayer.fillColor = [[UIColor whiteColor] CGColor];
             shapeLayer.lineWidth = 1;
             [self.layer addSublayer:shapeLayer];
@@ -103,13 +103,13 @@
     
     _xLabels = xLabels;
     CGFloat num = 0;
-    if (xLabels.count>=20) {
-        num=20.0;
-    }else if (xLabels.count<=1){
-        num=1.0;
-    }else{
+//    if (xLabels.count>=20) {
+//        num=20.0;
+//    }else if (xLabels.count<=1){
+//        num=1.0;
+//    }else{
         num = xLabels.count;
-    }
+//    }
     _xLabelWidth = (self.frame.size.width - UUYLabelwidth)/num;
     
     for (int i=0; i<xLabels.count; i++) {
@@ -129,7 +129,7 @@
         [path addLineToPoint:CGPointMake(UUYLabelwidth+i*_xLabelWidth,self.frame.size.height-2*UULabelHeight)];
         [path closePath];
         shapeLayer.path = path.CGPath;
-        shapeLayer.strokeColor = [[[UIColor whiteColor] colorWithAlphaComponent:0.1] CGColor];
+        shapeLayer.strokeColor = [[[UIColor blackColor] colorWithAlphaComponent:0.1] CGColor];
         shapeLayer.fillColor = [[UIColor whiteColor] CGColor];
         shapeLayer.lineWidth = 1;
         [self.layer addSublayer:shapeLayer];
@@ -187,7 +187,7 @@
         _chartLine.lineCap = kCALineCapRound;
         _chartLine.lineJoin = kCALineJoinBevel;
         _chartLine.fillColor   = [[UIColor whiteColor] CGColor];
-        _chartLine.lineWidth   = 3.0;
+        _chartLine.lineWidth   = 2.0;
         _chartLine.strokeEnd   = 0.0;
         [self.layer addSublayer:_chartLine];
         
@@ -249,10 +249,10 @@
         if ([[_colors objectAtIndex:i] CGColor]) {
             _chartLine.strokeColor = [[_colors objectAtIndex:i] CGColor];
         }else{
-            _chartLine.strokeColor = [LightPink CGColor];
+            _chartLine.strokeColor = [UUGreen CGColor];
         }
         CABasicAnimation *pathAnimation = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
-        pathAnimation.duration = childAry.count*0.4;
+        pathAnimation.duration = childAry.count*0.1;
         pathAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
         pathAnimation.fromValue = [NSNumber numberWithFloat:0.0f];
         pathAnimation.toValue = [NSNumber numberWithFloat:1.0f];

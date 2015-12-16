@@ -18,7 +18,7 @@
 #define UUGreen        [UIColor colorWithRed:77.0/255.0 green:186.0/255.0 blue:122.0/255.0 alpha:1.0f]
 #define UUTitleColor   [UIColor colorWithRed:0.0/255.0 green:189.0/255.0 blue:113.0/255.0 alpha:1.0f]
 #define UUButtonGrey   [UIColor colorWithRed:141.0/255.0 green:141.0/255.0 blue:141.0/255.0 alpha:1.0f]
-#define UUFreshGreen   [UIColor colorWithRed:77.0/255.0 green:196.0/255.0 blue:122.0/255.0 alpha:1.0f]//嫩绿色
+#define UUFreshGreen   [UIColor colorWithRed:77.0/255.0 green:196.0/255.0 blue:122.0/255.0 alpha:1.0f]
 #define UURed          [UIColor colorWithRed:245.0/255.0 green:94.0/255.0 blue:78.0/255.0 alpha:1.0f]
 #define UUMauve        [UIColor colorWithRed:88.0/255.0 green:75.0/255.0 blue:103.0/255.0 alpha:1.0f]
 #define UUBrown        [UIColor colorWithRed:119.0/255.0 green:107.0/255.0 blue:95.0/255.0 alpha:1.0f]
@@ -36,18 +36,12 @@
 #define UUPinkDark     [UIColor colorWithRed:170.0/255.0 green:165.0/255.0 blue:165.0/255.0 alpha:1.0f]
 #define UUCloudWhite   [UIColor colorWithRed:244.0/255.0 green:244.0/255.0 blue:244.0/255.0 alpha:1.0f]
 #define UUBlack        [UIColor colorWithRed:45.0/255.0 green:45.0/255.0 blue:45.0/255.0 alpha:1.0f]
-#define UUStarYellow   [UIColor colorWithRed:252.0/255.0 green:223.0/255.0 blue:101.0/255.0 alpha:1.0f]//星黄色
+#define UUStarYellow   [UIColor colorWithRed:252.0/255.0 green:223.0/255.0 blue:101.0/255.0 alpha:1.0f]
 #define UUTwitterColor [UIColor colorWithRed:0.0/255.0 green:171.0/255.0 blue:243.0/255.0 alpha:1.0]
 #define UUWeiboColor   [UIColor colorWithRed:250.0/255.0 green:0.0/255.0 blue:33.0/255.0 alpha:1.0]
 #define UUiOSGreenColor [UIColor colorWithRed:98.0/255.0 green:247.0/255.0 blue:77.0/255.0 alpha:1.0]
 #define UURandomColor   [UIColor colorWithRed:arc4random()%255/255.0 green:arc4random()%255/255.0 blue:arc4random()%255/255.0 alpha:1.0f]
-//----------------------------------------------------------------------------------------------------------------
-#define DarkPink  [UIColor colorWithRed:255.0/255.0 green:100.0/255.0 blue:110.0/255.0 alpha:1.0f]//悦跑背景红色
-#define YLDarkGray  [UIColor colorWithRed:51.0/255.0 green:53.0/255.0 blue:66.0/255.0 alpha:1.0f]//主背景深灰蓝
-#define YLDarkBlack  [UIColor colorWithRed:25.0/255.0 green:25.0/255.0 blue:40.0/255.0 alpha:1.0f]//0.5透明度黑色
-#define LightPink  [UIColor colorWithRed:255.0/255.0 green:110.0/255.0 blue:95.0/255.0 alpha:1.0f]
-#define LightGray  [UIColor colorWithRed:204.0/255.0 green:204.0/255.0 blue:204.0/255.0 alpha:0.9f]
-#define lightwhite     [UIColor colorWithRed:204.0/255.0 green:204.0/255.0 blue:204.0/255.0 alpha:0.5f] //透明色
+
 //范围
 struct Range {
     CGFloat max;

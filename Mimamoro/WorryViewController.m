@@ -9,10 +9,11 @@
 #import "WorryViewController.h"
 #import "LeafNotification.h"
 #import "ContactModel.h"
+#import "ABFillButton.h"
 #import <MailCore/MailCore.h>
 #import "AppDelegate.h"
 
-@interface WorryViewController ()<UITableViewDelegate,UITableViewDataSource>{
+@interface WorryViewController ()<UITableViewDelegate,UITableViewDataSource,ABFillButtonDelegate>{
     NSMutableDictionary *_contactDict;
     NSMutableArray *_currentArray;
     NSString *_health;
@@ -35,6 +36,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *sliderValue1;
 @property (strong, nonatomic) IBOutlet UILabel *sliderValue2;
 @property (strong, nonatomic) IBOutlet UILabel *sliderValue3;
+@property (strong, nonatomic) IBOutlet ABFillButton *worryBtn;
 
 @end
 
@@ -45,6 +47,10 @@
     if (!_currentArray) {
         _currentArray = [[NSMutableArray alloc]init];
     }
+    _worryBtn.delegate = self;
+    [_worryBtn setFillPercent:1.0];
+    [_worryBtn configureButtonWithHightlightedShadowAndZoom:YES];
+    [_worryBtn setEmptyButtonPressing:YES];
     //Setting default value
     _sliderValue1.text = @"大丈夫";
     _sliderValue2.text = @"大丈夫";
@@ -249,8 +255,12 @@
 }
 
 - (IBAction)btnAction:(id)sender {
+    [_worryBtn setFillPercent:1.0];
+}
+
+-(void)buttonIsEmpty:(ABFillButton *)button{
+    NSLog(@"button is pressedd");
     [self sendEmail:_health value2:_spirit value3:_happiness];
-    
 }
 
 @end

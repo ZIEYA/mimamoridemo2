@@ -15,6 +15,10 @@
     NSArray *weekarray;
     NSArray *montharray;
     NSArray *yeararray;
+    NSArray *dayarray2;
+    NSArray *weekarray2;
+    NSArray *montharray2;
+    NSArray *yeararray2;
 }
 @property (strong, nonatomic) IBOutlet UISegmentedControl *segmentControl;
 
@@ -28,9 +32,9 @@
     [self.tableView registerNib:[UINib nibWithNibName:@"DashBoardTableViewCell" bundle:nil] forCellReuseIdentifier:@"dashboardCell"];
     xNum = 0;
     //Get test data from plist files
-    [self getPlistWithName:@"testdata1"];
-    
     [_segmentControl addTarget:self action:@selector(segmentAction:) forControlEvents:UIControlEventValueChanged];
+    [self getPlistWithName:@"testdata1"];
+    [self getPlistWithName:@"testdata2"];
     
 }
 
@@ -43,12 +47,19 @@
     NSBundle *bundle = [NSBundle mainBundle];
     NSString *plistPath = [bundle pathForResource:name ofType:@"plist"];
     NSDictionary *dict = [[NSDictionary alloc]initWithContentsOfFile:plistPath];
-    dayarray =[[NSArray alloc]initWithArray:[dict objectForKey:@"day"]];
-    weekarray = [[NSArray alloc]initWithArray:[dict objectForKey:@"week"]];
-    montharray = [[NSArray alloc]initWithArray:[dict objectForKey:@"month"]];
-    yeararray = [[NSArray alloc]initWithArray:[dict objectForKey:@"year"]];
-    NSLog(@"dayarray->%@ weekarray->%@ montharray->%@ yeararray->%@",dayarray,weekarray,montharray,yeararray);
-    
+    if ([name isEqualToString:@"testdata1"]) {
+        dayarray =[[NSArray alloc]initWithArray:[dict objectForKey:@"day"]];
+        weekarray = [[NSArray alloc]initWithArray:[dict objectForKey:@"week"]];
+        montharray = [[NSArray alloc]initWithArray:[dict objectForKey:@"month"]];
+        yeararray = [[NSArray alloc]initWithArray:[dict objectForKey:@"year"]];
+    }else if([name isEqualToString:@"testdata2"]){
+        dayarray2=[[NSArray alloc]initWithArray:[dict objectForKey:@"day"]];
+        weekarray2 = [[NSArray alloc]initWithArray:[dict objectForKey:@"week"]];
+        montharray2 = [[NSArray alloc]initWithArray:[dict objectForKey:@"month"]];
+        yeararray2 = [[NSArray alloc]initWithArray:[dict objectForKey:@"year"]];
+        NSLog(@"dayarr->%@",dayarray2);
+    }
+
 }
 #pragma mark - Table view data source
 
@@ -66,52 +77,40 @@
     if (cell ==nil) {
         [[[NSBundle mainBundle]loadNibNamed:@"DashBoardTableViewCell" owner:nil options:nil]firstObject];
     }
-    if (indexPath.section ==0) {
-        switch (xNum) {
-            case 0:
-                [cell configUI:indexPath type:1 unit:0 yArray:dayarray];
-            case 1:
-                [cell configUI:indexPath type:1 unit:1 yArray:weekarray];
-            case 2:
-                [cell configUI:indexPath type:1 unit:2 yArray:montharray];
-            case 3:
-                [cell configUI:indexPath type:1 unit:3 yArray:yeararray];
-            default:
-                break;
-        }
-    }
-    else if (indexPath.section ==1) {
-        switch (xNum) {
-            case 0:
-                [cell configUI:indexPath type:2 unit:0 yArray:dayarray];
-            case 1:
-                [cell configUI:indexPath type:2 unit:1 yArray:weekarray];
-            case 2:
-                [cell configUI:indexPath type:2 unit:2 yArray:montharray];
-            case 3:
-                [cell configUI:indexPath type:2 unit:3 yArray:yeararray];
-            default:
-                break;
-        }
+    if (indexPath.section == 0) {
+        [cell configUI:indexPath type:1 unit:xNum day:dayarray week:weekarray month:montharray year:yeararray];
+    }else if (indexPath.section == 1){
+        [cell configUI:indexPath type:2 unit:xNum day:dayarray2 week:weekarray2 month:montharray2 year:yeararray2];
     }
     
     return cell;
+}
+
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    CGRect frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 20);
+    UILabel *label = [[UILabel alloc]initWithFrame:frame];
+    label.font = [UIFont systemFontOfSize:14];
+    label.backgroundColor = [[UIColor lightGrayColor]colorWithAlphaComponent:0.3];
+    label.text = section ?@"ベッド":@"電気使用量";
+    label.textColor = [UIColor colorWithRed:0.257 green:0.650 blue:0.478 alpha:1.000];
+    label.textAlignment = NSTextAlignmentCenter;
+    return label;
 }
 
 
 -(void)segmentAction:(UISegmentedControl*)seg{
     if (seg.selectedSegmentIndex == 0){
         xNum = 0;
-        NSLog(@"日");
+        [self.tableView reloadData];
     }else if(seg.selectedSegmentIndex == 1){
         xNum = 1;
-        NSLog(@"週");
+        [self.tableView reloadData];
     }else if(seg.selectedSegmentIndex == 2){
         xNum = 2;
-        NSLog(@"月");
+        [self.tableView reloadData];
     }else if(seg.selectedSegmentIndex == 3){
         xNum = 3;
-        NSLog(@"年");
+        [self.tableView reloadData];
     }
 }
 

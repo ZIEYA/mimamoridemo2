@@ -632,7 +632,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YKH-Ky-pDs">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YKH-Ky-pDs" customClass="ABFillButton">
                                 <rect key="frame" x="96" y="84" width="128" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="2Bn-Yw-JDJ"/>
@@ -640,7 +640,7 @@
                                 </constraints>
                                 <state key="normal" title="Button" image="worrybtn.png"/>
                                 <connections>
-                                    <action selector="btnAction:" destination="M5c-9O-kOM" eventType="touchUpInside" id="wSN-tv-2Zz"/>
+                                    <action selector="btnAction:" destination="M5c-9O-kOM" eventType="touchUpInside" id="NLU-DL-LhL"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="身体" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A3O-wG-AkQ">
@@ -813,6 +813,7 @@
                         <outlet property="sliderValue3" destination="YhQ-Ya-QLP" id="wTE-Ff-QDI"/>
                         <outlet property="spiritSlider" destination="MMP-U9-tl9" id="gOB-2b-jKJ"/>
                         <outlet property="tableview" destination="h44-B0-98Q" id="tPA-aD-xg5"/>
+                        <outlet property="worryBtn" destination="YKH-Ky-pDs" id="ceI-BF-jos"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JDC-1W-cDW" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1161,11 +1162,11 @@
             </objects>
             <point key="canvasLocation" x="397" y="1199"/>
         </scene>
-        <!--Dashboard Table View Controller-->
+        <!--ダッシュボード-->
         <scene sceneID="1vm-rb-ye9">
             <objects>
                 <tableViewController id="ZTN-4R-UPJ" customClass="DashboardTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" id="I6K-ld-IKU">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="180" sectionHeaderHeight="28" sectionFooterHeight="28" id="I6K-ld-IKU">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1186,7 +1187,7 @@
                             <outlet property="delegate" destination="ZTN-4R-UPJ" id="7XB-qJ-IhM"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="DHk-h7-YPd"/>
+                    <navigationItem key="navigationItem" title="ダッシュボード" id="DHk-h7-YPd"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="segmentControl" destination="gEI-0U-1qp" id="UbN-mv-2O0"/>

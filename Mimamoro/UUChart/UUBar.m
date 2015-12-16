@@ -18,13 +18,12 @@
         // Initialization code
 		_chartLine = [CAShapeLayer layer];
 		_chartLine.lineCap = kCALineCapSquare;
-		//_chartLine.fillColor   = [[UIColor whiteColor] CGColor];
-        _chartLine.fillColor = [LightGray CGColor];//bar背景色
+		_chartLine.fillColor   = [[UIColor whiteColor] CGColor];
 		_chartLine.lineWidth   = self.frame.size.width;
 		_chartLine.strokeEnd   = 0.0;
 		self.clipsToBounds = YES;
 		[self.layer addSublayer:_chartLine];
-		self.layer.cornerRadius = 4.0;
+		self.layer.cornerRadius = 2.0;
     }
     return self;
 }
@@ -38,9 +37,8 @@
 	UIBezierPath *progressline = [UIBezierPath bezierPath];
     
     [progressline moveToPoint:CGPointMake(self.frame.size.width/2.0, self.frame.size.height+30)];
-//	[progressline addLineToPoint:CGPointMake(self.frame.size.width/2.0, (1 - grade) * self.frame.size.height+15)];
-	[progressline addLineToPoint:CGPointMake(self.frame.size.width/2.0, (1 - grade) * self.frame.size.height)];
-    
+	[progressline addLineToPoint:CGPointMake(self.frame.size.width/2.0, (1 - grade) * self.frame.size.height+15)];
+	
     [progressline setLineWidth:1.0];
     [progressline setLineCapStyle:kCGLineCapSquare];
 	_chartLine.path = progressline.CGPath;
@@ -67,8 +65,7 @@
 	//Draw BG
     CGContextRef context = UIGraphicsGetCurrentContext();
     
-    //CGContextSetFillColorWithColor(context, [UIColor whiteColor].CGColor);
-    CGContextSetFillColorWithColor(context, LightGray.CGColor);
+    CGContextSetFillColorWithColor(context, [UIColor whiteColor].CGColor);
 	CGContextFillRect(context, rect);
     
 }

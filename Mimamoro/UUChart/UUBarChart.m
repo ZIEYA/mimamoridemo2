@@ -13,7 +13,6 @@
 @interface UUBarChart ()
 {
     UIScrollView *myScrollView;
-    float maxdis;
 }
 @end
 
@@ -28,7 +27,6 @@
         // Initialization code
         self.clipsToBounds = YES;
         myScrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(UUYLabelwidth, 0, frame.size.width-UUYLabelwidth, frame.size.height)];
-        myScrollView.backgroundColor = DarkPink;//chart图表背景色
         [self addSubview:myScrollView];
     }
     return self;
@@ -59,34 +57,24 @@
         max = 5;
     }
     if (self.showRange) {
-        //_yValueMin = (int)min;
-        _yValueMin = 0;
+        _yValueMin = (int)min;
     }else{
         _yValueMin = 0;
     }
-    for (int i=0; i<_yValues.count; i++) {
-        if (i==2)
-            return;
-        NSArray *ddd = _yValues[i];
-        maxdis = [[ddd valueForKeyPath:@"@max.floatValue"]floatValue];
-    }
-    //_yValueMax = (int)max;
-    _yValueMax = maxdis;
+    _yValueMax = (int)max;
     
     if (_chooseRange.max!=_chooseRange.min) {
         _yValueMax = _chooseRange.max;
         _yValueMin = _chooseRange.min;
     }
 
-    float level = (_yValueMax-_yValueMin) /2.0;
-    CGFloat chartCavanHeight = self.frame.size.height - UULabelHeight*6;
-    CGFloat levelHeight = chartCavanHeight /2.0;
+    float level = (_yValueMax-_yValueMin) /4.0;
+    CGFloat chartCavanHeight = self.frame.size.height - UULabelHeight*3;
+    CGFloat levelHeight = chartCavanHeight /4.0;
     
-    for (int i=0; i<3; i++) {
-        //UUChartLabel * label = [[UUChartLabel alloc] initWithFrame:CGRectMake(0.0,chartCavanHeight-i*levelHeight+5, UUYLabelwidth, UULabelHeight)];
-        UUChartLabel * label = [[UUChartLabel alloc] initWithFrame:CGRectMake(0.0,chartCavanHeight-i*levelHeight+25, UUYLabelwidth, UULabelHeight)];
+    for (int i=0; i<5; i++) {
+        UUChartLabel * label = [[UUChartLabel alloc] initWithFrame:CGRectMake(0.0,chartCavanHeight-i*levelHeight+5, UUYLabelwidth, UULabelHeight)];
 		label.text = [NSString stringWithFormat:@"%.1f",level * i+_yValueMin];
-        label.textColor = [UIColor whiteColor];
 		[self addSubview:label];
     }
 	
@@ -100,19 +88,18 @@
     
     _xLabels = xLabels;
     NSInteger num;
-    if (xLabels.count>=31) {
-        num = 31;
-    }else if (xLabels.count<=1){
-        num = 1;
-    }else{
+//    if (xLabels.count>=8) {
+//        num = 8;
+//    }else if (xLabels.count<=4){
+//        num = 4;
+//    }else{
         num = xLabels.count;
-    }
-    _xLabelWidth = myScrollView.frame.size.width/31;
+ //   }
+    _xLabelWidth = myScrollView.frame.size.width/num;
     
     for (int i=0; i<xLabels.count; i++) {
-        UUChartLabel * label = [[UUChartLabel alloc] initWithFrame:CGRectMake((i * _xLabelWidth-5 ), self.frame.size.height - UULabelHeight-5, _xLabelWidth, UULabelHeight)];
+        UUChartLabel * label = [[UUChartLabel alloc] initWithFrame:CGRectMake((i *  _xLabelWidth ), self.frame.size.height - UULabelHeight, _xLabelWidth, UULabelHeight)];
         label.text = xLabels[i];
-        label.textColor = [UIColor whiteColor];//xlabel颜色
         [myScrollView addSubview:label];
         
         [_chartLabelsForX addObject:label];
@@ -137,7 +124,7 @@
 -(void)strokeChart
 {
     
-    CGFloat chartCavanHeight = self.frame.size.height - UULabelHeight*6;
+    CGFloat chartCavanHeight = self.frame.size.height - UULabelHeight*3;
 	
     for (int i=0; i<_yValues.count; i++) {
         if (i==2)
@@ -146,10 +133,9 @@
         for (int j=0; j<childAry.count; j++) {
             NSString *valueString = childAry[j];
             float value = [valueString floatValue];
-            //float grade = ((float)value-_yValueMin) / ((float)_yValueMax-_yValueMin);
-            float grade = (float)value / maxdis;
-            //UUBar * bar = [[UUBar alloc] initWithFrame:CGRectMake((j+(_yValues.count==1?0.1:0.05))*_xLabelWidth +i*_xLabelWidth * 0.47, UULabelHeight, _xLabelWidth * (_yValues.count==1?0.8:0.45), chartCavanHeight)];
-            UUBar * bar = [[UUBar alloc] initWithFrame:CGRectMake((j+(_yValues.count==1?0.1:0.05))*_xLabelWidth +i*_xLabelWidth * 0.47, UULabelHeight*3, 5, chartCavanHeight)];
+            float grade = ((float)value-_yValueMin) / ((float)_yValueMax-_yValueMin);
+            
+            UUBar * bar = [[UUBar alloc] initWithFrame:CGRectMake((j+(_yValues.count==1?0.1:0.05))*_xLabelWidth +i*_xLabelWidth * 0.47, UULabelHeight, _xLabelWidth * (_yValues.count==1?0.8:0.45), chartCavanHeight)];
             bar.barColor = [_colors objectAtIndex:i];
             bar.grade = grade;
             [myScrollView addSubview:bar];
