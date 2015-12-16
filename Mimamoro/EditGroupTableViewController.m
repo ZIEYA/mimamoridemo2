@@ -122,9 +122,13 @@
     [itemdict setValue:contactModel.emergencyType forKey:@"emergencytype"];
     [itemdict setValue:contactModel.worryType forKey:@"worrytype"];
     [itemdict setValue:contactModel.alertType forKey:@"alerttype"];
-    [contArr addObject:itemdict];
     NSLog(@"the ar  is ::%@",contArr);
     [[NSUserDefaults standardUserDefaults]removeObjectForKey:@"contacts"];
+    if (_editType==1) {
+        [contArr replaceObjectAtIndex:_index withObject:itemdict];
+    }else{
+        [contArr addObject:itemdict];
+    }
     [[NSUserDefaults standardUserDefaults]setObject:contArr forKey:@"contacts"];
     
     [self.navigationController popViewControllerAnimated:YES];

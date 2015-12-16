@@ -17,7 +17,7 @@
     NSMutableArray *contArr;
     ContactModel *contModel;
     NSDictionary *contDic;
-    
+    long index;
 }
 
 @end
@@ -89,6 +89,7 @@
 //編集
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     edittype = 1;//編集
+    index = indexPath.row;
     contDic = [contArr objectAtIndex:indexPath.row];
     [self performSegueWithIdentifier:@"gotoEditGroupTVC" sender:self];
 }
@@ -120,6 +121,7 @@
     EditGroupTableViewController *editTVC = segue.destinationViewController;
     editTVC.contdic = contDic;
     editTVC.editType = edittype;
+    editTVC.index =index;
 }
 
 @end
