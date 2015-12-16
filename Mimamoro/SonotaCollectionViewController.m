@@ -47,7 +47,7 @@ static NSString * const reuseIdentifier = @"sonotacell";
         cell.label.text = @"設定";
     }else if (indexPath.section ==0 && indexPath.row ==1){
         cell.imageview.image = [UIImage imageNamed:@"image-1"];
-        cell.label.text = @"連絡先";
+        cell.label.text = @"大切な人";
     }
     
     return cell;
@@ -60,7 +60,7 @@ static NSString * const reuseIdentifier = @"sonotacell";
         [self performSegueWithIdentifier:@"gotoSettingVC" sender:self];
     }
     else if (indexPath.section ==0 && indexPath.row ==1){
-        [self performSegueWithIdentifier:@"gotocontactVC" sender:self];
+        [self performSegueWithIdentifier:@"gotocontactVCC" sender:self];
     }
     
 }

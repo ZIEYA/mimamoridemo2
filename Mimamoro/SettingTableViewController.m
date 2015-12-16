@@ -33,6 +33,8 @@
         [self performSegueWithIdentifier:@"gotoPersonaDataVC" sender:self];
     }else if (indexPath.row == 3){
         [self performSegueWithIdentifier:@"gotoGroupTVC" sender:self];
+    }else if (indexPath.row == 4){
+        [self performSegueWithIdentifier:@"gotoTaisetsuListTVC" sender:self];
     }
 }
 

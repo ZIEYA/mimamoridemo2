@@ -14,7 +14,7 @@
 #import "AppDelegate.h"
 
 @interface WorryViewController ()<UITableViewDelegate,UITableViewDataSource,ABFillButtonDelegate>{
-    NSMutableDictionary *_contactDict;
+    NSMutableArray *_contactArr;
     NSMutableArray *_currentArray;
     NSString *_health;
     NSString *_spirit;
@@ -76,15 +76,14 @@
 
 -(void)reloadContact{
     [_currentArray removeAllObjects];
-    NSDictionary *tempdict = [[NSUserDefaults standardUserDefaults]objectForKey:@"contact"];
-    if (!tempdict) {
+    NSArray *tempArr = [[NSUserDefaults standardUserDefaults]objectForKey:@"contacts"];
+    if (!tempArr) {
         [LeafNotification showInController:self withText:@"連絡人を追加してください"];
         return;
     }
-    _contactDict = [[NSMutableDictionary alloc]initWithDictionary:tempdict];
-    NSArray *keyArr = [tempdict allKeys];
-    for (int i=0 ; i<keyArr.count; i++) {
-        NSDictionary *dict = [tempdict objectForKey:keyArr[i]];
+    _contactArr = [[NSMutableArray alloc]initWithArray:tempArr];
+    for (int i=0 ; i<_contactArr.count; i++) {
+        NSDictionary *dict = [_contactArr objectAtIndex:i];
         ContactModel *model = [[ContactModel alloc]init];
         model.worryType = [dict valueForKey:@"worrytype"];
         model.name = [dict valueForKey:@"name"];

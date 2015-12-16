@@ -47,6 +47,15 @@
 		E55BAFCF1C20E8D3009F47F6 /* UUColor.m in Sources */ = {isa = PBXBuildFile; fileRef = E55BAFC81C20E8D3009F47F6 /* UUColor.m */; };
 		E55BAFD01C20E8D3009F47F6 /* UULineChart.m in Sources */ = {isa = PBXBuildFile; fileRef = E55BAFCA1C20E8D3009F47F6 /* UULineChart.m */; };
 		E55BAFD21C20F8FE009F47F6 /* testdata2.plist in Resources */ = {isa = PBXBuildFile; fileRef = E55BAFD11C20F8FE009F47F6 /* testdata2.plist */; };
+		E55BAFD51C210C3E009F47F6 /* AddTaisetsuPeopleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E55BAFD41C210C3E009F47F6 /* AddTaisetsuPeopleTableViewController.m */; };
+		E55BAFD81C210F8D009F47F6 /* AddItemTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E55BAFD71C210F8D009F47F6 /* AddItemTableViewController.m */; };
+		E55BAFDB1C211633009F47F6 /* CustomPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = E55BAFDA1C211633009F47F6 /* CustomPickerView.m */; };
+		E55BAFDE1C211F03009F47F6 /* ItemListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E55BAFDD1C211F03009F47F6 /* ItemListTableViewController.m */; };
+		E55BAFE21C213098009F47F6 /* TaisetsuListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E55BAFE11C213098009F47F6 /* TaisetsuListTableViewController.m */; };
+		E55BAFE51C21322C009F47F6 /* TaisetsuPeopleImageCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E55BAFE41C21322C009F47F6 /* TaisetsuPeopleImageCollectionViewController.m */; };
+		E55BAFE81C21328F009F47F6 /* TaisetsuImageCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E55BAFE71C21328F009F47F6 /* TaisetsuImageCollectionViewCell.m */; };
+		E55BAFED1C213C79009F47F6 /* EditGroupTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E55BAFEA1C213C79009F47F6 /* EditGroupTableViewController.m */; };
+		E55BAFEE1C213C79009F47F6 /* GroupTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E55BAFEC1C213C79009F47F6 /* GroupTableViewController.m */; };
 		E56250711C166FFA008FD1DF /* PocketDoctorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E56250701C166FFA008FD1DF /* PocketDoctorViewController.m */; };
 		E56250A51C1696E6008FD1DF /* setting-0.png in Resources */ = {isa = PBXBuildFile; fileRef = E56250A31C1696E6008FD1DF /* setting-0.png */; };
 		E56250A61C1696E6008FD1DF /* setting-0@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E56250A41C1696E6008FD1DF /* setting-0@2x.png */; };
@@ -103,8 +112,6 @@
 		E57B2C191C1021A500EF2948 /* item-10.png in Resources */ = {isa = PBXBuildFile; fileRef = E57B2C181C1021A500EF2948 /* item-10.png */; };
 		E57B2C1B1C1021E700EF2948 /* item-11.png in Resources */ = {isa = PBXBuildFile; fileRef = E57B2C1A1C1021E700EF2948 /* item-11.png */; };
 		E57B2C1D1C102B7900EF2948 /* addimage.png in Resources */ = {isa = PBXBuildFile; fileRef = E57B2C1C1C102B7900EF2948 /* addimage.png */; };
-		E57B2C201C10305700EF2948 /* GroupTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E57B2C1F1C10305700EF2948 /* GroupTableViewController.m */; };
-		E57B2C241C10370900EF2948 /* EditGroupTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E57B2C231C10370900EF2948 /* EditGroupTableViewController.m */; };
 		E57B2C271C103B3700EF2948 /* GroupModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E57B2C261C103B3700EF2948 /* GroupModel.m */; };
 		E57B2C291C103E4000EF2948 /* spouse.png in Resources */ = {isa = PBXBuildFile; fileRef = E57B2C281C103E4000EF2948 /* spouse.png */; };
 		E57B2C2B1C103E5700EF2948 /* son.png in Resources */ = {isa = PBXBuildFile; fileRef = E57B2C2A1C103E5700EF2948 /* son.png */; };
@@ -132,6 +139,11 @@
 		E57D2A431C202680005F9F76 /* graph@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E57D2A3F1C202680005F9F76 /* graph@2x.png */; };
 		E57D2A471C20298E005F9F76 /* DashBoardTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E57D2A451C20298E005F9F76 /* DashBoardTableViewCell.m */; };
 		E57D2A481C20298E005F9F76 /* DashBoardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E57D2A461C20298E005F9F76 /* DashBoardTableViewCell.xib */; };
+		E5B4117B1C2146EC00E08C89 /* anybodyCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B411781C2146EC00E08C89 /* anybodyCollectionViewCell.m */; };
+		E5B4117C1C2146EC00E08C89 /* anybodyCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B4117A1C2146EC00E08C89 /* anybodyCollectionViewController.m */; };
+		E5B411831C21470E00E08C89 /* editGuardTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B4117E1C21470E00E08C89 /* editGuardTableViewController.m */; };
+		E5B411841C21470E00E08C89 /* GuardTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B411801C21470E00E08C89 /* GuardTableViewCell.m */; };
+		E5B411851C21470E00E08C89 /* GuardTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B411821C21470E00E08C89 /* GuardTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -286,6 +298,24 @@
 		E55BAFC91C20E8D3009F47F6 /* UULineChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UULineChart.h; sourceTree = "<group>"; };
 		E55BAFCA1C20E8D3009F47F6 /* UULineChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UULineChart.m; sourceTree = "<group>"; };
 		E55BAFD11C20F8FE009F47F6 /* testdata2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = testdata2.plist; sourceTree = "<group>"; };
+		E55BAFD31C210C3E009F47F6 /* AddTaisetsuPeopleTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddTaisetsuPeopleTableViewController.h; sourceTree = "<group>"; };
+		E55BAFD41C210C3E009F47F6 /* AddTaisetsuPeopleTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddTaisetsuPeopleTableViewController.m; sourceTree = "<group>"; };
+		E55BAFD61C210F8D009F47F6 /* AddItemTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddItemTableViewController.h; sourceTree = "<group>"; };
+		E55BAFD71C210F8D009F47F6 /* AddItemTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddItemTableViewController.m; sourceTree = "<group>"; };
+		E55BAFD91C211633009F47F6 /* CustomPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomPickerView.h; sourceTree = "<group>"; };
+		E55BAFDA1C211633009F47F6 /* CustomPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomPickerView.m; sourceTree = "<group>"; };
+		E55BAFDC1C211F03009F47F6 /* ItemListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemListTableViewController.h; sourceTree = "<group>"; };
+		E55BAFDD1C211F03009F47F6 /* ItemListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemListTableViewController.m; sourceTree = "<group>"; };
+		E55BAFE01C213098009F47F6 /* TaisetsuListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaisetsuListTableViewController.h; sourceTree = "<group>"; };
+		E55BAFE11C213098009F47F6 /* TaisetsuListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaisetsuListTableViewController.m; sourceTree = "<group>"; };
+		E55BAFE31C21322C009F47F6 /* TaisetsuPeopleImageCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaisetsuPeopleImageCollectionViewController.h; sourceTree = "<group>"; };
+		E55BAFE41C21322C009F47F6 /* TaisetsuPeopleImageCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaisetsuPeopleImageCollectionViewController.m; sourceTree = "<group>"; };
+		E55BAFE61C21328F009F47F6 /* TaisetsuImageCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaisetsuImageCollectionViewCell.h; sourceTree = "<group>"; };
+		E55BAFE71C21328F009F47F6 /* TaisetsuImageCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaisetsuImageCollectionViewCell.m; sourceTree = "<group>"; };
+		E55BAFE91C213C79009F47F6 /* EditGroupTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditGroupTableViewController.h; sourceTree = "<group>"; };
+		E55BAFEA1C213C79009F47F6 /* EditGroupTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditGroupTableViewController.m; sourceTree = "<group>"; };
+		E55BAFEB1C213C79009F47F6 /* GroupTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupTableViewController.h; sourceTree = "<group>"; };
+		E55BAFEC1C213C79009F47F6 /* GroupTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupTableViewController.m; sourceTree = "<group>"; };
 		E562506F1C166FFA008FD1DF /* PocketDoctorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PocketDoctorViewController.h; sourceTree = "<group>"; };
 		E56250701C166FFA008FD1DF /* PocketDoctorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PocketDoctorViewController.m; sourceTree = "<group>"; };
 		E56250A31C1696E6008FD1DF /* setting-0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "setting-0.png"; sourceTree = "<group>"; };
@@ -355,10 +385,6 @@
 		E57B2C181C1021A500EF2948 /* item-10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "item-10.png"; sourceTree = "<group>"; };
 		E57B2C1A1C1021E700EF2948 /* item-11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "item-11.png"; sourceTree = "<group>"; };
 		E57B2C1C1C102B7900EF2948 /* addimage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = addimage.png; sourceTree = "<group>"; };
-		E57B2C1E1C10305700EF2948 /* GroupTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupTableViewController.h; sourceTree = "<group>"; };
-		E57B2C1F1C10305700EF2948 /* GroupTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupTableViewController.m; sourceTree = "<group>"; };
-		E57B2C221C10370900EF2948 /* EditGroupTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditGroupTableViewController.h; sourceTree = "<group>"; };
-		E57B2C231C10370900EF2948 /* EditGroupTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditGroupTableViewController.m; sourceTree = "<group>"; };
 		E57B2C251C103B3700EF2948 /* GroupModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupModel.h; sourceTree = "<group>"; };
 		E57B2C261C103B3700EF2948 /* GroupModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupModel.m; sourceTree = "<group>"; };
 		E57B2C281C103E4000EF2948 /* spouse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spouse.png; sourceTree = "<group>"; };
@@ -394,6 +420,16 @@
 		E57D2A441C20298E005F9F76 /* DashBoardTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DashBoardTableViewCell.h; sourceTree = "<group>"; };
 		E57D2A451C20298E005F9F76 /* DashBoardTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DashBoardTableViewCell.m; sourceTree = "<group>"; };
 		E57D2A461C20298E005F9F76 /* DashBoardTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DashBoardTableViewCell.xib; sourceTree = "<group>"; };
+		E5B411771C2146EC00E08C89 /* anybodyCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = anybodyCollectionViewCell.h; sourceTree = "<group>"; };
+		E5B411781C2146EC00E08C89 /* anybodyCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = anybodyCollectionViewCell.m; sourceTree = "<group>"; };
+		E5B411791C2146EC00E08C89 /* anybodyCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = anybodyCollectionViewController.h; sourceTree = "<group>"; };
+		E5B4117A1C2146EC00E08C89 /* anybodyCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = anybodyCollectionViewController.m; sourceTree = "<group>"; };
+		E5B4117D1C21470E00E08C89 /* editGuardTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = editGuardTableViewController.h; sourceTree = "<group>"; };
+		E5B4117E1C21470E00E08C89 /* editGuardTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = editGuardTableViewController.m; sourceTree = "<group>"; };
+		E5B4117F1C21470E00E08C89 /* GuardTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuardTableViewCell.h; sourceTree = "<group>"; };
+		E5B411801C21470E00E08C89 /* GuardTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuardTableViewCell.m; sourceTree = "<group>"; };
+		E5B411811C21470E00E08C89 /* GuardTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuardTableViewController.h; sourceTree = "<group>"; };
+		E5B411821C21470E00E08C89 /* GuardTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuardTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -540,6 +576,8 @@
 				E57D2A461C20298E005F9F76 /* DashBoardTableViewCell.xib */,
 				E57B2C6F1C11964400EF2948 /* PickerView.h */,
 				E57B2C701C11964400EF2948 /* PickerView.m */,
+				E55BAFD91C211633009F47F6 /* CustomPickerView.h */,
+				E55BAFDA1C211633009F47F6 /* CustomPickerView.m */,
 				E5705A6E1C15345800D6B995 /* ABFillButton.h */,
 				E5705A6F1C15345800D6B995 /* ABFillButton.m */,
 				E55915191C0EE45800CE9102 /* ContactCollectionViewCell.h */,
@@ -559,6 +597,8 @@
 		E55915271C0EEC2800CE9102 /* SubViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				E5B4116F1C2146B500E08C89 /* TEMP */,
+				E55BAFDF1C213074009F47F6 /* TaisetsuManageViewControllers */,
 				E57B2C301C1125BA00EF2948 /* ContactManageViewControllers */,
 				E57B2C211C1036C500EF2948 /* GroupManageViewControllers */,
 				E5705A6A1C1532E900D6B995 /* ProfileManageViewControllers */,
@@ -612,6 +652,21 @@
 				E55BAFCA1C20E8D3009F47F6 /* UULineChart.m */,
 			);
 			path = UUChart;
+			sourceTree = "<group>";
+		};
+		E55BAFDF1C213074009F47F6 /* TaisetsuManageViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E55BAFE01C213098009F47F6 /* TaisetsuListTableViewController.h */,
+				E55BAFE11C213098009F47F6 /* TaisetsuListTableViewController.m */,
+				E55BAFD31C210C3E009F47F6 /* AddTaisetsuPeopleTableViewController.h */,
+				E55BAFD41C210C3E009F47F6 /* AddTaisetsuPeopleTableViewController.m */,
+				E55BAFE31C21322C009F47F6 /* TaisetsuPeopleImageCollectionViewController.h */,
+				E55BAFE41C21322C009F47F6 /* TaisetsuPeopleImageCollectionViewController.m */,
+				E55BAFE61C21328F009F47F6 /* TaisetsuImageCollectionViewCell.h */,
+				E55BAFE71C21328F009F47F6 /* TaisetsuImageCollectionViewCell.m */,
+			);
+			name = TaisetsuManageViewControllers;
 			sourceTree = "<group>";
 		};
 		E56250641C166E6C008FD1DF /* SettingManageViewControllers */ = {
@@ -742,10 +797,10 @@
 		E57B2C211C1036C500EF2948 /* GroupManageViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				E57B2C1E1C10305700EF2948 /* GroupTableViewController.h */,
-				E57B2C1F1C10305700EF2948 /* GroupTableViewController.m */,
-				E57B2C221C10370900EF2948 /* EditGroupTableViewController.h */,
-				E57B2C231C10370900EF2948 /* EditGroupTableViewController.m */,
+				E55BAFE91C213C79009F47F6 /* EditGroupTableViewController.h */,
+				E55BAFEA1C213C79009F47F6 /* EditGroupTableViewController.m */,
+				E55BAFEB1C213C79009F47F6 /* GroupTableViewController.h */,
+				E55BAFEC1C213C79009F47F6 /* GroupTableViewController.m */,
 				E57B2C111C101F2200EF2948 /* PersonImageCollectionViewController.h */,
 				E57B2C121C101F2200EF2948 /* PersonImageCollectionViewController.m */,
 			);
@@ -755,6 +810,10 @@
 		E57B2C301C1125BA00EF2948 /* ContactManageViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				E55BAFDC1C211F03009F47F6 /* ItemListTableViewController.h */,
+				E55BAFDD1C211F03009F47F6 /* ItemListTableViewController.m */,
+				E55BAFD61C210F8D009F47F6 /* AddItemTableViewController.h */,
+				E55BAFD71C210F8D009F47F6 /* AddItemTableViewController.m */,
 				E57B2BDF1C0FCF0400EF2948 /* ContactTableViewController.h */,
 				E57B2BE01C0FCF0400EF2948 /* ContactTableViewController.m */,
 				E57B2BEF1C0FE04700EF2948 /* EditContactTableViewController.h */,
@@ -785,6 +844,23 @@
 				E57B2C4F1C11741700EF2948 /* unittestcpp */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		E5B4116F1C2146B500E08C89 /* TEMP */ = {
+			isa = PBXGroup;
+			children = (
+				E5B411771C2146EC00E08C89 /* anybodyCollectionViewCell.h */,
+				E5B411781C2146EC00E08C89 /* anybodyCollectionViewCell.m */,
+				E5B411791C2146EC00E08C89 /* anybodyCollectionViewController.h */,
+				E5B4117A1C2146EC00E08C89 /* anybodyCollectionViewController.m */,
+				E5B4117D1C21470E00E08C89 /* editGuardTableViewController.h */,
+				E5B4117E1C21470E00E08C89 /* editGuardTableViewController.m */,
+				E5B4117F1C21470E00E08C89 /* GuardTableViewCell.h */,
+				E5B411801C21470E00E08C89 /* GuardTableViewCell.m */,
+				E5B411811C21470E00E08C89 /* GuardTableViewController.h */,
+				E5B411821C21470E00E08C89 /* GuardTableViewController.m */,
+			);
+			name = TEMP;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1051,21 +1127,28 @@
 			files = (
 				E55BAFCB1C20E8D3009F47F6 /* UUBar.m in Sources */,
 				E57B2C711C11964400EF2948 /* PickerView.m in Sources */,
+				E55BAFE21C213098009F47F6 /* TaisetsuListTableViewController.m in Sources */,
+				E55BAFE81C21328F009F47F6 /* TaisetsuImageCollectionViewCell.m in Sources */,
+				E55BAFDE1C211F03009F47F6 /* ItemListTableViewController.m in Sources */,
 				E5705A621C15304D00D6B995 /* EditListTableViewController.m in Sources */,
 				E55915331C0EEE6B00CE9102 /* EditProfileTableViewController.m in Sources */,
 				E57B2C131C101F2200EF2948 /* PersonImageCollectionViewController.m in Sources */,
 				E5705A751C154ACC00D6B995 /* AddNewItemTableViewController.m in Sources */,
+				E5B4117C1C2146EC00E08C89 /* anybodyCollectionViewController.m in Sources */,
 				E559151E1C0EE47900CE9102 /* SettingCollectionViewCell.m in Sources */,
 				E55915431C0EF21200CE9102 /* PersonalDataTableViewController.m in Sources */,
+				E5B4117B1C2146EC00E08C89 /* anybodyCollectionViewCell.m in Sources */,
 				E55BAFCC1C20E8D3009F47F6 /* UUBarChart.m in Sources */,
+				E55BAFD51C210C3E009F47F6 /* AddTaisetsuPeopleTableViewController.m in Sources */,
+				E5B411851C21470E00E08C89 /* GuardTableViewController.m in Sources */,
 				E55915021C0ED54C00CE9102 /* TabBarController.m in Sources */,
-				E57B2C201C10305700EF2948 /* GroupTableViewController.m in Sources */,
 				E55BAFCD1C20E8D3009F47F6 /* UUChart.m in Sources */,
 				E57B2C271C103B3700EF2948 /* GroupModel.m in Sources */,
 				E57D2A011C1FA215005F9F76 /* SonotaCollectionViewController.m in Sources */,
 				E57B2BE11C0FCF0400EF2948 /* ContactTableViewController.m in Sources */,
 				E55915401C0EF20B00CE9102 /* ListTableViewController.m in Sources */,
 				E55915361C0EEEA000CE9102 /* ProfileTableViewController.m in Sources */,
+				E55BAFEE1C213C79009F47F6 /* GroupTableViewController.m in Sources */,
 				E57B2BF11C0FE04700EF2948 /* EditContactTableViewController.m in Sources */,
 				E5705A781C154C0300D6B995 /* ItemModel.m in Sources */,
 				E5705A7B1C15537700D6B995 /* ItemImageCollectionViewController.m in Sources */,
@@ -1076,23 +1159,28 @@
 				E57B2C101C101EC600EF2948 /* PersonCollectionViewCell.m in Sources */,
 				E559153D1C0EF07400CE9102 /* UserProfileModel.m in Sources */,
 				E55915391C0EF04900CE9102 /* SettingTableViewController.m in Sources */,
+				E55BAFDB1C211633009F47F6 /* CustomPickerView.m in Sources */,
 				E57D2A041C1FA43D005F9F76 /* SonotaCollectionViewCell.m in Sources */,
 				E55BAFD01C20E8D3009F47F6 /* UULineChart.m in Sources */,
 				E559154C1C0EF23700CE9102 /* EditKusiriTableViewController.m in Sources */,
 				E57B2BF41C0FE08F00EF2948 /* ContactModel.m in Sources */,
+				E55BAFE51C21322C009F47F6 /* TaisetsuPeopleImageCollectionViewController.m in Sources */,
 				E55BAFCF1C20E8D3009F47F6 /* UUColor.m in Sources */,
 				E55915551C0EF4B600CE9102 /* ListModel.m in Sources */,
+				E5B411841C21470E00E08C89 /* GuardTableViewCell.m in Sources */,
+				E55BAFD81C210F8D009F47F6 /* AddItemTableViewController.m in Sources */,
 				E559151B1C0EE45800CE9102 /* ContactCollectionViewCell.m in Sources */,
 				E55914BB1C0EC92E00CE9102 /* AppDelegate.m in Sources */,
 				E55BAFCE1C20E8D3009F47F6 /* UUChartLabel.m in Sources */,
+				E5B411831C21470E00E08C89 /* editGuardTableViewController.m in Sources */,
 				E57B2C341C1151F000EF2948 /* LeafNotification.m in Sources */,
 				E55914F61C0ED0A300CE9102 /* EmergencyViewController.m in Sources */,
 				E5705A7E1C1553BC00D6B995 /* ItemImageCollectionViewCell.m in Sources */,
 				E55914FC1C0ED0BD00CE9102 /* OtherCollectionViewController.m in Sources */,
-				E57B2C241C10370900EF2948 /* EditGroupTableViewController.m in Sources */,
 				E56250711C166FFA008FD1DF /* PocketDoctorViewController.m in Sources */,
 				E55915521C0EF4AE00CE9102 /* KusuriModel.m in Sources */,
 				E55914FF1C0ED0DA00CE9102 /* ContactCollectionViewController.m in Sources */,
+				E55BAFED1C213C79009F47F6 /* EditGroupTableViewController.m in Sources */,
 				E55914F91C0ED0B000CE9102 /* WorryViewController.m in Sources */,
 				E55914B81C0EC92E00CE9102 /* main.m in Sources */,
 				E57D2A471C20298E005F9F76 /* DashBoardTableViewCell.m in Sources */,

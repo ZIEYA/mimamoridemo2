@@ -14,7 +14,7 @@
 #import "AppDelegate.h"
 
 @interface EmergencyViewController ()<UITableViewDataSource,UITableViewDelegate,UITextViewDelegate,ABFillButtonDelegate>{
-    NSMutableDictionary *_contactDict;
+    NSMutableArray *_contactArr;
     NSMutableArray *_currentArray;
     NSString *userEmail;
     NSString *password;
@@ -66,16 +66,15 @@
 
 -(void)reloadContact{
     [_currentArray removeAllObjects];
-    NSDictionary *tempdict = [[NSUserDefaults standardUserDefaults]objectForKey:@"contact"];
-    if (!tempdict) {
+    NSArray *tempArr = [[NSUserDefaults standardUserDefaults]objectForKey:@"contacts"];
+    if (!tempArr) {
         [LeafNotification showInController:self withText:@"連絡人を追加してください"];
         return;
     }
-    _contactDict = [[NSMutableDictionary alloc]initWithDictionary:tempdict];
-    NSArray *keysArr = [tempdict allKeys];
+    _contactArr = [[NSMutableArray alloc]initWithArray:tempArr];
     //Models
-    for (int i = 0; i<keysArr.count; i++) {
-        NSDictionary *dict = [tempdict objectForKey:keysArr[i]];
+    for (int i = 0; i<_contactArr.count; i++) {
+        NSDictionary *dict = [_contactArr objectAtIndex:i];
         ContactModel *model = [[ContactModel alloc]init];
         model.emergencyType = [dict valueForKey:@"emergencytype"];
         model.name = [dict valueForKey:@"name"];

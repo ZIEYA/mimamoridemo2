@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "GroupModel.h"
-
-@interface EditGroupTableViewController : UITableViewController
-@property int editType;
-@property GroupModel *groupmodel;
-//@property NSString *tempname;
-
+#import "ContactModel.h"
+#import <Contacts/Contacts.h>
+#import <ContactsUI/ContactsUI.h>
+@interface EditGroupTableViewController : UITableViewController<CNContactPickerDelegate>
+@property int editType;//0:追加  1:編集
+@property (strong, nonatomic)NSDictionary *contdic;
+@property long index;
 @end

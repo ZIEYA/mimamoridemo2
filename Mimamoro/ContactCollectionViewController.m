@@ -100,7 +100,7 @@ static NSString * const reuseIdentifier = @"mycell";
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     GroupModel *model = [_groupArray objectAtIndex:indexPath.row];
     groupID = model.groupname;
-    [self performSegueWithIdentifier:@"gotoContactTVC" sender:self];
+    [self performSegueWithIdentifier:@"gotoItemListTVC" sender:self];
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
@@ -109,6 +109,10 @@ static NSString * const reuseIdentifier = @"mycell";
         contactTVC.groupid = groupID;
     }
 
+}
+
+- (IBAction)addAction:(id)sender {
+    [self performSegueWithIdentifier:@"gotoAddTaisetsuTVC" sender:self];
 }
 
 
